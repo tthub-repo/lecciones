@@ -1,5 +1,5 @@
 ---
-title: Definición de la Text Encoding Initiative, aplicaciones prácticas y recursos[^1]
+title: Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos[^1]
 author: Susanna Allés Torrent
 date: Enero 2019
 header-includes: |
@@ -12,12 +12,13 @@ geometry: margin=1in
 fontsize: 11pt
 ---
 
+Esta lección es una primera aproximación a la Text Encoding Initiative, un marco de trabajo concebido especialmente para la codificación, la explotación informática, la publicación en línea y la preservación de textos en ciencias sociales y humanidades, utilizado internacionalmente y por una gran comunidad de usuarios. Trataremos conceptos como el marcado de textos, su utilidad y los campos de aplicación.
+
 # I. Codificación, texto y TEI  
 
 En el ámbito de las humanidades y las ciencias sociales, el texto representa, en la mayoría de los casos, el punto de partida de muchas investigaciones. La introducción de métodos y herramientas propios de la ciencia informática llevaron hace ya más de veinte años a replantearse la importancia del texto y su procesamiento informático. La gran cantidad de textos a nuestra disposición conlleva la adopción de nuevas estrategias para la creación, la explotación y su conservación.  
 
 ![Carta de Federico García Lorca a José María Chacón](img/L1_001.jpg)
-
 
 La iniciativa de marcado de textos nace pues de la necesidad de procesar los textos desde un punto de vista informático, para que, en definitiva, no sea susceptible solo de una lectura "plana", sino para que sea procesable a través de múltiples herramientas como pueden ser programas de concordancias, análisis estilométricos, gráficos de frecuencias, segmentación gramatical o, sobretodo, su publicación web y la posibilidad de realizar búsquedas inteligentes. ![Logo de la Text Encoding Initiative](img/L1_002.jpg)
 
@@ -25,7 +26,7 @@ La Text Encoding Initiative <http://www.tei-c.org/> fue la primera iniciativa ci
 
 # II. ¿Qué es TEI? 
 
-La Text Encoding Initiative se ampara en primera instancia en el Consorcio TEI <http://www.tei-c.org/about/organization/>, cuya estructura veremos en la siguiente sección de este tema. Este consorcio compuesto por personas e instituciones es el responsable de desarrollar y mantener actualizadas las *Guías directrices* <http://www.tei-c.org/Guidelines/> para el marcado de los textos en formato digital. Estas guías son una especie de manual de codificación o de recomendaciones de buenas prácticas que especifican una metodología concreta de codificación de los textos de manera que sean leídos y procesados por las computadoras.  
+La Text Encoding Initiative se ampara en primera instancia en el Consorcio TEI <http://www.tei-c.org/about/organization/>, cuya estructura veremos más abajo. Este consorcio compuesto por personas e instituciones es el responsable de desarrollar y mantener actualizadas las *Guías directrices* <http://www.tei-c.org/Guidelines/> para el marcado de los textos en formato digital. Estas guías son una especie de manual de codificación o de recomendaciones de buenas prácticas que especifican una metodología concreta de codificación de los textos de manera que sean leídos y procesados por las computadoras.  
 
 TEI posee una plataforma web donde se publican tanto las Guías directrices como un sinfín de herramientas y de comunidades de ayuda. Aquí encontraréis una primera definición que nos será útil para empezar:    
 
@@ -41,7 +42,7 @@ Veamos paso por paso los diferentes puntos básicos de esta definición.
 4.  El sistema de marcado propuesto por TEI tiene una naturaleza modular que agrupa fenomenología diversa en un mismo "módulo". Tiene cuatro obligatorios, que corresponden a elementos compartidos por todos y cada uno de los documentos TEI (como puede ser el elemento raíz, o el elemento párrafo). Esta característica modular permite customizar o personalizar el modelo de marcado que cada proyecto necesita.  
 5.  TEI se expresa a través del lenguaje estándar web XML, Extensible Markup Language o Lenguaje de Marcas Extensible, que veremos en detalle en el próximo tema Además, por lo general, los esquemas o modelos de marcado también utilizan este mismo lenguaje.  
 6.  TEI ofrece una gran cantidad de documentación detallada sobre cada uno de los elementos, módulos y en general cualquier aspecto relacionado con su uso y buenas prácticas.  
-7.  Todo este material es de acceso abierto, con lo cual se puede consultar libremente online, descargarse, reutilizarse e, incluso, ser susceptible de mejoras a través de la retroalimentación de los usuarios. Todo el material está disponible en GitHub.  
+7.  Todo este material es de acceso abierto, con lo cual se puede consultar libremente online, descargarse, reutilizarse e, incluso, ser susceptible de mejoras a través de la retroalimentación de los usuarios. Todo el material está disponible en [GitHub](https://github.com/TEIC/TEI).  
 
 En lo que concierne a los objetivos de TEI, podríamos resumirlos de la siguiente manera:
   
@@ -56,6 +57,7 @@ Las ventajas que ofrece el uso de TEI son múltiples y entre ellas podemos seña
 * XML-TEI ha sido diseñado por y para la comunidad científica que es la encargada en última instancia de promover y mejorar las guías de marcado. Cuantos más usuarios y más gente implicada haya utilizando el mismo sistema de marcado, más se avanzará hacia una propuesta sólida de codificación.
 * XML-TEI facilita el reuso en diferentes formatos, en diferentes contextos, por diferentes usuarios. Un marcado a través de un estándar web, independiente de cualquier software o plataforma web, permite y facilita la reutilización del mismo material: en diferentes formatos, en contextos diferentes, por diferentes usuarios. Ello permite que proyectos posteriores o contemporáneos puedan establecer un vínculo y un uso diferente del material publicado, evitando el tener que empezar de cero y avanzando en el conocimiento.
 * XML-TEI se centra en el significado y el contenido del texto y no en su apariencia o en su presentación final (es decir, no es tan relevante el señalar un título en negrita, como definir que efectivamente se trata de un "título").  
+
 
 # III. ¿Qué entendemos por texto?
 
@@ -105,15 +107,15 @@ Hacia los años ochenta diferentes tecnologías ya habían entrado a formar part
 
 El reto que se planteó entonces fue el de desarrollar, mantener y publicar un método de codificación para los datos en humanidades en un formato electrónico que fuera independiente tanto de *hardware* y sistemas operativos como de programas informáticos. Ante el crecimiento de sistemas diferentes de representación de materiales textuales, incluidos procesadores de texto, urgía la necesidad de ofrecer a la comunidad científica un método sólido para alargar la vida de sus datos y poder reutilizarlos en el futuro con objetivos diferentes. El hecho de que cada compañía ofreciera un programa y formatos propietarios entorpecía el trabajo académico y hacía difícil la planificación de proyectos de larga escala y duración.
 
-Así pues, en 1987 tuvo lugar la primera reunión en el Vassar College (Poughkeepsie, NY), financiada por la *Association for Computers in the Humanities* y el *National Endowment for the Humanities*, con el fin de crear unas guías directrices para la codificación de textos electrónicos. El texto que de ahí salió se puede consultar todavía en *Design Principles for Text Encoding Guidelines* <http://www.tei-c.org/Vault/ED/edp01.htm>. 
+Así pues, en 1987 tuvo lugar la primera reunión en el Vassar College (Poughkeepsie, NY), financiada por la [*Association for Computers in the Humanities*](http://ach.org/) y el [*National Endowment for the Humanities*](https://www.neh.gov/), con el fin de crear unas guías directrices para la codificación de textos electrónicos. El texto que de ahí salió se puede consultar todavía en [*Design Principles for Text Encoding Guidelines*](http://www.tei-c.org/Vault/ED/edp01.htm). 
 
 En los años sucesivos, un comité, con la participación de más de 50 colaboradores, empezó la redacción de lo que acabaría siendo la primera propuesta de las *Guías Directrices*, conocida como TEI P1, publicada en junio de 1990. Se inició, posteriormente, una segunda fase con la creación de los hoy habituales "working groups" o grupos de trabajo por disciplina, con más de 100 colaboradores, que tras un trabajo de revisión y mejoras publicaron una segunda propuesta. Pocos años después, en mayo de 1994, salieron las primeras *Guías directrices* oficiales (P3), para las cuales se había contado ya con más de 200 colaboradores.
 
-Empezó entonces un enorme trabajo de difusión del modelo, a través de seminarios y talleres, pero sobretodo con muchos test y la retroalimentación de los colaboradores, que es el que todavía hoy ayuda a identificar problemas, señalar necesidades concretas y proponer soluciones; a tal fin, de hecho, TEI utiliza la plataforma GitHub donde se pueden solicitar nuevas funcionalidades TEI ("Feature Requests") o llamar la atención sobre errores existentes ("Bug" <https://github.com/TEIC/TEI/issues>).
+Empezó entonces un enorme trabajo de difusión del modelo, a través de seminarios y talleres, pero sobretodo con muchos test y la retroalimentación de los colaboradores, que es el que todavía hoy ayuda a identificar problemas, señalar necesidades concretas y proponer soluciones; a tal fin, de hecho, TEI utiliza la plataforma GitHub donde se pueden solicitar nuevas funcionalidades TEI (["Feature Requests"](https://github.com/TEIC/TEI/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+FeatureRequest%22)) o llamar la atención sobre errores existentes (["Bug"](https://github.com/TEIC/TEI/issues).
 
-En el año 2000 se creó, en fin, el Consorcio TEI que aspiraba a constituirse como una organización sin ánimo de lucro, permanente, académica y económicamente independiente. Una de las prioridades más urgentes que se planteó en ese momento fue la conversión de las *Guías Directrices* al lenguaje XML, pues las primeras se habían creado a partir del lenguaje SGML <https://www.w3.org/MarkUp/SGML/>, un sistema más complejo, pesado y no tan ágil como XML. Así, solo dos años después, en 2002, apareció la P4, que por primera vez proponía un marco de trabajo basado ya en XML.
+En el año 2000 se creó, en fin, el Consorcio TEI que aspiraba a constituirse como una organización sin ánimo de lucro, permanente, académica y económicamente independiente. Una de las prioridades más urgentes que se planteó en ese momento fue la conversión de las *Guías Directrices* al lenguaje XML, pues las primeras se habían creado a partir del lenguaje [SGML](https://www.w3.org/MarkUp/SGML/), un sistema más complejo, pesado y no tan ágil como XML. Así, solo dos años después, en 2002, apareció la P4, que por primera vez proponía un marco de trabajo basado ya en XML.
 
-Finalmente, en noviembre de 2007, apareció la P5, que corresponde a la quinta propuesta todavía hoy en uso; periódicamente se realizan mejoras y se aumenta el número de su versión: al momento actual contamos con la TEI P5 Versión 3.4.0, cuya última actualización ha sido en julio 2018 <http://www.tei-c.org/guidelines/p5/#section-1>.  
+Finalmente, en noviembre de 2007, apareció la P5, que corresponde a la quinta propuesta todavía hoy en uso; periódicamente se realizan mejoras y se aumenta el número de su versión. El historial de actualizaciones puede encontrarse en su sitio web <http://www.tei-c.org/guidelines/p5/#section-1>.  
 
 # VII. Estructura interna de la organización TEI
 
@@ -129,22 +131,21 @@ Desde el año 2000 su estructura organizativa se oficializó con la creación de
 Esta organización, sin ánimo de lucro, es autofinanciada por sus miembros y subscriptores que pueden ser instituciones (bibliotecas, universidades, proyectos académicos, unidades de investigación) y personas.  
 
 Tiene dos niveles de gestión:  
-* *TEI Board of Directors* <http://www.tei-c.org/about/board-of-directors/>, encargado de la gestión del Consorcio
-* *TEI Technical Council* <http://www.tei-c.org/activities/Council/>: 12 personas, encargadas de la elaboración y la evolución de las *Guías Directrices*  
+* [*TEI Board of Directors*](http://www.tei-c.org/about/board-of-directors/), encargado de la gestión del Consorcio
+* [*TEI Technical Council*](http://www.tei-c.org/activities/Council/): 12 personas, encargadas de la elaboración y la evolución de las *Guías Directrices*  
 
 Además, TEI cuenta con otros dos niveles de participación y organización que consisten en grupos de trabajo especializados en una materia o disciplina concreta:
 
-* *TEI Workgroups* <http://www.tei-c.org/activities/workgroups/>: equipos de investigadores y profesionales que tratan cuestiones generales relativas al marcado TEI, como la gestión de la bibliografía o de informaciones biográficas, estructuras de rasgos, descripción de manuscritos, migraciones de sistemas de marcado o de versiones TEI diferentes, etc. Su trabajo se refleja de una manera concreta en las *Guías Directrices*.  
-* *Special Interest Groups* <http://www.tei-c.org/activities/sig/>: son grupos de personas con intereses específicos normalmente en contacto a través de las listas de discusión, como por ejemplo, el caso de la codificación de la correspondencia epistolar, el uso de TEI en bibliotecas o la codificación de música, el uso de ontologías o la creación de herramientas, entre otras cuestiones.  
+* [*TEI Workgroups*](http://www.tei-c.org/activities/workgroups/): equipos de investigadores y profesionales que tratan cuestiones generales relativas al marcado TEI, como la gestión de la bibliografía o de informaciones biográficas, estructuras de rasgos, descripción de manuscritos, migraciones de sistemas de marcado o de versiones TEI diferentes, etc. Su trabajo se refleja de una manera concreta en las *Guías Directrices*.  
+* [*Special Interest Groups*](http://www.tei-c.org/activities/sig/): son grupos de personas con intereses específicos normalmente en contacto a través de las listas de discusión, como por ejemplo, el caso de la codificación de la correspondencia epistolar, el uso de TEI en bibliotecas o la codificación de música, el uso de ontologías o la creación de herramientas, entre otras cuestiones.  
 
-Todo ello, se engloba en la gran comunidad de usuarios conectada a través de listas de correo electrónico <http://www.tei-c.org/support/#tei-l> y de espacios participativos como la Wiki <https://wiki.tei-c.org/index.php/Main_Page>.  
+Todo ello, se engloba en la gran comunidad de usuarios conectada a través de [listas de correo electrónico](http://www.tei-c.org/support/#tei-l) y de espacios participativos como la [Wiki](https://wiki.tei-c.org/index.php/Main_Page).  
 
-Además de los talleres y seminarios que pueden tener lugar a lo largo del año, el Consorcio organiza des del año 2001 una conferencia anual: la última tuvo lugar en la Universidad de Tokyo (Japón) y la próxima será en Graz (Austria) en 2019.  
+Además de los talleres y seminarios que pueden tener lugar a lo largo del año, el Consorcio organiza des del año 2001 una conferencia anual, las últimas de las cuales han tenido lugar en [Lyon](http://tei2015.huma-num.fr/en/) (2015), [Vienna](http://tei2016.acdh.oeaw.ac.at/) (2016), y [Victoria](https://hcmc.uvic.ca/tei2017/index.php) (2017), [Universidad de Tokyo](https://tei2018.dhii.asia/) (2018) y  [Graz](https://graz-2019.tei-c.org/) (2019).  
 
 En este esquema se refleja el engranaje de la comunidad TEI:  
 
-![TEI organizational structure, 2012 (Burnard 2013)](img/L1_009.png)
-TEI organizational structure, 2012 (Burnard 2013)  
+![TEI organizational structure, 2012 (Burnard 2013)](img/L1_009.png) 
 
 # VIII. Aplicaciones prácticas y tipos de proyectos
 
@@ -158,87 +159,88 @@ A continuación, damos algunos ejemplos de los escenarios más típicos de su ap
 
 El uso más extendido de TEI-XML es, sin duda, la edición de textos. Esta es su aplicación principal y, de hecho, muchos proyectos de mayor envergadura contienen un componente editorial. En este sentido, podemos encontrar una gran variedad de enfoques que pueden abrazar todos los diferentes métodos y escuelas de la crítica textual, desde ediciones de textos modernos, a otras diplomáticas o de crítica genética e incluso auténticas ediciones críticas en línea. Véanse como ejemplos las siguientes iniciativas:
 
-* Mark Twain Project <http://www.marktwainproject.org/homepage.html>
-* Le Petit Thalamus de Montpellier <http://thalamus.huma-num.fr/chronique-francaise/annee-1502.html>
-* Les manuscrits de Madame Bovary <https://www.bovary.fr/>
-* Les manuscrits de Stendhal <http://manuscrits-de-stendhal.org/>  
+* [Mark Twain Project](http://www.marktwainproject.org/homepage.html)
+* [Le Petit Thalamus de Montpellier](http://thalamus.huma-num.fr/chronique-francaise/annee-1502.html)
+* [Les manuscrits de Madame Bovary](https://www.bovary.fr/)
+* [Les manuscrits de Stendhal](http://manuscrits-de-stendhal.org/) 
+* [Peter Plaoul: The Electronic Critical Edition of Plaoul's Commentary on the Sentences](http://scta.lombardpress.org/text/questions/plaoulcommentary) 
 
 Algunas de las ediciones aprovechan las posibilidades del medio digital para ofrecer los textos de múltiples ediciones en paralelo e incluso los textos originales junto con sus traducciones, como por ejemplo los dos proyectos siguientes:
 
-* Holinsheds Chronicles <http://www.cems.ox.ac.uk/holinshed/>
-* Vincent Van Gogh, *The Letters* <http://vangoghletters.org/vg/letters.html>  
+* [Holinsheds Chronicles](http://www.cems.ox.ac.uk/holinshed/)
+* [Vincent Van Gogh, *The Letters*](http://vangoghletters.org/vg/letters.html)
 
 Otros proyectos van más allá y plantean sus ediciones como una plataforma de recursos en torno a una obra o a un autor; muchos de estos son verdaderos instrumentos pedagógicos y didácticos; véanse estos tres ilustrativos casos:
 
-* The World of Dante <http://www.worldofdante.org/>
-* Decameron Web <http://www.brown.edu/Departments/Italian_Studies/dweb/index.php>
-* The Chymistry of Isaac Newton <http://webapp1.dlib.indiana.edu/newton/>  
+* [The World of Dante](http://www.worldofdante.org/)
+* [Decameron Web](http://www.brown.edu/Departments/Italian_Studies/dweb/index.php)
+* [The Chymistry of Isaac Newton](http://webapp1.dlib.indiana.edu/newton/)
 
 Dos recursos muy útiles a la hora de buscar ediciones en línea son los dos catálogos más completos hasta el momento:
 
-* G. Franzini, *A Catalogue of Digital Editions* <https://dig-ed-cat.acdh.oeaw.ac.at/>
-* P. Sahle, *Digital Scholarly Editions* <http://www.digitale-edition.de/index.html> 
+* [G. Franzini, *A Catalogue of Digital Editions*](https://dig-ed-cat.acdh.oeaw.ac.at/)
+* [P. Sahle, *Digital Scholarly Editions*](http://www.digitale-edition.de/index.html)
 
 ## 2. Bibliotecas virtuales
 
 En muchas ocasiones, la edición de los textos se inscribe en proyectos de más amplia envergadura, como el caso de las bibliotecas virtuales. Los documentos TEI-XML ofrecen la posibilidad de contener una serie muy rica de metadatos lo que facilita su inserción y conversión en bases de datos de fácil búsqueda. Algunos ejemplos, son: 
 
-* Women Writers projects <https://www.wwp.northeastern.edu/>
-* Biblioteca Novohispánico <http://www.bdpn.unam.mx/>
-* Les Bibliothèques Virtuelles Humanistes <http://www.bvh.univ-tours.fr/>
-* Biblioteca Virtual Miguel de Cervantes <http://www.cervantesvirtual.com/>
+* [Women Writers projects](https://www.wwp.northeastern.edu/)
+* [Biblioteca Novohispánico](http://www.bdpn.unam.mx/)
+* [Les Bibliothèques Virtuelles Humanistes](http://www.bvh.univ-tours.fr/)
+* [Biblioteca Virtual Miguel de Cervantes](http://www.cervantesvirtual.com/)
 
 ## 3. Archivos virtuales
 
 En la misma línea que las bibliotecas virtuales, están los archivos en línea, normalmente centrados en los escritos de un autor; especialmente interesantes son aquellos casos en que su obra se encuentra en localizaciones diferentes y puede ser ofrecida en una única plataforma:
 
-* The Charles Brockden Brown. Electronic Archive and Scholarly Edition <http://brockdenbrown.cah.ucf.edu/>
-* The Shelley-Godwin Archive <http://shelleygodwinarchive.org/> 
+* [The Charles Brockden Brown. Electronic Archive and Scholarly Edition](http://brockdenbrown.cah.ucf.edu/)
+* [The Shelley-Godwin Archive](http://shelleygodwinarchive.org/) 
 
 ## 4. Descripción de manuscritos
 
 TEI-XML también es muy utilizado en la descripción de los fondos de las bibliotecas; como es sabido, las bibliotecas por regla general tienen sus propios sistemas de catalogación, normalmente basado en MARC, pero cada vez más emplean TEI para la descripción detallada de manuscritos y obras antiguas; esta tendencia facilita eventualmente la creación de ediciones o exposiciones virtuales de los manuscritos.
 
-Se ha publicado, de hecho, una serie de buenas prácticas para el uso de TEI en las bibliotecas: *Best practices for TEI in Libraries* <http://www.tei-c.org/SIG/Libraries/teiinlibraries/>
+Se ha publicado, de hecho, una serie de buenas prácticas para el uso de TEI en las bibliotecas: [*Best practices for TEI in Libraries*](http://www.tei-c.org/SIG/Libraries/teiinlibraries/).
 
 Algunas iniciativas son:
 
-* Greek Manuscripts in Sweden <https://www.manuscripta.se/>
-* Oxford & Islamic Manuscripts Catalogue Online <https://www.bodleian.ox.ac.uk/weston/our-work/projects>  
+* [Greek Manuscripts in Sweden](https://www.manuscripta.se/)
+* [Oxford & Islamic Manuscripts Catalogue Online](https://www.bodleian.ox.ac.uk/weston/our-work/projects) 
 
-De la misma manera puede también utilizarse para la descripción de documentos de archivo, pero en este caso se prefiere el uso de la Encoding Archival Description <http://www.loc.gov/ead/>, también basada en el lenguaje XML y en muchos casos muy parecida a la Text Encoding Initiative.
+De la misma manera puede también utilizarse para la descripción de documentos de archivo, pero en este caso se prefiere el uso de la [Encoding Archival Description](http://www.loc.gov/ead/), también basada en el lenguaje XML y en muchos casos muy parecida a la Text Encoding Initiative.
 
 ## 5. Datos estructurados para la creación de bases de datos
 
 TEI-XML también puede utilizarse para crear bases de datos, como listas de personajes, cronologías, o colecciones de objetos, etc. Un ejemplo representativo se puede encontrar en:
 
-* Personography en *Map of Early Modern London* <https://mapoflondon.uvic.ca/mdtEncyclopediaPersonography_subcategories.htm>
+* [Personography en *Map of Early Modern London*](https://mapoflondon.uvic.ca/mdtEncyclopediaPersonography_subcategories.htm)
 
 ## 6. Diccionarios
 
 Cada vez más habitual es el uso de TEI-XML para diccionarios:
 
-* DuCange et al. *Glossarium mediae et infimae latinitatis*. Niort: L. Favre, 1883-1887 <http://ducange.enc.sorbonne.fr/>
-* Diccionario griego español (CSIC) <http://dge.cchs.csic.es/>
-* Lexicon of Greek Personal Names <http://www.lgpn.ox.ac.uk/>
+* [DuCange et al. *Glossarium mediae et infimae latinitatis*. Niort: L. Favre, 1883-1887](http://ducange.enc.sorbonne.fr/)
+* [Diccionario griego español (CSIC)](http://dge.cchs.csic.es/)
+* [Lexicon of Greek Personal Names](http://www.lgpn.ox.ac.uk/)
 
 ## 7. Codificación de inscripciones y catálogos
 
-TEI-XML en algunos casos se ha especializado en la codificación de ciertas tipologías documentales. Es el caso de la iniciativa EpiDoc <https://sourceforge.net/p/epidoc/wiki/Home/>, una adaptación de las guías TEI, para la codificación de inscripciones epigráficas. Véanse los casos de:
+TEI-XML en algunos casos se ha especializado en la codificación de ciertas tipologías documentales. Es el caso de la iniciativa [EpiDoc](https://sourceforge.net/p/epidoc/wiki/Home/), una adaptación de las guías TEI, para la codificación de inscripciones epigráficas. Véanse los casos de:
 
-* IOSPE. Ancient Inscriptions of the Northern Black Sea <http://iospe.kcl.ac.uk/index.html>
-* US Epigraphy Project <http://usepigraphy.brown.edu/projects/usep/collections/>
-* Inscriptions of Israel / Palestine <http://cds.library.brown.edu/projects/Inscriptions/>  
+* [IOSPE. Ancient Inscriptions of the Northern Black Sea](http://iospe.kcl.ac.uk/index.html)
+* [US Epigraphy Project](http://usepigraphy.brown.edu/projects/usep/collections/)
+* [Inscriptions of Israel / Palestine](http://cds.library.brown.edu/projects/Inscriptions/)
 
-## 9. Cartas medievales
+## 8. Cartas medievales
 
-TEI-XML se utiliza también para la codificación de cartas y documentos medievales, tanto en latín como en otras lenguas. Ha habido de hecho, como en el caso anterior, alguna iniciativa para adaptar las amplias *Guías Directrices* a este tipo textual, como la Charters Encoding Initiative <http://www.cei.uni-muenchen.de/index.php>, pero, en este caso, TEI sigue siendo la más usada.
+TEI-XML se utiliza también para la codificación de cartas y documentos medievales, tanto en latín como en otras lenguas. Ha habido de hecho, como en el caso anterior, alguna iniciativa para adaptar las amplias *Guías Directrices* a este tipo textual, como la [Charters Encoding Initiative](http://www.cei.uni-muenchen.de/index.php), pero, en este caso, TEI sigue siendo la más usada.
 
 Algunos de estos proyectos son:
 
-* Les cartulaires d'île-de-France (Elec, ENC) <http://elec.enc.sorbonne.fr/cartulaires/>
-* ASChart Anglo-Saxon Charters <http://www.aschart.kcl.ac.uk/index.html>
-* CHARTA. Corpus Hispánico y Americano en la Red: Textos Antiguos <http://www.corpuscharta.es/>, que recientemente ha publicado su *Guía para editar textos CHARTA según el estándar TEI: una propuesta* <http://files.redcharta1.webnode.es/200000027-7b22d7c1cc/Gu%C3%ADa%20CHARTA-TEI.pdf>.  
+* [Les cartulaires d'île-de-France (Elec, ENC)](http://elec.enc.sorbonne.fr/cartulaires/)
+* [ASChart Anglo-Saxon Charters](http://www.aschart.kcl.ac.uk/index.html)
+* [CHARTA. Corpus Hispánico y Americano en la Red: Textos Antiguos](http://www.corpuscharta.es/), que recientemente ha publicado su [*Guía para editar textos CHARTA según el estándar TEI: una propuesta*](http://files.redcharta1.webnode.es/200000027-7b22d7c1cc/Gu%C3%ADa%20CHARTA-TEI.pdf).  
 
 ## 9. Corpus lingüísticos
 
@@ -246,20 +248,20 @@ TEI permite tanto una codificación generalista (por corpus, subcorpus, obras, a
 
 Algunos corpus que utilizan TEI son:
 
-* CORPES (Corpus del Español del siglo XXI) <http://www.rae.es/recursos/banco-de-datos/corpes-xxi>
-* Base de Français Médiéval <http://txm.bfm-corpus.org/bfm>
-* British National Corpus <http://www.natcorp.ox.ac.uk/>
+* [CORPES (Corpus del Español del siglo XXI)](http://www.rae.es/recursos/banco-de-datos/corpes-xxi)
+* [Base de Français Médiéval](http://txm.bfm-corpus.org/bfm)
+* [British National Corpus](http://www.natcorp.ox.ac.uk/)
 
 ## 10. Editoriales
 
 Algunas editoriales han decidido adoptar el marcado TEI-XML como método de publicación para todas o algunas de sus colecciones, e incluso también revistas científicas:
 
-* OpenEdition <https://www.openedition.org/>
-* *Journal of the TEI* <https://journal.tei-c.org/journal/index>
+* [OpenEdition](https://www.openedition.org/)
+* [*Journal of the TEI*](https://journal.tei-c.org/journal/index)
 
 ## 11. Otras aplicaciones
 
-TEI-XML puede aplicarse también en función de la utilización de otras herramientas. Así, y sólo por citar dos, existen ejemplos para elaborar líneas cronológicas (Timeline <https://en.wikibooks.org/wiki/XQuery/TEI\_Document\_Timeline>), o para realizar transcripciones de facsímiles por zonas de píxeles, como en el proyecto del *Album interactif de paléographie médiévale* <http://paleographie.huma-num.fr/exo.php?id=minuscule_caroline>.
+TEI-XML puede aplicarse también en función de la utilización de otras herramientas. Así, y sólo por citar dos, existen ejemplos para elaborar líneas cronológicas ([Timeline](https://en.wikibooks.org/wiki/XQuery/TEI\_Document\_Timeline)), o para realizar transcripciones de facsímiles por zonas de píxeles, como en el proyecto del [*Album interactif de paléographie médiévale*](http://paleographie.huma-num.fr/exo.php?id=minuscule_caroline).
 
 # IX. Recursos didácticos
 
@@ -268,7 +270,7 @@ TEI-XML puede aplicarse también en función de la utilización de otras herrami
 * TEI@Oxford Teaching Pages <http://tei.it.ox.ac.uk/Talks/>: La universidad de Oxford es conocida especialmente por sus cursos de verano sobre HD, aquí podréis encontrar una gran cantidad de presentaciones, teoría y ejercicios que os serán de mucha utilidad para completar lo que vayamos haciendo en este curso.
 * TEI By Example <http://teibyexample.org/>: Aunque tiene ahora ya algunos años, sigue siendo uno de los tutoriales más completos para estudiar TEI-XML.  
 
-# 10. Bibliografía  
+# X. Bibliografía  
 
 Burnard, L., "Introduction", en Burnard, L. (2014), *What is the Text Encoding Initiative. How to add intelligent markup to digital resources*, Marserille: OpenEdition Press. <https://books.openedition.org/oep/679>  
 
@@ -280,4 +282,4 @@ Renear, A. H. (2004), "Text Encoding", en S. Schreibman, R. Siemens, J. Unsworth
 
 TEI Consortium (2014), "TEI: History". <http://www.tei-c.org/about/history/>. 
 
-[^1]: This is the first footnote.
+[^1]: Estos materiales fueron creados en el marco del certificado de Experto Profesional en Humanidades Digitales, ofrecido por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia desde 2014. 
