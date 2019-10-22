@@ -3,6 +3,11 @@ title: Esquemas y personalización de TEI
 author: Susanna Allés Torrent
 date: 2019-01-15
 ---
+# {{ page.title }}
+
+{{ page.author }}
+
+{{ page.date }}
 
 # I. Principios fundamentales del esquema
 En esta unidad veremos cómo llevar a cabo la personalización de un documento TEI a través de esquemas. Para ello, presentaremos de manera general la función del esquema al interno de los proyectos de edición digital en TEI, centrándonos en el lenguaje Relax NG <https://relaxng.org/>, y en la aplicación online Roma, que facilita la personalización de los esquemas que acompañan los documentos XML-TEI.

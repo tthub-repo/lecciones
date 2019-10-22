@@ -4,6 +4,12 @@ author: Susanna Allés Torrent
 date: 2019-01-15
 ---
 
+# {{ page.title }}
+
+{{ page.author }}
+
+{{ page.date }}
+
 # I. ¿Qué es un ODD?
 
 En este último tema, veremos en qué consiste un documento ODD (One Document Does it All) y cuál es su función al interno de un proyecto de codificación TEI.

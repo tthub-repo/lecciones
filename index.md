@@ -1,4 +1,7 @@
-# Homepage de lecciones 
+# Repositorio para las lecciones de TTHUB
+
+En GitHub: <https://github.com/tthub-repo/lecciones>
+En tthub.io disponibles desde: <https://tthub.io/aprende/>
 
 [L1. Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos](https://tthub-repo.github.io/lecciones/L1_Alles_Intro_a_TEI)
 
@@ -13,3 +16,7 @@
 [L6. Esquema y personalización de TEI](https://tthub-repo.github.io/lecciones/L6_Esquemas)
 
 [L7. ¿Qué es y para qué sirve el documento ODD (One Document Does it All)?](https://tthub-repo.github.io/lecciones/L7_ODD)
+
+Cita sugerida: Apellidos, Nombre. "Nombre de la lección", *TTHUB. Text Technologies Hub. Recursos sobre tecnologías del texto y edición digital* (2019), URL_lección [Última consulta 00-00-000]
+
+

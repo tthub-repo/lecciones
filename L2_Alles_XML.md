@@ -4,6 +4,12 @@ author: Susanna Allés Torrent
 date: 2019-01-15
 --- 
 
+# {{ page.title }}
+
+{{ page.author }}
+
+{{ page.date }}
+
 # I. Estándares web y XML 
 
 XML (Extensible Markup Language) es uno de los lenguajes más utilizados en el mundo de la informática, pues es uno de los más simples, flexibles y adecuados para asegurar la interoperabilidad con una gran cantidad de aplicaciones, plataformas y lenguajes informáticos.

@@ -3,6 +3,11 @@ title: Las Guías directrices, su manejo y su traducción al español
 author: Susanna Allés Torrent
 date: 2019-01-15
 --- 
+# {{ page.title }}
+
+{{ page.author }}
+
+{{ page.date }}
 
 # I. Introducción
 

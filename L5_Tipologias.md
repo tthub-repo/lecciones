@@ -3,6 +3,11 @@ title: La codificación de tipologías textuales (Prosa, poesía, drama, fuentes
 author: Susanna Allés Torrent
 date: 2019-01-15
 --- 
+# {{ page.title }}
+
+{{ page.author }}
+
+{{ page.date }}
 
 # Introducción
 

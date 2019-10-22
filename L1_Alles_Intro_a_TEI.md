@@ -3,6 +3,11 @@ title: Introducción a la Text Encoding Initiative. Definición, aplicaciones pr
 author: Susanna Allés Torrent
 date: 2019-01-15
 ---
+# {{ page.title }}
+
+{{ page.author }}
+
+{{ page.date }}
 
 Esta lección es una primera aproximación a la Text Encoding Initiative, un marco de trabajo concebido especialmente para la codificación, la explotación informática, la publicación en línea y la preservación de textos en ciencias sociales y humanidades, utilizado internacionalmente y por una gran comunidad de usuarios. Trataremos conceptos como el marcado de textos, su utilidad y los campos de aplicación.
 
