@@ -1,15 +1,7 @@
 ---
 title: Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos[^1]
 author: Susanna Allés Torrent
-date: Enero 2019
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[CO,CE]{Lección}
-    \fancyfoot[CO,CE]{Citame así: Allés Torrent, Susanna. }
-    \fancyfoot[LE,RO]{\thepage}
-geometry: margin=1in
-fontsize: 11pt
+date: 2019-01-01
 ---
 
 Esta lección es una primera aproximación a la Text Encoding Initiative, un marco de trabajo concebido especialmente para la codificación, la explotación informática, la publicación en línea y la preservación de textos en ciencias sociales y humanidades, utilizado internacionalmente y por una gran comunidad de usuarios. Trataremos conceptos como el marcado de textos, su utilidad y los campos de aplicación.
