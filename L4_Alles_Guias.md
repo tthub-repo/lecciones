@@ -1,15 +1,7 @@
 ---
-title: Las Guías directrices, su manejo y su traducción al español[^1]
+title: Las Guías directrices, su manejo y su traducción al español
 author: Susanna Allés Torrent
-date: Enero 2019
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[CO,CE]{Lección}
-    \fancyfoot[CO,CE]{Allés Torrent... }
-    \fancyfoot[LE,RO]{\thepage}
-geometry: margin=1in
-fontsize: 11pt
+date: 2019-01-15
 --- 
 
 # I. Introducción

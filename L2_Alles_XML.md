@@ -1,15 +1,7 @@
 ---
-title: El lenguaje XML (eXtensible Markup Language) y conceptos generales[^1]
+title: El lenguaje XML (eXtensible Markup Language) y conceptos generales
 author: Susanna Allés Torrent
-date: Enero 2019
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[CO,CE]{Lección}
-    \fancyfoot[CO,CE]{Citame así: Allés Torrent, Susanna. }
-    \fancyfoot[LE,RO]{\thepage}
-geometry: margin=1in
-fontsize: 11pt
+date: 2019-01-15
 --- 
 
 # I. Estándares web y XML 

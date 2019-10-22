@@ -1,15 +1,7 @@
 ---
-title: Tipologías textuales
+title: La codificación de tipologías textuales (Prosa, poesía, drama, fuentes primarias y edición crítica)
 author: Susanna Allés Torrent
-date: Enero 2019
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[CO,CE]{Lección}
-    \fancyfoot[CO,CE]{Allés Torrent... }
-    \fancyfoot[LE,RO]{\thepage}
-geometry: margin=1in
-fontsize: 11pt
+date: 2019-01-15
 --- 
 
 # Introducción

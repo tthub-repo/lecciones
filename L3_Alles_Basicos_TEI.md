@@ -1,17 +1,8 @@
 ---
-title: Estructura básica de un documento XML-TEI[^1]
+title: Estructura básica de un documento XML-TEI y elementos genéricos
 author: Susanna Allés Torrent
-date: Enero 2019
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[CO,CE]{Lección}
-    \fancyfoot[CO,CE]{Allés Torrent... }
-    \fancyfoot[LE,RO]{\thepage}
-geometry: margin=1in
-fontsize: 11pt
+date: 2019-01-15
 --- 
-
 
 {{ page.title }}
 {{ page.author }}

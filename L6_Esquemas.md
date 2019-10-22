@@ -1,15 +1,7 @@
 ---
-title: Esquemas y personalización de TEI[^1]
+title: Esquemas y personalización de TEI
 author: Susanna Allés Torrent
-date: Enero 2019
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[CO,CE]{Lección}
-    \fancyfoot[CO,CE]{Allés Torrent... }
-    \fancyfoot[LE,RO]{\thepage}
-geometry: margin=1in
-fontsize: 11pt
+date: 2019-01-15
 ---
 
 # I. Principios fundamentales del esquema
