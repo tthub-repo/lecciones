@@ -1,15 +1,7 @@
 ---
 title: Qué es y para qué sirve el documento ODD (One Document Does it All)
 author: Susanna Allés Torrent
-date: Enero 2019
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[CO,CE]{Lección}
-    \fancyfoot[CO,CE]{Allés Torrent... }
-    \fancyfoot[LE,RO]{\thepage}
-geometry: margin=1in
-fontsize: 11pt
+date: 2019-01-15
 ---
 
 # I. ¿Qué es un ODD?
