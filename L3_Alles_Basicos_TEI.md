@@ -4,8 +4,10 @@ author: Susanna Allés Torrent
 date: 2019-01-15
 --- 
 
-{{ page.title }}
+# {{ page.title }}
+
 {{ page.author }}
+{{ page.date }}
 
 # I. Introducción
 
