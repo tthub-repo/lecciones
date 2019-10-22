@@ -1,6 +1,6 @@
 # Homepage de lecciones 
 
-[L1. Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos](https://tthub-repo.github.io/lecciones/Alles_L1_Intro_a_TEI)
+[L1. Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos](https://tthub-repo.github.io/lecciones/L1_Alles_Intro_a_TEI)
 
 [L2. El lenguaje XML (eXtensible Markup Language) y conceptos generales](https://tthub-repo.github.io/lecciones/L2_Alles_XML)
 
