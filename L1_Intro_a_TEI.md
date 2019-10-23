@@ -67,7 +67,6 @@ El texto es una idea abstracta que presupone la existencia de una secuencia de s
 
 Centrémonos por un momento en los siguientes ejemplos e intentemos reflexionar sobre dónde está el texto:   
 
-| Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
 | ![Primera Parte del Ingenioso Hidalgo, 1605](https://tthub-repo.github.io/lecciones/img/L1_003.png)      | ![Alfonso de Palencia, *Parallelae*, Sevilla 1491, Biblioteca Nacional de España](https://tthub-repo.github.io/lecciones/img/L1_004.jpg) | ![Hunain Ibn Ishaq, *Libro de los buenos proverbios*, s. IX ](https://tthub-repo.github.io/lecciones/img/L1_005.jpg) |
 | ![Ludovico Ariosto, *Orlando Furioso*, Venezia, 1546](https://tthub-repo.github.io/lecciones/img/L1_006.jpg)      | ![*Dictionnaire Gaffiot latin-français*, Paris: Hachette, 1934](https://tthub-repo.github.io/lecciones/img/L1_007.jpg)     |   ![Lope de Vega, *La Bella Malmaridada*, Madrid, Alonso Martín, 1610](https://tthub-repo.github.io/lecciones/img/L1_008.jpg) |
