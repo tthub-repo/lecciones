@@ -10,7 +10,8 @@ date: 2019-01-15
 {{ page.date }}
 
 # I. Principios fundamentales del esquema
-En esta unidad veremos cómo llevar a cabo la personalización de un documento TEI a través de esquemas. Para ello, presentaremos de manera general la función del esquema al interno de los proyectos de edición digital en TEI, centrándonos en el lenguaje Relax NG <https://relaxng.org/>, y en la aplicación online Roma, que facilita la personalización de los esquemas que acompañan los documentos XML-TEI.
+
+En esta lección veremos cómo llevar a cabo la personalización de un documento TEI a través de esquemas. Para ello, presentaremos de manera general la función del esquema al interno de los proyectos de edición digital en TEI, centrándonos en el lenguaje [Relax NG](https://relaxng.org/), y en la aplicación online Roma, que facilita la personalización de los esquemas que acompañan los documentos XML-TEI.
 
 Para trabajar con un documento XML y aplicar un tipo concreto de marcado debemos tener un modelo de trabajo; una especie de guía que nos indique de qué modo debemos proceder para codificar ese texto, de manera que si interviene más de una persona, todas lleven a cabo un marcado homogéneo.
 
@@ -35,7 +36,7 @@ Si, en cambio, quisiéramos asociar nuestro documento a un esquema que nosotros 
 
 En el programa oXygen, para cambiar el esquema y asociar uno nuevo debemos ir a Document > Schema > Associate Schema; obviamente puede también hacerse de manera manual.
 
-Los esquemas, [como vimos en la Unidad 2](XX), son los responsables de la validación de nuestro documento. Recordad que una cuestión es el estar bien formado, según las normas del lenguaje XML, y la otra ser válido, según las normas de un esquema.
+Los esquemas, como se explica brevemente en [L2. El lenguaje XML (eXtensible Markup Language) y conceptos generales](https://tthub.io/aprende/l2-xml/), son los responsables de la validación de nuestro documento. Recordad que una cuestión es el estar bien formado, según las normas del lenguaje XML, y la otra ser válido, según las normas de un esquema.
 
 En general, los proyectos de edición digital no necesitan los 21 módulos ni todos los 505 elementos de las Guías directrices, de manera que es conveniente restringir y concretar lo más posible el esquema. Por otro lado, hay que tener también en cuenta que eventualmente TEI puede no ofrecer el elemento idóneo para marcar un determinado fenómeno o estructura que sí aparece en vuestro texto; en dicho caso, se podrían crear otros elementos y atributos, pero se recomienda no abusar de este método y utilizarlo con mucho cuidado, pues obtendríamos un esquema no conforme a las Guías directrices.
 
@@ -47,17 +48,17 @@ Un esquema, pues, especifica la estructura y la nomenclatura de nuestro fichero;
 
 Un modelo de codificación en XML se construye a partir de una sintaxis concreta que se establece en lo que llamamos esquemas. Existen diferentes tipos de esquema, [como vimos en la Unidad 2](XXX), entre los cuales encontramos:
 
-* DTD: responde a las siglas “Document Type Definition” y se definió al interno de la norma del lenguaje XML 1.0. Permite definir una lista de los elementos de un documento (nombre y modelo de contenido), los atributos (por nombre, tipo y categoría) y las entidades. En el campo de TEI ya no suele usarse, por considerarse demasiado rígida y ofrecer poca flexibilidad. Un tutorial simple está disponible en W3Schools DTD Tutorial <https://www.w3schools.com/xml/xml_dtd_intro.asp>, y tenéis un ejemplo en la sección de documentos de la unidad 2 curso: [Ejemplo 2: un documento XML asociado a una DTD (ejemplo-2-DTD.dtd) que valida el fichero XML (ejemplo-2.xml)](XX). 
-* W3C esquema: fueron propuestos por el W3C y los primeros en expresarse en XML. Se aprobó en mayo de 2001 y una segunda edición se publicó en octubre 2004, dividida en tres partes: XML Schema Part 0 <https://www.w3.org/TR/xmlschema-0/>; Part 1 <https://www.w3.org/TR/xmlschema-1/>: Structures; Part 2: Datatypes. <https://www.w3.org/TR/xmlschema-2/> Un tutorial simple está disponible en W3Schools XML Scheme Tutorial <https://www.w3schools.com/xml/schema_intro.asp>.
-* Relax NG <https://relaxng.org/>: en 2003 se estableció como norma ISO/IEC 19757-2 <https://www.iso.org/standard/52348.html>, actualizada en 2008 y es el más utilizado por la comunidad TEI.
+* DTD: responde a las siglas “Document Type Definition” y se definió al interno de la norma del lenguaje XML 1.0. Permite definir una lista de los elementos de un documento (nombre y modelo de contenido), los atributos (por nombre, tipo y categoría) y las entidades. En el campo de TEI ya no suele usarse, por considerarse demasiado rígida y ofrecer poca flexibilidad. Un tutorial simple está disponible en [W3Schools DTD Tutorial](https://www.w3schools.com/xml/xml_dtd_intro.asp), y tenéis un ejemplo en el Repositorio de un fichero XML ([L2_ejemplo-2.xml](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml)) que está asociado y validado por una DTD ([L2_ejemplo-2-DTD](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2-DTD.dtd)). 
+* W3C esquema: fueron propuestos por el W3C y los primeros en expresarse en XML. Se aprobó en mayo de 2001 y una segunda edición se publicó en octubre 2004, dividida en tres partes: [XML Schema Part 0](https://www.w3.org/TR/xmlschema-0/); [Part : Structures1](https://www.w3.org/TR/xmlschema-1/); [Part 2: Datatypes](https://www.w3.org/TR/xmlschema-2/). Un tutorial simple está disponible en [W3Schools XML Scheme Tutorial](https://www.w3schools.com/xml/schema_intro.asp).
+* [Relax NG](https://relaxng.org/): en 2003 se estableció como norma [ISO/IEC 19757-2](https://www.iso.org/standard/52348.html), actualizada en 2008 y es el más utilizado por la comunidad TEI.
 
-Aquí encontraréis un artículo de E. Van der Vlist donde se comparan los tres tipos de esquema: E. Van der Vlist, «Comparing XML Schema Languages» (12 Diciembre 2001), XML.com <https://dyomedea.com/papers/2005-xmlprague/schemas-compared.pdf>.
+Aquí encontraréis un artículo de E. Van der Vlist donde se comparan los tres tipos de esquema: E. Van der Vlist, «[Comparing XML Schema Languages](https://dyomedea.com/papers/2005-xmlprague/schemas-compared.pdf)» (12 Diciembre 2001), *XML.com*.
 
 # III. Esquema RelaxNG
 
-Al trabajar con XML-TEI, lo más habitual es el uso de esquemas Relax NG, pues son los que permiten más granularidad y flexibilidad. Relax NG responde a las siglas: REgular LAnguage for XML Next Generation y su especificación fue publicada por el Consortium OASIS el 3 de diciembre de 2001. Poco después, en 2003, se convirtió en norma ISO (ISO/IEC 19757-2:2003) y en 2008 hubo una nueva publicación que remplazaba la segunda: ISO/IEC 19757-2:2008 <https://www.iso.org/standard/52348.html> Document Schema Definition Language (DSDL) – Part 2: Regular grammar-based validation – RELAX NG.
+Al trabajar con XML-TEI, lo más habitual es el uso de esquemas Relax NG, pues son los que permiten más granularidad y flexibilidad. Relax NG responde a las siglas: REgular LAnguage for XML Next Generation y su especificación fue publicada por el Consortium OASIS el 3 de diciembre de 2001. Poco después, en 2003, se convirtió en norma ISO (ISO/IEC 19757-2:2003) y en 2008 hubo una nueva publicación que remplazaba la segunda: [ISO/IEC 19757-2:2008](https://www.iso.org/standard/52348.html) Document Schema Definition Language (DSDL) – Part 2: Regular grammar-based validation – RELAX NG.
 
-Relax NG se expresa en XML y es relativamente sencillo y fácil de aprender. A diferencia de las DTD, por ejemplo, admite espacios de nombre y por tanto la capacidad de trabajar con uno o con varios. Para una lista más detallada de las ventajas, véase aquí <https://www.oasis-open.org/committees/relax-ng/charter.php>.
+Relax NG se expresa en XML y es relativamente sencillo y fácil de aprender. A diferencia de las DTD, por ejemplo, admite espacios de nombre y por tanto la capacidad de trabajar con uno o con varios. Para una lista más detallada de las ventajas, véase [aquí](https://www.oasis-open.org/committees/relax-ng/charter.php).
 
 Este tipo de esquema propone una determinada estructura para cada una de las instancias XML, estableciendo un modelo concreto de contenido tanto de los elementos como de los atributos. Al interno del esquema, todos los elementos deben ser definidos. Para dar una idea general del tipo de gramática utilizada, veamos por ejemplo de qué manera Relax NG indicaría que el elemento raíz de un documento TEI puede ser doble:
 
@@ -117,20 +118,22 @@ Tomemos otro ejemplo, el elemento `<text>` tal y como aparece definido en el esq
 </define>
 ```
 
+El esquema puede encontrarse en nuestro Repositorio de ejemplos: [L6_Ejemplo_simple_comentado.rng](https://github.com/tthub-repo/ejemplos/blob/master/L6_Ejemplo_simple_comentado.rng)
+
 Para llevar a cabo un proyecto de edición digital y de marcado XML-TEI es indispensable tener un esquema creado a nuestra medida. El esquema es el que nos permite establecer qué tipo de elementos necesitamos para marcar determinados fenómenos textuales, para poder localizarlos y procesarlos posteriormente. También supone que podamos establecer los atributos, los valores e incluso el orden de todos ellos.
 
 Normalmente en un proyecto hay múltiples personas trabajando en la codificación, por lo que es muy importante que todos codifiquen de la misma manera y con los mismos procedimientos y elementos.
 
-Para la creación de un esquema el proceso siempre es el mismo. Tal y [como vimos en el Tema 1](XXX), la condición indispensable es que analicemos el texto y que definamos qué elementos aparecen en el mismo, tanto cuestiones estructurales, como semánticas. Una vez hemos elaborado la lista de fenómenos que nos gustaría codificar, deberemos encontrar la manera de expresarlo según las Guías directrices y elaborar nuestro esquema Relax NG propio.
+Para la creación de un esquema el proceso siempre es el mismo. La condición indispensable es que analicemos el texto y que definamos qué elementos aparecen en el mismo, tanto cuestiones estructurales, como semánticas. Una vez hemos elaborado la lista de fenómenos que nos gustaría codificar, deberemos encontrar la manera de expresarlo según las Guías directrices y elaborar nuestro esquema Relax NG propio.
 
 # IV. Aplicación Roma
 
-La sintaxis de los esquemas puede parecer complicada a simple vista, pero el esquema Relax NG realmente es el más sencillo y podríamos crearlo y modificarlo a mano. Aún así, el consorcio TEI pone a nuestra disposición una serie de customizaciones <http://www.tei-c.org/guidelines/customization/> y hasta una plataforma, llamada Roma, para la creación y la manipulación de un esquema a nuestra medida.
+La sintaxis de los esquemas puede parecer complicada a simple vista, pero el esquema Relax NG realmente es el más sencillo y podríamos crearlo y modificarlo a mano. Aún así, el consorcio TEI pone a nuestra disposición una serie de [customizaciones](http://www.tei-c.org/guidelines/customization/) y hasta una plataforma, llamada Roma, para la creación y la manipulación de un esquema a nuestra medida.
 
-En este apartado vamos a ver cómo funciona Roma y cómo construir un esquema a nuestra medida.
-Hay dos opciones a la hora de construir un esquema:
-* Elegir un esquema ya creado por la comunidad TEI, como puede ser la ya mencionada versión mínima, llamada TEI Lite o, más recientemente, TEI Simple, o la que incluye todos los elementos TEI All. En este enlace encontraréis los diferentes modelos. El programa oXygen también contiene estos esquemas.
-* Crear un nuevo modelo a partir de la aplicación Roma. Aquí encontraréis las indicaciones ofrecidas por el Consorcio TEI.
+En este apartado vamos a ver cómo funciona Roma y cómo construir un esquema a nuestra medida. Hay dos opciones a la hora de construir un esquema:
+
+* Elegir un esquema ya creado por la comunidad TEI, como puede ser la ya mencionada versión mínima, llamada [TEI Lite](http://www.tei-c.org/Guidelines/Customization/Lite/) o, más recientemente, [TEI Simple](https://github.com/TEIC/TEI-Simple), o la que incluye todos los elementos TEI All. En este [enlace](https://tei-c.org/Guidelines/Customization/) encontraréis los diferentes modelos. El programa oXygen también contiene estos esquemas.
+* Crear un nuevo modelo a partir de la [aplicación Roma](https://roma2.tei-c.org/). 
 
 Esta es la interfaz de inicio de la plataforma ROMA:
 
@@ -168,10 +171,10 @@ Fijaros que lo único que ha cambiado es el nombre de nuestro esquema que en lug
 
 Veamos ahora las otras opciones:
 
-1.	Nuevo: retrocede a la pantalla de inicio.
-2.	Personalizar: corresponde a la pantalla donde hemos creado el título y los otros metadatos del esquema.
-3.	Lengua: En este apartado tenemos la posibilidad de elegir entre diferentes lenguas, esto nos proporcionará una documentación de los elementos en la lengua escogida (siempre que exista una traducción). En nuestro caso, podemos escoger “Español”, aunque debemos tener en cuenta que la más actualizada y completa es la versión en inglés (Ya habéis visto en las Guías directrices como no todos los elementos y secciones están traducidas al español).
-4.	Módulos: esta es una de las pantallas más importantes, pues es aquí donde elegiremos qué módulos vamos a incluir en nuestro esquema:
+* **1. Nuevo**: retrocede a la pantalla de inicio.
+* **2. Personalizar**: corresponde a la pantalla donde hemos creado el título y los otros metadatos del esquema.
+* **3. Lengua**: En este apartado tenemos la posibilidad de elegir entre diferentes lenguas, esto nos proporcionará una documentación de los elementos en la lengua escogida (siempre que exista una traducción). En nuestro caso, podemos escoger “Español”, aunque debemos tener en cuenta que la más actualizada y completa es la versión en inglés (Ya habéis visto en las Guías directrices como no todos los elementos y secciones están traducidas al español).
+* **4. Módulos**: esta es una de las pantallas más importantes, pues es aquí donde elegiremos qué módulos vamos a incluir en nuestro esquema:
  
 ![Aplicación Roma, lista de los módulos](https://tthub-repo.github.io/lecciones/img/L9_004.png)
 
@@ -193,9 +196,9 @@ Una vez añadidos los diferentes módulos que nos interesan veremos en la column
 
 ![Aplicación Roma, modulos seleccionados para el esquema](https://tthub-repo.github.io/lecciones/img/L9_007.png)
 
-5.	Añadir elemento: A continuación, podríamos pasar a la pestaña “Añadir elemento”, en el caso que quisiéramos crear un nuevo elemento que no nos proporciona TEI; para ello, tendríamos que adjudicarle una clase de modelo y una clase de atributos. Esta práctica debe evitarse en línea de máxima a no ser que sea estrictamente necesario.
-6.	Cambiar clase: Lo mismo sucede con esta pestaña; podría darse el caso que un determinado elemento no tuviera los atributos que necesitamos, en tal caso, podríamos modificarlos y añadir de nuevos en esta sección.
-7.	Esquema: esta sección permite escoger el tipo de esquema que queremos: DTD, W3C, RelaxNG, etc.
+* **5. Añadir elemento**: A continuación, podríamos pasar a la pestaña “Añadir elemento”, en el caso que quisiéramos crear un nuevo elemento que no nos proporciona TEI; para ello, tendríamos que adjudicarle una clase de modelo y una clase de atributos. Esta práctica debe evitarse en línea de máxima a no ser que sea estrictamente necesario.
+* **6. Cambiar clase**: Lo mismo sucede con esta pestaña; podría darse el caso que un determinado elemento no tuviera los atributos que necesitamos, en tal caso, podríamos modificarlos y añadir de nuevos en esta sección.
+* **7. Esquema**: esta sección permite escoger el tipo de esquema que queremos: DTD, W3C, RelaxNG, etc.
 
 Este es uno de los momentos cruciales, pues aquí es donde podremos obtener un esquema en el formato que deseemos. Las opciones que se nos ofrecen son las siguientes:
 
@@ -210,7 +213,7 @@ Escogeremos la opción Relax NG schema (XML syntax) (no “compact syntax”) y 
  
 ![Aplicación Roma, cambio de idioma](https://tthub-repo.github.io/lecciones/img/L9_008.png)
 
-8.	Documentación: Permite escoger que tipo de formato se prefiere para la documentación del esquema. Tenemos la posibilidad de bajarnos en un único documento la descripción de cada uno de los elementos y atributos elegidos en nuestro esquema según las Guías directrices. Los formatos pueden ser:
+* **8. Documentación**: Permite escoger que tipo de formato se prefiere para la documentación del esquema. Tenemos la posibilidad de bajarnos en un único documento la descripción de cada uno de los elementos y atributos elegidos en nuestro esquema según las Guías directrices. Los formatos pueden ser:
 
 * HTML web page
 * PDF
@@ -221,13 +224,13 @@ La opción más útil es la HTML, pues nos generará un simple documento HTML do
 
 ![Aplicación Roma, descarga de la documentación en html](https://tthub-repo.github.io/lecciones/img/L9_003.png)
 
-9.	Guardar configuración personal: Esta pantalla también es de vital importancia porqué es la que genera el fichero ODD que veremos en el siguiente y último tema. En pocas palabras, se trata de un fichero XML que recoge todas las características del esquema personalizado y permite rehacerlo cuantas veces lo deseemos, conservando las modificaciones hechas. Si no se conserva este documento, no se podrá recuperar la personalización que hemos creado. 
-10.	Sanity Checker: Permite comprobar las decisiones hechas para tu personalización. Normalmente, si no has incluido nuevos elementos o eliminado partes esenciales, suele dar positivo.
+* **8. Guardar configuración personal**: Esta pantalla también es de vital importancia porqué es la que genera el fichero ODD que veremos en el siguiente y último tema. En pocas palabras, se trata de un fichero XML que recoge todas las características del esquema personalizado y permite rehacerlo cuantas veces lo deseemos, conservando las modificaciones hechas. Si no se conserva este documento, no se podrá recuperar la personalización que hemos creado. 
+* **10. Sanity Checker**: Permite comprobar las decisiones hechas para tu personalización. Normalmente, si no has incluido nuevos elementos o eliminado partes esenciales, suele dar positivo.
 
 
 # V. Recursos
 
-Aquí podréis ver el esquema Relax NG Lite que proponen la Guías directrices: <http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng>. Lo podéis abrir con el programa oXygen e intentar entender la estructura (File > Open URL > Pegad la URL en “File URL” y pulsar “OK”).
+Aquí podréis ver el [esquema Relax NG Lite](http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng) que proponen la Guías directrices. Lo podéis abrir con el programa oXygen e intentar entender la estructura (File > Open URL > Pegad la URL en “File URL” y pulsar “OK”).
 
 ## Lecturas y tutoriales: 
 
@@ -235,4 +238,4 @@ Eric van der Vlist, *Relax NG*, O’Reilly & Associates, 2003. Acceso al libro e
 
 OASIS Consortium, *Relax NG Tutorial* (Committee Specification 3 December 2001), <https://relaxng.org/tutorial-20011203.html>.
 
-E. Van der Vlist, «Relax NG, Compared» (23 Enero 2002), XML.com <http://eric.van-der-vlist.com/blog/2006/07/06/2814_relax_ng_and_w3c_xml_schema_compared_continued/>
+E. Van der Vlist, «[Relax NG, Compared](http://eric.van-der-vlist.com/blog/2006/07/06/2814_relax_ng_and_w3c_xml_schema_compared_continued/)» (23 Enero 2002), XML.com
