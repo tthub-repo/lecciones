@@ -21,7 +21,7 @@ Recapitulando algunas nociones básicas, recordaremos que XML-TEI es:
 * el objetivo final es el de organizar y estructurar los textos electrónicamente de manera que puedan ser procesados y explotados por las máquinas.
 * el tipo de marcado utilizado puede ser personalizado según las necesidades de cada texto o cada proyecto.
 
-En la [lección anterior]() explicamos los mecanismos que rigen el lenguaje XML, ahora, pues, se trata de empezar a trabajar con las etiquetas que son propias del sistema TEI.
+En la [lección anterior](https://tthub.io/aprende/l2_alles_xml/) explicamos los mecanismos que rigen el lenguaje XML, ahora, pues, se trata de empezar a trabajar con las etiquetas que son propias del sistema TEI.
 
 Un documento TEI es un documento XML de manera que sigue la misma sintaxis que cualquier otro documento XML. En esta imagen se reproduce la estructura mínima de un documento XML-TEI, que básicamente se compone de:
 
@@ -29,12 +29,12 @@ Un documento TEI es un documento XML de manera que sigue la misma sintaxis que c
 * el encabezado
 * el cuerpo del texto
 
-![Estructura básica de un documento XML-TEI](https://tthub-repo.github.io/lecciones/https://tthub-repo.github.io/lecciones/img/L3_001.jpg)
+![Estructura básica de un documento XML-TEI](https://tthub-repo.github.io/lecciones/img/L3_001.jpg)
 
 En el prólogo del documento XML-TEI encontramos elementos que ya hemos visto anteriormente:
 
 * La declaración XML nos indica que se trata de un documento XML y que el tipo de codificación utilizado es el UTF-8.
-* La asociación del modelo de esquema: en este caso se trata de un esquema RelaxNG (.rng). Es la misma asociación que establecían las DTD a través del DOCTYPE (como vimos en el [Ejemplo 2]()). Gracias a esta indicación sabemos que este documento XML-TEI depende de un esquema concreto, el TEI-Lite, que es un modelo minimalista de TEI donde se contemplan los elementos obligatorios y algunos de los más utilizados.
+* La asociación del modelo de esquema: en este caso se trata de un esquema RelaxNG (.rng). Es la misma asociación que establecían las DTD a través del DOCTYPE (como vimos en el [Ejemplo 2](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml)). Gracias a esta indicación sabemos que este documento XML-TEI depende de un esquema concreto, el [TEI-Lite](http://www.tei-c.org/Guidelines/Customization/Lite/), que es un modelo minimalista de TEI donde se contemplan los elementos obligatorios y algunos de los más utilizados.
 
 Acabado el prólogo, aparece el elemento raíz `<TEI>` que engloba la totalidad del documento. Aquí irán todos los otros elementos XML-TEI: el encabezado y el texto, con la siguiente estructura:
 
@@ -70,8 +70,9 @@ Por ahora veamos cuáles son las partes obligatorias que aparecen por defecto al
         <p>Información sobre el texto original</p>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>
-```
+  </teiHeader>```
+
+En nuestro repositorio de ejemplos en GitHub, también encontraréis un ejemplo ([L3_documentoXML-TEI.xml](https://github.com/tthub-repo/ejemplos/blob/master/L3_documentoXML-TEI.xml)). 
 
 El `<teiHeader>` tiene un solo elemento obligatorio, llamado `<fileDesc>`. Este elemento es el responsable de contener tanto la información sobre el fichero XML-TEI con el que estamos trabajando, como los detalles de la fuente primaria:
 
@@ -79,7 +80,7 @@ El `<teiHeader>` tiene un solo elemento obligatorio, llamado `<fileDesc>`. Este 
 * `<publicationStmt>` recoge la información sobre la publicación digital; la información debe ir organizada en párrafos: `<p>`
 * `<sourceDesc>` contiene la información de la fuente original.
 
-Pongamos un ejemplo de la Biblioteca Virtual Miguel de Cervantes; imaginemos que estamos haciendo la edición digital de una edición antigua de la La Regenta (tal y como aparece en este caso <http://www.cervantesvirtual.com/obra/la-regenta--1/>). El encabezado podría marcarse de esta manera:
+Pongamos un ejemplo de la Biblioteca Virtual Miguel de Cervantes; imaginemos que estamos haciendo la edición digital de una edición antigua de la La Regenta (tal y como aparece en [este caso](http://www.cervantesvirtual.com/obra/la-regenta--1/). El encabezado podría marcarse de esta manera:
 
 ```xml
 	<teiheader>
@@ -94,9 +95,10 @@ Pongamos un ejemplo de la Biblioteca Virtual Miguel de Cervantes; imaginemos que
             </publicationstmt>
             <sourcedesc>La Regenta, por Leopoldo Alas (Clarín). Prólogo de Benito Pérez Galdós, Madrid, Librería de Fernando Fé 1900</sourcedesc>
         </filedesc>
-    </teiheader>
-```
-                                                  
+    </teiheader>```
+
+Podéis encontrar este documento, en nuestro Repositorio de Ejemplos en Github ([L3_Ejemplo_novela.xml](https://github.com/tthub-repo/ejemplos/blob/master/L3_Ejemplo_novela.xml)). 
+                                               
 En el `<titleStmt>` hemos incluido el nombre del archivo que, en este caso, puede ser igual al de la obra original. Nada impediría que decidiéramos titularlo de una manera diferente, por ejemplo, “Edición digital de la Regenta (1900)”. En el elemento de `<publicationStmt>` aparece la información relativa a la publicación digital, en este caso el lugar (Alicante), el editor (Biblioteca Virtual Miguel de Cervantes) y el año de la publicación (2000).
 
 Por otro lado, en el elemento `<sourceDesc>` debe aparecer la información de la obra original. Aquí se señala la información de la edición original de 1900. Podríamos, además, enriquecer las informaciones con la localización de la obra original, la división en tomos o cualquier otro dato que consideráramos pertinentes.
@@ -157,6 +159,15 @@ El texto o la masa textual se incluye siempre al interior de elementos más conc
 
 # V. Elementos genéricos de todo documento TEI
 
+Pasamos ahora a aquellos elementos generales y presentes en todos los documentos TEI-XML, como pueden ser párrafos, cuestiones de puntuación o de tipografía, nombres, fechas, abreviaturas, listas, notas a pie de página o de otra naturaleza, indexación, entre otros aspectos.
+
+En primer lugar, conviene recordar que el sistema de codificación TEI se divide en módulos, cada uno destinado a una tipología textual: verso, drama, transcripciones de discurso, diccionarios, etc. Cada uno de estos módulos es descrito en las Guidelines.
+
+Los módulos pueden ser obligatorios o optativos. Así, los módulos obligatorios son cuatro: “tei”, “core”, “header” “textstructure”; sin estos no tendríamos un documento válido. Los módulos optativos responden a tipologías textuales concretas.
+
+En la unidad 3 vimos aquellos elementos que constituían la estructura obligatoria y básica de un documento TEI. Vamos, aquí, a centrarnos en el módulo llamado «core», que contiene una serie de elementos o etiquetas que pueden utilizarse en cualquier documento, incluso en la versión más minimalista TEI Lite. La panorámica que ofreceremos no es completa, pero corresponde a los más utilizados. Encontraréis la parte correspondiente a este tema de las Guidelines en la página web del consorcio.
+
+Vamos a dividir los elementos en: Párrafos y cuestiones de puntuación, Elementos tipográficos, citas, Nombres, números, fechas, y Listas, notas, anotaciones, indexación, referencias, y un último apartado con Otros elementos frecuentemente utilizados.
 
 ## Párrafos y puntuación
 

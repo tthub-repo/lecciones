@@ -99,7 +99,7 @@ Veamos enseguida qué aspecto tiene un fichero XML e intentemos comprender la no
     </libro>
 </lista>```
 
-[Ejemplo 1: un documento xml (GitHub)](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-1.xml).
+[Ejemplo 1: un documento xml (GitHub)](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-1.xml).
 
 Este documento es en realidad simple texto, podría crearse, editarse y guardarse en un fichero de texto y con uno de los múltiples editores de texto existentes, tales como [Atom](https://atom.io/packages/xml-tools), [Komodo](https://www.activestate.com/products/komodo-edit/), [BBEdit](http://www.barebones.com/products/bbedit/), [jEdit](http://www.jedit.org/), [Emacs](http://www.gnu.org/software/emacs/), entre muchos otros. Entre la comunidad TEI, el editor más utilizado es [oXygen]( https://www.oxygenxml.com/) porque, aunque es de pago, ofrece funcionalidades específicas para el marcado TEI. 
 
@@ -128,7 +128,7 @@ Ejemplo:
 
 # III. Estructura de un documento
 
-Pasemos ahora a ver con más detalle cada una de las partes de un documento XML. Os aconsejo que para esta sección abráis el documento [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2.xml), un pequeño fichero XML comentado. Lo podéis copiar, abrir con oXygen u cualquier programa de edición XML, y anotar libremente con vuestros comentarios.
+Pasemos ahora a ver con más detalle cada una de las partes de un documento XML. Os aconsejo que para esta sección abráis el documento [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml), un pequeño fichero XML comentado. Lo podéis copiar, abrir con oXygen u cualquier programa de edición XML, y anotar libremente con vuestros comentarios.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -169,7 +169,7 @@ cuestión se llama "ejemplo_DTD.dtd" que se halla en la misma carpeta. -->
     </contenido>
 </curso>
 ```
-[Ejemplo 2: un documento XML asociado a una DTD (GitHub)](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2.xml)
+[Ejemplo 2: un documento XML asociado a una DTD (GitHub)](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml)
 
 ## Declaración XML
 
@@ -282,7 +282,7 @@ Los dos objetivos principales del espacio de nombre son:
 
 ## El elemento raíz 
 
-Todo documento XML tiene un solo elemento raíz (en inglés, “root”), el único que no depende de ningún otro elemento y que contiene todos los otros. En [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2.xml), el esquema sería el siguiente: 
+Todo documento XML tiene un solo elemento raíz (en inglés, “root”), el único que no depende de ningún otro elemento y que contiene todos los otros. En [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml), el esquema sería el siguiente: 
 
 ![Ejemplo de esquema en árbol](https://tthub-repo.github.io/lecciones/img/L2_001.jpg)
  
@@ -327,7 +327,7 @@ Por otro lado, las [entidades de referencia](https://es.wikipedia.org/wiki/Anexo
 
 # IV. Esquemas
 
-Los esquemas constituyen, en general, un fichero diferente, de esta manera podemos referirnos a él desde múltiples documentos XML. Su función principal es la de establecer y definir los requisitos que debe respetar el documento XML, donde la referencia al esquema aparece en el prólogo del documento XML (después de la declaración XML y antes del elemento raíz), tal y como vemos en el [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2.xml):
+Los esquemas constituyen, en general, un fichero diferente, de esta manera podemos referirnos a él desde múltiples documentos XML. Su función principal es la de establecer y definir los requisitos que debe respetar el documento XML, donde la referencia al esquema aparece en el prólogo del documento XML (después de la declaración XML y antes del elemento raíz), tal y como vemos en el [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -383,7 +383,7 @@ Nosotros utilizaremos el programa oXygen que posee ya un parser que permite la c
 
 Por otro lado, el documento debe ser también “válido”. Para ello, necesita un modelo que fije la estructura básica y las posibilidades de anidación del documento. Las DTD o esquemas (RelaxNG, W3CSchema) establecen la sintaxis que debe tener el documento XML. Si este está formado según sus reglas, será válido. A diferencia de cuando está bien formado, los navegadores web no validan los documentos XML, solo comprueban que esté bien formado.
 
-Volviendo a nuestro ejemplo ([Ejemplo 2](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2.xml)) y al programa oXygen, podemos comprobar que nuestro fichero sea válido. En este caso, el fichero depende de una DTD, llamada [Ejemplo 2: una DTD](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2-DTD.dtd). Vamos al Menú superior > Document > Validate > Validate. El mensaje que nos aparecerá en la parte inferior de programa será “Document is valid”.
+Volviendo a nuestro ejemplo ([Ejemplo 2](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml)) y al programa oXygen, podemos comprobar que nuestro fichero sea válido. En este caso, el fichero depende de una DTD, llamada [Ejemplo 2: una DTD](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2-DTD.dtd). Vamos al Menú superior > Document > Validate > Validate. El mensaje que nos aparecerá en la parte inferior de programa será “Document is valid”.
 
 Mientras que un documento XML debe estar siempre bien formado, el hecho de ser válido no es obligatorio, pero altamente recomendable pues establece qué tipo de marcado se ha utilizado. En el campo de TEI, veremos como siempre usamos un esquema con el que comparamos nuestro documento.
 
