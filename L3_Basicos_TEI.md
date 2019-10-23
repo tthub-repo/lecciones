@@ -29,7 +29,7 @@ Un documento TEI es un documento XML de manera que sigue la misma sintaxis que c
 * el encabezado
 * el cuerpo del texto
 
-![Estructura básica de un documento XML-TEI](img/L3_001.jpg)
+![Estructura básica de un documento XML-TEI](https://tthub-repo.github.io/lecciones/https://tthub-repo.github.io/lecciones/img/L3_001.jpg)
 
 En el prólogo del documento XML-TEI encontramos elementos que ya hemos visto anteriormente:
 

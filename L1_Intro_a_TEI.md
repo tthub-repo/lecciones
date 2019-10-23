@@ -15,9 +15,9 @@ Esta lección es una primera aproximación a la Text Encoding Initiative, un mar
 
 En el ámbito de las humanidades y las ciencias sociales, el texto representa, en la mayoría de los casos, el punto de partida de muchas investigaciones. La introducción de métodos y herramientas propios de la ciencia informática llevaron hace ya más de veinte años a replantearse la importancia del texto y su procesamiento informático. La gran cantidad de textos a nuestra disposición conlleva la adopción de nuevas estrategias para la creación, la explotación y su conservación.  
 
-![Carta de Federico García Lorca a José María Chacón](img/L1_001.jpg)
+![Carta de Federico García Lorca a José María Chacón](https://tthub-repo.github.io/lecciones/img/L1_001.jpg)
 
-La iniciativa de marcado de textos nace pues de la necesidad de procesar los textos desde un punto de vista informático, para que, en definitiva, no sea susceptible solo de una lectura "plana", sino para que sea procesable a través de múltiples herramientas como pueden ser programas de concordancias, análisis estilométricos, gráficos de frecuencias, segmentación gramatical o, sobretodo, su publicación web y la posibilidad de realizar búsquedas inteligentes. ![Logo de la Text Encoding Initiative](img/L1_002.jpg)
+La iniciativa de marcado de textos nace pues de la necesidad de procesar los textos desde un punto de vista informático, para que, en definitiva, no sea susceptible solo de una lectura "plana", sino para que sea procesable a través de múltiples herramientas como pueden ser programas de concordancias, análisis estilométricos, gráficos de frecuencias, segmentación gramatical o, sobretodo, su publicación web y la posibilidad de realizar búsquedas inteligentes. ![Logo de la Text Encoding Initiative](https://tthub-repo.github.io/lecciones/img/L1_002.jpg)
 
 La Text Encoding Initiative <http://www.tei-c.org/> fue la primera iniciativa científica destinada a la codificación informática de textos, actualmente es una de las más utilizadas y uno de los temas centrales en la disciplina de las humanidades digitales.  
 
@@ -64,12 +64,12 @@ El texto es una idea abstracta que presupone la existencia de una secuencia de s
 
 Centrémonos por un momento en los siguientes ejemplos e intentemos reflexionar sobre dónde está el texto:    
 
-![Primera Parte del Ingenioso Hidalgo, 1605](img/L1_003.png)
-![Alfonso de Palencia, *Parallelae*, Sevilla 1491, Biblioteca Nacional de España](img/L1_004.jpg)
-![Hunain Ibn Ishaq, *Libro de los buenos proverbios*, s. IX ](img/L1_005.jpg)
-![Ludovico Ariosto, *Orlando Furioso*, Venezia, 1546](img/L1_006.jpg)
-![*Dictionnaire Gaffiot latin-français*, Paris: Hachette, 1934](img/L1_007.jpg)
-![Lope de Vega, *La Bella Malmaridada*, Madrid, Alonso Martín, 1610](img/L1_008.jpg)
+![Primera Parte del Ingenioso Hidalgo, 1605](https://tthub-repo.github.io/lecciones/img/L1_003.png)
+![Alfonso de Palencia, *Parallelae*, Sevilla 1491, Biblioteca Nacional de España](https://tthub-repo.github.io/lecciones/img/L1_004.jpg)
+![Hunain Ibn Ishaq, *Libro de los buenos proverbios*, s. IX ](https://tthub-repo.github.io/lecciones/img/L1_005.jpg)
+![Ludovico Ariosto, *Orlando Furioso*, Venezia, 1546](https://tthub-repo.github.io/lecciones/img/L1_006.jpg)
+![*Dictionnaire Gaffiot latin-français*, Paris: Hachette, 1934](https://tthub-repo.github.io/lecciones/img/L1_007.jpg)
+![Lope de Vega, *La Bella Malmaridada*, Madrid, Alonso Martín, 1610](https://tthub-repo.github.io/lecciones/img/L1_008.jpg)
 
 Cada una de estas tipologías contiene aspectos diferentes y todos en realidad tienen un texto. El diccionario contiene voces y significados; la obra teatral tiene escenas y personajes; una postal, además del mensaje, contiene información sobre quien y para quien se escribió; el manuscrito antiguo puede contener diversas obras, la edición del siglo XVI contiene un rico frontispicio con informaciones sobre la impresión, etc. Además hay otros aspectos que en realidad también forman parte del texto aunque sea desde un punto de vista físico: la estructura textual (parágrafos, listas, tablas...), en el caso del manuscrito vemos letras dañadas, caracteres especiales, líneas del folio, abreviaciones, anotaciones manuscritas, correcciones de autor, errores, y un sinfín de casuística.  
 
@@ -142,7 +142,7 @@ Además de los talleres y seminarios que pueden tener lugar a lo largo del año,
 
 En este esquema se refleja el engranaje de la comunidad TEI:  
 
-![TEI organizational structure, 2012 (Burnard 2013)](img/L1_009.png) 
+![TEI organizational structure, 2012 (Burnard 2013)](https://tthub-repo.github.io/lecciones/img/L1_009.png) 
 
 # VIII. Aplicaciones prácticas y tipos de proyectos
 

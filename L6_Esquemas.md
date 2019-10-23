@@ -134,7 +134,7 @@ Hay dos opciones a la hora de construir un esquema:
 
 Esta es la interfaz de inicio de la plataforma ROMA:
 
-![Aplicación Roma, pantalla de inicio](img/L9_001.png)
+![Aplicación Roma, pantalla de inicio](https://tthub-repo.github.io/lecciones/img/L9_001.png)
 
  Las opciones disponibles son las siguientes:
  
@@ -146,7 +146,7 @@ Esta es la interfaz de inicio de la plataforma ROMA:
 
 Elegiremos la primera opción Build up, es decir, crearemos un esquema a partir de una versión mínima que sólo contiene los módulos obligatorios. La siguiente pantalla corresponde a los metadatos:
 
-![Aplicación Roma, personalización](img/L9_002.png)
+![Aplicación Roma, personalización](https://tthub-repo.github.io/lecciones/img/L9_002.png)
  
 En este caso las opciones que se nos ofrecen son las siguientes:
 
@@ -160,7 +160,7 @@ En este caso las opciones que se nos ofrecen son las siguientes:
 
 Cambiemos las informaciones por defecto por las nuestras y seleccionemos como lengua de la interfaz el “Español”:
  
-![Aplicación Roma, cambio de idioma](img/L9_003.png)
+![Aplicación Roma, cambio de idioma](https://tthub-repo.github.io/lecciones/img/L9_003.png)
 
 Y guardamos el esquema, clicando el botón rojo “Save”.
 
@@ -173,25 +173,25 @@ Veamos ahora las otras opciones:
 3.	Lengua: En este apartado tenemos la posibilidad de elegir entre diferentes lenguas, esto nos proporcionará una documentación de los elementos en la lengua escogida (siempre que exista una traducción). En nuestro caso, podemos escoger “Español”, aunque debemos tener en cuenta que la más actualizada y completa es la versión en inglés (Ya habéis visto en las Guías directrices como no todos los elementos y secciones están traducidas al español).
 4.	Módulos: esta es una de las pantallas más importantes, pues es aquí donde elegiremos qué módulos vamos a incluir en nuestro esquema:
  
-![Aplicación Roma, lista de los módulos](img/L9_004.png)
+![Aplicación Roma, lista de los módulos](https://tthub-repo.github.io/lecciones/img/L9_004.png)
 
 Como veis, la columna de la izquierda contiene todos y cada uno de los módulos TEI, mientras que el de la derecha recoge sólo los obligatorios: core, tei, header, textstructure. A partir de aquí, debemos saber a qué módulos pertenecen los fenómenos textuales que queremos codificar. Por lo general, si trabajamos con textos teatrales, tendremos que incluir el módulo drama, si trabajamos con poesía el módulo verse, si trabajamos con diccionarios el módulo dictionaries, etc.
 
 Podemos acceder a cada uno de los módulos y ver todos los elementos que contiene. Por ejemplo, si accedemos al módulo textcrit, observamos la lista completa:
 
-![Aplicación Roma, lista de elementos del módulo textcrit](img/L9_005.png)
+![Aplicación Roma, lista de elementos del módulo textcrit](https://tthub-repo.github.io/lecciones/img/L9_005.png)
  
 Una vez al interno de los módulos podemos “Excluir” aquellos elementos que no necesitemos para nuestra codificación. En lo que concierne al “Nombre” conviene dejarlo tal y como está para no provocar confusiones con el sistema estándar TEI de nombres de elementos, es decir, si cambiamos, por ejemplo, `<app>` por `<aparato>`, la etiqueta en nuestro documento XML-TEI aparecería como `<aparato>` y no como `<app>`. Además, tenemos la posibilidad de modificar los atributos, manteniendo los que nos interesan y suprimiendo los que no necesitamos.
 
 Al interior de cada uno de los elementos, tenemos la posibilidad de detallar ulteriormente la “Descripción” de ese elemento. Dicha descripción es la que aparecerá en el apartado correspondiente de la documentación. Por ejemplo, retomemos el elemento `<app>` e imaginemos que queremos encuadrarlo en nuestro proyecto, de manera que sea útil a las personas que elaborarán la codificación, o incluso, para nosotros mismos.
 
-![Aplicación Roma, descripción personalizada de un elemento](img/L9_006.png)
+![Aplicación Roma, descripción personalizada de un elemento](https://tthub-repo.github.io/lecciones/img/L9_006.png)
  
 Supongamos que queremos hacer la edición crítica de una obra lírica del siglo de Oro. Para ello, en primer lugar, deberemos seleccionar los módulos que nos interesen, en este caso, textcrit y verse. Pero también podemos prever que codificaremos los nombres de los personajes y los diferentes lugares que aparecen en el texto, en ese caso incluimos: namesdates.
 
 Una vez añadidos los diferentes módulos que nos interesan veremos en la columna de la derecha los módulos seleccionados:
 
-![Aplicación Roma, modulos seleccionados para el esquema](img/L9_007.png)
+![Aplicación Roma, modulos seleccionados para el esquema](https://tthub-repo.github.io/lecciones/img/L9_007.png)
 
 5.	Añadir elemento: A continuación, podríamos pasar a la pestaña “Añadir elemento”, en el caso que quisiéramos crear un nuevo elemento que no nos proporciona TEI; para ello, tendríamos que adjudicarle una clase de modelo y una clase de atributos. Esta práctica debe evitarse en línea de máxima a no ser que sea estrictamente necesario.
 6.	Cambiar clase: Lo mismo sucede con esta pestaña; podría darse el caso que un determinado elemento no tuviera los atributos que necesitamos, en tal caso, podríamos modificarlos y añadir de nuevos en esta sección.
@@ -208,7 +208,7 @@ Este es uno de los momentos cruciales, pues aquí es donde podremos obtener un e
 
 Escogeremos la opción Relax NG schema (XML syntax) (no “compact syntax”) y pulsaremos “Generate”; acto seguido se nos descargará el esquema que hemos elaborado:
  
-![Aplicación Roma, cambio de idioma](img/L9_008.png)
+![Aplicación Roma, cambio de idioma](https://tthub-repo.github.io/lecciones/img/L9_008.png)
 
 8.	Documentación: Permite escoger que tipo de formato se prefiere para la documentación del esquema. Tenemos la posibilidad de bajarnos en un único documento la descripción de cada uno de los elementos y atributos elegidos en nuestro esquema según las Guías directrices. Los formatos pueden ser:
 
@@ -219,7 +219,7 @@ Escogeremos la opción Relax NG schema (XML syntax) (no “compact syntax”) y 
 
 La opción más útil es la HTML, pues nos generará un simple documento HTML donde tendremos todos los elementos y atributos incluidos en nuestro esquema para poder consultarlos fácilmente en forma de página web:
 
-![Aplicación Roma, descarga de la documentación en html](img/L9_003.png)
+![Aplicación Roma, descarga de la documentación en html](https://tthub-repo.github.io/lecciones/img/L9_003.png)
 
 9.	Guardar configuración personal: Esta pantalla también es de vital importancia porqué es la que genera el fichero ODD que veremos en el siguiente y último tema. En pocas palabras, se trata de un fichero XML que recoge todas las características del esquema personalizado y permite rehacerlo cuantas veces lo deseemos, conservando las modificaciones hechas. Si no se conserva este documento, no se podrá recuperar la personalización que hemos creado. 
 10.	Sanity Checker: Permite comprobar las decisiones hechas para tu personalización. Normalmente, si no has incluido nuevos elementos o eliminado partes esenciales, suele dar positivo.

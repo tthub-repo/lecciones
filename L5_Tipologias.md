@@ -20,7 +20,7 @@ Las Guías directrices de TEI no tienen un módulo específico para la codificac
 
 Al afrontar la codificación de un texto, debemos, en primer lugar, llevar a cabo un análisis del documento, tal y como hicimos en el [Tema 1](XX), aislando las unidades estructurales de las que se compone. Partamos de un ejemplo concreto y veamos de qué manera podría ser codificado:
 
-![Análisis estructural de un texto](img/L6_001.png){width="5.250168416447944in"
+![Análisis estructural de un texto](https://tthub-repo.github.io/lecciones/img/L6_001.png){width="5.250168416447944in"
 height="7.090586176727909in"}
 
 En esta página tenemos diferentes elementos que deberemos marcar, como
@@ -407,7 +407,7 @@ Muy frecuentemente nos encontramos con documentos en los que ha habido algún ti
 
 Para las adiciones usaremos el elemento `<add>`, que pertenece al módulo core. Habitualmente se suele señalar con el atributo `@place` el lugar donde se ha producido dicha adición; por defecto, tenemos como valores: above, below, bottom, end, inline, margin, opposite, overleaf, top. Tomemos este ejemplo y veamos cómo lo podríamos codificar:
 
-![Ejemplo de una adición](img/L8_001.png){width="6.6194444444444445in"
+![Ejemplo de una adición](https://tthub-repo.github.io/lecciones/img/L8_001.png){width="6.6194444444444445in"
 height="1.16875in"}
 
 Si quisiéramos sólo señalar que aparece una adición en el margen lo podríamos señalar de la siguiente manera:
@@ -453,7 +453,7 @@ Las abreviaturas pueden codificarse de maneras diferentes, la más
 sencilla de las cuales es simplemente marcar la abreviatura dentro del
 elemento [`<abbr>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-abbr.html). Pero en la mayoría de los casos, vale la pena indicar la forma expandida. Veamos este fragmento extraído del mismo folio anterior:
 
-![Ejemplo de una abreviatura](img/L8_002.png){width="6.647916666666666in"
+![Ejemplo de una abreviatura](https://tthub-repo.github.io/lecciones/img/L8_002.png){width="6.647916666666666in"
 height="1.83125in"}
 
 Para ello, podemos proceder de la siguiente manera:
@@ -533,7 +533,7 @@ ejemplo:
 * Los números originales de las páginas, o incluso la numeración de los cuadernos o los hilitos de los encabezados. Para ello, podemos utilizar `<fw>` (forme work)
 * `<space>`: para indicar el espacio vacío en nuestra copia:
 
-![Ejemplo de un espacio](img/L8_003.png){width="6.634027777777778in"
+![Ejemplo de un espacio](https://tthub-repo.github.io/lecciones/img/L8_003.png){width="6.634027777777778in"
 height="1.042361111111111in"}
 
 Podríamos codificar este fenómeno de la siguiente manera:
@@ -565,7 +565,7 @@ appellant graeci. Hanc...
 
 * En lo que concierne las correcciones en calidad de editores del texto electrónico, debemos utilizar los elementos y agrupados al interior de `<choice>`. Por ejemplo:
 
-![Ejemplo de una corrección editorial](img/L8_004.png)
+![Ejemplo de una corrección editorial](https://tthub-repo.github.io/lecciones/img/L8_004.png)
 
 ```xml
 ... Aqueste mas luenga mente 
