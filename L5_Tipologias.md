@@ -15,10 +15,9 @@ En esta unidad tendremos oportunidad de trabajar con más detalles con algunos m
 
 # I. Prosa
 
-Las Guías directrices de TEI no tienen un módulo específico para la codificación de prosa, pues se trata de un término algo genérico y difícil de definir. La mayoría de los elementos utilizados para codificar textos en prosa pertenecen al módulo core <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html> y textstructure
-<http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html>,es decir, los elementos que aparecen integrados en la estructura TEI por defecto y que se explica en la [Lección 4](XX).
+Las [Guías directrices](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/) de TEI no tienen un módulo específico para la codificación de prosa, pues se trata de un término algo genérico y difícil de definir. La mayoría de los elementos utilizados para codificar textos en prosa pertenecen al módulo [core](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html) y [textstructure](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html),es decir, los elementos que aparecen integrados en la estructura TEI por defecto y que explicamos en la [L3. Estructura básica de un documento XML-TEI y elementos genéricos](https://tthub.io/aprende/l3-basicos-tei/).
 
-Al afrontar la codificación de un texto, debemos, en primer lugar, llevar a cabo un análisis del documento, tal y como hicimos en el [Tema 1](XX), aislando las unidades estructurales de las que se compone. Partamos de un ejemplo concreto y veamos de qué manera podría ser codificado:
+Al afrontar la codificación de un texto, debemos, en primer lugar, llevar a cabo un análisis del documento, aislando las unidades estructurales de las que se compone. Partamos de un ejemplo concreto y veamos de qué manera podría ser codificado:
 
 ![Análisis estructural de un texto](https://tthub-repo.github.io/lecciones/img/L6_001.png){width="5.250168416447944in"
 height="7.090586176727909in"}
@@ -117,12 +116,11 @@ Si a cada ítem lo antecede un título podríamos utilizar `<label>`; pero, quiz
 
 Es también habitual que en un texto en prosa nos encontremos con referencias cruzadas que apunten al interior del documento o a una fuente externa. Los elementos para indicar este tipo de referencias y enlaces son `<ref>` y `<ptr/>`. La diferencia básica entre los dos es que el primero puede tener contenido y corresponde en realidad al típico enlace tal cual estamos acostumbrados a ver, mientras que `<ptr/>` (pointer) es un elemento vacío e indica sólo que en ese punto del texto aparece algo que crea un enlace, como por ejemplo un tipo concreto de imagen.
 
-El posible resultado final -porqué recordad que no hay una sola manera correcta de codificar los textos- para un texto en prosa es el que encontraréis en el Ejemplo en prosa
-<https://tthub.io/materiales/introduccion-a-tei/u6/1-prosa/ejemplo-prosa/>.
+El posible resultado final -porqué recordad que no hay una sola manera correcta de codificar los textos- para un texto en prosa es el que encontraréis en el [Ejemplo en prosa (L5_Ejemplo_prosa.xml)](https://github.com/tthub-repo/ejemplos/blob/master/L5_Ejemplo_prosa.xml).
 
 ## Ejemplos
 
-Para ver algunos ejemplos de prosa, consultad el corpus en abierto de
+Para ver otros ejemplos de prosa, consultad el corpus en abierto de
 novelas españolas y latinoamericanas en el CLiGS textbox:
 
 * [Collection of 19th Century Spanish-American Novels (1880-1916)](https://github.com/cligs/textbox/blob/master/spanish/novela-hispanoamericana), edited by Ulrike Henny-Krahmer (24 novelas)
@@ -131,7 +129,7 @@ novelas españolas y latinoamericanas en el CLiGS textbox:
 
 * [Corpus of Spanish Short Stories from 1880-1940](https://github.com/cligs/textbox/blob/master/spanish/cuentos-espanoles), edited by José Calvo Tello (20 colecciones de narraciones breves y 302 narraciones)
 
-Os sugieron también que sigáis el tutorial de la parte correspondiente de TEU By Example:
+Os sugieron también que sigáis el tutorial de la parte correspondiente de TEI By Example:
 [http://teibyexample.org/modules/TBED03v00.htm](http://teibyexample.org/modules/TBED03v00.htm)
 
 # II. Poesía 
@@ -205,7 +203,7 @@ El vocabulario TEI prevé un elemento específico para codificar las rimas: `<ry
 Además, el elemento `<rhyme>` puede contener el atributo `@label` para señalar el tipo de rima, normalmente indicado con una letra del
 alfabeto:
 
-marav`<rhyme label=\"a\">`illa`</rhyme>`
+`marav<rhyme label="a">`illa`</rhyme>`
 
 Pero también puede indicarse en el interior del elemento `<div>`, `<lg>`
 e incluso `<l>`:
@@ -258,20 +256,20 @@ en un elemento `<lg>`:
 	</lg>
 </div>
 ```
+Encontraréis otro ejemplo de marcado en el nuestro Repositorio de ejemplos en GitHub: [Ejemplo en verso](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_poema.xml). 
 
 Existen muchos otros elementos relacionados con las composiciones
-métricas, para más detalles os remito al módulo correspondiente, verse
-<http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html>. Así
+métricas, para más detalles os remito al módulo correspondiente, [verse](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html). Así
 también, para completar esta sección, os dejo el enlace a la sección de
-TEI By Example: <https://teibyexample.org/modules/TBED04v00.htm>
+[TEI By Example](https://teibyexample.org/modules/TBED04v00.htm).
 
 # III. Drama
 
 Los textos dramáticos se caracterizan por tener una estructura más bien fija y unos elementos recurrentes: actos, escenas, acotaciones, indicaciones escénicas, diálogos, etc.
 
-Las Guías directrices, al igual que sucedía con las obras en verso, dedica un módulo específico a las obras dramática (véase 7. Performance texts <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html>), que os he dejado en formato pdf en la sección documentos.
+Las Guías directrices, al igual que sucedía con las obras en verso, dedica un módulo específico a las obras dramática (véase [7. Performance texts](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html>), que os he dejado en formato pdf en la sección documentos.
 
-En primer lugar, es necesario crear la infraestructura general en la que acomodar el texto. Tal y como hemos procedido en las otras ocasiones, se podría establecer una división general para cada una de las escenas y para cada uno de los actos o jornadas, añadiendo un atributo `@type para definirlas:
+En primer lugar, es necesario crear la infraestructura general en la que acomodar el texto. Tal y como hemos procedido en las otras ocasiones, se podría establecer una división general para cada una de las escenas y para cada uno de los actos o jornadas, añadiendo un atributo `@type` para definirlas:
 
 ```xml
 <div type="acto" n="1">
@@ -357,13 +355,13 @@ pueden sernos útiles en alguna ocasión como por ejemplo:
 * `<caption>` para recoger las palabras que deberán proyectarse en pantalla.
 * `<tech>` otras informaciones técnicas.
 
-[Aquí](XXX) encontraréis un ejemplo sencillo de codificación del inicio de una obra dramática en verso de Lope de Vega, *Amar sin saber a quien*. Miraros la reproducción digital que aparece en la Biblioteca Cervantes Virtual <http://bib.cervantesvirtual.com/servlet/SirveObras/01260529543471504100035/p0000001.htm#I_0_> y confrontadla con la codificación que he propuesto. Aquí <http://bib.cervantesvirtual.com/servlet/SirveObras/00363959755781806410046/ima0000.htm> encontraréis también una edición digital en HTML.
+[En el Repositorio de ejemplos en GitHub](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_drama.xml) encontraréis un ejemplo sencillo de codificación del inicio de una obra dramática en verso de Lope de Vega, *Amar sin saber a quien*. Miraros la reproducción digital que aparece en la [Biblioteca Cervantes Virtual](http://bib.cervantesvirtual.com/servlet/SirveObras/01260529543471504100035/p0000001.htm#I_0_) y confrontadla con la codificación que he propuesto. [Aquí](http://bib.cervantesvirtual.com/servlet/SirveObras/00363959755781806410046/ima0000.htm) encontraréis también una edición digital en HTML.
 
-Como siempre os recomiendo que sigáis otros recursos, en este caso el Módulo 5 de TEI by Sample <http://teibyexample.org/modules/TBED05v00.htm> y, sobre todo, los ejemplos <http://teibyexample.org/examples/TBED05v00.htm>. Así como la consulta de las Guías directrices <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html>.
+Como siempre os recomiendo que sigáis otros recursos, en este caso el Módulo 5 de [TEI by Sample](http://teibyexample.org/modules/TBED05v00.htm), sobre todo, que estudiéis los [ejemplos](http://teibyexample.org/examples/TBED05v00.htm), y la consulta de las [Guías directrices](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html).
 
 # IV. Fuentes primarias
 
-Para la descripción de fuentes primarias existe un módulo específico: 11. Representation of Primary Sources <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html>. Aún así, muchos de los elementos que nos servirán para la descripción de dichas fuentes pertenecen al módulo core o Elementos comunes a todos los documentos TEI <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html>. De igual manera, algunos de los elementos de este módulo son útiles si queremos llevar a cabo una edición crítica y la creación de un aparato de variantes. Es importante, pues, tener en cuenta que al crear nuestro propio esquema necesitaremos seguramente integrar diferentes módulos, porque aunque cada uno de ellos aspira a cubrir una fenomenología diferente, puede ser que nuestra tipología textual o, sencillamente, nuestro texto nos obligue a contemplar elementos que pertenecen a otros módulos.
+Para la descripción de fuentes primarias existe un módulo específico: [11. Representation of Primary Sources](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html). Aún así, muchos de los elementos que nos servirán para la descripción de dichas fuentes pertenecen al módulo core o [Elementos comunes a todos los documentos TEI](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html). De igual manera, algunos de los elementos de este módulo son útiles si queremos llevar a cabo una edición crítica y la creación de un aparato de variantes. Es importante, pues, tener en cuenta que al crear nuestro propio esquema necesitaremos seguramente integrar diferentes módulos, porque aunque cada uno de ellos aspira a cubrir una fenomenología diferente, puede ser que nuestra tipología textual o, sencillamente, nuestro texto nos obligue a contemplar elementos que pertenecen a otros módulos.
 
 Los elementos específicos del módulo sobre fuentes primarias son los
 siguientes:
@@ -407,8 +405,7 @@ Muy frecuentemente nos encontramos con documentos en los que ha habido algún ti
 
 Para las adiciones usaremos el elemento `<add>`, que pertenece al módulo core. Habitualmente se suele señalar con el atributo `@place` el lugar donde se ha producido dicha adición; por defecto, tenemos como valores: above, below, bottom, end, inline, margin, opposite, overleaf, top. Tomemos este ejemplo y veamos cómo lo podríamos codificar:
 
-![Ejemplo de una adición](https://tthub-repo.github.io/lecciones/img/L8_001.png){width="6.6194444444444445in"
-height="1.16875in"}
+![Ejemplo de una adición](https://tthub-repo.github.io/lecciones/img/L8_001.png)
 
 Si quisiéramos sólo señalar que aparece una adición en el margen lo podríamos señalar de la siguiente manera:
 
@@ -421,7 +418,7 @@ emperador de los Romanos
 
 ### b. Cancelaciones o omisiones
 
-En el caso de las supresiones, ya sea porqué se ha tachado una parte del texto ya sea porqué se ha omitido puede utilizarse `<del>`, que también corresponde al módulo core. Podemos añadir un atributo \@type para caracterizar el tipo de cancelación o de omisión. Retomando el mismo ejemplo:
+En el caso de las supresiones, ya sea porqué se ha tachado una parte del texto ya sea porqué se ha omitido puede utilizarse `<del>`, que también corresponde al módulo core. Podemos añadir un atributo `@type` para caracterizar el tipo de cancelación o de omisión. Retomando el mismo ejemplo:
 
 ```xml
 doctrina: y en integridad de costumbres:
@@ -432,7 +429,7 @@ emperador de los Romanos
 ```
 
 Además, el módulo de representación de fuentes primarias tiene otro elemento útil para aquellos casos en los que un fragmento largo ha sido omitido o cancelado. En estos casos, podríamos introducir el texto eliminado señalando el inicio del texto con el elemento
-[`<delSpan>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-delSpan.html), acompañado del atributo \@spanTo que apuntaría al punto de anclaje donde finaliza dicho fragmento. Véanse los ejemplos en las *[Guías directrices](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-delSpan.html%20).
+[`<delSpan>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-delSpan.html), acompañado del atributo \@spanTo que apuntaría al punto de anclaje donde finaliza dicho fragmento. Véanse los ejemplos en las [Guías directrices](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-delSpan.html%20).
 
 ### c. Substituciones
 
@@ -453,8 +450,7 @@ Las abreviaturas pueden codificarse de maneras diferentes, la más
 sencilla de las cuales es simplemente marcar la abreviatura dentro del
 elemento [`<abbr>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-abbr.html). Pero en la mayoría de los casos, vale la pena indicar la forma expandida. Veamos este fragmento extraído del mismo folio anterior:
 
-![Ejemplo de una abreviatura](https://tthub-repo.github.io/lecciones/img/L8_002.png){width="6.647916666666666in"
-height="1.83125in"}
+![Ejemplo de una abreviatura](https://tthub-repo.github.io/lecciones/img/L8_002.png)
 
 Para ello, podemos proceder de la siguiente manera:
 
@@ -533,8 +529,7 @@ ejemplo:
 * Los números originales de las páginas, o incluso la numeración de los cuadernos o los hilitos de los encabezados. Para ello, podemos utilizar `<fw>` (forme work)
 * `<space>`: para indicar el espacio vacío en nuestra copia:
 
-![Ejemplo de un espacio](https://tthub-repo.github.io/lecciones/img/L8_003.png){width="6.634027777777778in"
-height="1.042361111111111in"}
+![Ejemplo de un espacio](https://tthub-repo.github.io/lecciones/img/L8_003.png)
 
 Podríamos codificar este fenómeno de la siguiente manera:
 
@@ -676,4 +671,4 @@ Existe también la posibilidad de señalar el lema principal de entre las varian
 
 En estos casos `<lem>` contiene el lema o texto base de la variante textual (presente o no en algún testimonio), mientras que `<rdg>` (reading) contiene una sola lectura o variante textual.
 
-Os animo a consultar, además de las Guías directrices, los ejemplos que aparecen en el tutorial TEI By Example: <http://www.teibyexample.org/examples/TBED07v00.htm>
+Os animo a consultar, además de las Guías directrices, los ejemplos en nuestro [Repositorio de Ejemplos en GitHub](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_aparato_critico.xml) los ejemplos que aparecen en el tutorial [TEI By Example](http://www.teibyexample.org/examples/TBED07v00.htm). 
