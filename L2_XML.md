@@ -27,33 +27,33 @@ Al igual que sucede en las lenguas modernas, donde existe un “estándar” y u
 
 El uso de estándares permite que todo el mundo tenga acceso a la totalidad de la información en la red y propicia un desarrollo más rápido y más sólido. Por ejemplo, el uso de estándares facilita la visualización de los sitios en todos los navegadores y permite una indexación de los metadatos de una manera más eficiente.
 
-Una lectura útil y aclaradora sobre los estándares web la podéis encontrar aquí: ¿Qué son los estándares web y por qué debería usarlos? <https://www.webstandards.org/learn/faq/faq_es/>
+Una lectura útil y aclaradora sobre los estándares web la podéis encontrar aquí: [¿Qué son los estándares web y por qué debería usarlos?](https://www.webstandards.org/learn/faq/faq_es/)
 
-Hay muchos tipos de estándares web pero los más conocidos y que nos interesan ahora son los del W3C, World Wide Web Consortium <https://www.w3.org/>, que se ocupan de potenciar y optimizar la Web, creada por Tim Berners-Lee en 1994.
+Hay muchos tipos de estándares web pero los más conocidos y que nos interesan ahora son los del W3C, [World Wide Web Consortium](https://www.w3.org/), que se ocupan de potenciar y optimizar la Web, creada por Tim Berners-Lee en 1994.
 
-El W3C desarrolla especificaciones de acceso abierto, en realidad estándares, que permiten la interoperabilidad de todos los productos relacionados con la Web. Las recomendaciones del W3C son desarrolladas por grupos de trabajo formados tanto por miembros del consorcio como por expertos invitados. Estos grupos de trabajo, una vez obtenido el acuerdo general, tanto de las compañías como de las otras organizaciones involucradas en la creación de aplicaciones web, crean un borrador con las recomendaciones y lo entregan a los miembros del W3C y a su director para que las aprueben de manera oficial.
+El W3C desarrolla [especificaciones de acceso abierto](https://www.w3.org/standards/faq), en realidad estándares, que permiten la interoperabilidad de todos los productos relacionados con la Web. Las recomendaciones del W3C son desarrolladas por grupos de trabajo formados tanto por miembros del consorcio como por expertos invitados. Estos grupos de trabajo, una vez obtenido el acuerdo general, tanto de las compañías como de las otras organizaciones involucradas en la creación de aplicaciones web, crean un borrador con las recomendaciones y lo entregan a los miembros del W3C y a su director para que las aprueben de manera oficial.
 
 Algunos de los estándares más conocidos son:
 
-* HTML (HyperText Markup Language) <https://www.w3.org/TR/html/>: lenguaje utilizado para la creación de hipertexto (web), nacido en 1989 y derivado de SGML. Su última versión es el HTML 4.01 (1999), convertido en norma ISO/IEC 15445:2000.
-* HTML5 <https://www.w3.org/TR/html5/>: la última versión de HTML.
-* XML (Extensible Markup Language) <https://www.w3.org/TR/2008/REC-xml-20081126/>.
-* XHTML (Extensible HyperText Markup Language) <https://www.w3.org/TR/xhtml2/>: la reformulación de HTML 4 según los principios de compatibilidad con XML (2000, revisión del 2002).
-* CSS (Cascading Style Sheets) <https://www.w3.org/TR/CSS/>: Hojas de estilo en cascada para dar formato y diseño a HTML.
-* DOM (Document Object Model) <https://www.w3.org/DOM/DOMTR>: lenguaje para la creación de interfaces de programación.
+* [HTML](https://www.w3.org/TR/html/) (HyperText Markup Language): lenguaje utilizado para la creación de hipertexto (web), nacido en 1989 y derivado de SGML. Su última versión es el HTML 4.01 (1999), convertido en norma ISO/IEC 15445:2000.
+* [HTML5](https://www.w3.org/TR/html5/): la última versión de HTML.
+* [XML](https://www.w3.org/TR/2008/REC-xml-20081126/) (Extensible Markup Language).
+* [XHTML](https://www.w3.org/TR/xhtml2/) (Extensible HyperText Markup Language): la reformulación de HTML 4 según los principios de compatibilidad con XML (2000, revisión del 2002).
+* [CSS](https://www.w3.org/TR/CSS/) (Cascading Style Sheets): Hojas de estilo en cascada para dar formato y diseño a HTML.
+* [DOM](https://www.w3.org/DOM/DOMTR) (Document Object Model): lenguaje para la creación de interfaces de programación.
 
-Os recomiendo esta breve historia del World Wide Web: Tim Berners-Lee, The World Wide Web: A very short personal history (1998) <https://www.w3.org/People/Berners-Lee/ShortHistory.html>. Una de las citas de este artículo me parece muy interesante en relación con este tipo de tecnologías:
+Os recomiendo esta breve historia del World Wide Web: Tim Berners-Lee, [The World Wide Web: A very short personal history](https://www.w3.org/People/Berners-Lee/ShortHistory.html) (1998). Una de las citas de este artículo me parece muy interesante en relación con este tipo de tecnologías:
 
-> The web of human-readable document is being merged with a web of machine-understandable data. The potential of the mixture of humans and machines working together and communicating through the web could be immense.
+> The web of human-readable document is being merged with a web of machine-understandable data. The potential of the mixture of humans and machines working together and communicating through the web could be immense. 
 Tim Berners-Lee
 
-Existen otros tipos de estándares, no necesariamente relacionados o creados para la Web. En algún momento oiréis hablar de los estándares ISO, aquellos creados por la Organización Internacional para la Estandarización (en inglés, International Ogranization for Standardization <https://www.iso.org/standards.html>).
+Existen otros tipos de estándares, no necesariamente relacionados o creados para la Web. En algún momento oiréis hablar de los [estándares ISO](https://www.iso.org/standards.html), aquellos creados por la Organización Internacional para la Estandarización (en inglés, [International Ogranization for Standardization](https://www.iso.org/standards.html)).
 
 Esta organización se encarga de publicar estándares bajo forma de documentos oficiales que estipulan los requisitos, las especificaciones, guías directrices o características que pueden ser usadas de manera consistente para asegurar qué materiales, productos, procesos o servicios se adecuen a sus propósitos. XML no es una norma ISO pero sí puede utilizar algunos estándares aprobados por ISO, como en la codificación de los caracteres.
 
 ## El estándar XML
 
-XML es un estándar del W3C que responde a las siglas Extensible Markup Language. En origen, es un heredero, más sencillo y eficaz, de su antecesor SGML (Standard Generalized Markup Language <https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language>), un estándar ISO 8879:1986 creado por IBM en los años setenta. Las primeras recomendaciones del W3C para el uso de XML se publicaron en febrero de 1998. Actualmente la última versión es XML 1.0 <https://www.w3.org/TR/2008/REC-xml-20081126/> (5ª edición 2008) y toda su documentación puede encontrarse en la página web del W3C. Existe la versión 1.1. <https://www.w3.org/TR/2006/REC-xml11-20060816/>, publicada en febrero de 2004 (2ª edición 2006) que integra algunas evoluciones relativas al Unicode <https://es.wikipedia.org/wiki/Unicode>, pero en general es poco utilizada. Nosotros nos centraremos en la versión 1.0.
+XML es un estándar del W3C que responde a las siglas Extensible Markup Language. En origen, es un heredero, más sencillo y eficaz, de su antecesor [SGML](https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language) (Standard Generalized Markup Language), un estándar [ISO 8879:1986](https://www.iso.org/obp/ui/%) creado por IBM en los años setenta. Las primeras recomendaciones del W3C para el uso de XML se publicaron en febrero de 1998. Actualmente la última versión es [XML 1.0](https://www.w3.org/TR/2008/REC-xml-20081126/) (5ª edición 2008) y toda su documentación puede encontrarse en la página web del W3C. Existe la [versión 1.1.](https://www.w3.org/TR/2006/REC-xml11-20060816/), publicada en febrero de 2004 (2ª edición 2006) que integra algunas evoluciones relativas al [Unicode](https://es.wikipedia.org/wiki/Unicode), pero en general es poco utilizada. Nosotros nos centraremos en la versión 1.0.
 
 La misión principal de XML consiste en el marcado electrónico de textos, de cualquier tipología, para que sean procesados por una máquina. El lenguaje utilizado para la marcación de datos es simple y legible por los humanos (lo que en inglés llaman “human-readable”). En contraposición, imaginemos un código de barras o datos binarios, que pueden ser leídos por un ordenador, pero no por una persona.
 
@@ -63,7 +63,7 @@ XML constituye un método sencillo para representar datos de una manera estructu
 
 La misión principal, pues, es la de marcar los diferentes tipos de datos textuales que aparecen en un documento. El código o marca XML se incluye en el mismo documento XML como una cadena de texto y es delimitado por marcas de texto que describen su contenido. De esta manera, un fichero XML consiste en una serie de datos estructurados y representados como una secuencia de texto, por ello puede leerse, tanto los datos textuales como su código, con cualquier herramienta que pueda leer ficheros de texto.
 
-La unidad básica del marcado en XML es la “marca” o “etiqueta” <https://es.wikipedia.org/wiki/Etiqueta_(lenguaje_de_marcado)> (“tag”, en inglés), denominada técnicamente “elemento” <https://www.w3schools.com/xml/xml_elements.asp>. XML tiene una serie de reglas que definen una sintaxis concreta, como por ejemplo, cómo deben delimitarse dichas etiquetas, cómo deben formarse, qué tipo de nombres son aceptables, dónde pueden situarse, etc. Si un documento cumple todos los requisitos de su gramática, estará bien formado <https://www.w3schools.com/xml/xml_validator.asp>.
+La unidad básica del marcado en XML es la [“marca” o “etiqueta”](https://es.wikipedia.org/wiki/Etiqueta_(lenguaje_de_marcado)), (“tag”, en inglés), denominada técnicamente “[elemento](https://www.w3schools.com/xml/xml_elements.asp)”. XML tiene una serie de reglas que definen una sintaxis concreta, como por ejemplo, cómo deben delimitarse dichas etiquetas, cómo deben formarse, qué tipo de nombres son aceptables, dónde pueden situarse, etc. Si un documento cumple todos los requisitos de su gramática, estará [bien formado](https://www.w3schools.com/xml/xml_validator.asp).
 
 Además, por norma general, un documento XML, como veremos, depende de un modelo abstracto que especifica la lista de las etiquetas que pueden utilizarse, sus nombres, dónde pueden situarse o cómo deben anidarse. Este modelo recibe el nombre de “esquema”; si el documento XML cumple los requisitos del esquema, será un documento válido.
 
@@ -74,7 +74,7 @@ XML, en fin, soporta diferentes sistemas de escritura, gracias al uso del están
 En apariencia XML se parece mucho a HTML, pero es crucial entender algunas diferencias:
 
 * XML es extensible, lo que significa que este lenguaje puede ser extendido y adaptado para responder a necesidades diferentes. XML es un metalenguaje de marcado sin una lista fija de etiquetas, pues estas se crean en función de las necesidades del proyecto. De esta manera, se permite a los usuarios o a una comunidad establecer una serie propia de etiquetas, como es el caso de TEI.
-* XML tiene que estar bien formado (“well-formed”). Para que ello se cumpla, debe cumplir con una serie de normas bastante estrictas; esto permite a los procesadores XML parsear <https://en.wikipedia.org/wiki/Parsing> y poder validar cualquier documento. De hecho, si un documento no está bien formado, será rechazado por cualquier procesador y por tanto inservible.
+* XML tiene que estar bien formado (“well-formed”). Para que ello se cumpla, debe cumplir con una serie de normas bastante estrictas; esto permite a los procesadores XML [parsear](https://en.wikipedia.org/wiki/Parsing) y poder validar cualquier documento. De hecho, si un documento no está bien formado, será rechazado por cualquier procesador y por tanto inservible.
 * XML, como hemos dicho, se centra en la descripción semántica de los fragmentos de texto, mientras que HTML se ocupa solo de la presentación. Por ejemplo, imaginemos que tenemos un texto donde aparecen palabras en cursiva, unas indican palabras extranjeras y las otras indican títulos de obras. Si quisiéramos convertirlo en una página web y usar HTML, marcaríamos seguramente las palabras en cuestión con la etiqueta de cursiva, es decir, de la siguiente manera: `<i>palabra</i>`; en cambio, XML marcaría las palabra con etiquetas que indicaran “palabra extranjera” y “título”: `<palabraExtranjera>palabra</palabraExtranjera>` o `<titulo>El título</titulo>`. XML se preocupa del qué son las cosas, y no del cómo aparecerán; separa, en definitiva, el contenido de la presentación.
 * XML puede ser validado a través de un esquema específico, un aspecto que veremos más abajo. Los documentos XML, además de las reglas intrínsecas del mismo lenguaje, pueden depender de un esquema que determine qué elementos se pueden utilizar y de qué manera se pueden anidar, qué tipos de atributos pueden llevar, etc. En el caso de que el documento XML cumpla los requisitos del esquema, será “válido”.
 
@@ -97,18 +97,18 @@ Veamos enseguida qué aspecto tiene un fichero XML e intentemos comprender la no
         <autor id="euripides">Eurípides</autor>
         <titulo>Medea</titulo>
     </libro>
-</lista>
-```
+</lista>```
 
-Este documento es en realidad simple texto, podría crearse, editarse y guardarse en un fichero de texto y con uno de los múltiples editores de texto existentes, tales como Atom, Komodo, BBEdit, jEdit, Emacs, TextWrangler, entre muchos otros. Entre la comunidad TEI, el editor más utilizado es oXygen <https://www.oxygenxml.com/> porque, aunque es de pago, ofrece funcionalidades específicas para el marcado TEI. 
+[Ejemplo 1: un documento xml (GitHub)](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-1.xml).
+
+Este documento es en realidad simple texto, podría crearse, editarse y guardarse en un fichero de texto y con uno de los múltiples editores de texto existentes, tales como [Atom](https://atom.io/packages/xml-tools), [Komodo](https://www.activestate.com/products/komodo-edit/), [BBEdit](http://www.barebones.com/products/bbedit/), [jEdit](http://www.jedit.org/), [Emacs](http://www.gnu.org/software/emacs/), entre muchos otros. Entre la comunidad TEI, el editor más utilizado es [oXygen]( https://www.oxygenxml.com/) porque, aunque es de pago, ofrece funcionalidades específicas para el marcado TEI. 
 
 A partir de este simple ejemplo, podemos constatar ya algunas ideas y reglas inherentes a todos los documentos XML:
 
-* El marcado (“markup”) consiste en aislar una porción de texto, grande o pequeña, con un significado semántico específico y señalarlo a través de una marca electrónica, que comúnmente llamamos etiqueta (“tag”). Dichas etiquetas son en realidad una secuencia lineal de caracteres con una estructura específica. Por ejemplo: 
+* El [marcado](https://es.wikipedia.org/wiki/Lenguaje_de_marcado) (“markup”) consiste en aislar una porción de texto, grande o pequeña, con un significado semántico específico y señalarlo a través de una marca electrónica, que comúnmente llamamos etiqueta (“tag”). Dichas etiquetas son en realidad una secuencia lineal de caracteres con una estructura específica. Por ejemplo: 
 
 ```xml
-<autor>Esquilo</autor> <titulo>Prometeo encadenado</titulo>
-```
+<autor>Esquilo</autor> <titulo>Prometeo encadenado</titulo>```
 
 * Como vemos, la marca indica una instrucción especial de procesamiento (`<...>`) que el ordenador interpreta como código informático, dónde empieza y dónde acaba. Estas marcas o etiquetas deben aparecer al inicio del segmento que queramos codificar a través de dos paréntesis angulares, y en el cierre del mismo, también con dos paréntesis angulares con la barra inclinada (`/`) al inicio. Es importante recordar que los caracteres `< >` son siempre interpretados como código por nuestro ordenador, de manera que si se quieren representar en el texto como tales deberemos utilizar caracteres diferentes (`&lt;` para representar `<` y `&gt;` para `>`).
 * La estructura de cada una de estas marcas constituye lo que llamamos un “elemento”. Su estructura es rígida y siempre tiene la misma estructura: el nombre del elemento, también llamado identificador, y, normalmente, uno o varios atributos con sus valores respectivos: Estructura:
@@ -128,7 +128,7 @@ Ejemplo:
 
 # III. Estructura de un documento
 
-Pasemos ahora a ver con más detalle cada una de las partes de un documento XML. Os aconsejo que para esta sección abráis el documento [Ejemplo 2: un documento XML asociado a una DTD](), un pequeño fichero XML comentado. Lo podéis copiar, abrir con oXygen u cualquier programa de edición XML, y anotar libremente con vuestros comentarios.
+Pasemos ahora a ver con más detalle cada una de las partes de un documento XML. Os aconsejo que para esta sección abráis el documento [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2.xml), un pequeño fichero XML comentado. Lo podéis copiar, abrir con oXygen u cualquier programa de edición XML, y anotar libremente con vuestros comentarios.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -169,6 +169,7 @@ cuestión se llama "ejemplo_DTD.dtd" que se halla en la misma carpeta. -->
     </contenido>
 </curso>
 ```
+[Ejemplo 2: un documento XML asociado a una DTD (GitHub)](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2.xml)
 
 ## Declaración XML
 
@@ -182,7 +183,7 @@ Este elemento no puede ir precedido por ningún comentario, ni espacio en blanco
 
 * Declarar que es un documento XML; el paréntesis angular seguido del interrogante de cierre es interpretado como código por nuestra máquina y le está indicando que se trata de una declaración o una instrucción de procesamiento, no de un elemento corriente.
 * Declarar qué versión del estándar XML se sigue; No es lo mismo utilizar la versión 1.0 que la 1.1. Además, en el hipotético caso que en el futuro se publique una nueva versión (cosa que suele ocurrir con los lenguajes informáticos) es importante que dejemos para el futuro la versión específica utilizada para evitar problemas.
-* Declarar qué caracteres de codificación utiliza el documento. Los documentos XML contienen texto cifrado en Unicode <https://es.wikipedia.org/wiki/Unicode>. Unicode es una combinación de caracteres que incluye prácticamente todas las lenguas del mundo y puede expresarse a través de diversos sistemas de codificación. Cada uno de estos sistemas establece un juego de caracteres (“character set”) específico que representa los caracteres (alfanuméricos y otros símbolos) a través de una secuencia de números (por ejemplo, imaginemos que el número 65 corresponde a la letra A). Así, cada combinación numérica corresponde a una letra o caracter, que difiere en las diferentes codificaciones. Cada una de estas combinaciones de puntos se llama “puntos de código” (“code points”). La codificación de los caracteres determina cómo estos puntos de código son representados en bytes. De esta manera, el conjunto de caracteres de Unicode puede tener diferentes codificaciones como UTF-8, UCS-2, UCS-4 o UTF-16. Por eso es importante señalar al inicio del documento qué codificación de caracteres hemos utilizado para que el parser sepa cómo descifrarlos y para que nuestra secuencia de texto se visualice de manera correcta. Aunque XML utiliza por defecto UTF-8, se podría también utilizar otro sistema según nuestras necesidades, como sería la combinación de caracteres ISO, por ejemplo, el ISO-8859-1 (Latin 1) que corresponde a las lenguas europeas occidentales, incluido el español.
+* Declarar qué caracteres de codificación utiliza el documento. Los documentos XML contienen texto cifrado en [Unicode](https://es.wikipedia.org/wiki/Unicode). Unicode es una combinación de caracteres que incluye prácticamente todas las lenguas del mundo y puede expresarse a través de diversos sistemas de codificación. Cada uno de estos sistemas establece un juego de caracteres (“character set”) específico que representa los caracteres (alfanuméricos y otros símbolos) a través de una secuencia de números (por ejemplo, imaginemos que el número 65 corresponde a la letra A). Así, cada combinación numérica corresponde a una letra o caracter, que difiere en las diferentes codificaciones. Cada una de estas combinaciones de puntos se llama “puntos de código” (“code points”). La codificación de los caracteres determina cómo estos puntos de código son representados en bytes. De esta manera, el conjunto de caracteres de Unicode puede tener diferentes codificaciones como UTF-8, UCS-2, UCS-4 o UTF-16. Por eso es importante señalar al inicio del documento qué codificación de caracteres hemos utilizado para que el parser sepa cómo descifrarlos y para que nuestra secuencia de texto se visualice de manera correcta. Aunque XML utiliza por defecto UTF-8, se podría también utilizar otro sistema según nuestras necesidades, como sería la combinación de caracteres ISO, por ejemplo, el ISO-8859-1 (Latin 1) que corresponde a las lenguas europeas occidentales, incluido el español.
 * En algunos casos, en la declaración de documento también nos podemos encontrar el atributo “standalone”:
 
 ```xml
@@ -193,7 +194,7 @@ Este elemento no puede ir precedido por ningún comentario, ni espacio en blanco
 
 ## Declaración de tipo de documento
 
-En algunos casos, un documento XML puede depender de un modelo abstracto que puede tener diferentes formas. Un caso frecuente es el modelo de la DTD (Document Type Definition), ampliamente utilizado en XML, aunque en desuso en el campo de TEI (donde se prefieren los esquemas RelaxNG). De esta manera, podemos encontrarnos en el prólogo del documento con una declaración del tipo de documento, “Documento Type” que tiene esta forma:
+En algunos casos, un documento XML puede depender de un modelo abstracto que puede tener diferentes formas. Un caso frecuente es el modelo de la [DTD](https://es.wikipedia.org/wiki/Definici%C3%B3n_de_tipo_de_documento) (Document Type Definition), ampliamente utilizado en XML, aunque en desuso en el campo de TEI (donde se prefieren los esquemas [RelaxNG](https://en.wikipedia.org/wiki/RELAX_NG)). De esta manera, podemos encontrarnos en el prólogo del documento con una declaración del tipo de documento, “Documento Type” que tiene esta forma:
 
 ```xml
 <!DOCTYPE curso SYSTEM "ejemplo-2-DTD.dtd">
@@ -216,7 +217,7 @@ De momento es solo necesario que sepáis diferenciar entre una instrucción de p
 
 ## Declaración del espacio de nombre 
 
-En los documentos TEI aparece normalmente una declaración del “espacio de nombre” (en inglés, “namespace”). Por ejemplo, en un documento TEI aparece de la siguiente manera:
+En los documentos TEI aparece normalmente una declaración del “[espacio de nombre](https://www.w3schools.com/xml/xml_namespaces.asp)” (en inglés, “namespace”). Por ejemplo, en un documento TEI aparece de la siguiente manera:
 
 ```xml
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
@@ -281,7 +282,7 @@ Los dos objetivos principales del espacio de nombre son:
 
 ## El elemento raíz 
 
-Todo documento XML tiene un solo elemento raíz (en inglés, “root”), el único que no depende de ningún otro elemento y que contiene todos los otros. En Ejemplo 2: un documento XML asociado a una DTD, el esquema sería el siguiente: 
+Todo documento XML tiene un solo elemento raíz (en inglés, “root”), el único que no depende de ningún otro elemento y que contiene todos los otros. En [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2.xml), el esquema sería el siguiente: 
 
 ![Ejemplo de esquema en árbol](https://tthub-repo.github.io/lecciones/img/L2_001.jpg)
  
@@ -316,7 +317,7 @@ Los documentos XML pueden contener comentarios para que los autores puedan dejar
 <!-- ¡esto es un comentario! -->
 ```
 
-Por otro lado, las entidades de referencia <https://es.wikipedia.org/wiki/Anexo:Entidades_de_caracteres_XML_y_HTML> (“entity references” en inglés) pueden ser de diferentes tipos de mayor o menor complejidad. En esta ocasión citaremos solo las entidades internas de caracteres, pues las encontraremos con una cierta frecuencia. Se trata de caracteres especiales que no deben ser interpretados como código. Por ello, determinados signos deben ser codificados de una manera especial. Sucede así en los siguientes casos:
+Por otro lado, las [entidades de referencia](https://es.wikipedia.org/wiki/Anexo:Entidades_de_caracteres_XML_y_HTML) (“entity references” en inglés) pueden ser de diferentes tipos de mayor o menor complejidad. En esta ocasión citaremos solo las entidades internas de caracteres, pues las encontraremos con una cierta frecuencia. Se trata de caracteres especiales que no deben ser interpretados como código. Por ello, determinados signos deben ser codificados de una manera especial. Sucede así en los siguientes casos:
 
 * `&lt;` para indicar el símbolo “menor que” o el paréntesis angular de la marca de apertura `<`
 * `&gt;` para indicar el símbolo “mayor que” o el paréntesis angular de cierre de la marca `>`
@@ -326,7 +327,7 @@ Por otro lado, las entidades de referencia <https://es.wikipedia.org/wiki/Anexo:
 
 # IV. Esquemas
 
-Los esquemas constituyen, en general, un fichero diferente, de esta manera podemos referirnos a él desde múltiples documentos XML. Su función principal es la de establecer y definir los requisitos que debe respetar el documento XML, donde la referencia al esquema aparece en el prólogo del documento XML (después de la declaración XML y antes del elemento raíz), tal y como vemos en el Ejemplo 2: un documento XML asociado a una DTD:
+Los esquemas constituyen, en general, un fichero diferente, de esta manera podemos referirnos a él desde múltiples documentos XML. Su función principal es la de establecer y definir los requisitos que debe respetar el documento XML, donde la referencia al esquema aparece en el prólogo del documento XML (después de la declaración XML y antes del elemento raíz), tal y como vemos en el [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2.xml):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -337,16 +338,16 @@ Un esquema establece la serie de elementos, sus nombres y los atributos que esto
 
 Hay diferentes tipos de esquema:
 
-* DTD (Document Type Definition): es el modelo más utilizado en el mundo de la informática pero no en cambio en el campo de TEI, pues es menos flexible que otros modelos. En el fichero Ejemplo 2: una DTD encontraréis una muestra de una sencilla DTD comentada y que acompaña el fichero XML Ejemplo 2: un documento XML asociado a una DTD.
-* Esquemas W3C: se trata de esquemas expresados en XML, publicados por el W3C en 2001 (2ª ed. 2004):
-* Esquemas RelaxNG: este tipo de esquemas también se expresan en XML y son los más utilizados en el campo de TEI; será, por tanto, con el que nosotros trabajaremos. En 2003 se constituyó como una norma ISO/IEC 19757-2, actualizada en 2008.
-* Existen otros esquemas también utilizados como Schematron, Examplotron.
+* [DTD](https://en.wikipedia.org/wiki/Document_type_definition) (Document Type Definition): es el modelo más utilizado en el mundo de la informática pero no en cambio en el campo de TEI, pues es menos flexible que otros modelos. En el fichero [Ejemplo 2: una DTD](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2-DTD.dtd) encontraréis una muestra de una sencilla DTD comentada y que acompaña el fichero XML [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2.xml).
+* [Esquemas W3C](https://www.w3.org/XML/Schema): se trata de esquemas expresados en XML, publicados por el W3C en 2001 (2ª ed. 2004):
+* [Esquemas RelaxNG](https://relaxng.org/): este tipo de esquemas también se expresan en XML y son los más utilizados en el campo de TEI; será, por tanto, con el que nosotros trabajaremos. En 2003 se constituyó como una norma ISO/IEC 19757-2, actualizada en 2008.
+* Existen otros esquemas también utilizados como [Schematron](http://schematron.com/), [Examplotron](http://examplotron.org/).
 
 En cualquier caso, una regla de oro es que el formato esté bien documentado. Debe haber un esquema para nuestro proyecto y debe estar bien comentado. Además, debería haber más documentación escrita para complementarlo, como una especie de manual de marcado (no concebido como sustitución de la documentación formal del esquema, sino como un complemento).
 
 # V. Conceptos de “Válido” y “Bien formado”
 
-Un documento XML debe estar bien formado y ser válido <https://es.wikipedia.org/wiki/Validaci%C3%B3n_XML> para poder ser procesado y visualizado.
+Un documento XML debe estar [bien formado y ser válido](https://es.wikipedia.org/wiki/Validaci%C3%B3n_XML) para poder ser procesado y visualizado.
 
 La expresión “bien formado” significa que el documento XML debe estar expresado correctamente según la gramática de XML. Entre las reglas que debemos seguir escrupulosamente señalaremos las siguientes:
 
@@ -378,36 +379,36 @@ Pero no esto:
 
 Una manera muy sencilla de comprobar si un documento XML está bien formado es abrirlo con un navegador web que sepa interpretar documentos XML, como por ejemplo Mozilla. Si el documento aparece en el navegador, significa que está bien formado, en caso contrario aparecerá un error.
 
-Nosotros utilizaremos el programa oXygen que posee ya un parser que permite la comprobación de su correcta formación. La opción “Check Well-Formedness” (Menú superior, Document > Validate > Check Well–Formedness) nos permite llevar a cabo esta operación sin ninguna complicación; en caso de que se cumplan los requisitos nos aparecerá en la parte inferior el mensaje “Document is well formed”. En caso contrario aparecerá: “Wellformed test – failed. Errors: 1” o el número de errores que localice en el documento. Además nos aparecerá el mensaje del tipo de parser utilizado, en el caso de oXygen, Xerces <http://xerces.apache.org/xerces-j/>, con los detalles del error.
+Nosotros utilizaremos el programa oXygen que posee ya un parser que permite la comprobación de su correcta formación. La opción “Check Well-Formedness” (Menú superior, Document > Validate > Check Well–Formedness) nos permite llevar a cabo esta operación sin ninguna complicación; en caso de que se cumplan los requisitos nos aparecerá en la parte inferior el mensaje “Document is well formed”. En caso contrario aparecerá: “Wellformed test – failed. Errors: 1” o el número de errores que localice en el documento. Además nos aparecerá el mensaje del tipo de parser utilizado, en el caso de oXygen, [Xerces](http://xerces.apache.org/xerces-j/), con los detalles del error.
 
 Por otro lado, el documento debe ser también “válido”. Para ello, necesita un modelo que fije la estructura básica y las posibilidades de anidación del documento. Las DTD o esquemas (RelaxNG, W3CSchema) establecen la sintaxis que debe tener el documento XML. Si este está formado según sus reglas, será válido. A diferencia de cuando está bien formado, los navegadores web no validan los documentos XML, solo comprueban que esté bien formado.
 
-Volviendo a nuestro ejemplo (Ejemplo 2) y al programa oXygen, podemos comprobar que nuestro fichero sea válido. En este caso, el fichero depende de una DTD, llamada Ejemplo 2: una DTD. Vamos al Menú superior > Document > Validate > Validate. El mensaje que nos aparecerá en la parte inferior de programa será “Document is valid”.
+Volviendo a nuestro ejemplo ([Ejemplo 2](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2.xml)) y al programa oXygen, podemos comprobar que nuestro fichero sea válido. En este caso, el fichero depende de una DTD, llamada [Ejemplo 2: una DTD](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo-2-DTD.dtd). Vamos al Menú superior > Document > Validate > Validate. El mensaje que nos aparecerá en la parte inferior de programa será “Document is valid”.
 
 Mientras que un documento XML debe estar siempre bien formado, el hecho de ser válido no es obligatorio, pero altamente recomendable pues establece qué tipo de marcado se ha utilizado. En el campo de TEI, veremos como siempre usamos un esquema con el que comparamos nuestro documento.
 
 # VI. Recapitulación
 
-XML es uno de los lenguajes más sólidos y extendidos en toda la historia de la informática. A partir de XML se han creado otras tecnologías aliadas o de soporte que son utilizadas en muchas aplicaciones basadas en XML, como son: XLink, XSLT, XPointer, XPath, Namespaces, Schemas, DOM, XHTML 1.0, entre otros.
+XML es uno de los lenguajes más sólidos y extendidos en toda la historia de la informática. A partir de XML se han creado otras tecnologías aliadas o de soporte que son utilizadas en muchas aplicaciones basadas en XML, como son: [XLink](http://www.w3.org/TR/xlink/), [XSLT](http://www.w3.org/TR/xslt), [XPointer](http://www.w3.org/TR/WD-xptr), [XPath](http://www.w3.org/TR/xpath/), [Namespaces](http://www.w3.org/TR/REC-xml-names/), [Schemas](http://www.w3.org/XML/Schema), [DOM](http://www.w3.org/DOM/), [XHTML 1.0](http://www.w3.org/TR/xhtml1/), entre otros.
 
 XML al ser extensible, simple y flexible es ampliamente utilizado por muchas comunidades cuyo objetivo es establecer una lista cerrada de etiquetas o marcas que, en realidad, corresponden a la fenomenología con la que trabajan. Así, por ejemplo, XML es utilizado por los siguientes modelos públicos:
 
-* DocBook: para la creación de documentación técnica.
-* SVG (Scalable Vector Graphics): para representar en forma de texto imágenes vectoriales.
-* MathML: para expresar fórmulas matemáticas
-* MEI (Music Encoding Initiative): para representar las partituras musicales.
-* KML (Keyhole Markup Language): para localización geoespacial.
+* [DocBook](http://www.docbook.org/): para la creación de documentación técnica.
+* [SVG](http://www.w3.org/Graphics/SVG/) (Scalable Vector Graphics): para representar en forma de texto imágenes vectoriales.
+* [MathML](http://www.w3.org/Math/): para expresar fórmulas matemáticas
+* [MEI](http://music-encoding.org/home) (Music Encoding Initiative): para representar las partituras musicales.
+* [KML](https://developers.google.com/kml/documentation/kmlreference?hl=es) (Keyhole Markup Language): para localización geoespacial.
 
 Y sobre todo para crear modelos de metadatos estructurados en ámbitos diferentes:
 
-* Dublin Core Metadata Initiative: uno de los lenguajes metadatos más utilizados en campos muy diversos.
-* EAD (Encoding Archival Description): para estructurar los documentos archivísticos.
-* EAC-CPF (Encoded Archival Context – Corporate Bodies, Persons, and Families): utilizado para estructurar metadatos relativos a noticias de autoridad en archivos.
-* MODS (Metadata Object Description Schema): para las referencias bibliográficas
-* MARCXML: para el uso de MARC en XML en bibliotecas.
-* MADS (Metadata Authorithy Description Schema): para la estructuración de los metadatos en noticias de autoridad.
-* METS (Metadata Encoding and Transmission Standard): para la gestión de objetos digitales en bibliotecas.
-* RDF (Resource Description Framework): un modelo de metadatos derivado de la web semántica.
+* [Dublin Core Metadata Initiative](http://dublincore.org/): uno de los lenguajes metadatos más utilizados en campos muy diversos.
+* [EAD](http://www.loc.gov/ead/) (Encoding Archival Description): para estructurar los documentos archivísticos.
+* [EAC-CPF](http://eac.staatsbibliothek-berlin.de/) (Encoded Archival Context – Corporate Bodies, Persons, and Families): utilizado para estructurar metadatos relativos a noticias de autoridad en archivos.
+* [MODS](http://www.loc.gov/standards/mods/) (Metadata Object Description Schema): para las referencias bibliográficas
+* [MARCXML](http://www.loc.gov/standards/marcxml/): para el uso de MARC en XML en bibliotecas.
+* [MADS](http://www.loc.gov/standards/mads/) (Metadata Authorithy Description Schema): para la estructuración de los metadatos en noticias de autoridad.
+* [METS](http://www.loc.gov/standards/mets/METSOverview_spa.html) (Metadata Encoding and Transmission Standard): para la gestión de objetos digitales en bibliotecas.
+* [RDF](http://www.w3.org/TR/rdf-schema/) (Resource Description Framework): un modelo de metadatos derivado de la web semántica.
 
 # VII. Bibliografía
 

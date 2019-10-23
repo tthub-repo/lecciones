@@ -100,7 +100,7 @@ En definitiva, el hecho de separar la forma o su presentación de su contenido f
 
 # VI. Historia de la Text Encoding Initiative
 
-Hacia los años ochenta diferentes tecnologías ya habían entrado a formar parte de ciertos campos de las humanidades y las ciencias sociales; recordemos por ejemplo que la lingüística de corpus ya había visto aparecer diferentes iniciativas de proyectos lexicográficos a gran escala, como el *Index Thomisticus* del padre Roberto Busa <https://en.wikipedia.org/wiki/Roberto_Busa> que contó con la colaboración de IBM. 
+Hacia los años ochenta diferentes tecnologías ya habían entrado a formar parte de ciertos campos de las humanidades y las ciencias sociales; recordemos por ejemplo que la lingüística de corpus ya había visto aparecer diferentes iniciativas de proyectos lexicográficos a gran escala, como el *Index Thomisticus* del padre [Roberto Busa](https://en.wikipedia.org/wiki/Roberto_Busa) que contó con la colaboración de IBM. 
 
 El reto que se planteó entonces fue el de desarrollar, mantener y publicar un método de codificación para los datos en humanidades en un formato electrónico que fuera independiente tanto de *hardware* y sistemas operativos como de programas informáticos. Ante el crecimiento de sistemas diferentes de representación de materiales textuales, incluidos procesadores de texto, urgía la necesidad de ofrecer a la comunidad científica un método sólido para alargar la vida de sus datos y poder reutilizarlos en el futuro con objetivos diferentes. El hecho de que cada compañía ofreciera un programa y formatos propietarios entorpecía el trabajo académico y hacía difícil la planificación de proyectos de larga escala y duración.
 
@@ -112,13 +112,13 @@ Empezó entonces un enorme trabajo de difusión del modelo, a través de seminar
 
 En el año 2000 se creó, en fin, el Consorcio TEI que aspiraba a constituirse como una organización sin ánimo de lucro, permanente, académica y económicamente independiente. Una de las prioridades más urgentes que se planteó en ese momento fue la conversión de las *Guías Directrices* al lenguaje XML, pues las primeras se habían creado a partir del lenguaje [SGML](https://www.w3.org/MarkUp/SGML/), un sistema más complejo, pesado y no tan ágil como XML. Así, solo dos años después, en 2002, apareció la P4, que por primera vez proponía un marco de trabajo basado ya en XML.
 
-Finalmente, en noviembre de 2007, apareció la P5, que corresponde a la quinta propuesta todavía hoy en uso; periódicamente se realizan mejoras y se aumenta el número de su versión. El historial de actualizaciones puede encontrarse en su sitio web <http://www.tei-c.org/guidelines/p5/#section-1>.  
+Finalmente, en noviembre de 2007, apareció la P5, que corresponde a la quinta propuesta todavía hoy en uso; periódicamente se realizan mejoras y se aumenta el número de su versión. El [historial de actualizaciones](http://www.tei-c.org/guidelines/p5/#section-1) puede encontrarse en su sitio web.  
 
 # VII. Estructura interna de la organización TEI
 
 La Text Encoding Initiative es una organización internacional, fundada en el año 1987, encargada de desarrollar, mantener y publicar unas guías directrices para la codificación electrónica de textos en humanidades y ciencias sociales.  
 
-Desde el año 2000 su estructura organizativa se oficializó con la creación del Consorcio TEI que tiene una serie de objetivos, listados en su propia página web <http://www.tei-c.org/about/mission/>:
+Desde el año 2000 su estructura organizativa se oficializó con la creación del Consorcio TEI que tiene una serie de [objetivos](http://www.tei-c.org/about/mission/):
 
 * Desarrollo de las *Guías Directrices* TEI.
 * Difusión y promoción de las *Guías Directrices* TEI.
@@ -148,7 +148,7 @@ En este esquema se refleja el engranaje de la comunidad TEI:
 
 El sistema de marcado TEI-XML se utiliza en una gran variedad de contextos diferentes. En línea de máxima, se emplea para la edición de textos, pero su uso se ha extendido también a otros tipos de proyectos.
 
-El mismo Consorcio ofrece una lista oficial de proyectos que utilizan TEI <http://www.tei-c.org/Activities/Projects/>, accesible en su web; también la universidad de Oxford ha recogido otra serie de proyectos <http://ota.ahds.ac.uk/catalogue/index.html> con el mismo propósito; ambas lista no son, ni mucho menos, completas.
+El mismo Consorcio ofrece una lista oficial de [proyectos que utilizan TEI](http://www.tei-c.org/Activities/Projects/), accesible en su web; también la [universidad de Oxford](http://ota.ahds.ac.uk/catalogue/index.html) ha recogido otra serie de proyectos con el mismo propósito; ambas lista no son, ni mucho menos, completas.
 
 A continuación, damos algunos ejemplos de los escenarios más típicos de su aplicación:
 
