@@ -165,7 +165,7 @@ En primer lugar, conviene recordar que el sistema de codificación TEI se divide
 
 Los módulos pueden ser obligatorios o optativos. Así, los módulos obligatorios son cuatro: “tei”, “core”, “header” “textstructure”; sin estos no tendríamos un documento válido. Los módulos optativos responden a tipologías textuales concretas.
 
-En la unidad 3 vimos aquellos elementos que constituían la estructura obligatoria y básica de un documento TEI. Vamos, aquí, a centrarnos en el módulo llamado «core», que contiene una serie de elementos o etiquetas que pueden utilizarse en cualquier documento, incluso en la versión más minimalista TEI Lite. La panorámica que ofreceremos no es completa, pero corresponde a los más utilizados. Encontraréis la parte correspondiente a este tema de las Guidelines en la página web del consorcio.
+Más arriba vimos aquellos elementos que constituían la estructura obligatoria y básica de un documento TEI. Vamos, aquí, a centrarnos en el módulo llamado «core», que contiene una serie de elementos o etiquetas que pueden utilizarse en cualquier documento, incluso en la versión más minimalista TEI Lite. La panorámica que ofreceremos no es completa, pero corresponde a los más utilizados. Encontraréis la parte correspondiente a este tema de las Guidelines en la página web del consorcio.
 
 Vamos a dividir los elementos en: Párrafos y cuestiones de puntuación, Elementos tipográficos, citas, Nombres, números, fechas, y Listas, notas, anotaciones, indexación, referencias, y un último apartado con Otros elementos frecuentemente utilizados.
 

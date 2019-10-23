@@ -14,7 +14,7 @@ date: 2019-01-15
 Este tema tiene como objetivo familiarizarse y aprender a manejar las *Guidelines* o *Guías directrices* (*GD*) de la Text Encoding Initiative.
 
 Como ya hemos visto, la Text Encoding Initiative se sustenta en primer lugar en unas Guías directrices que establecen un modelo concreto de codificación. Estas pautas son publicadas por el mismo Consorcio, en acceso abierto, en su página oficial. Una sección está dedicada
-exclusivamente a las "Guidelines" <http://www.tei-c.org/Guidelines/> y es el centro de atención de esta unidad.
+exclusivamente a las "[Guidelines](http://www.tei-c.org/Guidelines/)" y es el centro de atención de esta unidad.
 
 Empecemos con la definición que ofrece esta sección:
 
@@ -37,16 +37,15 @@ Veamos pues de qué manera estas GD documentan el modelo en su página oficial. 
 
 La sección que ahora nos interesa es la que concierne las directricespara la codificación y el intercambio de textos electrónicos. Esta documentación la debéis concebir como una especie de manual, de recomendaciones y de buenas prácticas para la codificación de vuestros textos en TEI; cuanto más familiarizados estéis con las GD, más agilidad tendréis para concebir un marcado concreto para un determinado fenómeno textual o lingüístico o del tipo que sea.
 
-Las GD pueden descargarse en diferentes formatos, pero lo más habitual -debido al volumen de las mismas- es hacerlo en su versión HTML en inglés <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/> o parcialmente en español
-<http://www.tei-c.org/release/doc/tei-p5-doc/es/html/>
+Las GD pueden descargarse en diferentes formatos, pero lo más habitual -debido al volumen de las mismas- es hacerlo en su [versión HTML en inglés](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/) o parcialmente en [español](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/).
 
 La página se estructura en cuatro bloques que en realidad reflejan la
 estructura de todo documento TEI:
 
-* "Front Matter" o Material preliminar: corresponde a lo que sería el elemento `<front>` que puede situarse antes del elemento `<text>` y suele contener informaciones complementarias, tales como los prólogos. Así, en esta sección encontraréis informaciones varias sobre las diferentes versiones, la codificación de los caracteres, pero sobretodo una "Gentle Introduction to XML" <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html>, una introducción al lenguaje XML que os recomiendo vivamente que leáis si no lo habéis hecho ya.
+* "Front Matter" o Material preliminar: corresponde a lo que sería el elemento `<front>` que puede situarse antes del elemento `<text>` y suele contener informaciones complementarias, tales como los prólogos. Así, en esta sección encontraréis informaciones varias sobre las diferentes versiones, la codificación de los caracteres, pero sobretodo una "[Gentle Introduction to XML](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html)", una introducción al lenguaje XML que os recomiendo vivamente que leáis si no lo habéis hecho ya.
 * "Back Matter" o Material final: correspondería al elemento `<back>` y aquí encontraréis diversos apéndices, como por ejemplo la lista de todos los elementos existentes en TEI, en un primer momento clasificados por orden alfabético, y a continuación según los módulos diferentes. ¡Eso os dará una idea del conjunto!
 * "Text Body" o Cuerpo del texto: correspondería al elemento `<text>` y es la parte más importante pues es la que describe cada uno de los veintiún módulos.
-* "TEI Sourcecode" o código fuente TEI: este apartado contiene informaciones e indicaciones para utilizar el repositorio TEI en GitHub <https://github.com/TEIC/TEI>, una subversión del mismo, y un apartado dedicado a la recopilación de "bugs" o errores eventuales que puedan darse en la infraestructura TEI; tenéis también una lista de peticiones (por ejemplo, si alguien considera necesario la inclusión de un elemento que todavía no existe).
+* "[TEI Sourcecode](https://github.com/TEIC/TEI)" o código fuente TEI: este apartado contiene informaciones e indicaciones para utilizar el repositorio TEI en GitHub, una subversión del mismo, y un apartado dedicado a la recopilación de "bugs" o errores eventuales que puedan darse en la infraestructura TEI; tenéis también una lista de peticiones (por ejemplo, si alguien considera necesario la inclusión de un elemento que todavía no existe).
 
 Cada proyecto de codificación, pues, debe crear su propio esquema a partir de una combinación de los módulos obligatorios y los módulos optativos. En total disponemos de veintiún módulos: cuatro son obligatorios (tei, core, header, textstructure), mientras que los otros son optativos en función de las necesidades del proyecto.
 
@@ -81,15 +80,15 @@ Los módulos optativos son:
   transcr             Transcription of Primary Sources       [11. Representation of Primary Sources](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html)
   verse               Verse                                  [6. Verse](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html)
 
-Cada módulo define una serie de etiquetas propias (de un total de aproximadamente 500 elementos), así como las clases de modelo <http://www.tei-c.org/release/doc/tei-p5-doc/es/html/REF-CLASSES-MODEL.html> y de los atributos <http://www.tei-c.org/release/doc/tei-p5-doc/es/html/REF-CLASSES-ATTS.html>.
+Cada módulo define una serie de etiquetas propias (de un total de aproximadamente 500 elementos), así como las [clases de modelo](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/REF-CLASSES-MODEL.html) y de los [atributos](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/REF-CLASSES-ATTS.html).
 
-Cada módulo tiene una presentación general, donde se explica el funcionamiento de cada uno de sus elementos. Por ejemplo, si estamos interesados en los diccionarios, tenemos a nuestra disposición la explicación general <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html> sobre diccionarios en las GD, y si necesitamos uno de sus elementos podemos acceder a su información individualizada, pongamos por caso `<form>` <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-form.html>
+Cada módulo tiene una presentación general, donde se explica el funcionamiento de cada uno de sus elementos. Por ejemplo, si estamos interesados en los diccionarios, tenemos a nuestra disposición la [explicación general](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html) sobre diccionarios en las GD, y si necesitamos uno de sus elementos podemos acceder a su información individualizada, pongamos por caso [`<form>`](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-form.html)
 
 Cada uno de los elementos, contiene a) una definición, b) el módulo de pertenencia, c) la clase de atributos que puede conllevar, d) la clase de modelo del que forma parte, e) la indicación de los elementos donde puede ser utilizado, f) la serie de elementos que puede contener en su interior; g) el fragmento de código del esquema (RelaxNG) que define su comportamiento; h) un ejemplo concreto, con la posibilidad de recuperar todos los ejemplos existentes con ese elemento en las Guías directrices (opción "Show all").
 
-En la [lección XXX]() tendremos tiempo de trabajar con algunos de estos módulos.
+En la [lección sobre Tipologías](https://tthub.io/aprende/l5-tipologias/) tendremos tiempo de trabajar con algunos de estos módulos.
 
-Como os podréis imaginar, el mismo Consorcio prevé que la actualización constante, especialmente la evolución de P4 a P5, suponga cambios considerables. Por ello, ofrece consejos de migración <http://www.tei-c.org/Vault/P4/migrate.html> y una Wiki <https://wiki.tei-c.org/index.php/Main_Page> de cuestiones relativas a TEI, entre ellas la migración entre versiones para aquellos proyectos que utilizaron la versión anterior, TEI.
+Como os podréis imaginar, el mismo Consorcio prevé que la actualización constante, especialmente la evolución de P4 a P5, suponga cambios considerables. Por ello, ofrece [consejos de migración](http://www.tei-c.org/Vault/P4/migrate.html) y una [Wiki](https://wiki.tei-c.org/index.php/Main_Page) de cuestiones relativas a TEI, entre ellas la migración entre versiones para aquellos proyectos que utilizaron la versión anterior, TEI.
 
 # II. Estructura y formatos de publicación
 
@@ -101,11 +100,29 @@ Las GD se fundamentan sobre el principio del acceso abierto, por ello todo lo qu
 
 Las GD pueden descargarse en diferentes formatos:
 
-* Versión HTML en línea <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/>
-* En formato PDF <http://www.tei-c.org/release/doc/tei-p5-doc/en/Guidelines.pdf>
-* En formato EPUB <http://www.tei-c.org/release/doc/tei-p5-doc/en/Guidelines.epub>
-* En formato MOBI <http://www.tei-c.org/release/doc/tei-p5-doc/en/Guidelines.mobi>
+* [Versión HTML en línea](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/)
+* [Formato PDF](http://www.tei-c.org/release/doc/tei-p5-doc/en/Guidelines.pdf)
+* [Formato EPUB](http://www.tei-c.org/release/doc/tei-p5-doc/en/Guidelines.epub)
+* [Formato MOBI](http://www.tei-c.org/release/doc/tei-p5-doc/en/Guidelines.mobi)
 
-Una de las opciones más interesantes es la posibilidad de instalarnos una copia de las GD en nuestro ordenador personal a través de SVN (Version Control System), pero ello está indicado especialmente para que los usuarios más avanzados puedan probar los últimos desarrollos y proveer feedback sobre lo que piensan y como deberían desarrollarse. Lo que sí, en cambio, es muy útil es la descarga de la última versión de las GD, disponible aquí <https://sourceforge.net/projects/tei/files/TEI-P5-all/>. Os recomiendo que os descargéis una copia y la conservéis en vuestro ordenador para que podáis consultarla incluso cuando no estéis en línea.
+Una de las opciones más interesantes es la posibilidad de instalarnos una copia de las GD en nuestro ordenador personal a través de SVN (Version Control System), pero ello está indicado especialmente para que los usuarios más avanzados puedan probar los últimos desarrollos y proveer feedback sobre lo que piensan y como deberían desarrollarse. Lo que sí, en cambio, es muy útil es la descarga de la última versión de las GD, disponible [aquí](https://sourceforge.net/projects/tei/files/TEI-P5-all/). Os recomiendo que os descargéis una copia y la conservéis en vuestro ordenador para que podáis consultarla incluso cuando no estéis en línea.
 
-[^1]: Esta lección... 
+## III. Recursos
+
+En el apartado de las [Guidelines](http://www.tei-c.org/Guidelines/), a parte de las GD propiamente dichas, encontramos otra serie de materiales y recursos relacionados que conviene conocer. En la página encontraréis las siguientes secciones:
+
+* [Personalización de las Guidelines](http://www.tei-c.org/Guidelines/Customization/index.xml): Las GD están concebidas para ser personalizadas, de manera que cada proyecto e incluso disciplina puede crear una versión personalizada y adaptada a las necesidades y prácticas particulares. TEI ofrece una herramienta, llamada ROMA, que permite elegir los módulos necesarios para nuestro proyecto y personalizar así nuestro esquema (añadiendo y eliminando elementos y atributos no utilizados, y estableciendo valores predeterminados para los atributos, etc.)
+
+* [Internacionalización](http://www.tei-c.org/Tools/I18N/): Las GD están todavía en curso de traducción en otras lenguas diferentes del inglés. Este apartado ofrece información sobre el estado de dichas traducciones que son llevadas a cabo de manera espontánea y gratuita. En el caso del español, aunque se indique que disponemos de un “stable relase”, lo cierto es que no es completa y algunas partes, como la introducción a XML, carece todavía de una traducción.
+
+* TEI mantiene un repositorio en [GitHub](https://github.com/TEIC) que gestiona el desarrollo y la distribución de la versión TEI más actualizada. Los ficheros originales de la última versión de las GD y los materiales relacionados (como las hojas de estilo XSLT, la herramienta Roma, o las traducciones) pueden ser descargados en este portal.
+
+* [Archivo TEI](http://www.tei-c.org/Vault/). El consorcio es consciente que muchos de los proyectos elaborados con TEI se hicieron con versiones anteriores a la actual, por ello existe un archivo o repositorio con todas las versiones anteriores de las GD; conservan incluso las versiones anteriores de la página web TEI.
+
+* “[Getting Involved](http://www.tei-c.org/Guidelines/participation.xml)”: las GD son concebidas como un proyecto colaborativo donde es imprescindible la colaboración y la participación activa tanto o de sus miembros como de todos os usuarios. Ene este apartado se detallan las diferentes maneras en que la comunidad TEI (miembros y no miembros) pueden contribuir.
+
+* [Licencia y Citación](http://www.tei-c.org/Guidelines/access.xml). TEI informa sobre los términos de la licencia de las GD y ayuda a citarlas de una manera correcta, de manera que si utilizamos TEI podamos agregar la información legal en nuestro proyecto.
+
+* [Aprende TEI](http://www.tei-c.org/Support/Learn/). TEI mantiene una lista extremadamente útil de recursos y materiales que ayudan a iniciarse en el estudio de las GD de TEI, incluyendo enlaces a talleres, documentación de proyectos y tutoriales en línea.
+
+
