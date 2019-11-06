@@ -69,21 +69,12 @@ Centrémonos por un momento en los siguientes ejemplos e intentemos reflexionar 
 ![Primera Parte del Ingenioso Hidalgo, 1605](img/L1_003.png){height=250px} 
 ![Alfonso de Palencia, *Parallelae*, Sevilla 1491](https://tthub-repo.github.io/lecciones/img/L1_004.jpg){height=250px}  
 
-Primera Parte del Ingenioso Hidalgo, 1605  
-Alfonso de Palencia, *Parallelae*, Sevilla 1491
-
 ![Hunain Ibn Ishaq, *Libro de los buenos proverbios*, s. IX ](https://tthub-repo.github.io/lecciones/img/L1_005.jpg){height=250px} 
 ![Ludovico 
 Ariosto, *Orlando Furioso*, Venezia, 1546](https://tthub-repo.github.io/lecciones/img/L1_006.jpg){height=250px} 
 
-Hunain Ibn Ishaq, *Libro de los buenos proverbios*, s. IX  
-Ludovico Ariosto, *Orlando Furioso*, Venezia, 1546
-
 ![*Dictionnaire Gaffiot latin-français*, Paris: Hachette, 1934](https://tthub-repo.github.io/lecciones/img/L1_007.jpg){height=250px} 
 ![Lope de Vega, *La Bella Malmaridada*, Madrid, Alonso Martín, 1610](https://tthub-repo.github.io/lecciones/img/L1_008.jpg){height=250px} 
-
-Dictionnaire Gaffiot latin-français*, Paris: Hachette, 1934  
-Lope de Vega, *La Bella Malmaridada*, Madrid, Alonso Martín, 1610
 
 Cada una de estas tipologías contiene aspectos diferentes y todos en realidad tienen un texto. El diccionario contiene voces y significados; la obra teatral tiene escenas y personajes; una postal, además del mensaje, contiene información sobre quien y para quien se escribió; el manuscrito antiguo puede contener diversas obras, la edición del siglo XVI contiene un rico frontispicio con informaciones sobre la impresión, etc. Además hay otros aspectos que en realidad también forman parte del texto aunque sea desde un punto de vista físico: la estructura textual (parágrafos, listas, tablas...), en el caso del manuscrito vemos letras dañadas, caracteres especiales, líneas del folio, abreviaciones, anotaciones manuscritas, correcciones de autor, errores, entre otra casuística.  
 
