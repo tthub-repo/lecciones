@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Susanna Allés Torrent" />
+  <meta name="dcterms.date" content="2019-01-01" />
+  <title>Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos</h1>
+<p class="author">Susanna Allés Torrent</p>
+<p class="date">2019</p>
+</header>
+<h1 id="page.title-1">{{ page.title }}<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h1>
+<pre><code>{{ page.author }}
+
+{{ page.date }}</code></pre>
+<p>Esta lección ofrece una primera aproximación a la Text Encoding Initiative, un marco de trabajo, utilizado internacionalmente y por una gran comunidad de usuarios, concebido especialmente para la codificación, la explotación informática, la publicación en línea y la preservación de textos en ciencias sociales y humanidades. Para ello, se tratan conceptos generales como la codificación de los textos, su utilidad o los campos de aplicación.</p>
+<h1 id="i.-codificación-de-los-textos-y-tei">I. Codificación de los textos y TEI</h1>
+<p>En el ámbito de las humanidades y las ciencias sociales, el texto representa, en la mayoría de los casos, el punto de partida de muchas investigaciones. La introducción de métodos y herramientas propios de la ciencia informática llevaron hace ya más de veinte años a replantearse la importancia del texto y su procesamiento informático. La gran cantidad de textos a nuestra disposición conlleva la adopción de nuevas estrategias para la creación, la explotación y su conservación.</p>
+<p>La iniciativa de marcado de textos nace pues de la necesidad de procesar los textos desde un punto de vista informático, para que, en definitiva, no sea susceptible solo de una lectura “plana”, sino para que sea procesable a través de múltiples herramientas como pueden ser programas de concordancias, análisis estilométricos, gráficos de frecuencias, segmentación gramatical o, sobretodo, su publicación web y la posibilidad de realizar búsquedas inteligentes.</p>
+<figure>
+<img src="img/L1_002.png" alt="Logo de la Text Encoding Initiative" style="width:15.0%" /><figcaption>Logo de la Text Encoding Initiative</figcaption>
+</figure>
+<p>La <a href="http://www.tei-c.org/">Text Encoding Initiative</a> surgió a finales de los años ochenta y fue la primera iniciativa científica destinada a la codificación informática de textos, actualmente es una de las más utilizadas y uno de los temas centrales en la disciplina de las humanidades digitales.</p>
+<h2 id="qué-es-tei">¿Qué es TEI?</h2>
+<p>La Text Encoding Initiative se ampara en primera instancia en el <a href="http://www.tei-c.org/about/organization/">Consorcio TEI</a>, cuya estructura veremos más abajo. Este consorcio compuesto por personas e instituciones es el responsable de desarrollar y mantener actualizadas las <a href="http://www.tei-c.org/Guidelines/"><em>Guías directrices</em></a> para el marcado de los textos en formato digital. Estas guías son una especie de manual de codificación o de recomendaciones de buenas prácticas que especifican una metodología concreta de codificación de los textos de manera que sean leídos y procesados por las computadoras.</p>
+<p>TEI posee una plataforma web donde se publican tanto las <em>Guías directrices</em>, como una gran cantidad de herramientas e informaciones sobre su comunidad. A continuación, podemos leer una primera definición que nos será útil para empezar:</p>
+<blockquote>
+<p>[English] The <em>TEI Guidelines for Electronic Text Encoding and Interchange</em> define and document a markup language for representing the structural, renditional, and conceptual features of texts. They focus (though not exclusively) on the encoding of documents in the humanities and social sciences, and in particular on the representation of primary source materials for research and analysis. These guidelines are expressed as a modular, extensible XML schema, accompanied by detailed documentation, and are published under an open-source license. The Guidelines are maintained and developed by the TEI Consortium, through its Technical Council, with the support and participation of the TEI community.</p>
+</blockquote>
+<blockquote>
+<p>[Español] “Las <em>Guías Directrices para la codificación y el intercambio de textos electrónicos</em> definen y documentan un lenguaje de marcado para la representación de las características estructurales, físicas y conceptuales de los textos. Su foco de atención es el marcado de documentos en Humanidades y Ciencias Sociales (aunque no exclusivamente), y en particular la representación de fuentes primarias para su explotación y análisis. Estas líneas directrices se expresan de forma modular, a través de esquemas XML extensibles, están acompañadas de una documentación detallada, y publicadas bajo una licencia en acceso abierto. Las <em>Guías Directrices</em> son mantenidas y desarrolladas por el Conaoexio TEI, a través de su Comité Técnico, con el respaldo y la participación de la comunidad TEI”. http://www.tei-c.org/Guidelines/</p>
+</blockquote>
+<p>Veamos paso por paso los diferentes puntos básicos de esta definición:</p>
+<ul>
+<li>El núcleo central de la TEI son las <em>Guías Directrices</em> que constituyen el manual de uso y la recomendación de buenas prácticas sobre cómo proceder. Su misión principal es proponer unas pautas claras para el marcado y el intercambio electrónico de los textos y ofrecer una documentación general y explicativa.<br />
+</li>
+<li>Las <em>Guías Directrices</em> proponen un tipo concreto de lenguaje de marcado que consiste en aislar a través de “marcas” o “etiquetas” las características textuales, ya sean estructurales (como capítulos de libro, secciones, apartados, párrafos, estrofas, versos, etc.), como físicas (distribución de la página en columnas en un manuscrito), como conceptuales o semánticas (nombres de personas, de lugares, palabras clave, etc.).<br />
+</li>
+<li>TEI es especialmente usada en las disciplinas humanísticas, ciencias sociales o lingüística, y en la representación de las fuentes primarias, tales como manuscritos (de hecho, TEI es también utilizada en algunas bibliotecas para la descripción y catalogación de sus fondos).<br />
+</li>
+<li>El sistema de marcado propuesto por TEI tiene una naturaleza modular que agrupa fenomenología diversa en un mismo “módulo”. Tiene cuatro obligatorios, que corresponden a elementos compartidos por todos y cada uno de los documentos TEI (como puede ser el elemento raíz, o el elemento párrafo). Esta característica modular permite customizar o personalizar el modelo de marcado que cada proyecto necesita.<br />
+</li>
+<li>TEI se expresa a través del lenguaje estándar web XML, Extensible Markup Language o Lenguaje de Marcas Extensible, que se ve en detalle en la lección <a href="https://tthub.io/aprende/l2-xml/">“El lenguaje XML (eXtensible Markup Language) y conceptos generales”</a>. Además, por lo general, los esquemas o modelos de marcado también utilizan este mismo lenguaje.<br />
+</li>
+<li>TEI ofrece una gran cantidad de documentación detallada sobre cada uno de los elementos, módulos y en general cualquier aspecto relacionado con su uso y buenas prácticas.<br />
+</li>
+<li>Todo este material es de acceso abierto y puede consultarse libremente online, descargarse, reutilizarse e, incluso, ser susceptible de mejoras a través de la retroalimentación de los usuarios. Todo el material está disponible en <a href="https://github.com/TEIC/TEI">GitHub</a>.</li>
+</ul>
+<p>En lo que concierne a los objetivos de TEI, podríamos resumirlos de la siguiente manera:</p>
+<ul>
+<li>Ofrecer unas guías directrices para la creación y la manipulación de todo tipo de datos textuales. Los datos pueden proceder de textos de cualquier naturaleza, manuscritos, documentos de archivos, inscripciones, correspondencia, novelas, obras dramáticas, etc.<br />
+</li>
+<li>Promover la creación, el intercambio y la integración de los datos textuales informatizados.</li>
+<li>Contemplar textos de cualquier tipología, género y disciplina (Ciencias Humanas y Sociales, Humanidades, Lingüística), en cualquier lengua y de cualquier periodo cronológico.</li>
+<li>Ser accesible tanto a un público novel, sin conocimientos previos en informática, que quiera codificar un material textual, como a un público técnico, capaz de buscar y proponer nuevas soluciones informáticas.</li>
+</ul>
+<p>Las ventajas que ofrece el uso de TEI son múltiples y entre ellas podemos señalar:</p>
+<ul>
+<li>XML-TEI no depende de ningún software o programa informático y por tanto es gratuito e independiente. Un documento XML será siempre el mismo en cualquier sistema operativo o aplicación. Este hecho evita que se puedan dar situaciones catastróficas, en que, por ejemplo, un programa con un formato propietario ya no se mantenga o no se utilice y los documentos queden obsoletos.</li>
+<li>XML-TEI ha sido diseñado por y para la comunidad científica que es la encargada en última instancia de promover y mejorar las guías de marcado. Cuantos más usuarios y más gente implicada haya utilizando el mismo sistema de marcado, más se avanzará hacia una propuesta sólida de codificación.</li>
+<li>Un marcado a través de un estándar web, independiente de cualquier software o plataforma web, como es el caso de en XML-TEI, permite y facilita la reutilización del mismo material: en diferentes formatos, en contextos diferentes, por diferentes usuarios. Ello permite que proyectos posteriores o contemporáneos puedan establecer un vínculo y un uso diferente del material publicado, evitando el tener que empezar de cero y avanzando en el conocimiento.</li>
+<li>XML-TEI se centra en el significado y el contenido del texto y no en su apariencia o en su presentación final (es decir, no es tan relevante el señalar un título en negrita, como definir que efectivamente se trata de un “título”).</li>
+</ul>
+<h2 id="qué-entendemos-por-texto">¿Qué entendemos por texto?</h2>
+<p>Antes de adentrarnos en ejemplos concretos, conviene que reflexionemos por un momento sobre qué es un texto. Una pregunta tan sencilla y obvia esconde en realidad una respuesta compleja y no siempre fácil de definir.</p>
+<p>El texto es una idea abstracta que presupone la existencia de una secuencia de símbolos lingüísticos. ¿Pero donde se encuentra exactamente un texto? ¿Lo debemos buscar en el original que escribió el autor o en todas las otras copias y ediciones posteriores? ¿Lo debemos extraer de la historia que se explica o en las intenciones últimas del autor? ¿O es quizás en la presentación y distribución de la página?</p>
+<p>Centrémonos por un momento en los siguientes ejemplos e intentemos reflexionar sobre dónde está el texto:</p>
+<p><img src="img/L1_003.png" alt="Primera Parte del Ingenioso Hidalgo, 1605" height="250" /> <img src="https://tthub-repo.github.io/lecciones/img/L1_004.jpg" alt="Alfonso de Palencia, Parallelae, Sevilla 1491" height="250" /></p>
+<p>Primera Parte del Ingenioso Hidalgo, 1605<br />
+Alfonso de Palencia, <em>Parallelae</em>, Sevilla 1491</p>
+<p><img src="https://tthub-repo.github.io/lecciones/img/L1_005.jpg" alt="Hunain Ibn Ishaq, Libro de los buenos proverbios, s. IX" height="250" /> <img src="https://tthub-repo.github.io/lecciones/img/L1_006.jpg" alt="Ludovico Ariosto, Orlando Furioso, Venezia, 1546" height="250" /></p>
+<p>Hunain Ibn Ishaq, <em>Libro de los buenos proverbios</em>, s. IX<br />
+Ludovico Ariosto, <em>Orlando Furioso</em>, Venezia, 1546</p>
+<p><img src="https://tthub-repo.github.io/lecciones/img/L1_007.jpg" alt="Dictionnaire Gaffiot latin-français, Paris: Hachette, 1934" height="250" /> <img src="https://tthub-repo.github.io/lecciones/img/L1_008.jpg" alt="Lope de Vega, La Bella Malmaridada, Madrid, Alonso Martín, 1610" height="250" /></p>
+<p>Dictionnaire Gaffiot latin-français<em>, Paris: Hachette, 1934<br />
+Lope de Vega, </em>La Bella Malmaridada*, Madrid, Alonso Martín, 1610</p>
+<p>Cada una de estas tipologías contiene aspectos diferentes y todos en realidad tienen un texto. El diccionario contiene voces y significados; la obra teatral tiene escenas y personajes; una postal, además del mensaje, contiene información sobre quien y para quien se escribió; el manuscrito antiguo puede contener diversas obras, la edición del siglo XVI contiene un rico frontispicio con informaciones sobre la impresión, etc. Además hay otros aspectos que en realidad también forman parte del texto aunque sea desde un punto de vista físico: la estructura textual (parágrafos, listas, tablas…), en el caso del manuscrito vemos letras dañadas, caracteres especiales, líneas del folio, abreviaciones, anotaciones manuscritas, correcciones de autor, errores, entre otra casuística.</p>
+<p>El texto, pues, no es solo el contenido textual sino que hay muchas otras variantes y componentes que debemos tener en cuenta a la hora de su codificación. Es importante que cuando afrontamos cualquier proyecto de marcado tengamos en cuenta todas y cada una de estas características que componen el “texto” en un sentido amplio. Por ello, será útil establecer una diferencia entre los conceptos de “texto” y “documento”. Mientras que el documento corresponde a un objeto en el mundo real que podemos escanear o digitalizar, como podría ser el caso de estas imágenes. El texto, en cambio, corresponde a la idea abstracta del contenido de ese documento, creado por y para una comunidad de lectores. Es esta última acepción de “texto” con la que en realidad trabajamos la mayoría de las veces al editar o codificar y requiere un análisis previo así como un cierto nivel de abstracción.</p>
+<h2 id="la-codificación-de-un-texto">La codificación de un texto</h2>
+<p>Todas las informaciones que queramos localizar y reutilizar deben ser marcadas de una manera explícita y a través de unas marcas informáticas. Sólo las informaciones que son explícitas podrán ser buscadas a posteriori, procesadas y presentadas.</p>
+<p>Un marcado electrónico es un valor añadido al texto pues puede proporcionar múltiples anotaciones, difícilmente señalables en una edición en papel, como por ejemplo en qué secuencia un autor canceló y añadió ciertas correcciones.</p>
+<p>Es importante antes de empezar a codificar saber qué elementos queremos aislar y cuáles son útiles para nuestro proyecto:</p>
+<ul>
+<li>Divisiones estructurales dentro del texto: título de la página, capítulo, escena, poema, línea, párrafo…<br />
+</li>
+<li>Elementos tipográficos puntuales: cambios de letra, caracteres especiales…<br />
+</li>
+<li>Informaciones semánticas: personas, lugares, eventos, fechas…<br />
+</li>
+<li>Otros elementos: estructuras sintácticas, formas gramaticales, localización de ilustraciones, gráficos, tablas, imágenes…</li>
+</ul>
+<p>La decisión, una vez más, dependerá de las informaciones que queramos recuperar <em>a posteriori</em> y procesar informáticamente.</p>
+<h2 id="formato-vs-contenido">Formato vs Contenido</h2>
+<p>Conviene aclarar antes de entrar en materia que existen diferentes tipos de lenguajes de marcado. Para simplificarlo, -y para lo que aquí nos conviene- podemos establecer dos tipos básicos de lenguajes informáticos, por un lado, están los que se ocupan de la presentación (en inglés, “Presentational markup”), es decir, de cuestiones como los diferentes tipos de fuentes, el diseño y a la distribución en la página web, etc.; y por otro lado, los lenguajes descriptivos (“Descriptive markup”) que se ocupan de señalar lo que son las cosas sin preocuparse de cómo aparecerán en la página web, sea cual sea su formato de salida. De hecho, en la mayoría de los casos su transformación y presentación se relega a una etapa posterior.</p>
+<p>Un lenguaje de presentación es claramente el lenguaje HTML que se ocupa de presentar los contenidos en la web; por el contrario, el lenguaje XML es descriptivo pues se centra en el contenido semántico. Volvamos al ejemplo anterior: imaginemos que queremos marcar el título principal de una obra; pues bien, HTML lo marcaría de esta manera: <code>&lt;b&gt;Titulo&lt;/b&gt;</code>, donde <code>&lt;b&gt;</code> está por “bold” o negrita; mientras que XML lo marcaría con otra etiqueta que indicara lo que es, no cómo debe aparecer: <code>&lt;title type=&quot;principal&quot;&gt;Titulo&lt;/title&gt;</code>. El lenguaje XML-TEI, al centrarse en el contenido semántico y no en su presentación, no señala si una palabra irá o no en negrita, sino la naturaleza de ese elemento, en este caso un “título”. De esta manera, el contenido nunca está limitado a la perspectiva de un único editor, el texto existe y la presentación que se obtenga al final es relativamente irrelevante. Además, un documento XML puede ser transformado con facilidad a múltiples formatos, como .doc, epub, html, pdf, pero no siempre al revés.</p>
+<p>En definitiva, el hecho de separar la forma o su presentación de su contenido facilita la reutilización de un documento pues no contiene todavía los corsés del formato, de manera que su difusión y reciclaje es mucho más flexible.</p>
+<h1 id="ii.-la-text-encoding-initiative">II. La Text Encoding Initiative</h1>
+<h2 id="un-poco-de-historia">Un poco de historia…</h2>
+<p>Hacia los años ochenta, diferentes tecnologías ya habían entrado a formar parte de ciertos campos de las humanidades y las ciencias sociales; recordemos por ejemplo que la lingüística de corpus ya había visto aparecer diferentes iniciativas de proyectos lexicográficos a gran escala, como el <em>Index Thomisticus</em> del padre <a href="https://en.wikipedia.org/wiki/Roberto_Busa">Roberto Busa</a> que contó con la colaboración de IBM.</p>
+<p>El reto que se planteó entonces fue el de desarrollar, mantener y publicar un método de codificación para los datos en humanidades en un formato electrónico que fuera independiente tanto de <em>hardware</em> y sistemas operativos como de programas informáticos. Ante el crecimiento de sistemas diferentes de representación de materiales textuales, incluidos procesadores de texto, urgía la necesidad de ofrecer a la comunidad científica un método sólido para alargar la vida de sus datos y poder reutilizarlos en el futuro con objetivos diferentes. El hecho de que cada compañía ofreciera un programa y formatos propietarios entorpecía el trabajo académico y hacía difícil la planificación de proyectos a gran escala y de la larga duración.</p>
+<p>Así pues, en 1987 tuvo lugar la primera reunión en el Vassar College (Poughkeepsie, NY), financiada por la <a href="http://ach.org/"><em>Association for Computers in the Humanities</em></a> y el <a href="https://www.neh.gov/"><em>National Endowment for the Humanities</em></a>, con el fin de crear un sistema para la codificación de textos electrónicos. El texto que de ahí salió se puede consultar todavía en <a href="http://www.tei-c.org/Vault/ED/edp01.htm"><em>Design Principles for Text Encoding Guidelines</em></a>.</p>
+<p>En los años sucesivos, un comité, con la participación de más de 50 colaboradores, empezó la redacción de lo que acabaría siendo la primera propuesta de las <em>Guías Directrices</em>, conocida como TEI P1, publicada en junio de 1990. Se inició, posteriormente, una segunda fase con la creación de los hoy habituales “working groups” o grupos de trabajo por disciplina, con más de 100 colaboradores que, tras un trabajo de revisión y mejoras, publicaron una segunda propuesta. Pocos años después, en mayo de 1994, salieron las primeras <em>Guías directrices</em> oficiales (P3), para las cuales se había contado ya con más de 200 colaboradores.</p>
+<p>Empezó entonces un enorme trabajo de difusión del modelo, a través de seminarios y talleres, pero sobretodo con muchos test y la retroalimentación de los colaboradores, que es lo que todavía hoy ayuda a identificar problemas, señalar necesidades concretas y proponer soluciones; para tal fin, TEI utiliza la plataforma GitHub donde se pueden solicitar nuevas funcionalidades TEI (<a href="https://github.com/TEIC/TEI/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+FeatureRequest%22">“Feature Requests”</a>) o llamar la atención sobre errores existentes (<a href="https://github.com/TEIC/TEI/issues">“Bug”</a>).</p>
+<p>En el año 2000 se creó, en fin, el Consorcio TEI que aspiraba a constituirse como una organización sin ánimo de lucro, permanente, académica y económicamente independiente. Una de las prioridades más urgentes que se planteó en ese momento fue la conversión de las <em>Guías Directrices</em> al lenguaje XML, pues las primeras se habían creado a partir del lenguaje <a href="https://www.w3.org/MarkUp/SGML/">SGML</a>, un sistema más complejo, pesado y no tan ágil como XML. Así, solo dos años después, en 2002, apareció la P4, que por primera vez proponía un marco de trabajo basado ya en XML.</p>
+<p>Finalmente, en noviembre de 2007, apareció la P5, que corresponde a la quinta propuesta todavía hoy en uso; periódicamente se realizan mejoras y se aumenta el número de su versión. El <a href="http://www.tei-c.org/guidelines/p5/#section-1">historial de actualizaciones</a> puede encontrarse en su sitio web.</p>
+<h2 id="estructura-interna-de-la-organización-tei">Estructura interna de la organización TEI</h2>
+<p>La Text Encoding Initiative es una organización internacional, fundada en el año 1987, encargada de desarrollar, mantener y publicar unas guías directrices para la codificación electrónica de textos en humanidades y ciencias sociales.</p>
+<p>Desde el año 2000 su estructura organizativa se oficializó con la creación del Consorcio TEI que tiene una serie de <a href="http://www.tei-c.org/about/mission/">objetivos</a>:</p>
+<ul>
+<li>Desarrollo de las <em>Guías Directrices</em> TEI.</li>
+<li>Difusión y promoción de las <em>Guías Directrices</em> TEI.</li>
+<li>Formación y divulgación</li>
+<li>Promoción de una comunidad de investigación TEI.</li>
+</ul>
+<p>Esta organización, sin ánimo de lucro, es autofinanciada por sus miembros y subscriptores que pueden ser instituciones (bibliotecas, universidades, proyectos académicos, unidades de investigación) y personas.</p>
+<p>Tiene dos niveles de gestión:</p>
+<ul>
+<li><a href="http://www.tei-c.org/about/board-of-directors/"><em>TEI Board of Directors</em></a>, encargado de la gestión del Consorcio</li>
+<li><a href="http://www.tei-c.org/activities/Council/"><em>TEI Technical Council</em></a>: 12 personas, encargadas de la elaboración y el desarrollo de las <em>Guías Directrices</em></li>
+</ul>
+<p>Además, TEI cuenta con otros dos niveles de participación y organización que consisten en grupos de trabajo especializados en una materia o disciplina concretas:</p>
+<ul>
+<li><a href="http://www.tei-c.org/activities/workgroups/"><em>TEI Workgroups</em></a>: equipos de investigadores y profesionales que tratan cuestiones generales relativas al marcado TEI, como la gestión de la bibliografía o de informaciones biográficas, estructuras de rasgos, descripción de manuscritos, migraciones de sistemas de marcado o de versiones TEI diferentes, etc. Su trabajo se refleja de una manera concreta en las <em>Guías Directrices</em>.<br />
+</li>
+<li><a href="http://www.tei-c.org/activities/sig/"><em>Special Interest Groups</em></a>: grupos de personas con intereses específicos normalmente en contacto a través de las listas de discusión, como por ejemplo, el caso de la codificación de la correspondencia epistolar, el uso de TEI en bibliotecas o la codificación de música, el uso de ontologías o la creación de herramientas, entre otras cuestiones.</li>
+</ul>
+<p>Todo ello, se engloba en la gran comunidad de usuarios conectada a través de la <a href="http://www.tei-c.org/support/#tei-l">lista de correo electrónico</a> y de espacios participativos como la <a href="https://wiki.tei-c.org/index.php/Main_Page">Wiki</a>.</p>
+<p>Además de los talleres y seminarios que pueden tener lugar a lo largo del año, el Consorcio organiza des del año 2001 una conferencia anual, las últimas de las cuales han tenido lugar en <a href="http://tei2015.huma-num.fr/en/">Lyon</a> (2015), <a href="http://tei2016.acdh.oeaw.ac.at/">Vienna</a> (2016), y <a href="https://hcmc.uvic.ca/tei2017/index.php">Victoria</a> (2017), <a href="https://tei2018.dhii.asia/">Tokyo</a> (2018) y <a href="https://graz-2019.tei-c.org/">Graz</a> (2019).</p>
+<p>En este esquema se refleja el engranaje de la comunidad TEI:</p>
+<figure>
+<img src="https://tthub-repo.github.io/lecciones/img/L1_009.png" alt="TEI organizational structure, 2012 (Burnard 2013)" style="width:50.0%" /><figcaption>TEI organizational structure, 2012 (Burnard 2013)</figcaption>
+</figure>
+<h1 id="iii.-aplicaciones-prácticas-y-tipos-de-proyectos">III. Aplicaciones prácticas y tipos de proyectos</h1>
+<p>El sistema de marcado XML-TEI se utiliza en una gran variedad de contextos diferentes. En línea de máxima, se emplea para la edición de textos, pero su uso se ha extendido también a otros tipos de proyectos.</p>
+<p>El mismo Consorcio ofrece una lista oficial de <a href="http://www.tei-c.org/Activities/Projects/">proyectos que utilizan TEI</a> accesible en su web; también la <a href="http://ota.ahds.ac.uk/catalogue/index.html">universidad de Oxford</a> ha recogido otra serie de proyectos con el mismo propósito; ambas listas no son, ni mucho menos, completas.</p>
+<p>A continuación, damos algunos ejemplos de los escenarios más típicos de su aplicación:</p>
+<h2 id="edición-de-textos">Edición de textos</h2>
+<p>El uso más extendido de XML-TEI es, sin duda, la edición de textos. Esta es su aplicación principal y, de hecho, muchos proyectos de mayor envergadura contienen un componente editorial. En este sentido, podemos encontrar una gran variedad de enfoques que pueden abrazar todos los diferentes métodos y escuelas de la crítica textual, desde ediciones de textos modernos, a otras diplomáticas o de crítica genética e incluso auténticas ediciones críticas en línea. Véanse como ejemplos las siguientes iniciativas:</p>
+<ul>
+<li><a href="http://damaboba.unibo.it/">La Dama Boba</a></li>
+<li><a href="http://thalamus.huma-num.fr/chronique-francaise/annee-1502.html">Le Petit Thalamus de Montpellier</a></li>
+<li><a href="https://www.bovary.fr/">Les manuscrits de Madame Bovary</a></li>
+<li><a href="http://www.marktwainproject.org/homepage.html">Mark Twain Project</a></li>
+<li><a href="http://scta.lombardpress.org/text/questions/plaoulcommentary">Peter Plaoul: The Electronic Critical Edition of Plaoul’s Commentary on the Sentences</a></li>
+</ul>
+<p>Algunas de las ediciones aprovechan las posibilidades del medio digital para ofrecer los textos de múltiples ediciones en paralelo e incluso los textos originales junto con sus traducciones, como por ejemplo los dos proyectos siguientes:</p>
+<ul>
+<li><a href="http://www.cems.ox.ac.uk/holinshed/">Holinsheds Chronicles</a></li>
+<li><a href="http://vangoghletters.org/vg/letters.html">Vincent Van Gogh, <em>The Letters</em></a></li>
+</ul>
+<p>Otros proyectos van más allá y plantean sus ediciones como una plataforma de recursos en torno a una obra o a un autor; muchos de estos son verdaderos instrumentos pedagógicos y didácticos; véanse estos tres casos:</p>
+<ul>
+<li><a href="http://www.worldofdante.org/">The World of Dante</a></li>
+<li><a href="http://www.brown.edu/Departments/Italian_Studies/dweb/index.php">Decameron Web</a></li>
+<li><a href="http://webapp1.dlib.indiana.edu/newton/">The Chymistry of Isaac Newton</a></li>
+</ul>
+<p>Dos recursos muy útiles a la hora de buscar ediciones en línea son los dos catálogos más completos hasta el momento:</p>
+<ul>
+<li><a href="https://dig-ed-cat.acdh.oeaw.ac.at/">G. Franzini, <em>A Catalogue of Digital Editions</em></a></li>
+<li><a href="http://www.digitale-edition.de/index.html">P. Sahle, <em>Digital Scholarly Editions</em></a></li>
+</ul>
+<h2 id="bibliotecas-virtuales">Bibliotecas virtuales</h2>
+<p>En muchas ocasiones, la edición de los textos se inscribe en proyectos de más amplia envergadura, como el caso de las bibliotecas virtuales. Los documentos XML-TEI ofrecen la posibilidad de contener una serie muy rica de metadatos lo que facilita su inserción y conversión en bases de datos de fácil búsqueda. Algunos ejemplos, son:</p>
+<ul>
+<li><a href="https://www.folger.edu/folger-digital-texts">Folger Digital Library</a></li>
+<li><a href="http://www.bdpn.unam.mx/">Biblioteca Novohispánico</a></li>
+<li><a href="http://www.cervantesvirtual.com/">Biblioteca Virtual Miguel de Cervantes</a></li>
+<li><a href="http://www.bvh.univ-tours.fr/">Les Bibliothèques Virtuelles Humanistes</a></li>
+<li><a href="https://www.wwp.northeastern.edu/">Women Writers projects</a></li>
+</ul>
+<h2 id="archivos-virtuales">Archivos virtuales</h2>
+<p>En la misma línea que las bibliotecas virtuales, están los archivos en línea, normalmente centrados en los escritos de un autor; especialmente interesantes son aquellos casos en que su obra se encuentra en localizaciones diferentes y puede ser ofrecida en una única plataforma:</p>
+<ul>
+<li><a href="http://brockdenbrown.cah.ucf.edu/">The Charles Brockden Brown. Electronic Archive and Scholarly Edition</a></li>
+<li><a href="http://shelleygodwinarchive.org/">The Shelley-Godwin Archive</a></li>
+</ul>
+<h2 id="descripción-de-manuscritos">Descripción de manuscritos</h2>
+<p>XML-TEI también es utilizado en la descripción de los fondos de las bibliotecas. Aunque estas por regla general tienen sus propios sistemas de catalogación, normalmente basado en <a href="https://en.wikipedia.org/wiki/MARC_standards">MARC</a>, algunas emplean TEI para la descripción detallada de manuscritos y obras antiguas; esta tendencia facilita eventualmente la creación de ediciones o exposiciones virtuales de los manuscritos.</p>
+<p>Se ha publicado, de hecho, una serie de buenas prácticas para el uso de TEI en las bibliotecas: <a href="http://www.tei-c.org/SIG/Libraries/teiinlibraries/"><em>Best practices for TEI in Libraries</em></a>.</p>
+<p>Algunas iniciativas son:</p>
+<ul>
+<li><a href="https://www.manuscripta.se/">Greek Manuscripts in Sweden</a></li>
+<li><a href="https://www.bodleian.ox.ac.uk/weston/our-work/projects">Oxford &amp; Islamic Manuscripts Catalogue Online</a></li>
+</ul>
+<p>De la misma manera puede también utilizarse para la descripción de documentos de archivo, pero en este caso se prefiere el uso de la <a href="http://www.loc.gov/ead/">Encoding Archival Description</a>, también basada en el lenguaje XML y en muchos casos muy parecida a la Text Encoding Initiative.</p>
+<h2 id="datos-estructurados-para-la-creación-de-bases-de-datos">Datos estructurados para la creación de bases de datos</h2>
+<p>XML-TEI también puede utilizarse para crear bases de datos, como listas de personajes, cronologías, o colecciones de objetos, etc. Un ejemplo representativo se puede encontrar en:</p>
+<ul>
+<li><a href="https://mapoflondon.uvic.ca/mdtEncyclopediaPersonography_subcategories.htm">Personography, <em>Map of Early Modern London</em></a></li>
+</ul>
+<h2 id="diccionarios">Diccionarios</h2>
+<p>Cada vez más habitual es el uso de XML-TEI para diccionarios:</p>
+<ul>
+<li><a href="http://dge.cchs.csic.es/">Diccionario griego español</a></li>
+<li><a href="http://ducange.enc.sorbonne.fr/">DuCange et al. <em>Glossarium mediae et infimae latinitatis</em>. Niort: L. Favre, 1883-1887</a></li>
+<li><a href="http://www.lgpn.ox.ac.uk/">Lexicon of Greek Personal Names</a></li>
+</ul>
+<h2 id="codificación-de-inscripciones-y-catálogos">Codificación de inscripciones y catálogos</h2>
+<p>XML-TEI en algunos casos se ha especializado en la codificación de ciertas tipologías documentales. Es el caso de la iniciativa <a href="https://sourceforge.net/p/epidoc/wiki/Home/">EpiDoc</a>, una adaptación de las guías TEI, para la codificación de inscripciones epigráficas. Véanse estos casos:</p>
+<ul>
+<li><a href="http://iospe.kcl.ac.uk/index.html">IOSPE. Ancient Inscriptions of the Northern Black Sea</a></li>
+<li><a href="http://usepigraphy.brown.edu/projects/usep/collections/">US Epigraphy Project</a></li>
+<li><a href="http://cds.library.brown.edu/projects/Inscriptions/">Inscriptions of Israel / Palestine</a></li>
+</ul>
+<h2 id="cartularios-medievales">Cartularios medievales</h2>
+<p>XML-TEI se utiliza también para la codificación de cartas y documentos medievales, tanto en latín como en otras lenguas. Existe, como en el caso anterior, alguna iniciativa para adaptar las amplias <em>Guías Directrices</em> a este tipo textual, como la <a href="https://www.cei.lmu.de/">Charters Encoding Initiative</a>, pero, en este caso, TEI sigue siendo la más usada.</p>
+<p>Algunos de estos proyectos son:</p>
+<ul>
+<li><a href="http://www.aschart.kcl.ac.uk/index.html">ASChart Anglo-Saxon Charters</a></li>
+<li><a href="http://www.corpuscharta.es/">CHARTA. Corpus Hispánico y Americano en la Red: Textos Antiguos</a>, que en su día publicó una <a href="https://www.academia.edu/8100780/Gu%C3%ADa_para_editar_textos_CHARTA_seg%C3%BAn_el_est%C3%A1ndar_TEI_una_propuesta"><em>Guía para editar textos CHARTA según el estándar TEI: una propuesta</em></a>.<br />
+</li>
+<li><a href="http://elec.enc.sorbonne.fr/cartulaires/">Les cartulaires d’île-de-France (Elec, ENC)</a></li>
+</ul>
+<h2 id="corpus-lingüísticos">Corpus lingüísticos</h2>
+<p>TEI permite tanto una codificación generalista (por corpus, subcorpus, obras, autores, períodos, etc.), como un nivel de granularidad muy fino que comprende incluso las unidades léxicas; por ello, en algunos de los corpus la utilización de este sistema es especialmente interesante para la lematización de sus textos, es decir, para añadir la información gramatical a cada una de las palabras.</p>
+<p>Algunos corpus que utilizan TEI son:</p>
+<ul>
+<li><a href="http://txm.bfm-corpus.org/bfm">Base de Français Médiéval</a></li>
+<li><a href="http://www.natcorp.ox.ac.uk/">British National Corpus</a></li>
+<li><a href="http://www.rae.es/recursos/banco-de-datos/corpes-xxi">CORPES (Corpus del Español del siglo XXI)</a></li>
+</ul>
+<h2 id="editoriales">Editoriales</h2>
+<p>Algunas editoriales han decidido adoptar el marcado TEI-XML como método de publicación para todas o algunas de sus colecciones, e incluso también revistas científicas:</p>
+<ul>
+<li><a href="https://journal.tei-c.org/"><em>Journal of the TEI</em></a></li>
+<li><a href="https://www.openedition.org/">OpenEdition</a></li>
+</ul>
+<h2 id="otras-aplicaciones">Otras aplicaciones</h2>
+<p>TEI-XML puede aplicarse también en función de la utilización de otras herramientas. Así, y sólo por citar dos, existen ejemplos para elaborar líneas cronológicas (<a href="https://en.wikibooks.org/wiki/XQuery/TEI_Document_Timeline">Timeline</a>), o para realizar transcripciones de facsímiles por zonas de píxeles, como en el proyecto del <a href="http://paleographie.huma-num.fr/exo.php?id=minuscule_caroline"><em>Album interactif de paléographie médiévale</em></a>.</p>
+<h1 id="iv.-algunos-recursos-donde-aprender-xml-tei">IV. Algunos recursos donde aprender XML-TEI</h1>
+<p>Además de la sección “Aprende” en nuestro proyecto <a href="https://tthub.io/aprende/"><em>TTHub. Tecnologías del texto y edición digital</em></a>, donde encontrarás lecciones, recursos, ejemplos, ejercicios y un espacio colaborativo, recomiendo:</p>
+<ul>
+<li>Burghart, Marjorie &amp; Elena Pierazzo. “<a href="https://teach.dariah.eu/course/view.php?id=32&amp;section=0">Digital Scholarly Editions: Manuscripts, Texts and TEI Encoding</a>”. #dariahTeach. DH Teaching material,2017.</li>
+<li>Schreibman, Susan &amp; Roman Bleier. “<a href="https://teach.dariah.eu/course/view.php?id=23">Text encoding and the TEI</a>”. #dariahTeach. DH Teaching material, 2017.</li>
+<li><a href="http://www.tei-c.org/support/learn/teach-yourself-tei/">Teach Yourself TEI</a>: Esta es la página de recursos que ofrece el mismo Consorcio TEI.</li>
+<li><a href="http://teibyexample.org/">TEI By Example</a>: Aunque tiene ahora ya algunos años, sigue siendo uno de los tutoriales más completos para estudiar TEI-XML.<br />
+</li>
+<li><a href="http://tei.it.ox.ac.uk/Talks/">TEI@Oxford Teaching Pages</a>: La universidad de Oxford es conocida especialmente por sus cursos de verano sobre HD, aquí podréis encontrar una gran cantidad de presentaciones, teoría y ejercicios que os serán de mucha utilidad.</li>
+<li><a href="https://www.wwp.northeastern.edu/outreach/resources.html">WWP Resources for teaching and learning text encoding</a>: El proyecto Women Writers Projects, ahora en la universidad de Northeastern, ofrece una serie de materiales muy interesantes para aprender TEI y otros lenguajes relacionados.</li>
+</ul>
+<h1 id="v.-bibliografía">V. Bibliografía</h1>
+<p>Burnard, L., “Introduction”, en Burnard, L. (2014), <em>What is the Text Encoding Initiative. How to add intelligent markup to digital resources</em>, Marserille: OpenEdition Press. <a href="https://books.openedition.org/oep/679" class="uri">https://books.openedition.org/oep/679</a></p>
+<p>Burnard, L. (2013), “The Evolution of the Text Encoding Initiative: From Research Project to Research Infrastructure”, <em>Journal of the Text Encoding Initiative</em> 5, Junio. <a href="https://journals.openedition.org/jtei/811" class="uri">https://journals.openedition.org/jtei/811</a></p>
+<p>McGann, J. (2004), “<a href="http://digitalhumanities.org:3030/companion/view?docId=blackwell/9781405103213/9781405103213.xml&amp;chunk.id=ss1-3-4&amp;toc.depth=1&amp;toc.id=ss1-3-4&amp;brand=9781405103213_brand">Marking Texts of Many Dimensions</a>”, en S. Schreibman, R. Siemens, J. Unsworth, <em>A companion to Digital Humanities</em>, Oxford: Blackwell, pp. 218-239.</p>
+<p>Pierazzo, Elena (2016). “<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118680605.ch21">Textual Scholarship and Text Encoding</a>”. en S. Schreibman, R. Siemens, J. Unsworth, <em>A New Companion to Digital Humanities</em>, Oxford: Wiley Blackwell.</p>
+<p>Renear, A. H. (2004), “<a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&amp;chunk.id=ss1-3-5&amp;toc.depth=1&amp;toc.id=ss1-3-5&amp;brand=default">Text Encoding</a>”, en S. Schreibman, R. Siemens, J. Unsworth, <em>A companion to Digital Humanities</em>, Oxford: Blackwell, pp. 218-239.</p>
+<p>TEI Consortium (2014), “TEI: History”. <a href="http://www.tei-c.org/about/history/" class="uri">http://www.tei-c.org/about/history/</a>.</p>
+<h3 id="cita-propuesta">Cita propuesta:</h3>
+<p>Allés Torrent, Susanna (2019). “Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos”. <em>TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital</em>. <a href="https://tthub.io/aprende/l1-intro-a-tei/" class="uri">https://tthub.io/aprende/l1-intro-a-tei/</a> DOI: <a href="https://doi.org/10.5281/zenodo.3530772">10.5281/zenodo.3530772</a></p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Estos materiales fueron creados en el marco del certificado de <a href="http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/">Experto Universitario en Humanidades Digitales</a>, ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+</body>
+</html>
