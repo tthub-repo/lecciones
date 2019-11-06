@@ -445,7 +445,7 @@ Las abreviaturas pueden codificarse de maneras diferentes, la más
 sencilla de las cuales es simplemente marcar la abreviatura dentro del
 elemento [`<abbr>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-abbr.html). Pero en la mayoría de los casos, vale la pena indicar la forma expandida. En la Figura \ref{L5_abbr} (extraído del mismo folio anterior) podemos ver diferentes casos de abreviaturas:
 
-![Ejemplo de una abreviatura. [*La primera y segunda parte de Plutharcho* / traducida por Alfonso de Palencia, Sevilla, 1491. BNE, Inc/314-Inc/315, f. 2r](http://bdh.bne.es/bnesearch/detalle/bdh0000005043) \label{L5_abbr}](https://tthub-repo.github.io/lecciones/img/L5_003.png)
+![Ejemplos de abreviaturas. [*La primera y segunda parte de Plutharcho* / traducida por Alfonso de Palencia, Sevilla, 1491. BNE, Inc/314-Inc/315, f. 2r](http://bdh.bne.es/bnesearch/detalle/bdh0000005043) \label{L5_abbr}](https://tthub-repo.github.io/lecciones/img/L5_003.png)
 
 Para ello, podemos proceder de la siguiente manera:
 
@@ -520,7 +520,7 @@ En general, podemos diferenciar aquellos fenómenos que "objetivamente" encontra
 * [`<supplied>`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/examples-supplied.html) indica el texto que ha sido restablecido por el editor. En el ejemplo de la Figura \ref{L5_space}, sabíamos qué palabra debía ir en el espacio en blanco con lo cual hemos podido marcarlo con este elemento, pues lo hemos restablecido. 
 * En lo que concierne las correcciones en calidad de editores del texto electrónico, debemos utilizar los elementos `<sic>` y `<corr>`, y agrupados al interior de `<choice>`. En la siguiente Figura \ref{L5_corr}:
 
-![Ejemplo de una corrección editorial. [*La primera y segunda parte de Plutharcho* / traducida por Alfonso de Palencia, Sevilla, 1491. BNE, Inc/314-Inc/315, f. 165v](http://bdh-rd.bne.es/viewer.vm?id=0000005043&page=1) \lable{L5_corr}](https://tthub-repo.github.io/lecciones/img/L5_005.png)
+![Ejemplo de una corrección editorial. [*La primera y segunda parte de Plutharcho* / traducida por Alfonso de Palencia, Sevilla, 1491. BNE, Inc/314-Inc/315, f. 165v](http://bdh-rd.bne.es/viewer.vm?id=0000005043&page=1) \label{L5_corr}](https://tthub-repo.github.io/lecciones/img/L5_005.png)
 
 ```xml
 ... Aqueste mas luenga mente 
@@ -634,7 +634,7 @@ Existe también la posibilidad de señalar el lema principal de entre las varian
 
 En estos casos `<lem>` contiene el lema o texto base de la variante textual (presente o no en algún testimonio), mientras que `<rdg>` (reading) contiene una sola lectura o variante textual.
 
-Recomiendo, además de la sección al [Aparato crítico en las *Guías directrices*](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html) y de los ejemplos en nuestro [Repositorio de Ejemplos en GitHub](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_aparato_critico.xml), los materiales que aparecen en el tutorial [Module 7: Critical Editing](https://teibyexample.org/modules/TBED07v00.htm) del *TEI By Example*. Además, un excelente tutorial es el propuesto por Marjorie Burghart y Elena Pierazzo: [Digital Scholarly Editions: Manuscripts, Texts and TEI Encoding](https://teach.dariah.eu/course/view.php?id=32&section=0) (2017). En fin, para aquellos interesados en trabajar con aparatos críticos, pueden experimentar una posible visualización con el [TEI Critical Apparatus TextBox](http://teicat.huma-num.fr/).
+Recomiendo, además de la sección al [Aparato crítico en las *Guías directrices*](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html) y de los ejemplos en nuestro [Repositorio de Ejemplos en GitHub](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_aparato_critico.xml), los materiales que aparecen en el [Module 7: Critical Editing](https://teibyexample.org/modules/TBED07v00.htm) de *TEI By Example*. Además, un excelente tutorial es el propuesto por Marjorie Burghart y Elena Pierazzo: [Digital Scholarly Editions: Manuscripts, Texts and TEI Encoding](https://teach.dariah.eu/course/view.php?id=32&section=0) (2017). En fin, para aquellos interesados en trabajar con aparatos críticos, pueden experimentar una posible visualización con el [TEI Critical Apparatus TextBox](http://teicat.huma-num.fr/).
 
 ### Cita propuesta: 
 
