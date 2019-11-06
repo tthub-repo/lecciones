@@ -8,7 +8,7 @@ header-includes: |
     \usepackage{fancyhdr}
     \pagestyle{fancy}
     \fancyhead[LO,RE]{Allés Torrent, S.}
-    \fancyfoot[RO,LE]{}
+    \fancyfoot[RO,LE]{https://doi.org/10.5281/zenodo.3530772}
 	\usepackage{fancyvrb}
 	\fvset{%
 	fontsize=\small,
@@ -18,7 +18,12 @@ header-includes: |
 geometry: margin=1in
 fontsize: 12pt
 ---
+# {{ page.title }}[^1]
 
+	{{ page.author }}
+
+	{{ page.date }}
+	
 Esta lección ofrece una primera aproximación a la Text Encoding Initiative, un marco de trabajo, utilizado internacionalmente y por una gran comunidad de usuarios, concebido especialmente para la codificación, la explotación informática, la publicación en línea y la preservación de textos en ciencias sociales y humanidades. Para ello, se tratan conceptos generales como la codificación de los textos, su utilidad o los campos de aplicación.
 
 # I. Codificación de los textos y TEI  
@@ -75,15 +80,24 @@ El texto es una idea abstracta que presupone la existencia de una secuencia de s
 Centrémonos por un momento en los siguientes ejemplos e intentemos reflexionar sobre dónde está el texto:   
 
 
-![Primera Parte del Ingenioso Hidalgo, 1605](img/L1_003.png){height=250px}
-![Alfonso de Palencia, *Parallelae*, Sevilla 1491](https://tthub-repo.github.io/lecciones/img/L1_004.jpg){height=250px} 
+![Primera Parte del Ingenioso Hidalgo, 1605](img/L1_003.png){height=250px} 
+![Alfonso de Palencia, *Parallelae*, Sevilla 1491](https://tthub-repo.github.io/lecciones/img/L1_004.jpg){height=250px}  
 
-![Hunain Ibn Ishaq, *Libro de los buenos proverbios*, s. IX ](https://tthub-repo.github.io/lecciones/img/L1_005.jpg){height=250px}
+Primera Parte del Ingenioso Hidalgo, 1605  
+Alfonso de Palencia, *Parallelae*, Sevilla 1491
+
+![Hunain Ibn Ishaq, *Libro de los buenos proverbios*, s. IX ](https://tthub-repo.github.io/lecciones/img/L1_005.jpg){height=250px} 
 ![Ludovico 
-Ariosto, *Orlando Furioso*, Venezia, 1546](https://tthub-repo.github.io/lecciones/img/L1_006.jpg){height=250px}
+Ariosto, *Orlando Furioso*, Venezia, 1546](https://tthub-repo.github.io/lecciones/img/L1_006.jpg){height=250px} 
 
-![*Dictionnaire Gaffiot latin-français*, Paris: Hachette, 1934](https://tthub-repo.github.io/lecciones/img/L1_007.jpg){height=250px}
-![Lope de Vega, *La Bella Malmaridada*, Madrid, Alonso Martín, 1610](https://tthub-repo.github.io/lecciones/img/L1_008.jpg){height=250px}
+Hunain Ibn Ishaq, *Libro de los buenos proverbios*, s. IX  
+Ludovico Ariosto, *Orlando Furioso*, Venezia, 1546
+
+![*Dictionnaire Gaffiot latin-français*, Paris: Hachette, 1934](https://tthub-repo.github.io/lecciones/img/L1_007.jpg){height=250px} 
+![Lope de Vega, *La Bella Malmaridada*, Madrid, Alonso Martín, 1610](https://tthub-repo.github.io/lecciones/img/L1_008.jpg){height=250px} 
+
+Dictionnaire Gaffiot latin-français*, Paris: Hachette, 1934  
+Lope de Vega, *La Bella Malmaridada*, Madrid, Alonso Martín, 1610
 
 Cada una de estas tipologías contiene aspectos diferentes y todos en realidad tienen un texto. El diccionario contiene voces y significados; la obra teatral tiene escenas y personajes; una postal, además del mensaje, contiene información sobre quien y para quien se escribió; el manuscrito antiguo puede contener diversas obras, la edición del siglo XVI contiene un rico frontispicio con informaciones sobre la impresión, etc. Además hay otros aspectos que en realidad también forman parte del texto aunque sea desde un punto de vista físico: la estructura textual (parágrafos, listas, tablas...), en el caso del manuscrito vemos letras dañadas, caracteres especiales, líneas del folio, abreviaciones, anotaciones manuscritas, correcciones de autor, errores, entre otra casuística.  
 
@@ -308,7 +322,7 @@ TEI Consortium (2014), "TEI: History". <http://www.tei-c.org/about/history/>.
 
 ### Cita propuesta: 
 
-Allés Torrent, Susanna (2019). "Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/> DOI: 
+Allés Torrent, Susanna (2019). "Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l1-intro-a-tei/> DOI: [10.5281/zenodo.3530772](https://doi.org/10.5281/zenodo.3530772)
 
 
 [^1]: Estos materiales fueron creados en el marco del certificado de [Experto Universitario en Humanidades Digitales](http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/), ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia. 
