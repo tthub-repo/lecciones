@@ -6,9 +6,9 @@ date: 2019
 
 # {{ page.title }}[^1]
 
-{{ page.author }}
+## {{ page.author }}
 
-{{ page.date }}
+### {{ page.date }}
 	
 Esta lección ofrece una primera aproximación a la Text Encoding Initiative, un marco de trabajo, utilizado internacionalmente y por una gran comunidad de usuarios, concebido especialmente para la codificación, la explotación informática, la publicación en línea y la preservación de textos en ciencias sociales y humanidades. Para ello, se tratan conceptos generales como la codificación de los textos, su utilidad o los campos de aplicación.
 
