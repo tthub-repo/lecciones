@@ -1,28 +1,38 @@
 ---
-title: La codificación de tipologías textuales (Prosa, poesía, drama, fuentes primarias y edición crítica)
+title: La codificación de tipologías textuales (Prosa, poesía, drama, fuentes primarias y edición crítica)[^1]
 author: Susanna Allés Torrent
-date: 2019-01-15
+date: 2019
+# Todo esto son indicaciones para el pdf
+colorlinks: blue
+header-includes: |
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhead[LO,RE]{Allés Torrent, S.}
+    \fancyfoot[RO,LE]{}
+	\usepackage{fancyvrb}
+	\fvset{%
+	fontsize=\small,
+	numbers=left}
+	\usepackage{fvextra}
+	\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+geometry: margin=1in
+fontsize: 12pt
 --- 
-# {{ page.title }}
-
-{{ page.author }}
-
-{{ page.date }}
 
 # Introducción
 
-En esta unidad tendremos oportunidad de trabajar con más detalles con algunos módulos TEI y con ciertas tipologías textuales. Aun así, es importante retener que para una información completa debemos siempre dirigirnos a las Guías directrices tal y como vimos en la tema anterior. Sólo así obtendremos una información detallada sobre las restricciones y el uso adecuado de los elementos, su estructura y su semántica.
+Esta lección ofrece la oportunidad de trabajar con más detalles con algunos módulos de la Text Encoding Initiative y algunas de las tipologías textuales más comunes. Aun así, es importante retener que para una información completa debemos siempre dirigirnos a las *Guías directrices*[^2]. Sólo así obtendremos una información detallada sobre las restricciones y el uso adecuado de los elementos, su estructura y su semántica.
 
 # I. Prosa
 
-Las [Guías directrices](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/) de TEI no tienen un módulo específico para la codificación de prosa, pues se trata de un término algo genérico y difícil de definir. La mayoría de los elementos utilizados para codificar textos en prosa pertenecen al módulo [core](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html) y [textstructure](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html),es decir, los elementos que aparecen integrados en la estructura TEI por defecto y que explicamos en la [L3. Estructura básica de un documento XML-TEI y elementos genéricos](https://tthub.io/aprende/l3-basicos-tei/).
+Las [*Guías directrices*](https://tei-c.org/guidelines/p5/) de TEI no tienen un módulo específico para la codificación de prosa, pues se trata de un término algo genérico y difícil de definir. La mayoría de los elementos utilizados para codificar textos en prosa pertenecen al módulo [core](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html) y [textstructure](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html),es decir, los elementos que aparecen integrados en la estructura TEI por defecto y que explicamos en la [Estructura básica y elementos comunes de los documentos XML-TEI (L3)](https://tthub.io/aprende/l3-basicos-tei/).
 
 Al afrontar la codificación de un texto, debemos, en primer lugar, llevar a cabo un análisis del documento, aislando las unidades estructurales de las que se compone. Partamos de un ejemplo concreto y veamos de qué manera podría ser codificado:
 
-![Análisis estructural de un texto](https://tthub-repo.github.io/lecciones/img/L6_001.png){width="5.250168416447944in"
+![Análisis estructural de un texto \label{L5_estructura}](https://tthub-repo.github.io/lecciones/img/L5_001.png){width="5.250168416447944in"
 height="7.090586176727909in"}
 
-En esta página tenemos diferentes elementos que deberemos marcar, como
+En la Figura \ref{L5_estructura} tenemos diferentes elementos que deberemos marcar, como
 por ejemplo:
 
 * Las divisiones que corresponden a la primera parte, a los apartados (1, 2...) y a los subapartados (1.1., 1.2., etc.)
@@ -33,11 +43,11 @@ por ejemplo:
 * Los números de página
 * Las referencias cruzadas
 
-A partir de aquí, la idea consiste en encontrar un elemento TEI que responda a cada uno de estos conceptos y expresarlo tal y como proponen las Guías directrices.
+A partir de aquí, la idea consiste en encontrar un elemento TEI que responda a cada uno de estos conceptos y expresarlo tal y como proponen las *Guías directrices*.
 
-## `<div>` (divisiones)
+## [`<div>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html) (divisiones)
 
-Como ya hemos visto, las diferentes partes del texto se delimitan con un elemento genérico llamado `<div>`; de esta manera podemos crear una serie de divisiones jerárquicas tales como partes, capítulos, subcapítulos, secciones, subsecciones, etc. Debemos siempre recordar que las `<div>` pueden anidarse unas dentro de otras y pueden contener
+Generalmente, las diferentes partes del texto se delimitan con un elemento genérico llamado `<div>`; de esta manera podemos crear una serie de divisiones jerárquicas tales como partes, capítulos, subcapítulos, secciones, subsecciones, etc. Debemos siempre recordar que las `<div>` pueden anidarse unas dentro de otras y pueden contener
 prácticamente todos los otros elementos TEI.
 
 Es muy frecuente que el elemento `<div>` conlleve, además, diversos
@@ -46,7 +56,7 @@ atributos, entre ellos:
 * `@type` para especificar y caracterizar el tipo de división.
 * `@n` para otorgarle una numeración precisa, aunque no es obligatorio pues el procesador puede localizar fácilmente su orden de aparición a partir del elemento padre.
 
-## `<p>` (párrafos) y `<ab>` (bloques anónimos)
+## [`<p>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-p.html) (párrafos) y [`<ab>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html) (bloques anónimos)
 
 El elemento `<p>` indica un párrafo y puede aparecer en cualquier tipo
 de texto. Los párrafos no pueden anidarse unos al interior de los otros,
@@ -59,7 +69,7 @@ block). Por ejemplo, en nuestro documento, podríamos marcar el texto
 introductorio con `<ab>` y relegar el elemento `<p>` para los párrafos
 de los apartados y subapartados.
 
-## `<head>` (títulos y encabezados)
+## [`<head>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-head.html) (títulos y encabezados)
 
 Los encabezados y títulos de cualquier tipo se marcan con el elemento
 `<head>` que puede conllevar, como en los casos anteriores, diversos
@@ -76,9 +86,9 @@ presentación podríamos establecer tipologías diferentes:
 <head type="apartado">1. Introducción</head>
 ```
 
-Aun así, no sería ni mucho menos obligatorio porqué los diversos `<head>` son localizables por el procesador a partir del elemento del que forman parte, de manera que cada `<head>` podría tener una presentación diferente en función del elemento padre al que pertenecen.
+Aun así, no sería ni mucho menos obligatorio porqué los diversos `<head>` son localizables por el procesador a partir del elemento del que forman parte, de manera que cada `<head>` podría tener una presentación diferente en función del elemento padre al que pertenece.
 
-## `<cit>` (citas)
+## [`<cit>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cit.html) (citas)
 
 Las citas pueden ser de muchos tipos diferentes, pero las más habituales son aquellas en que se reproducen de manera literal las palabras de otra fuente, acompañadas de la indicación bibliográfica. En estos casos, se utiliza el elemento `<cit>` que debe estar formado, a su vez, por `<quote>` que encierra propiamente las palabras de la cita, y por `<bibl>` que debe contener la referencia bibliográfica:
 
@@ -93,12 +103,12 @@ Las citas pueden ser de muchos tipos diferentes, pero las más habituales son aq
 En un trabajo en prosa, y especialmente en monografías y trabajos de investigación, la bibliografía suele codificarse separadamente, tal y como lo haríamos tradicionalmente. Puede ir incluida en el `<teiHeader>`, pero también en el `<front>`, `<back>` o incluso dentro de `<text>` creando una división especial, del tipo:
 
 ```xml
-<div type=bibliografia>
+<div type="bibliografia">
 ```
 
 Cada ítem bibliográfico debe tener su identificador (`@xml:id`) para que
 pueda ser fácilmente localizable y recuperable. De esta manera, cuando
-en el cuerpo del texto nos aparece una cita de ese ítem bibliográfico
+en el cuerpo del texto nos aparezca una cita de ese ítem bibliográfico
 nos referimos a él con el atributo `@corresp` al interior del elemento
 `<bibl>`:
 
@@ -106,15 +116,15 @@ nos referimos a él con el atributo `@corresp` al interior del elemento
 <bibl corresp="#Guidelines">TEI Consortium</bibl>
 ```
 
-## `<list>` (listas)
+## [`<list>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-list.html) (listas)
 
-En esta tipología textual, aparecen en muchos casos listas de elementos; en TEI, como vimos el otro día, deben marcarse con el elemento `<list>`, y cada uno de los ítems se codifica con el elemento `<item>`.
+En los textos en prosa, aparecen en muchos casos listas de elementos que, en TEI, deben marcarse con el elemento `<list>`, y cada uno de los ítems se codifica con el elemento `<item>`.
 
-Si a cada ítem lo antecede un título podríamos utilizar `<label>`; pero, quizás, lo más interesante sean los diferentes tipos de listas que podemos crear a partir del atributo `@type`, para indicar el tipo de contenido (TEI propone como valores: gloss, index, instructions, litany, syllogism), y los atributos `@rend` o `@style` para determinar el tipo de presentación, donde los valores propuestos son: numbered, inline, bulleted, simple.
+Si a cada ítem lo antecede un título podríamos utilizar `<label>`; pero, quizás, lo más interesante sean los diferentes tipos de listas que podemos crear a partir del atributo `@type`, para indicar el tipo de contenido (TEI propone como valores: `gloss`, `index`, `instructions`, `litany`, `syllogism`), y los atributos `@rend` o `@style` para determinar el tipo de presentación, donde los valores propuestos son: `numbered`, `inline`, `bulleted`, `simple`.
 
 ## Referencias cruzadas
 
-Es también habitual que en un texto en prosa nos encontremos con referencias cruzadas que apunten al interior del documento o a una fuente externa. Los elementos para indicar este tipo de referencias y enlaces son `<ref>` y `<ptr/>`. La diferencia básica entre los dos es que el primero puede tener contenido y corresponde en realidad al típico enlace tal cual estamos acostumbrados a ver, mientras que `<ptr/>` (pointer) es un elemento vacío e indica sólo que en ese punto del texto aparece algo que crea un enlace, como por ejemplo un tipo concreto de imagen.
+Es también habitual que en un texto en prosa nos encontremos con referencias cruzadas que apunten al interior del documento o a una fuente externa. Los elementos para indicar este tipo de referencias y enlaces son [`<ref>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ref.html) y [`<ptr/>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ptr.html). La diferencia básica entre los dos es que el primero puede tener contenido y corresponde en realidad al típico enlace tal cual estamos acostumbrados a ver, mientras que `<ptr/>` (pointer) es un elemento vacío e indica sólo que en ese punto del texto aparece algo que crea un enlace, como por ejemplo un tipo concreto de imagen.
 
 El posible resultado final -porqué recordad que no hay una sola manera correcta de codificar los textos- para un texto en prosa es el que encontraréis en el [Ejemplo en prosa (L5_Ejemplo_prosa.xml)](https://github.com/tthub-repo/ejemplos/blob/master/L5_Ejemplo_prosa.xml).
 
@@ -123,55 +133,43 @@ El posible resultado final -porqué recordad que no hay una sola manera correcta
 Para ver otros ejemplos de prosa, consultad el corpus en abierto de
 novelas españolas y latinoamericanas en el CLiGS textbox:
 
-* [Collection of 19th Century Spanish-American Novels (1880-1916)](https://github.com/cligs/textbox/blob/master/spanish/novela-hispanoamericana), edited by Ulrike Henny-Krahmer (24 novelas)
+* [Collection of 19th Century Spanish-American Novels (1880-1916)](https://github.com/cligs/textbox/blob/master/spanish/novela-hispanoamericana), Ulrike Henny-Krahmer (ed.) (24 novelas)
 
-* [Corpus of Spanish Novels from 1880-1940](https://github.com/cligs/textbox/blob/master/spanish/novela-espanola), edited by José Calvo Tello (39 novelas)
+* [Corpus of Spanish Novels from 1880-1940](https://github.com/cligs/textbox/blob/master/spanish/novela-espanola), José Calvo Tello (ed.) (39 novelas)
 
-* [Corpus of Spanish Short Stories from 1880-1940](https://github.com/cligs/textbox/blob/master/spanish/cuentos-espanoles), edited by José Calvo Tello (20 colecciones de narraciones breves y 302 narraciones)
+* [Corpus of Spanish Short Stories from 1880-1940](https://github.com/cligs/textbox/blob/master/spanish/cuentos-espanoles), José Calvo Tello (ed.) (20 colecciones de narraciones breves y 302 narraciones)
 
-Os sugieron también que sigáis el tutorial de la parte correspondiente de TEI By Example:
+Sugiero también que sigan el tutorial de la parte correspondiente de *TEI By Example*:
 [http://teibyexample.org/modules/TBED03v00.htm](http://teibyexample.org/modules/TBED03v00.htm)
 
 # II. Poesía 
 
-Centrémonos ahora en los elementos básicos para codificar composiciones en verso. Tuvimos ya ocasión de reflexionar sobre la codificación de un
-poema y es ahora el momento de concretar el vocabulario propuesto por TEI.
+Centrémonos ahora en los elementos básicos para codificar composiciones en verso y véamos cómo funciona el vocabulario propuesto por TEI. En el apartado de [6. Verse](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html) de las *Guías directrices* se encuentra información mucho más detallada. 
 
-Tomemos este soneto de Federico García Lorca:
+Tomemos ahora este soneto de Federico García Lorca:
 
-> Tengo miedo a perder la maravilla
+> Tengo miedo a perder la maravilla  
+> de tus ojos de estatua y el acento  
+> que de noche me pone en la mejilla  
+> la solitaria rosa de tu aliento. 
+ 
+> Tengo pena de ser en esta orilla  
+> tronco sin ramas; y lo que más siento  
+> es no tener la flor, pulpa o arcilla,  
+> para el gusano de mi sufrimiento.  
 
-> de tus ojos de estatua y el acento
+> Si tú eres el tesoro oculto mío,  
+> si eres mi cruz y mi dolor mojado,  
+> si soy el perro de tu señorío,  
 
-> que de noche me pone en la mejilla
+> no me dejes perder lo que he ganado  
+> y decora las aguas de tu río  
+> con hojas de mi otoño enajenado.  
 
-> la solitaria rosa de tu aliento.
-
-> Tengo pena de ser en esta orilla
-
-> tronco sin ramas; y lo que más siento
-
-> es no tener la flor, pulpa o arcilla,
-
-> para el gusano de mi sufrimiento.
-
-
-> Si tú eres el tesoro oculto mío,
-
-> si eres mi cruz y mi dolor mojado,
-
-> si soy el perro de tu señorío,
-
-> no me dejes perder lo que he ganado
-
-> y decora las aguas de tu río
-
-> con hojas de mi otoño enajenado.
-
-La totalidad del poema suele contenerse en el elemento `<lg>` (line
+La totalidad del poema suele contenerse en el elemento [`<lg>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html) (line
 group), mientras que el título, una vez más, se sitúa al interior de un
 elemento `<head>`; cada uno de los versos se codifica con el elemento
-que indica la línea: `<l>`. Así mismo, para marcar las estrofas también
+que indica la línea: [`<l>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-l.html). Así mismo, para marcar las estrofas también
 se utiliza `<lg>`, pues permite la anidación de otros elementos
 idénticos en su interior.
 
@@ -189,7 +187,7 @@ También el verso (`<l>`) puede tener sus atributos:
 * `@rhyme` para indicar la rima del verso
 * `@xml:id` para otorgar un identificador a cada verso
 
-El vocabulario TEI prevé un elemento específico para codificar las rimas: `<ryhme>`; éste puede aparecer tanto a final de verso como en su interior, donde sea que aparezca la rima:
+El vocabulario TEI prevé un elemento específico para codificar las rimas: [`<ryhme>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-rhyme.html); éste puede aparecer tanto a final de verso como en su interior, donde sea que aparezca la rima:
 
 ```xml 
 <lg type="cuarteto" n="1">
@@ -203,7 +201,9 @@ El vocabulario TEI prevé un elemento específico para codificar las rimas: `<ry
 Además, el elemento `<rhyme>` puede contener el atributo `@label` para señalar el tipo de rima, normalmente indicado con una letra del
 alfabeto:
 
+```xml
 `marav<rhyme label="a">`illa`</rhyme>`
+```
 
 Pero también puede indicarse en el interior del elemento `<div>`, `<lg>`
 e incluso `<l>`:
@@ -222,7 +222,7 @@ e incluso `<l>`:
 ```
 
 En el caso que apareciera el nombre el poema, podríamos codificar su
-nombre en el interior del elemento `<signed>`.
+nombre en el interior del elemento [`<signed>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-signed.html).
 
 Si tuviéramos una serie de poemas, las estrategias a seguir podrían ser
 varias pero la más sencilla sería marcar cada poema independientemente
@@ -259,17 +259,17 @@ en un elemento `<lg>`:
 Encontraréis otro ejemplo de marcado en el nuestro Repositorio de ejemplos en GitHub: [Ejemplo en verso](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_poema.xml). 
 
 Existen muchos otros elementos relacionados con las composiciones
-métricas, para más detalles os remito al módulo correspondiente, [verse](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html). Así
+métricas, para más detalles os remito al módulo correspondiente [6. Verse](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html). Así
 también, para completar esta sección, os dejo el enlace a la sección de
-[TEI By Example](https://teibyexample.org/modules/TBED04v00.htm).
+[Module 4: Poetry](https://teibyexample.org/modules/TBED04v00.htm) del *TEI By Example*
 
 # III. Drama
 
 Los textos dramáticos se caracterizan por tener una estructura más bien fija y unos elementos recurrentes: actos, escenas, acotaciones, indicaciones escénicas, diálogos, etc.
 
-Las Guías directrices, al igual que sucedía con las obras en verso, dedica un módulo específico a las obras dramática (véase [7. Performance texts](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html>), que os he dejado en formato pdf en la sección documentos.
+Las *Guías directrices*, al igual que sucedía con las obras en verso, dedica un módulo específico a las obras dramática (véase [7. Performance texts](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html), que os he dejado en formato pdf en la sección documentos.
 
-En primer lugar, es necesario crear la infraestructura general en la que acomodar el texto. Tal y como hemos procedido en las otras ocasiones, se podría establecer una división general para cada una de las escenas y para cada uno de los actos o jornadas, añadiendo un atributo `@type` para definirlas:
+En primer lugar, es necesario crear la estructura general en la que acomodar el texto. Tal y como hemos procedido en las otras ocasiones, se podría establecer una división general para cada una de las escenas y para cada uno de los actos o jornadas, añadiendo un atributo `@type` para definirlas:
 
 ```xml
 <div type="acto" n="1">
@@ -290,8 +290,8 @@ En primer lugar, es necesario crear la infraestructura general en la que acomoda
 Cada una de las divisiones puede o no ir acompañado de un título,
 elemento aceptado en todos los documentos TEI.
 
-Para los diálogos se utilizan los elementos `<sp>` (speech) que están
-constituidos de la persona que habla `<speaker>` y del diálogo en sí,
+Para los diálogos se utilizan los elementos [`<sp>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sp.html) (speech) que están
+constituidos de la persona que habla [`<speaker>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-speaker.html) y del diálogo en sí,
 normalmente marcado en un simple `<p>`, aunque nada impediría que se
 utilizara `<l>` o `<lg>`, especialmente en aquellos casos en que se
 tratara de una versificación; o incluso podría también utilizar el
@@ -323,20 +323,15 @@ En lo que concierne los personajes es importante crear de antemano una lista de 
 </front>
 ```
 
-De esta manera cada vez que un personaje hable se podrá marcar al
-interior de `<sp>` con el atributo `@who, para que todas sus
-intervenciones sean fácilmente localizables. De hecho, se podría
-eliminar la etiqueta `<speaker>` y recuperar la abreviación del
-personaje justamente a través del identificador que aparece como valor
-en el atributo `@who` al interior de `<sp>`. Es decir que podríamos
-expresar lo mismo de esta forma:
+De esta manera cada vez que un personaje hable se podrá marcar al interior de `<sp>` con el atributo `@who`, para que todas sus intervenciones sean fácilmente localizables. De hecho, se podría eliminar la etiqueta `<speaker>` y recuperar la abreviación del
+personaje justamente a través del identificador que aparece como valor en el atributo `@who` al interior de `<sp>`. Es decir que podríamos expresar lo mismo de esta forma:
 
 ```xml
 <sp who="#personaje1">Diálogo</sp>
 <sp who="#personaje2">Diálogo</sp>
 ```
 
-Las indicaciones dramáticas o acotaciones, aquellas normalmente realizadas por el dramaturgo, pueden incluirse al interior de un elemento `<stage>`. También aquí se prevé la opción de añadir un atributo `@type` para caracterizar las diferentes acotaciones o tipos de indicaciones, por ejemplo:
+Las indicaciones dramáticas o acotaciones, aquellas normalmente realizadas por el dramaturgo, pueden incluirse al interior de un elemento [`<stage>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-stage.html). También aquí se prevé la opción de añadir un atributo `@type` para caracterizar las diferentes acotaciones o tipos de indicaciones, por ejemplo:
 
 ```xml
 <sp who="#personaje1">Diálogo</sp>
@@ -348,16 +343,16 @@ Las indicaciones dramáticas o acotaciones, aquellas normalmente realizadas por 
 Al interior del elemento `<stage>` podemos utilizar otros elementos que
 pueden sernos útiles en alguna ocasión como por ejemplo:
 
-* `<move>`: para indicar los movimientos de los personajes. Podríamos incluso especificar los movimiento con el atributo `@type`, que conlleva unos valores predifinidos por defecto de entrada, salida y en escena: entrance o exit y onStage; así también podemos añadir el atributo `@who` para identificar fácilmente de qué personaje se trata y `@where` para señalar hacia dónde es el movimiento.
-* `<sound>`: para describir fenómenos de sonido, añadiendo si es necesario el atributo `@type`.
-* `<view>`: para describir el contexto visual de una parte del escenario, tal y como lo debe visualizar el espectador.
-* `<camera>` para dar indicaciones al cámara en el caso de grabaciones video, como películas.
-* `<caption>` para recoger las palabras que deberán proyectarse en pantalla.
-* `<tech>` otras informaciones técnicas.
+* [`<move>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-move.html): para indicar los movimientos de los personajes. Podríamos incluso especificar los movimiento con el atributo `@type`, que conlleva unos valores predifinidos por defecto de entrada, salida y en escena: `entrance` o `exit` y `onStage`; así también podemos añadir el atributo `@who` para identificar fácilmente de qué personaje se trata y `@where` para señalar hacia dónde es el movimiento.
+* [`<sound>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sound.html): para describir fenómenos de sonido, añadiendo si es necesario el atributo `@type`.
+* [`<view>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-view.html): para describir el contexto visual de una parte del escenario, tal y como lo debe visualizar el espectador.
+* [`<camera>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-camera.html) para dar indicaciones al cámara en el caso de grabaciones video, como películas.
+* [`<caption>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-caption.html) para recoger las palabras que deberán proyectarse en pantalla.
+* [`<tech>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-tech.html) otras informaciones técnicas.
 
-[En el Repositorio de ejemplos en GitHub](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_drama.xml) encontraréis un ejemplo sencillo de codificación del inicio de una obra dramática en verso de Lope de Vega, *Amar sin saber a quien*. Miraros la reproducción digital que aparece en la [Biblioteca Cervantes Virtual](http://bib.cervantesvirtual.com/servlet/SirveObras/01260529543471504100035/p0000001.htm#I_0_) y confrontadla con la codificación que he propuesto. [Aquí](http://bib.cervantesvirtual.com/servlet/SirveObras/00363959755781806410046/ima0000.htm) encontraréis también una edición digital en HTML.
+[En el Repositorio de ejemplos en GitHub](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_drama.xml) encontraréis un ejemplo sencillo de codificación del inicio de una obra dramática en verso de Lope de Vega, *Amar sin saber a quien*. Miren la reproducción digital que aparece en la [Biblioteca Cervantes Virtual](http://bib.cervantesvirtual.com/servlet/SirveObras/00363959755781806410046/ima0000.htm) y confrontadla con la codificación que he propuesto. [Aquí](http://bib.cervantesvirtual.com/servlet/SirveObras/01260529543471504100035/p0000001.htm#I_0_) encontraréis también una edición digital en HTML.
 
-Como siempre os recomiendo que sigáis otros recursos, en este caso el Módulo 5 de [TEI by Sample](http://teibyexample.org/modules/TBED05v00.htm), sobre todo, que estudiéis los [ejemplos](http://teibyexample.org/examples/TBED05v00.htm), y la consulta de las [Guías directrices](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html).
+Recomiendo consultar otros recursos: en este caso el [Module 5: Drama](http://teibyexample.org/modules/TBED05v00.htm) en *TEI by Example*, poniendo especial atención a los [ejemplos](http://teibyexample.org/examples/TBED05v00.htm), y la consulta de las [*Guías directrices*](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html).
 
 # IV. Fuentes primarias
 
@@ -403,9 +398,9 @@ Muy frecuentemente nos encontramos con documentos en los que ha habido algún ti
 
 ### a. Adiciones
 
-Para las adiciones usaremos el elemento `<add>`, que pertenece al módulo core. Habitualmente se suele señalar con el atributo `@place` el lugar donde se ha producido dicha adición; por defecto, tenemos como valores: above, below, bottom, end, inline, margin, opposite, overleaf, top. Tomemos este ejemplo y veamos cómo lo podríamos codificar:
+Para las adiciones usaremos el elemento [`<add>`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-add.html), que pertenece al módulo `Core`. Habitualmente se suele señalar con el atributo `@place` el lugar donde se ha producido dicha adición; por defecto, tenemos como valores: `above`, `below`, `bottom`, `end`, `inline`, `margin`, `opposite`, `overleaf`, `top`. Tomemos el ejemplo que aparece en la Figura \ref{L5_add} y veamos cómo lo podríamos codificar:
 
-![Ejemplo de una adición](https://tthub-repo.github.io/lecciones/img/L8_001.png)
+![Ejemplo de una adición. [*La primera y segunda parte de Plutharcho* / traducida por Alfonso de Palencia, Sevilla, 1491. BNE, Inc/314-Inc/315, f. 2r](http://bdh.bne.es/bnesearch/detalle/bdh0000005043) \label{L5_add}](https://tthub-repo.github.io/lecciones/img/L5_002.png)
 
 Si quisiéramos sólo señalar que aparece una adición en el margen lo podríamos señalar de la siguiente manera:
 
@@ -418,7 +413,7 @@ emperador de los Romanos
 
 ### b. Cancelaciones o omisiones
 
-En el caso de las supresiones, ya sea porqué se ha tachado una parte del texto ya sea porqué se ha omitido puede utilizarse `<del>`, que también corresponde al módulo core. Podemos añadir un atributo `@type` para caracterizar el tipo de cancelación o de omisión. Retomando el mismo ejemplo:
+En el caso de las supresiones, ya sea porqué se ha tachado una parte del texto ya sea porqué se ha omitido puede utilizarse [`<del>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) (deletion), que también corresponde al módulo core. Podemos añadir un atributo `@type` para caracterizar el tipo de cancelación o de omisión. Retomando el mismo ejemplo de la Figura \ref{L5_add}:
 
 ```xml
 doctrina: y en integridad de costumbres:
@@ -429,11 +424,11 @@ emperador de los Romanos
 ```
 
 Además, el módulo de representación de fuentes primarias tiene otro elemento útil para aquellos casos en los que un fragmento largo ha sido omitido o cancelado. En estos casos, podríamos introducir el texto eliminado señalando el inicio del texto con el elemento
-[`<delSpan>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-delSpan.html), acompañado del atributo \@spanTo que apuntaría al punto de anclaje donde finaliza dicho fragmento. Véanse los ejemplos en las [Guías directrices](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-delSpan.html%20).
+[`<delSpan>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-delSpan.html), acompañado del atributo `@spanTo` que apuntaría al punto de anclaje donde finaliza dicho fragmento. Véanse los ejemplos en las [*Guías directrices*](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-delSpan.html%20).
 
 ### c. Substituciones
 
-Cuando describimos la fuente primaria y nos encontramos con una corrección o substitución de cualquier tipo la marcaremos utilizando `<del>` y `<add>`, agrupados en un elemento `<subst>` si lo consideramos conveniente; también podemos especificar, con el atributo `@hand`, la mano responsable de dicha corrección y, con `@resp`, el editor que ha interpretado dicha corrección en la fuente primaria. Por ejemplo:
+Cuando describimos la fuente primaria y nos encontramos con una corrección o substitución de cualquier tipo la marcaremos utilizando [`<del>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) y [`<add>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html), agrupados en un elemento [`<subst>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-subst.html) si lo consideramos conveniente; también podemos especificar, con el atributo `@hand`, la mano responsable de dicha corrección y, con `@resp`, el editor que ha interpretado dicha corrección en la fuente primaria. Por ejemplo:
 
 ```xml
 doctrina: y en integridad de costumbres:
@@ -448,119 +443,84 @@ e no poco dichoso en ser maestro de tan
 
 Las abreviaturas pueden codificarse de maneras diferentes, la más
 sencilla de las cuales es simplemente marcar la abreviatura dentro del
-elemento [`<abbr>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-abbr.html). Pero en la mayoría de los casos, vale la pena indicar la forma expandida. Veamos este fragmento extraído del mismo folio anterior:
+elemento [`<abbr>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-abbr.html). Pero en la mayoría de los casos, vale la pena indicar la forma expandida. En la Figura \ref{L5_abbr} (extraído del mismo folio anterior) podemos ver diferentes casos de abreviaturas:
 
-![Ejemplo de una abreviatura](https://tthub-repo.github.io/lecciones/img/L8_002.png)
+![Ejemplo de una abreviatura. [*La primera y segunda parte de Plutharcho* / traducida por Alfonso de Palencia, Sevilla, 1491. BNE, Inc/314-Inc/315, f. 2r](http://bdh.bne.es/bnesearch/detalle/bdh0000005043) \label{L5_abbr}](https://tthub-repo.github.io/lecciones/img/L5_003.png)
 
 Para ello, podemos proceder de la siguiente manera:
 
 ```xml
-gua griega: 
-<expan>
-  <abbr>quisiero</abbr><ex>n</ex>
-</expan> dar obra a la tan prouechosa 
-traducçion: cada uno dellos 
-<expan>
-  <abbr>segu<ex>n</ex>d</abbr>
-</expan> lo
-<expan>
-   <abbr>q</abbr><ex>ue</ex>
-</expan>
-<expan>
-   <abbr>p</abbr>
-   <ex>er</ex>miti<abbr>a</abbr><ex>n</ex>
-</expan> sus negoçios particulares de que no 
-podian vacar: saluo breue 
-<expan>
-   <abbr>tie<ex>m</ex>po</abbr>
-</expan>. 
+gua griega: <expan><abbr>quisiero</abbr><ex>n</ex></expan> dar obra a la tan prouechosa traducçion: cada uno dellos <expan><abbr>segu<ex>n</ex>d</abbr>
+</expan> lo <expan><abbr>q</abbr><ex>ue</ex></expan> <expan><abbr>p</abbr><ex>er</ex>miti<abbr>a</abbr><ex>n</ex></expan> sus negoçios particulares de que no podian vacar: saluo breue <expan><abbr>tie<ex>m</ex>po</abbr></expan>. 
 ```
 
-Como veis, cada abreviatura se sitúa al interior de `<expan>`, la forma abreviada en `<abbr>`, mientras que la expansión se encuentra en el elemento `<ex>`. Esta opción carga a veces el marcado, por lo que a veces se prefiere este otro sistema en el que el elemento `<choice>` contiene la forma abreviada en el interior del elemento `<abbr>` y la forma expandida completa en el elemento `<expan>`:
+Como veis, cada abreviatura se sitúa al interior de `<expan>`, mientras que la forma abreviada aparecen dentro de `<abbr>` y la expansión en el elemento `<ex>`. Esta opción puede llegar a cargar el marcado, por lo que a veces se prefiere este otro sistema en el que el elemento `<choice>` contiene la forma abreviada en el interior del elemento `<abbr>` y la forma expandida completa en el elemento `<expan>`:
 
 ```xml
-lengua griega: 
-<choice>
+lengua griega: <choice>
    <abbr>quisiero</abbr>
    <expan>quisieron</expan>
-</choice> dar obra a la tan prouechosa 
-traducçión: cada uno dellos 
-<choice>
+</choice> dar obra a la tan prouechosa traducçión: cada uno dellos <choice>
    <abbr>segud</abbr>
    <expan>segund</expan>
-</choice> lo 
-<choice>
+</choice> lo <choice>
    <abbr>q</abbr>
    <expan>que</expan>
-</choice>
-<choice>
+</choice> <choice>
    <abbr>pmitia</abbr>
-   <expan>permitian</expan>
-</choice> sus negoçios particulares de que 
-no podian vacar: saluo breve tiempo.
+   <expan>permitian</expan></choice> sus negoçios particulares de que no podian vacar: saluo breve tiempo.
 ```
 
 ### e. Establecer diferentes manos de un manuscrito
 
-Puede ser que en algunos casos nos encontremos con una fuente en la que aparecen manos diferentes; en el caso que queramos señalarlas las codificaremos con el elemento `<handNote>` que se halla en el tei Header (/TEI/teiHeader/fileDesc/sourceDesc/msDesc/physDesc/handDesc) y atribuyendo un identificador propio a cada una de las manos:
+Puede ser que en algunos casos nos encontremos con una fuente en la que aparecen manos diferentes; en el caso que queramos señalarlas las codificaremos con el elemento [`<handNote>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-handNote.html) que se halla en el tei Header (/TEI/teiHeader/fileDesc/sourceDesc/msDesc/physDesc/handDesc). Además, le podemos atribuir un identificador propio a cada una de las manos:
 
 ```xml
 <physDesc>
     <handDesc>
-      <handNote xml:id="copista">El copista 
-        del manuscrito</handNote>
-     <handNote xml:id="Lector">Un lector 
-       posterior que anotó el manuscrito</handNote>
+      <handNote xml:id="copista">El copista del manuscrito</handNote>
+     <handNote xml:id="Lector">Un lector posterior que anotó el manuscrito</handNote>
     </handDesc>
 </physDesc>
 ```
 
 Así, podemos también señalar cuando se produce un cambio de mano en nuestra fuente, gracias al elemento [`<handShift>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-handShift.html).
 
-### f. Damage
+### f. Daños
 
-Si nuestro texto posee alguna zona dañada, frecuente en los manuscritos e impresos antiguos, podemos marcar dicho pasaje con el elemento `<damage>`. En su interior pueden utilizarse diversos atributos, como `@agent` para marcar el motivo del daño; o bien, en aquellos casos en que el daño ataña a un fragmento largo del texto podemos utilizar, como en `<delSpan>`, el elemento `<damageSpan>` con el atributo `@spanTo` que apuntará hacia el anclaje que indica el final del texto dañado. Para ejemplos, véanse las Guías directrices.
+Si nuestro texto posee alguna zona dañada, frecuente en los manuscritos e impresos antiguos, podemos marcar dicho pasaje con el elemento [`<damage>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-damage.html). En su interior pueden utilizarse diversos atributos, como `@agent` para marcar el motivo del daño; o bien, en aquellos casos en que el daño atañe a un fragmento largo del texto podemos utilizar, como en `<delSpan>`, el elemento [`<damageSpan>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-damageSpan.html) con el atributo `@spanTo` que apuntará hacia el anclaje que indica el final del texto dañado.
 
 ### g. Otros elementos
 
 En fin, hay otra serie de fenómenos que quizás queramos marcar como por
 ejemplo:
 
-* Los números originales de las páginas, o incluso la numeración de los cuadernos o los hilitos de los encabezados. Para ello, podemos utilizar `<fw>` (forme work)
-* `<space>`: para indicar el espacio vacío en nuestra copia:
+* [`<fw>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-fw.html) (forme work) para indicar los números originales de las páginas, o incluso la numeración de los cuadernos o los hilitos de los encabezados.  
+* [`<space>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) para indicar el espacio vacío en nuestra copia, como sucede en la Figura \ref{L5_space}
 
-![Ejemplo de un espacio](https://tthub-repo.github.io/lecciones/img/L8_003.png)
+![Ejemplo de un espacio. Plutarco, *Vitae illustrium Virorum*, Nicolas Jenson, Venecia 1478, f. 115v. [Bayerische Staatsbibliothek, München, BSB-Ink P-626 - GW M34480](http://daten.digitale-sammlungen.de/0006/bsb00060043/images/index.html?id=00060043&groesser=&fip=193.174.98.30&no=&seite=236) \label{L5_space}](https://tthub-repo.github.io/lecciones/img/L5_004.png)
 
-Podríamos codificar este fenómeno de la siguiente manera:
+Podríamos codificar este fenómeno de la siguiente manera, señalando el espacio en blanco y aportando incluso la cantidad aproximada de las letras omitidas y el tipo de unidad (unit) del tipo de medida (caracteres, milímetros, centímetros, etc.).:
 
 ```xml
-quos 
-<space quantity="10" unit="chars"/> 
-appellant graeci. Hanc
+... quos 
+<space quantity="10" unit="chars"/>
+<supplied resp="#SAT">         </supplied> 
+appellant graeci. Hanc...
 ```
 
-Indicando la cantidad aproximada de las letras omitidas e indicando en las unidades "unit" el tipo de medida (caracteres, milímetros, centímetros, etc.).
-
-* `<surplus>`: para indicar un texto en la fuente que el editor considera
+* [`<surplus>`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-surplus.html): para indicar un texto en la fuente que el editor considera
 superficial o redundante.
 
 ## Intervenciones editoriales
 
 En general, podemos diferenciar aquellos fenómenos que "objetivamente" encontramos en nuestra fuente, de aquellos otros que corresponden a una intervención del editor o del que codifica. En este sentido, podemos utilizar:
 
-* `<unclear>`: para la transcripción y la codificación de aquellas de lectura incierta. Normalmente se acompaña del atributo \@resp para indicar la responsabilidad del editor, y de `@reason` para señalar el motivo.
-* `<supplied>`: indica el texto que ha sido restablecido por el editor. En el ejemplo anterior, sabemos qué palabra debe ir en el espacio con lo cual podríamos marcarlo de la siguiente manera:
+* [`<unclear>`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-unclear.html) para la transcripción y la codificación de aquellas lecturas inciertas. Normalmente se acompaña del atributo `@resp` para indicar la responsabilidad del editor, y de `@reason` para señalar el motivo.
+* [`<supplied>`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/examples-supplied.html) indica el texto que ha sido restablecido por el editor. En el ejemplo de la Figura \ref{L5_space}, sabíamos qué palabra debía ir en el espacio en blanco con lo cual hemos podido marcarlo con este elemento, pues lo hemos restablecido. 
+* En lo que concierne las correcciones en calidad de editores del texto electrónico, debemos utilizar los elementos `<sic>` y `<corr>`, y agrupados al interior de `<choice>`. En la siguiente Figura \ref{L5_corr}:
 
-```xml
-... quos 
-<space quantity="10" unit="chars"/>
-<supplied resp="#SAT">φἱλαγρος</supplied> 
-appellant graeci. Hanc...
-```
-
-* En lo que concierne las correcciones en calidad de editores del texto electrónico, debemos utilizar los elementos y agrupados al interior de `<choice>`. Por ejemplo:
-
-![Ejemplo de una corrección editorial](https://tthub-repo.github.io/lecciones/img/L8_004.png)
+![Ejemplo de una corrección editorial. [*La primera y segunda parte de Plutharcho* / traducida por Alfonso de Palencia, Sevilla, 1491. BNE, Inc/314-Inc/315, f. 165v](http://bdh-rd.bne.es/viewer.vm?id=0000005043&page=1) \lable{L5_corr}](https://tthub-repo.github.io/lecciones/img/L5_005.png)
 
 ```xml
 ... Aqueste mas luenga mente 
@@ -572,7 +532,7 @@ appellant graeci. Hanc...
 
 ## Reproducción facsimilar de la fuente
 
-La práctica más habitual para conectar una página de la fuente primaria a su reproducción fotográfica es a través del uso del atributo `@facs`. Este atributo apunta hacia el conjunto o una parte de la imagen en cuestión que corresponde con el contenido de elemento. Por ejemplo, si quisiéramos asociar cada página con su imagen respectiva, lo más sencillo sería incluir el atributo al interior del cambio de página y crear una estructura de este tipo:
+La práctica más habitual para conectar una página de la fuente primaria a su reproducción fotográfica es a través del uso del atributo `@facs`. Este atributo apunta hacia el conjunto o una parte de la imagen en cuestión que corresponde al contenido de elemento. Por ejemplo, si quisiéramos asociar cada página con su imagen respectiva, lo más sencillo sería incluir el atributo al interior del cambio de página y crear una estructura de este tipo:
 
 ```xml
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
@@ -589,7 +549,7 @@ La práctica más habitual para conectar una página de la fuente primaria a su 
 	<text>
 ```
 
-Las imágenes pueden también codificarse y anotarse describiéndolas en general o por zonas concretas y permitiendo, por ejemplo, una transcripción fina por línea. Este tema reviste algo más de complejidad, por lo que me remito a las mismas Guías directrices para aquellos de vosotros que queráis profundizar:
+Las imágenes pueden también codificarse y anotarse describiéndolas en general o por zonas concretas y permitiendo, por ejemplo, una transcripción fina por línea. Este tema reviste algo más de complejidad, por lo que me remito a las mismas *Guías directrices* para aquellos que quieran profundizar. 
 
 
 # V. Edición crítica
@@ -615,7 +575,7 @@ Los elementos del módulo relativo a la creación de un aparato crítico son:
 
 ## Lista de testimonios
 
-La lista de los testimonios utilizados en la edición se sitúan en el teiHeader, más preceisamente en fileDesc>sourceDesc, al interior del elemento `<listWist>`:
+La lista de los testimonios utilizados en la edición se sitúan en el teiHeader, más preceisamente en fileDesc>sourceDesc, al interior del elemento `<listWit>`:
 
 ```xml
 <listwit>
@@ -630,9 +590,12 @@ Cada manuscrito se codifica con el elemento `<witness>` y debe tener un identifi
 
 ```xml
 <listwit>
-     <witness xml:id="NLV">Napoli, Biblioteca Nazionale Vittorio Emanuele III di Napoli, ms. LV BB 20</witness>
-     <witness xml:id="NXXX">Firenze, Biblioteca Nazionale Centrale di Firenze, Magl. XXX, 154</witness>
-     <witness xml:id="M211">Madrid, Biblioteca Nacional de España, RES/423</witness>
+     <witness xml:id="NLV">Napoli, Biblioteca Nazionale Vittorio 
+     Emanuele III di Napoli, ms. LV BB 20</witness>
+     <witness xml:id="NXXX">Firenze, Biblioteca Nazionale Centrale 
+     di Firenze, Magl. XXX, 154</witness>
+     <witness xml:id="M211">Madrid, Biblioteca Nacional de España, 
+     RES/423</witness>
 </listwit>
 ```
 
@@ -651,14 +614,14 @@ La codificación de una edición puede llevarse a cabo de muchas maneras diferen
 <l>línea 3</l>
 ```
 
-El marcado, pues, es el responsable de registrar todas las variantes textuales, cada una conectada con el identificador del testimonio correspondiente. De esta manera, si quisiéramos recuperar todas las variantes del \#testimonio1, por ejemplo, el proceso es extremadamente fácil. Es decir, al mismo tiempo que marcamos las variantes, estamos en
+El marcado, pues, es el responsable de registrar todas las variantes textuales, cada una conectada con el identificador del testimonio correspondiente. De esta manera, si quisiéramos recuperar todas las variantes del `#testimonio1`, por ejemplo, el proceso es extremadamente fácil. Es decir, al mismo tiempo que marcamos las variantes, estamos en
 realidad construyendo el aparato crítico que recuperaremos a posteriori bajo la forma que deseemos.
 
 Existe también la posibilidad de señalar el lema principal de entre las variantes textuales:
 
 ```xml
-<l>línea 1</l>
-<l>línea 2
+<l>línea 1</l>
+<l>línea 2
 	<app>
 		<lem wit="#testimonio1">lema</lem>
 		<rdg wit="#testimonio1">variante1</rdg>
@@ -666,9 +629,17 @@ Existe también la posibilidad de señalar el lema principal de entre las varian
 		<rdg wit="#testimonio3">variante3</rdg>
 	</app> 
 </l>
-<l>línea 3</l>
+<l>línea 3</l>
 ```
 
 En estos casos `<lem>` contiene el lema o texto base de la variante textual (presente o no en algún testimonio), mientras que `<rdg>` (reading) contiene una sola lectura o variante textual.
 
-Os animo a consultar, además de las Guías directrices, los ejemplos en nuestro [Repositorio de Ejemplos en GitHub](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_aparato_critico.xml) los ejemplos que aparecen en el tutorial [TEI By Example](http://www.teibyexample.org/examples/TBED07v00.htm). 
+Recomiendo, además de la sección al [Aparato crítico en las *Guías directrices*](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html) y de los ejemplos en nuestro [Repositorio de Ejemplos en GitHub](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_aparato_critico.xml), los materiales que aparecen en el tutorial [Module 7: Critical Editing](https://teibyexample.org/modules/TBED07v00.htm) del *TEI By Example*. Además, un excelente tutorial es el propuesto por Marjorie Burghart y Elena Pierazzo: [Digital Scholarly Editions: Manuscripts, Texts and TEI Encoding](https://teach.dariah.eu/course/view.php?id=32&section=0) (2017). En fin, para aquellos interesados en trabajar con aparatos críticos, pueden experimentar una posible visualización con el [TEI Critical Apparatus TextBox](http://teicat.huma-num.fr/).
+
+### Cita propuesta: 
+
+Allés Torrent, Susanna (2019). "La codificación de tipologías textuales (Prosa, poesía, drama, fuentes primarias y edición crítica)". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/> DOI: 
+
+
+[^1]: Estos materiales fueron creados en el marco del certificado de Experto Profesional en Humanidades Digitales, ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia.
+[^2]: Para una primera aproxmación, véase la lección [Las *Guías directrices*, su manejo y su traducción al español (L4)](https://tthub.io/aprende/l4-guias/).
