@@ -1,5 +1,5 @@
 ---
-title: Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos[^1]
+title: Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos
 author: Susanna Allés Torrent
 date: 2019
 # Todo esto son indicaciones para el pdf
@@ -18,6 +18,7 @@ header-includes: |
 geometry: margin=1in
 fontsize: 12pt
 ---
+
 # {{ page.title }}[^1]
 
 	{{ page.author }}
