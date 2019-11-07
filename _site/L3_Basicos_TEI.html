@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title></title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container-lg px-3 my-5 markdown-body">
+
+<h1><a href="https://tthub-repo.github.io/lecciones/">Lecciones en TTHub</a></h1>    
+
+    <h1 id="estructura-básica-y-elementos-comunes-de-los-documentos-xml-tei">Estructura básica y elementos comunes de los documentos XML-TEI<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></h1>
+<h2 id="susanna-allés-torrent">Susanna Allés Torrent</h2>
+<h3 id="2019">2019</h3>
+<p><a href="https://doi.org/10.5281/zenodo.3531506"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3531506.svg" alt="DOI" /></a></p>
+
+<h1 id="i-introducción">I. Introducción</h1>
+
+<p>En esta lección nos centraremos en la estructura básica de los documentos XML-TEI, viendo solo aquellos elementos obligatorios e indispensables para empezar a trabajar con un documento TEI válido y bien formado.</p>
+
+<p>Recapitulando algunas nociones básicas, recordaremos que XML-TEI es:</p>
+
+<ul>
+  <li>un marco de trabajo basado en el lenguaje de marcado XML que define una serie de guías directrices y recomendaciones para marcar electrónicamente textos de cualquier disciplina y de cualquier época.</li>
+  <li>al ser XML, TEI es a su vez independiente de cualquier programa y plataforma.</li>
+  <li>el objetivo final es el de organizar y estructurar los textos electrónicamente de manera que puedan ser procesados y explotados por las computadoras.</li>
+  <li>el tipo de marcado utilizado puede ser personalizado según las necesidades de cada texto o cada proyecto.</li>
+</ul>
+
+<p>En la <a href="https://tthub.io/aprende/l2-xml/">lección <em>El lenguaje XML (eXtensible Markup Language) y algunos conceptos generales</em></a> explicamos los mecanismos que rigen el lenguaje XML, y ahora, debemos empezar a trabajar con las etiquetas que son propias del sistema TEI.</p>
+
+<p>Un documento TEI es un documento XML de manera que sigue la misma sintaxis que cualquier otro documento XML. En esta imagen se reproduce la estructura mínima de un documento XML-TEI, que básicamente se compone de:</p>
+
+<ul>
+  <li>el prólogo XML</li>
+  <li>el encabezado</li>
+  <li>el cuerpo del texto</li>
+</ul>
+
+<p><img src="https://tthub-repo.github.io/lecciones/img/L3_001.jpg" alt="Estructura básica de un documento XML-TEI" /></p>
+
+<p>En el prólogo del documento XML-TEI encontramos los elementos típicos de un documento XML:</p>
+
+<ul>
+  <li>La declaración XML nos indica que se trata de un documento XML y que el tipo de codificación utilizado es el UTF-8.</li>
+  <li>La asociación del modelo de esquema: en este caso se trata de un esquema RelaxNG (.rng). Es la misma asociación que establecían las DTD a través del DOCTYPE (como se ve en el <a href="https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml">Ejemplo 2</a>). Gracias a esta indicación sabemos que este documento XML-TEI depende de un esquema concreto, el <a href="http://www.tei-c.org/Guidelines/Customization/Lite/">TEI-Lite</a>, que es un modelo minimalista de TEI donde se contemplan los elementos obligatorios y algunos de los más utilizados.</li>
+</ul>
+
+<p>Acabado el prólogo, aparece el elemento raíz <code class="highlighter-rouge">&lt;TEI&gt;</code> que engloba la totalidad del documento. Aquí irán todos los otros elementos XML-TEI: el encabezado y el texto, con la siguiente estructura:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;tei</span> <span class="na">xmlns=</span><span class="s">"http://www.tei-c.org/ns/1.0"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;teiheader&gt;</span>
+     ....
+     <span class="nt">&lt;/teiheader&gt;</span>
+     <span class="nt">&lt;text&gt;</span>
+      ....
+     <span class="nt">&lt;/text&gt;</span>
+<span class="nt">&lt;/tei&gt;</span>
+</code></pre></div></div>
+
+<h1 id="ii-encabezado-teiheader">II. Encabezado (teiHeader)</h1>
+
+<p>El documento XML-TEI consiste en dos grandes secciones: el encabezado que recibe el nombre de <a href="https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-teiHeader.html"><code class="highlighter-rouge">&lt;teiHeader&gt;</code></a>, y el del texto propiamente dicho, llamado <a href="https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-text.html"><code class="highlighter-rouge">&lt;text&gt;</code></a>.</p>
+
+<p>En el encabezado encontramos los metadatos, es decir, las diferentes informaciones relativas al texto que estamos marcando.</p>
+
+<p>Por ahora veamos cuáles son las partes obligatorias que debe tener cualquier documento XML-TEI:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;teiHeader&gt;</span>
+    <span class="nt">&lt;fileDesc&gt;</span>
+      <span class="nt">&lt;titleStmt&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Título del fichero XML<span class="nt">&lt;/title&gt;</span>
+      <span class="nt">&lt;/titleStmt&gt;</span>
+      <span class="nt">&lt;publicationStmt&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Información sobre la publicación digital<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/publicationStmt&gt;</span>
+      <span class="nt">&lt;sourceDesc&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Información sobre el texto original<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/sourceDesc&gt;</span>
+    <span class="nt">&lt;/fileDesc&gt;</span>
+<span class="nt">&lt;/teiHeader&gt;</span>
+</code></pre></div></div>
+
+<p>En nuestro repositorio de ejemplos en GitHub, también encontraréis un ejemplo (<a href="https://github.com/tthub-repo/ejemplos/blob/master/L3_documentoXML-TEI.xml">L3_documentoXML-TEI.xml</a>).</p>
+
+<p>El <code class="highlighter-rouge">&lt;teiHeader&gt;</code> tiene un solo elemento obligatorio, llamado <a href="https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-fileDesc.html"><code class="highlighter-rouge">&lt;fileDesc&gt;</code></a>. Este elemento es el responsable de contener tanto la información sobre el fichero XML-TEI con el que estamos trabajando, como los detalles de la fuente primaria:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-titleStmt.html"><code class="highlighter-rouge">&lt;titleStmt&gt;</code></a> contiene la información sobre el título del fichero propiamente dicho; éste a su vez debe ir dentro de un elemento más específico llamado <code class="highlighter-rouge">&lt;title&gt;</code>.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-publicationStmt.html"><code class="highlighter-rouge">&lt;publicationStmt&gt;</code></a> recoge la información sobre la publicación digital; la información debe ir organizada en párrafos: <code class="highlighter-rouge">&lt;p&gt;</code></li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sourceDesc.html"><code class="highlighter-rouge">&lt;sourceDesc&gt;</code></a> contiene la información de la fuente original.</li>
+</ul>
+
+<p>Pongamos un ejemplo de la Biblioteca Virtual Miguel de Cervantes; imaginemos que estamos haciendo la edición digital de una edición antigua de la La Regenta (tal y como aparece en <a href="http://www.cervantesvirtual.com/obra/la-regenta--1/">este caso</a>. El encabezado podría marcarse de esta manera:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nt">&lt;teiheader&gt;</span>
+		<span class="nt">&lt;filedesc&gt;</span>
+     		<span class="nt">&lt;titlestmt&gt;</span>
+				<span class="nt">&lt;title&gt;</span>La Regenta, por Leopoldo Alas (Clarin); prólogo 
+				de Benito Pérez Galdós<span class="nt">&lt;/title&gt;</span>
+			<span class="nt">&lt;/titlestmt&gt;</span>
+            <span class="nt">&lt;publicationstmt&gt;</span>
+                <span class="nt">&lt;pubplace&gt;</span>Alicante<span class="nt">&lt;/pubplace&gt;</span>        
+                <span class="nt">&lt;publisher&gt;</span>Biblioteca Virtual Miguel de Cervantes<span class="nt">&lt;/publisher&gt;</span>
+                <span class="nt">&lt;date&gt;</span>2000<span class="nt">&lt;/date&gt;</span>      
+            <span class="nt">&lt;/publicationstmt&gt;</span>
+            <span class="nt">&lt;sourcedesc&gt;</span>La Regenta, por Leopoldo Alas (Clarin). Prólogo 
+            de Benito Pérez Galdós, Madrid, Librería de Fernando 
+            Fe 1900<span class="nt">&lt;/sourcedesc&gt;</span>
+        <span class="nt">&lt;/filedesc&gt;</span>
+    <span class="nt">&lt;/teiheader&gt;</span>
+</code></pre></div></div>
+
+<p>Podéis encontrar este documento, en nuestro Repositorio de Ejemplos en Github (<a href="https://github.com/tthub-repo/ejemplos/blob/master/L3_Ejemplo_novela.xml">L3_Ejemplo_novela.xml</a>).</p>
+
+<p>En el <code class="highlighter-rouge">&lt;titleStmt&gt;</code> hemos incluido el nombre del archivo que, en este caso, puede ser igual al de la obra original. Nada impediría que decidiéramos titularlo de una manera diferente, por ejemplo, “Edición digital de la Regenta (1900)”. En el elemento de <code class="highlighter-rouge">&lt;publicationStmt&gt;</code> aparece la información relativa a la publicación digital, en este caso el lugar (Alicante), el editor (Biblioteca Virtual Miguel de Cervantes) y el año de la publicación (2000).</p>
+
+<p>Por otro lado, en el elemento <code class="highlighter-rouge">&lt;sourceDesc&gt;</code> debe aparecer la información de la obra original. Aquí se señala la información de la edición original de 1900. Podríamos, además, enriquecer las informaciones con la localización de la obra original, la división en tomos o cualquier otro dato que consideráramos pertinentes.</p>
+
+<p>En las <a href="https://tei-c.org/guidelines/P5/"><em>Guías directrices</em></a> de TEI encontraréis toda la documentación relativa al <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-teiHeader.html"><code class="highlighter-rouge">teiHeader</code></a>, así como múltiples ejemplos.</p>
+
+<h1 id="iii-cuerpo-del-documento">III. Cuerpo del documento</h1>
+
+<p>El cuerpo del documento corresponde al elemento <code class="highlighter-rouge">&lt;text&gt;</code> que puede contener, a su vez, tres (sub)elementos:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-front.html"><code class="highlighter-rouge">&lt;front&gt;</code></a>: se utiliza para marcar elementos paratextuales que preceden el texto, tales como prefacios, prólogos, cartas dedicatorias, una lista de personajes, etc. No es obligatorio.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-body.html"><code class="highlighter-rouge">&lt;body&gt;</code></a>: se consagra al texto propiamente dicho del documento y es obligatorio.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-back.html"><code class="highlighter-rouge">&lt;back&gt;</code></a>: puede utilizarse para añadir los apéndices, índices, cronologías, bibliografías, etc. No es obligatorio.</li>
+</ul>
+
+<p>Siguiendo con el ejemplo anterior podríamos marcar el texto con la siguiente estructura:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;text&gt;</span>
+    <span class="nt">&lt;front&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"prologo"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;/div&gt;</span> 
+	<span class="nt">&lt;/front&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"tomo"</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"capitulo"</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span> ... <span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"capitulo"</span> <span class="na">n=</span><span class="s">"2"</span><span class="nt">&gt;</span> ... <span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"capitulo"</span> <span class="na">n=</span><span class="s">"3"</span><span class="nt">&gt;</span> ... <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"tomo"</span> <span class="na">n=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"capitulo"</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span> ... <span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"capitulo"</span> <span class="na">n=</span><span class="s">"2"</span><span class="nt">&gt;</span> ... <span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"capitulo"</span> <span class="na">n=</span><span class="s">"3"</span><span class="nt">&gt;</span> ... <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/text&gt;</span>
+</code></pre></div></div>
+<p>En línea de máxima, como sucede con los nombres de los elementos y de los atributos, es mejor no utilizar acentos ni espacios tampoco en los valores de los atributos.</p>
+
+<h1 id="iv-divisiones">IV. Divisiones</h1>
+
+<p>Uno de los elementos más utilizados en el cuerpo del documento es el de “división”, <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html"><code class="highlighter-rouge">&lt;div&gt;</code></a>, que es utilizado para marcar cualquier tipo de sección estructural del texto, como tomos o volúmenes, libros, capítulos, partes, apartados, etc.</p>
+
+<p>Del ejemplo anterior, se puede observar cómo hemos utilizado el elemento <code class="highlighter-rouge">&lt;div&gt;</code> para:</p>
+
+<ul>
+  <li>caracterizar el “prólogo”.</li>
+  <li>diferenciar los diferentes “tomos”.</li>
+  <li>estructurar los diferentes “capítulos”.</li>
+</ul>
+
+<p>Al afrontar cualquier estructuración de un texto, es pues un buen ejercicio empezar identificando las diferentes secciones del texto con <code class="highlighter-rouge">&lt;div&gt;</code> diferentes. Normalmente, cada una de las <code class="highlighter-rouge">&lt;div&gt;</code> tiene un atributo <code class="highlighter-rouge">@type</code> que ayuda a caracterizar esa sección en particular. El valor que puede conllevar <code class="highlighter-rouge">@type</code> es libre, con lo cual podemos utilizar el que mejor nos convenga (ej. libro, capítulo, escena, acto, poema, estrofa, etc.) y en la lengua que queramos.</p>
+
+<p>Otro atributo muy utilizado es el <code class="highlighter-rouge">@xml:id</code> que asigna un identificador único a aquella sección particular del texto. Este mecanismo es imprescindible en el caso que queramos aislar determinadas porciones del texto. Por ejemplo, con este mecanismo al buscar una palabra podremos recuperar fácilmente en qué sección del libro estaba. El <code class="highlighter-rouge">@xml:id</code> se puede utilizar en una gran variedad de elementos, como bien podéis imaginaros es realmente útil en los casos de capítulos, líneas, versos, páginas, etc. Además, identificando las secciones de esta manera facilitamos el que otras partes del documento apunten a esa sección en concreto; de hecho, para la creación de “links”, este es un requisito indispensable: para crear un enlace necesitamos decirle al ordenador que vaya de un punto hacia otro, es decir, de un punto hacia un identificador concreto. Un elemento <code class="highlighter-rouge">&lt;div&gt;</code> con los atributos mencionados tendría esta forma:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"tomo"</span> <span class="na">xml:id=</span><span class="s">"tomo_1"</span> <span class="nt">&gt;</span> ...<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>El texto o la masa textual se incluye siempre al interior de elementos más concretos; no podemos añadir texto directamente dentro del elemento <code class="highlighter-rouge">&lt;div&gt;</code>. Por eso, en el caso que tengamos párrafos, utilizaremos el elemento <code class="highlighter-rouge">&lt;p&gt;</code>, en el caso que tuviéramos otros fragmentos de texto que no fueran párrafos, se podrían utilizar otros elementos más genéricos, como <code class="highlighter-rouge">&lt;ab&gt;</code> “anonymous block”, que indica cualquier unidad textual sin una semántica concreta (como es el caso, por ejemplo de “párrafo”, o “frase”).</p>
+
+<h1 id="v-elementos-comunes-de-todo-documento-tei">V. Elementos comunes de todo documento TEI</h1>
+
+<p>En primer lugar, conviene recordar que el sistema de codificación TEI se divide en módulos, cada uno destinado a una tipología textual: verso, drama, transcripciones de discurso, diccionarios, etc. Cada uno de estos módulos es descrito en las <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html"><em>Guías directrices</em></a>. A su vez, los módulos pueden ser obligatorios o optativos. Así, los módulos obligatorios son cuatro: <a href="https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ST.html"><code class="highlighter-rouge">tei</code></a>, <a href="https://www.tei-c.org/release/doc/tei-p5-doc/es/html/CO.html"><code class="highlighter-rouge">core</code></a>, <a href="https://www.tei-c.org/release/doc/tei-p5-doc/es/html/HD.html"><code class="highlighter-rouge">header</code></a>, <a href="https://www.tei-c.org/release/doc/tei-p5-doc/es/html/DS.html"><code class="highlighter-rouge">textstructure</code></a>; sin estos no tendríamos un documento válido. Los módulos optativos, en cambio, responden a tipologías textuales concretas.</p>
+
+<p>Ahora, veremos aquellos elementos generales y comunes en todos los documentos TEI, como pueden ser párrafos, cuestiones de puntuación o de tipografía, nombres, fechas, abreviaturas, listas, notas a pie de página o de otra naturaleza, indexación, entre otros aspectos. Todos estos elementos se encuentran explicados en la sección <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html">“3. Elements Available in All TEI Documents”</a> de las <em>Guías directrices</em>.</p>
+
+<p>Más arriba vimos aquellos elementos que constituían la estructura obligatoria y básica de un documento TEI. Vamos, aquí, a centrarnos en el módulo llamado «core», que contiene una serie de elementos o etiquetas que pueden utilizarse en cualquier documento, incluso en la versión más minimalista <a href="https://tei-c.org/guidelines/customization/lite/">TEI Lite</a>. La panorámica que ofreceremos no es completa, pero corresponde a los más utilizados.</p>
+
+<p>Vamos a dividir los elementos en: Párrafos, Cuestiones de puntuación, Elementos tipográficos, Citas, Nombres, números, fechas, Listas, notas, anotaciones, indexación, referencias, y un último apartado con Otros elementos frecuentemente utilizados.</p>
+
+<h2 id="párrafos">Párrafos</h2>
+
+<p>El párrafo es la unidad más pequeña en la que un texto en prosa puede dividirse. El elemento utilizado para marcar los párrafos es <code class="highlighter-rouge">&lt;p&gt;</code>.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>El único defecto que hallan en mi es el de que estoy muy delgadito, a fuerza de estudiar. Para que engorde se proponen no dejarme estudiar ni leer un papel mientras aquí permanezca, y además hacerme comer cuantos primores de cocina y de repostería se confeccionan en el lugar. Está visto: quieren cebarme. No hay familia conocida que no me haya enviado algún obsequio. Ya me envían una torta de bizcocho, ya un cuajado, ya una pirámide de piñonate, ya un tarro de almibar.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Los obsequios que me hacen no son sólo estos presentes enviados a casa, sino que también me han convidado a comer tres o cuatro personas de las más importantes del lugar.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Mañana como en casa de la famosa Pepita Jiménez, de quien Vd. habrá oído hablar sinduda alguna. Nadie ignora aquí que mi padre la pretende.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+<p>(Juan Valera, <em>Pepita Jiménez</em>, Cap. I)</p>
+
+<p>En los casos, por ejemplo, que quisiéramos dividir ulteriormente un párrafo, podríamos utilizar otros elementos como <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html"><code class="highlighter-rouge">&lt;s&gt;</code></a> (segment) para dividir otro tipo de segmentos, como por ejemplo, las frases:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;s</span> <span class="na">type=</span><span class="s">"frase"</span><span class="nt">&gt;</span>El único defecto que hallan en mí es el de que estoy muy delgadito, a fuerza de estudiar.<span class="nt">&lt;/s&gt;</span> 
+<span class="nt">&lt;s</span> <span class="na">type=</span><span class="s">"frase"</span><span class="nt">&gt;</span>Para que engorde se proponen no dejarme estudiar ni leer un papel mientras aquí permanezca, y además hacerme comer cuantos primores de cocina y de repostería se confeccionan en el lugar.<span class="nt">&lt;/s&gt;</span> 
+<span class="nt">&lt;s</span> <span class="na">type=</span><span class="s">"frase"</span><span class="nt">&gt;</span>Está visto: quieren cebarme.<span class="nt">&lt;/s&gt;</span> 
+<span class="nt">&lt;s&gt;</span>No hay familia conocida que no me haya enviado algún obsequio.<span class="nt">&lt;/s&gt;</span> 
+<span class="nt">&lt;s</span> <span class="na">type=</span><span class="s">"frase"</span><span class="nt">&gt;</span>Ya me envían una torta de bizcocho, ya un cuajado, ya una pirámide de piñonate, ya un tarro de almíbar.<span class="nt">&lt;/s&gt;</span>
+</code></pre></div></div>
+<p>(Juan Valera, <em>Pepita Jiménez</em>, Cap. I)</p>
+
+<p>El elemento <code class="highlighter-rouge">&lt;p&gt;</code> puede contener una gran variedad de elementos en su interior, prácticamente todos los que veremos a continuación.</p>
+
+<h2 id="puntuación">Puntuación</h2>
+
+<p>De manera general, y especialmente en prosa, la puntuación del texto no suele codificarse; pero en algunos casos donde el marcado debe ser extremadamente sutil, se puede marcar. El elemento utilizado es:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-pc.html"><code class="highlighter-rouge">&lt;pc&gt;</code></a> (punctuation character): utilizado para codificar el punto, el signo de interrogación y de exclamación, los puntos suspensivos, las comillas (aunque podrían eliminarse si se utiliza <code class="highlighter-rouge">&lt;q&gt;</code> o <code class="highlighter-rouge">&lt;quote&gt;</code>), apóstrofes, paréntesis, etc.</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;s&gt;</span>
+<span class="nt">&lt;seg&gt;</span>Está visto<span class="nt">&lt;pc&gt;</span>:<span class="nt">&lt;/pc&gt;&lt;/seg&gt;</span> 
+<span class="nt">&lt;seg&gt;</span>quieren cebarme<span class="nt">&lt;/seg&gt;&lt;pc&gt;</span>.<span class="nt">&lt;/pc&gt;</span>
+<span class="nt">&lt;/s&gt;</span>
+</code></pre></div></div>
+
+<p>La codificación de la puntuación puede ser interesante en aquellos casos en que se quiera dar fe de los diferentes cambios a lo largo de la historia. A veces, la ausencia o presencia de un punto, por ejemplo, puede cambiar el sentido.</p>
+
+<h2 id="elementos-tipográficos">Elementos tipográficos</h2>
+
+<p>Todos los textos impresos poseen elementos tipográficos diversos como pueden ser la cursiva, la negrita, las versalitas, incluso fuentes diversas, tamaño de la fuente, etc. La naturaleza de estos elementos tipográficos en las fuentes escritas pueden ser de diversa naturaleza:</p>
+
+<ul>
+  <li>una palabra o frase en una lengua extranjera, un arcaísmo, un barbarismo, una palabra técnica, etc.</li>
+  <li>una palabra o frase sobre la que se quiere poner un énfasis especial, que se resaltaría al hablar.</li>
+  <li>un palabra o frase que en realidad no forma parte del discurso del texto, como las referencias cruzadas, los títulos o los encabezados, etc.</li>
+  <li>cadenas narrativas diferentes, como un monólogo interno o un comentario.</li>
+  <li>la atribución a una referencia externa al texto, como un discurso directo o una citación.</li>
+</ul>
+
+<p>Ahora bien, como explicamos anteriormente, el sistema TEI no se concentra tanto en la apariencia del texto como en señalar qué son las cosas. De esta manera, al encontrarnos, por ejemplo con un extranjerismo, quizás no nos interesará tanto señalar que aparece en cursiva, como indicar que se trata de una palabra extranjera. Sea cual sea la opción que se elija, TEI ofrece la posibilidad de marcar estos elementos tipográficos de una manera general, sin implicaciones semánticas. El elemento utilizado a tal propósito es <code class="highlighter-rouge">&lt;hi&gt;</code> (highlight), que por lo general suele tener un atributo <code class="highlighter-rouge">@rend</code> (rendition) que indica de qué manera aparece en el texto:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;hi</span> <span class="na">rend=</span><span class="s">"italic"</span><span class="nt">&gt;</span>Palabra o frase en cursiva<span class="nt">&lt;/hi&gt;</span>
+<span class="nt">&lt;hi</span> <span class="na">rend=</span><span class="s">"bold"</span><span class="nt">&gt;</span>Palabra o frase en negrita<span class="nt">&lt;/hi&gt;</span>
+<span class="nt">&lt;hi</span> <span class="na">rend=</span><span class="s">"small-caps"</span><span class="nt">&gt;</span>Palabra o frase en versalitas<span class="nt">&lt;/hi&gt;</span>
+</code></pre></div></div>
+
+<p>El valor de los elementos es libre, con lo cual nada nos impide señalarlo en otra lengua, por ejemplo:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;hi</span> <span class="na">rend=</span><span class="s">"cursiva"</span><span class="nt">&gt;</span>Palabra o frase en cursiva<span class="nt">&lt;/hi&gt;</span>
+</code></pre></div></div>
+
+<p>Podemos encontrar además otros elementos que responden a las tipografías diversas anteriormente mencionadas:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-foreign.html"><code class="highlighter-rouge">&lt;foreign&gt;</code></a> indica una palabra o frase perteneciente a otra lengua; normalmente posee el atributo <code class="highlighter-rouge">@xml:lang</code> para definir la lengua. Por ejemplo,</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>El papa Francisco recuerda los conflictos activos en el mundo en la bendición 
+<span class="nt">&lt;foreign</span> <span class="na">xml:lang=</span><span class="s">"lat"</span><span class="nt">&gt;</span>urbi et orbi<span class="nt">&lt;/foreign&gt;&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Te espero en el <span class="nt">&lt;foreign</span> <span class="na">xml:lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>lobby<span class="nt">&lt;/foreign&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li><a href=""><code class="highlighter-rouge">&lt;emph&gt;</code></a> indica una palabra o frase a la que se atribuye un énfasis especial:</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>Aquí, como en todas partes, la gente es muy aficionada al dinero. Y digo mal <span class="nt">&lt;emph&gt;</span>como en todas partes<span class="nt">&lt;/emph&gt;</span>: en las ciudades populosas, en los grandes centros de civilización, hay otras distinciones que se ambicionan tanto o más que el dinero, porque abren camino y dan crédito y consideración en el mundo<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-distinct.html"><code class="highlighter-rouge">&lt;distinct&gt;</code></a> indica un término diferente lingüísticamente (arcaísmo, tecnicismo, dialectalismo, coloquialismo, etc.).</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-mentioned.html"><code class="highlighter-rouge">&lt;mentioned&gt;</code></a> es utilizado para señalar una palabra mencionada o citada.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-soCalled.html"><code class="highlighter-rouge">&lt;soCalled&gt;</code></a> contiene una palabra o expresión respecto a la cual el autor manifiesta su rechazo de responsabilidad:</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>El mencionado <span class="nt">&lt;soCalled&gt;</span>manuscrito<span class="nt">&lt;/soCalled&gt;</span>, fielmente trasladado a la estampa, es como sigue.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<h2 id="citas">Citas</h2>
+
+<p>La marcas tipográficas también pueden utilizarse, como es sabido, para señalar citas de diferente naturaleza, ya sea un pensamiento, un discurso indirecto o directo, o incluso una cita literaria o bibliográfica. TEI ofrece una gran variedad de elementos para señalar estos fenómenos entre los que destacan:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-q.html"><code class="highlighter-rouge">&lt;q&gt;</code></a> (quoted) puede utilizarse para marcar el estilo directo, un pensamiento o algún término técnico, normalmente en las fuentes escritas aparece entre comillas:</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>Al día siguiente, Bioy me llamó desde Buenos Aires. Me dijo que tenía a la vista el artículo sobre Uqbar, en el volumen XXVI de la Enciclopedia. No constaba el nombre del heresiarca, pero si la noticia de su doctrina, formulada en palabras casi idénticas a las repetidas por él, aunque -tal vez- literariamente inferiores. Él había recordado:  <span class="nt">&lt;q</span> <span class="na">xml:lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>Copulation and mirrors are abominable<span class="nt">&lt;/q&gt;</span>. El texto de la Enciclopedia decía: <span class="nt">&lt;q&gt;</span>Para uno de esos gnósticos, el visible universo era una ilusión o (más precisamente) un sofisma. Los espejos y la paternidad son abominables (<span class="nt">&lt;foreign</span> <span class="na">xml:lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>mirrors and fatherhood are hateful<span class="nt">&lt;/foreign&gt;</span>) porque lo multiplican y lo 
+divulgan.<span class="nt">&lt;/q&gt;</span> Le dije, sin faltar a la verdad, que <span class="nt">&lt;q&gt;</span>me gustaria 
+ver ese articulo<span class="nt">&lt;/q&gt;</span>. A los pocos días lo trajo. Lo cual me sorprendió, 
+porque los escrupulosos índices cartográficos de la Erdkunde de Ritter 
+ignoraban con plenitud el nombre de Uqbar.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+<p>(Borges, <em>Ficciones</em>)</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-said.html"><code class="highlighter-rouge">&lt;said&gt;</code></a> (speech or thought) discurso hablado o pensamiento:</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span> Así es que un día ambas se quedaron atónitas y pasmadas cuando, después de varios requiebros, entre burlas y veras, D. Gumersindo soltó con la mayor formalidad y a boca de jarro la siguiente categórica pregunta:<span class="nt">&lt;/p&gt;</span> 
+<span class="nt">&lt;said&gt;</span>Muchacha, ¿quieres casarte conmigo?<span class="nt">&lt;/said&gt;</span>
+<span class="nt">&lt;p&gt;</span> Pepita, aunque la pregunta venía después de mucha broma, y pudiera tomarse por broma, y aunque inexperta de las cosas del mundo, por cierto instinto adivinatorio que hay en las mujeres y sobre todo en las mozas, por cándidas que sean, conoció que aquello iba por lo serio, se puso colorada como una guinda, y no contestó nada. La madre contestó por ella:<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;said&gt;</span>Niña, no seas mal criada; contesta a tu tío lo que debes contestar: Tío, con mucho gusto; cuando Vd. quiera.<span class="nt">&lt;/said&gt;</span>
+</code></pre></div></div>
+<p>(J. Valera, <em>Pepita Jiménez</em>)</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-quote.html"><code class="highlighter-rouge">&lt;quote&gt;</code></a> pasaje atribuido a una fuente externa:</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span> No conozco aún a Pepita Jiménez. Todos dicen que es muy linda. Yo sospecho que será una beldad lugareña y algo rústica. Por lo que de ella se cuenta, no acierto a decidir si es buena o mala moralmente; pero sí que es de gran despejo natural. Pepita tendrá veinte años; es viuda; solo tres años estuvo casada. Era hija de doña Francisca Gálvez, viuda, como Vd. sabe, de un capitán retirado <span class="nt">&lt;quote&gt;</span>Que le dejo a su muerte, Solo su honrosa espada por herencia,<span class="nt">&lt;/quote&gt;</span> según dice el poeta. Hasta la edad de diez y seis años vivió Pepita con su madre en la mayor estrechez, casi en la miseria.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cit.html"><code class="highlighter-rouge">&lt;cit&gt;</code></a> se utiliza para citar de manera completa una referencia bibliográfica:</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;p&gt;</span>El pasaje nos recuerda al 
+    <span class="nt">&lt;cit&gt;</span>
+      <span class="nt">&lt;quote&gt;</span>"Arma virumque cano,..."<span class="nt">&lt;/quote&gt;</span>
+       <span class="nt">&lt;bibl&gt;</span>(<span class="nt">&lt;author&gt;</span>Virgilio<span class="nt">&lt;/author&gt;</span>, 
+      <span class="nt">&lt;title&gt;</span>Eneida<span class="nt">&lt;/title&gt;</span>, I)<span class="nt">&lt;/bibl&gt;</span>
+    <span class="nt">&lt;/cit&gt;&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<h2 id="nombres-números-y-fechas">Nombres, números y fechas</h2>
+
+<p>En múltiples ocasiones podemos encontrar en los textos nombres (ya sean topónimos, antropónimos, etc.), números y fechas. TEI propone para ello una serie de elementos que nos serán de gran utilidad.</p>
+
+<h3 id="nombres">Nombres</h3>
+
+<p>Un elemento general para codificar todo tipo de nombres o incluso frases es <code class="highlighter-rouge">&lt;name&gt;</code>; más adelante, veremos como existe un módulo específico para el marcado de nombres de lugar, de persona, etc. Otro elemento recurrente es <code class="highlighter-rouge">&lt;rs&gt;</code> (referring string) que indica un nombre con una denominación genérica o una cadena de referencia.</p>
+
+<p>Los atributos más utilizados, a parte de <code class="highlighter-rouge">@xml:id</code>, son <code class="highlighter-rouge">@type</code> para especificarlos ulteriormente, y <code class="highlighter-rouge">@key</code> o <code class="highlighter-rouge">@ref</code> para referirse a un identificador concreto. Por ejemplo, supongamos esta frase: “Pepita Jiménez era hija de Francisca Gálvez quien la quería casar con D. Gumersindo”; la podríamos marcar de la siguiente manera:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;&lt;name</span> <span class="na">xml:id=</span><span class="s">"PJ"</span><span class="nt">&gt;</span>Pepita Jiménez<span class="nt">&lt;/name&gt;</span> era hija de 
+<span class="nt">&lt;name</span> <span class="na">xml:id=</span><span class="s">"FG"</span><span class="nt">&gt;</span>Francisca Gálvez<span class="nt">&lt;/name&gt;</span> que la hizo casar con 
+<span class="nt">&lt;name</span> <span class="na">ref=</span><span class="s">"#Gu"</span><span class="nt">&gt;</span>D. Gumersindo<span class="nt">&lt;/name&gt;&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<p>una vez establecidos los identificadores, podríamos referirnos a los personajes con facilidad en el fragmento que sigue:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>Era, con todo, tan inverosímil y tan desatinado el suponer que un hombre, que había pasado ochenta años sin querer casarse, pensase en tal locura cuando ya tenía un pie en el sepulcro, que ni la <span class="nt">&lt;rs</span> <span class="na">ref=</span><span class="s">"#FG"</span><span class="nt">&gt;</span>madre de Pepita<span class="nt">&lt;/rs&gt;</span>, ni <span class="nt">&lt;name</span> <span class="na">ref=</span><span class="s">"#PJ"</span><span class="nt">&gt;</span>Pepita<span class="nt">&lt;/name&gt;</span> mucho menos, sospecharon jamás los en verdad atrevidos pensamientos de <span class="nt">&lt;name</span> <span class="na">ref=</span><span class="s">"#Gu"</span><span class="nt">&gt;</span>D. Gumersindo<span class="nt">&lt;/name&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<h3 id="fechas">Fechas</h3>
+
+<p>En lo que concierne a las fechas, se utiliza el elemento <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-date.html"><code class="highlighter-rouge">&lt;date&gt;</code></a> y se regulariza su formato (de manera que la máquina la interprete correctamente) al interior del <code class="highlighter-rouge">@when</code>, cuyo formato es: año-mes-día. He aquí algunos ejemplos.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;date</span> <span class="na">when=</span><span class="s">"1980-03-23"</span><span class="nt">&gt;</span>23 de marzo de 1980<span class="nt">&lt;/date&gt;</span>
+<span class="nt">&lt;date</span> <span class="na">when=</span><span class="s">"1980"</span><span class="nt">&gt;</span> el año 1980<span class="nt">&lt;/date&gt;</span>
+<span class="nt">&lt;date</span> <span class="na">when=</span><span class="s">"1999-10"</span><span class="nt">&gt;</span>octubre de 1999<span class="nt">&lt;/date&gt;</span>
+<span class="nt">&lt;date</span> <span class="na">when=</span><span class="s">"--02-14"</span><span class="nt">&gt;</span>cada 14 de febrero<span class="nt">&lt;/date&gt;</span>
+<span class="nt">&lt;date</span> <span class="na">from=</span><span class="s">"2014-02-10"</span> <span class="na">to=</span><span class="s">"2014-02-20"</span><span class="nt">&gt;</span> del 10 de febrero al 
+20 de octubre de 2014<span class="nt">&lt;/date&gt;</span>
+</code></pre></div></div>
+
+<p>Opcionalmente, se pueden especificar los diferentes sistemas de calendario (juliano, gregoriano, etc.) con <code class="highlighter-rouge">@calendar</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;date</span> <span class="na">when=</span><span class="s">"1541"</span> <span class="na">calendar=</span><span class="s">"#juliano"</span><span class="nt">&gt;</span>1541<span class="nt">&lt;/date&gt;</span>
+</code></pre></div></div>
+
+<p>En estos casos suele describirse el tipo de calendario utilizado en el elemento <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-calendar.html"><code class="highlighter-rouge">&lt;calendar&gt;</code></a> en el TEI Header.</p>
+
+<p>Podemos, además, especificar la hora con el elemento <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-time.html"><code class="highlighter-rouge">&lt;time&gt;</code></a> que suele también incluir el atributo <code class="highlighter-rouge">@when</code> para regularizar la forma:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;time</span> <span class="na">when=</span><span class="s">"08:48:00"</span><span class="nt">&gt;</span>8:48<span class="nt">&lt;/time&gt;</span>
+</code></pre></div></div>
+
+<h3 id="números-y-medidas">Números y medidas</h3>
+
+<p>En lo que toca a los números y las medidas, se reducen al uso de los elementos <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-num.html"><code class="highlighter-rouge">&lt;num&gt;</code></a>, para cualquier tipo de número (y a veces acompañados de los <code class="highlighter-rouge">@type</code>, <code class="highlighter-rouge">@value</code>), y de <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-measure.html"><code class="highlighter-rouge">&lt;measure&gt;</code></a> para marcar una cantidad (seguido opcionalmente de los atributos <code class="highlighter-rouge">@type</code>, <code class="highlighter-rouge">@quantity</code>, <code class="highlighter-rouge">@unit</code>, <code class="highlighter-rouge">@comodity</code>).</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;num</span> <span class="na">value=</span><span class="s">"52"</span><span class="nt">&gt;</span>LII<span class="nt">&lt;/num&gt;</span>
+<span class="nt">&lt;num</span> <span class="na">type=</span><span class="s">"cardinal"</span> <span class="na">value=</span><span class="s">"15"</span><span class="nt">&gt;</span>quince<span class="nt">&lt;/num&gt;</span>
+<span class="nt">&lt;num</span> <span class="na">type=</span><span class="s">"percentage"</span> <span class="na">value=</span><span class="s">"20"</span><span class="nt">&gt;</span>veinte por ciento<span class="nt">&lt;/num&gt;</span>
+<span class="nt">&lt;num</span> <span class="na">type=</span><span class="s">"ordinal"</span> <span class="na">value=</span><span class="s">"6"</span><span class="nt">&gt;</span>6º<span class="nt">&lt;/num&gt;</span>
+<span class="nt">&lt;measure</span> <span class="na">type=</span><span class="s">"peso"</span><span class="nt">&gt;&lt;num&gt;</span>4<span class="nt">&lt;/num&gt;</span> quilos de harina <span class="nt">&lt;/measure&gt;</span>
+</code></pre></div></div>
+
+<h2 id="listas-notas-anotaciones-indexación-referencias">Listas, notas, anotaciones, indexación, referencias</h2>
+
+<h3 id="listas">Listas</h3>
+
+<p>Las listas suelen ser un fenómeno habitual en muchos de los textos impresos. Los elementos más comunes que pueden constituir una lista son los siguientes:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-list.html"><code class="highlighter-rouge">&lt;list&gt;</code></a> secuencia de ítems que conforman una lista.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-item.html"><code class="highlighter-rouge">&lt;item&gt;</code></a> un componente de una lista.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-label.html"><code class="highlighter-rouge">&lt;label&gt;</code></a> etiqueta asociada a un ítem.</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;list&gt;</span>
+	<span class="nt">&lt;head&gt;</span>Ingredientes:<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;item</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>Harina<span class="nt">&lt;/item&gt;</span>
+	<span class="nt">&lt;item</span> <span class="na">n=</span><span class="s">"2"</span><span class="nt">&gt;</span>Huevos<span class="nt">&lt;/item&gt;</span>
+	<span class="nt">&lt;item</span> <span class="na">n=</span><span class="s">"3"</span><span class="nt">&gt;</span>Azucar<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/list&gt;</span>
+<span class="nt">&lt;list</span> <span class="na">type=</span><span class="s">"gloss"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>Lista de medidas (traducción)<span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;label&gt;</span>height<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;item&gt;</span>altura<span class="nt">&lt;/item&gt;</span>
+  <span class="nt">&lt;label&gt;</span>width<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;item&gt;</span>ancho<span class="nt">&lt;/item&gt;</span>
+  <span class="nt">&lt;label&gt;</span>depth<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;item&gt;</span>fondo<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/list&gt;</span>
+</code></pre></div></div>
+
+<p>Pueden también establecerse diferentes tipos de lista a través del atributo <code class="highlighter-rouge">@type</code>, que tiene estos valores por defecto:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">bulleted</code>: ítems precedidos de puntos o marcas similare.</li>
+  <li><code class="highlighter-rouge">inline</code>: ítems presentados en prosa continua, sin saltos de página.</li>
+  <li><code class="highlighter-rouge">numbered</code>: ítems precedidos de un número.</li>
+  <li><code class="highlighter-rouge">simple</code>: ítems presentados como bloques, pero sin puntos ni números.</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;list</span> <span class="na">rend=</span><span class="s">"numbered"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>Lista de temas a estudiar<span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;item</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>¿Qué es la TEI y qué aplicaciones prácticas tiene?<span class="nt">&lt;/item&gt;</span>
+  <span class="nt">&lt;item</span> <span class="na">n=</span><span class="s">"2"</span><span class="nt">&gt;</span>Principios fundamentales de un documento XML<span class="nt">&lt;/item&gt;</span>
+  <span class="nt">&lt;item</span> <span class="na">n=</span><span class="s">"3"</span><span class="nt">&gt;</span>La estructura básica de un documento TEI<span class="nt">&lt;/item&gt;</span>
+  <span class="nt">&lt;item</span> <span class="na">n=</span><span class="s">"4"</span><span class="nt">&gt;</span>Elementos generales a todos los documentos TEI (core)<span class="nt">&lt;/item&gt;</span>
+  <span class="nt">&lt;item</span> <span class="na">n=</span><span class="s">"5"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/list&gt;</span>
+</code></pre></div></div>
+
+<h3 id="notas">Notas</h3>
+
+<p>En muchos casos, podemos encontrarnos con notas o anotaciones de naturaleza diversa. El elemento para codificarlas es <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-note.html"><code class="highlighter-rouge">&lt;note&gt;</code></a>, que sirve tanto para las que se encuentran en el texto impreso como las que son añadidas por el editor digital.</p>
+
+<p>El elemento <code class="highlighter-rouge">&lt;note&gt;</code> tiene una serie de atributos que nos serán de gran utilidad, entre ellos destacamos:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@type</code>: permite caracterizar la nota en cuestión, si se trata de una nota al margen, de una nota a pie de página, etc.</li>
+  <li><code class="highlighter-rouge">@place</code>: es especialmente útil cuando se transcribe un manuscrito que posee notas en los márgenes; así por ejemplo podemos indicar la localización física de la nota.</li>
+  <li><code class="highlighter-rouge">@xml:id</code>: se utiliza, como hemos visto, para dar un identificador único a la nota en cuestión, de manera que podamos referirnos a esta con facilidad y crear, si lo deseamos, un enlace a la misma</li>
+  <li><code class="highlighter-rouge">@target</code>: lo utilizaríamos para conectar la referencia con la nota o viceversa.</li>
+</ul>
+
+<p>Las notas pueden marcarse de dos maneras diferentes; una opción es situarla donde aparece la referencia a la misma en el cuerpo del texto (Opción 1); la otra consiste en crear una zona separada (una <code class="highlighter-rouge">&lt;div type=“notas”&gt;</code> por ejemplo) y apuntar a la referencia a través del <code class="highlighter-rouge">@target</code>:</p>
+
+<p>Opción 1:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>Historia y organización<span class="nt">&lt;note</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>Todas las discusiones e informaciones relativas entorno a TEI desde sus inicios se encuentran en el repositorio de la lista TEI<span class="nt">&lt;/note&gt;&lt;/head&gt;</span>
+</code></pre></div></div>
+
+<p>Opción 2:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>Historia y organización<span class="nt">&lt;ref</span> <span class="na">target=</span><span class="s">"nota1"</span> <span class="na">xml:id=</span><span class="s">"referencia1"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/ref&gt;&lt;/head&gt;</span>
+....
+[...]
+<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"notas"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;note</span> <span class="na">xml:id=</span><span class="s">"nota1"</span> <span class="na">target=</span><span class="s">"#referencia1"</span><span class="nt">&gt;</span>Todas las discusiones e informaciones relativas entorno a TEI desde sus inicios se encuentran en el repositorio de la lista TEI <span class="nt">&lt;/note&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="indexación">Indexación</h3>
+
+<p>En algunas ocasiones podemos también encontrarnos con índices de términos, para ello podemos utilizar estos dos elementos:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-index.html"><code class="highlighter-rouge">&lt;index&gt;</code></a> marca una entrada de índice, puede llevar <code class="highlighter-rouge">@indexName</code>; en su interior pueden anidarse diferentes índices.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-term.html"><code class="highlighter-rouge">&lt;term&gt;</code></a> marca un término en el interior del índice.</li>
+</ul>
+
+<p>Puede ocurrir que la fuente original no tenga un índice, pero que queramos construir uno. Esto puede hacerse de diferentes maneras, una de ellas sería utilizando los dos elementos anteriores y marcar los términos que queramos introducir en un nuevo índice. Por ejemplo, imaginemos que queremos hacer un índice de personajes:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;index</span> <span class="na">indexName=</span><span class="s">"Personajes"</span><span class="nt">&gt;&lt;term</span> <span class="na">xml:id=</span><span class="s">"PJ"</span><span class="nt">&gt;</span>Pepita<span class="nt">&lt;/term&gt;&lt;/index&gt;</span> tendrá veinte años; es viuda; sólo tres años estuvo casada. Era hija de doña <span class="nt">&lt;index</span> <span class="na">indexName=</span><span class="s">"Personajes"</span><span class="nt">&gt;</span> <span class="nt">&lt;term</span> <span class="na">xml:id=</span><span class="s">"FG"</span><span class="nt">&gt;</span>Francisca Gálvez<span class="nt">&lt;/term&gt;&lt;/index&gt;</span>, viuda, como Vd. sabe, de un capitán retirado.
+</code></pre></div></div>
+<p>De esta manera sería fácil autogenerar un índice con los nombres de los personajes, por ejemplo, con un simple script en XSLT.</p>
+
+<h3 id="enlaces-y-referencias">Enlaces y referencias</h3>
+
+<p>Una de las ventajas de crear un hipertexto es justamente la posibilidad que tenemos de conectar las diferentes secciones del texto a otras y establecer todo tipo de enlaces. En TEI los enlaces pueden realizarse de dos maneras, con los siguientes elementos:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ptr.html"><code class="highlighter-rouge">&lt;ptr&gt;</code></a> (pointer) un indicador hacia otra localización</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ref.html"><code class="highlighter-rouge">&lt;ref&gt;</code></a> (reference) define una referencia hacia otra localización, normalmente contiene un texto que funciona como el enlace. Ambos suelen utilizar, entre otros, el atributo <code class="highlighter-rouge">@target</code> que toma la forma de una referencia URI.</li>
+</ul>
+
+<h2 id="otros-elementos">Otros elementos</h2>
+
+<p>Existen mucho otros elementos entre los cuales podríamos destacar los cambios editoriales, tales como los errores, correcciones, adiciones, supresiones, etc. y otros elementos pertenecientes a la estructura física del texto, como los saltos de línea, de página o de columna.</p>
+
+<h3 id="cambios-editoriales">Cambios editoriales</h3>
+
+<p>Como ocurre en la edición de fuentes escritas, a veces debemos señalar el proceso de constitución de un texto en sus diferentes fases (copistas, editor papel, editor digital, etc.). Para recoger las intervenciones editoriales disponemos de una serie de elementos básicos que podemos utilizar en todos los documentos TEI. Para entender la codificación de estos fenómenos debemos visualizar la intervención como una unidad en la que hay etapas o elementos diferentes. El elemento encargado de recoger estos marcados editoriales alternativos es <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-choice.html"><code class="highlighter-rouge">&lt;choice&gt;</code></a>, y puede utilizarse en los siguientes casos:</p>
+
+<ul>
+  <li>Corrección de errores: ante un error, se utiliza el elemento <code class="highlighter-rouge">&lt;sic&gt;</code> para marcar el error aparente; con el elemento <code class="highlighter-rouge">&lt;corr&gt;</code>, en cambio, se recoge la corrección de dicho error:</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>Hasta cinco mujeres han venido a verme que 
+<span class="nt">&lt;choice&gt;</span>
+   <span class="nt">&lt;sic&gt;</span>todos<span class="nt">&lt;/sic&gt;&lt;corr&gt;</span>todas<span class="nt">&lt;/corr&gt;</span>
+<span class="nt">&lt;/choice&gt;</span> han sido mis amas y me han abrazado y besado.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Regularización de formas ortográficas: la forma original que aparece en el texto se marca con el elemento <code class="highlighter-rouge">&lt;orig&gt;</code>, mientras que su forma regularizada, con el elemento <code class="highlighter-rouge">&lt;reg&gt;</code>:</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;choice&gt;</span>
+   <span class="nt">&lt;orig&gt;</span>Comiença<span class="nt">&lt;/orig&gt;</span>
+   <span class="nt">&lt;reg&gt;</span>Comienza<span class="nt">&lt;/reg&gt;</span>
+<span class="nt">&lt;/choice&gt;</span> la
+<span class="nt">&lt;choice&gt;</span>
+   <span class="nt">&lt;orig&gt;</span>ystoria<span class="nt">&lt;/orig&gt;</span>
+    <span class="nt">&lt;reg&gt;</span>historia<span class="nt">&lt;/reg&gt;</span>
+<span class="nt">&lt;/choice&gt;</span>...
+</code></pre></div></div>
+
+<ul>
+  <li>Abreviatura: la forma abreviada aparece en el elemento <code class="highlighter-rouge">&lt;abbr&gt;</code>, mientras que la forma expandida bajo <code class="highlighter-rouge">&lt;expan&gt;</code>:</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>...un largo 
+<span class="nt">&lt;choice&gt;</span>
+    <span class="nt">&lt;abbr&gt;</span>etc.<span class="nt">&lt;/abbr&gt;</span>
+     <span class="nt">&lt;expan&gt;</span>etcétera<span class="nt">&lt;/expan&gt;</span>
+<span class="nt">&lt;/choice&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<p>Hay otro tipo de intervenciones que pueden codificarse de manera aislada, como las adiciones, las eliminaciones, las omisiones, e incluso las lecturas dudosas:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html"><code class="highlighter-rouge">&lt;add&gt;</code></a>: adición al texto, como por ejemplo una glosa marginal.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html"><code class="highlighter-rouge">&lt;del&gt;</code></a>: una eliminación en el texto, como una tachadura.</li>
+  <li><a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-gap.html"><code class="highlighter-rouge">&lt;gap&gt;</code></a>: indica un punto donde el material ha sido omitido; puede tener el atributo <code class="highlighter-rouge">@reason</code> para señalar el motivo.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html"><code class="highlighter-rouge">&lt;unclear&gt;</code></a>: indica una lectura dudosa.</li>
+</ul>
+
+<h3 id="milestones">Milestones</h3>
+
+<p>Dentro de la categoría que las <em>Guías directrices</em> denominan “Milestone” encontramos diversos elementos que pueden indicar ciertas características físicas del documento. Entre estos elementos encontramos:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-milestone.html"><code class="highlighter-rouge">&lt;milestone&gt;</code></a>: marca un punto límite separando cualquier tipo de sección de un texto.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gb.html"><code class="highlighter-rouge">&lt;gb&gt;</code></a> (gathering begins) puede indicar el inicio o final de la folación de un manuscrito, por ejemplo donde empieza y donde acaba un cuaderno.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html"><code class="highlighter-rouge">&lt;pb&gt;</code></a> (page break): indica el cambio de página.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html"><code class="highlighter-rouge">&lt;lb&gt;</code></a> (line break): indica el cambio de línea.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cb.html"><code class="highlighter-rouge">&lt;cb&gt;</code></a> (column break): indica el cambio de columna</li>
+</ul>
+
+<h1 id="vi-bibliografía">VI. Bibliografía</h1>
+
+<ul>
+  <li>Burnard, L. (2014), What is the Text Encoding Initiative. How to add intelligent markup to digital resources, Marserille: OpenEdition Press <a href="https://books.openedition.org/oep/681">https://books.openedition.org/oep/681</a></li>
+</ul>
+
+<h2 id="tutoriales">Tutoriales:</h2>
+
+<ul>
+  <li>“Module 1: Common Structure and Elements.” <em>TEI by Example</em>, <a href="http://teibyexample.org/modules/TBED01v00.htm">http://teibyexample.org/modules/TBED01v00.htm</a></li>
+  <li>Schreibman, Susan &amp; Roman Bleier. “<a href="https://teach.dariah.eu/course/view.php?id=23">Text encoding and the TEI</a>”. #dariahTeach. DH Teaching material, 2017.</li>
+</ul>
+
+<h3 id="cita-propuesta">Cita propuesta:</h3>
+
+<p>Allés Torrent, Susanna (2019). “Estructura básica y elementos comunes de los documentos XML-TEI”. <em>TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital</em>. <a href="https://tthub.io/aprende/l3-basicos-tei/">https://tthub.io/aprende/l3-basicos-tei/</a> DOI: <a href="https://doi.org/10.5281/zenodo.3531506">10.5281/zenodo.3531506</a></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Estos materiales fueron creados en el marco del certificado de <a href="http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/">Experto Universitario en Humanidades Digitales</a>, ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+      
+<div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+This site is open source. <a href="https://github.com/tthub-repo/lecciones/edit/master/index.md">Improve this page</a>.
+</div>
+</div>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+    
+</body>
+</html>

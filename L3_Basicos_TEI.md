@@ -2,23 +2,14 @@
 title: Estructura básica y elementos comunes de los documentos XML-TEI[^1]
 author: Susanna Allés Torrent
 date: 2019
-# Todo esto son indicaciones para el pdf
-colorlinks: blue
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[LO,RE]{Allés Torrent, S.}
-    \fancyfoot[RO,LE]{https://doi.org/10.5281/zenodo.3531506}
-	\usepackage{fancyvrb}
-	\fvset{%
-	fontsize=\small,
-	numbers=left}
-	\usepackage{fvextra}
-	\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-geometry: margin=0.9in
-fontsize: 12pt
+layout: default
 lang: es
---- 
+---
+
+# {{ page.title }}
+## {{ page.author }}
+### {{ page.date }}
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3531506.svg)](https://doi.org/10.5281/zenodo.3531506)
 
 # I. Introducción
 

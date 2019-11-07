@@ -2,23 +2,14 @@
 title: Esquemas RNG y personalización de TEI[^1]
 author: Susanna Allés Torrent
 date: 2019
-# Todo esto son indicaciones para el pdf
-colorlinks: blue
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[LO,RE]{Allés Torrent, S.}
-    \fancyfoot[RO,LE]{https://doi.org/10.5281/zenodo.3531662}
-	\usepackage{fancyvrb}
-	\fvset{%
-	fontsize=\small,
-	numbers=left}
-	\usepackage{fvextra}
-	\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-geometry: margin=1in
-fontsize: 12pt
+layout: default
 lang: es
 ---
+
+# {{ page.title }}
+## {{ page.author }}
+### {{ page.date }}
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3531662.svg)](https://doi.org/10.5281/zenodo.3531662)
 
 # I. Principios fundamentales del esquema
 
@@ -159,7 +150,7 @@ En este apartado vamos a ver cómo funciona Roma y cómo construir un esquema a 
 
 En la Figura \ref{L6_001} vemos la interfaz de inicio de la plataforma ROMA, donde aparece un enlace a la nueva plataforma en la que están trabajando [Roma-ODD Customization](https://romabeta.tei-c.org/). 
 
-![Aplicación Roma, pantalla de inicio \label{L6_001}](https://tthub-repo.github.io/lecciones/img/L6_001.png){height=350px}
+![Aplicación Roma, pantalla de inicio \label{L6_001}](https://tthub-repo.github.io/lecciones/img/L6_001.png)
 
  Las opciones disponibles son las siguientes:
  

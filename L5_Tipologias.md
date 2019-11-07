@@ -2,23 +2,14 @@
 title: La codificación de tipologías textuales (prosa, poesía, drama, fuentes primarias y edición crítica)[^1]
 author: Susanna Allés Torrent
 date: 2019
-# Todo esto son indicaciones para el pdf
-colorlinks: blue
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[LO,RE]{Allés Torrent, S.}
-    \fancyfoot[RO,LE]{https://doi.org/10.5281/zenodo.3531626}
-	\usepackage{fancyvrb}
-	\fvset{%
-	fontsize=\small,
-	numbers=left}
-	\usepackage{fvextra}
-	\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-geometry: margin=1in
-fontsize: 12pt
+layout: default
 lang: es
---- 
+---
+
+# {{ page.title }}
+## {{ page.author }}
+### {{ page.date }}
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3531626.svg)](https://doi.org/10.5281/zenodo.3531626)
 
 # Introducción
 
@@ -30,8 +21,7 @@ Las [*Guías directrices*](https://tei-c.org/guidelines/p5/) de TEI no tienen un
 
 Al afrontar la codificación de un texto, debemos, en primer lugar, llevar a cabo un análisis del documento, aislando las unidades estructurales de las que se compone. Partamos de un ejemplo concreto y veamos de qué manera podría ser codificado:
 
-![Análisis estructural de un texto \label{L5_estructura}](https://tthub-repo.github.io/lecciones/img/L5_001.png){width="5.250168416447944in"
-height="7.090586176727909in"}
+![Análisis estructural de un texto \label{L5_estructura}](https://tthub-repo.github.io/lecciones/img/L5_001.png)
 
 En la Figura \ref{L5_estructura} tenemos diferentes elementos que deberemos marcar, como
 por ejemplo:
@@ -506,7 +496,7 @@ Podríamos codificar este fenómeno de la siguiente manera, señalando el espaci
 ```xml
 ... quos 
 <space quantity="10" unit="chars"/>
-<supplied resp="#SAT">         </supplied> 
+<supplied resp="#SAT">φἰλαγρος</supplied> 
 appellant graeci. Hanc...
 ```
 

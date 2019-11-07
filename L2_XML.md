@@ -2,23 +2,14 @@
 title: El lenguaje XML y algunos conceptos generales[^1]
 author: Susanna Allés Torrent
 date: 2019
-# Todo esto son indicaciones para el pdf
-colorlinks: blue
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[LO,RE]{Allés Torrent, S.}
-    \fancyfoot[RO,LE]{https://doi.org/10.5281/zenodo.3530805}
-	\usepackage{fancyvrb}
-	\fvset{%
-	fontsize=\small,
-	numbers=left}
-	\usepackage{fvextra}
-	\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-geometry: margin=1in
-fontsize: 12pt
+layout: default
 lang: es
---- 
+---
+
+# {{ page.title }}
+## {{ page.author }}
+### {{ page.date }}
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3530805.svg)](https://doi.org/10.5281/zenodo.3530805)
 
 # I. Estándares web y XML 
 
@@ -299,7 +290,7 @@ Los dos objetivos principales del espacio de nombre son:
 
 Todo documento XML tiene un solo elemento raíz (en inglés, “root”), el único que no depende de ningún otro elemento y que contiene todos los otros. En [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml), el esquema sería el siguiente: 
 
-![Ejemplo de esquema en árbol](https://tthub-repo.github.io/lecciones/img/L2_001.jpg){height=90%}
+![Ejemplo de esquema en árbol](https://tthub-repo.github.io/lecciones/img/L2_001.jpg)
  
 Como vemos, la estructura arbórea consta de un solo elemento raíz (“curso”), del que descienden todos los otros elementos. Estos elementos pueden constituirse en lo que llamamos “nodos” (en inglés “nodes”) que pueden ser: a) un subárbol: por ejemplo, metadatos con sus cuatro elementos descendientes titulo, fecha, profesor, universidad; b) un simple elemento, por ejemplo, el nodo titulo; c) la misma secuencia de caracteres que encontramos como contenido al interior de los elementos. Es importante conocer esta nomenclatura y utilizar este vocabulario para no dar lugar a equívocos.
 

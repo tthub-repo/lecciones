@@ -2,24 +2,14 @@
 title: ¿Qué es y para qué sirve el documento ODD?[^1]
 author: Susanna Allés Torrent
 date: 2019
-# Todo esto son indicaciones para el pdf
-colorlinks: blue
-header-includes: |
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[LO,RE]{Allés Torrent, S.}
-    \fancyfoot[RO,LE]{https://doi.org/10.5281/zenodo.3531693}
-	\usepackage{fancyvrb}
-	\fvset{%
-	fontsize=\small,
-	numbers=left}
-	\usepackage{fvextra}
-	\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-	\usepackage{float}
-geometry: margin=1in
-fontsize: 12pt
+layout: default
 lang: es
 ---
+
+# {{ page.title }}
+## {{ page.author }}
+### {{ page.date }}
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3531693.svg)](https://doi.org/10.5281/zenodo.3531693)
 
 # I. ¿Qué es un ODD?
 
@@ -48,11 +38,11 @@ Para tomar una primera toma de contacto con un fichero ODD, pueden crear uno con
 
 `File > New > Framework templates > TEI ODD > ODD [TEI ODD] > Create`
  
-![Programa Oxygen. Pasos a seguir para crear un documento ODD \label{L7_001}](https://tthub-repo.github.io/lecciones/img/L7_001.png){height=350px}
+![Programa Oxygen. Pasos a seguir para crear un documento ODD \label{L7_001}](https://tthub-repo.github.io/lecciones/img/L7_001.png)
 
 Como puede observarse, se trata de un fichero XML-TEI normal con el prólogo XML, un elemento raíz `<TEI>`, al interior del cual tenemos un `<teiheader>` con los diferentes metadatos, y un elemento `<text>` que contiene a su vez el `<body>`. Ahora bien, los elementos que aparecen a continuación son nuevos (Figura \ref{L7_002}).
 
-![Oxygen. Estructura básica de un documento ODD \label{L7_002}](https://tthub-repo.github.io/lecciones/img/L7_002.png){height=350px}
+![Oxygen. Estructura básica de un documento ODD \label{L7_002}](https://tthub-repo.github.io/lecciones/img/L7_002.png)
  
 El elemento `<schemaSpec>` responde a "Schema Specification", es decir, señala el tipo de esquema que debe reconstruir, indicando además el elemento raíz a través del atributo `@start`.
 
@@ -62,19 +52,19 @@ De hecho, este sería el mismo resultado que si, en la aplicación Roma, creára
 
 * **1.** Id a la aplicación Roma y cread un esquema a partir del modelo mínimo (Figura \ref{L7_003}).
 
-![Aplicación Roma. Creación de un esquema \label{L7_003}](https://tthub-repo.github.io/lecciones/img/L7_003.png){height=350px}
+![Aplicación Roma. Creación de un esquema \label{L7_003}](https://tthub-repo.github.io/lecciones/img/L7_003.png)
 
 * **2.** Cambiad los metadatos esenciales en la pestaña "Customize" o “Personalizar” (Figura \ref{L7_004}).
 
-![Roma. Personalización de un esquema \label{L7_004}](https://tthub-repo.github.io/lecciones/img/L7_004.png){height=350px}
+![Roma. Personalización de un esquema \label{L7_004}](https://tthub-repo.github.io/lecciones/img/L7_004.png)
  
 * **3.** Si ahora quisiéramos generar un esquema RelaxNG, iríamos a la pestaña “Esquema”; si quisiéramos obtener la documentación relativa a ese esquema, seleccionaríamos la pestaña “Documentación”. Ahora lo que nos interesa es crear el documento ODD, por lo que iremos a “Guardar configuración personal” (Figura \ref{L7_005}).
 
-![Roma. Guardar configuración personal \label{L7_005}](https://tthub-repo.github.io/lecciones/img/L7_005.png){height=350px}
+![Roma. Guardar configuración personal \label{L7_005}](https://tthub-repo.github.io/lecciones/img/L7_005.png)
  
 Al pulsar, se descargará de manera automática el fichero ODD, que si abrimos con el programa oXygen, veremos que contiene la misma estructura y los mismos módulos obligatorios; además de la descripción que añadimos en la pestaña “Personalizar” se reflejan en el documento obtenido (Figura \ref{L7_006}).
 
-![Oxygen. Documento ODD \label{L7_006}](https://tthub-repo.github.io/lecciones/img/L7_006.png){height=350px}
+![Oxygen. Documento ODD \label{L7_006}](https://tthub-repo.github.io/lecciones/img/L7_006.png)
  
 Aparecen los siguientes elementos y atributos:
 
@@ -90,15 +80,15 @@ Hagamos otra prueba, retomando nuestro archivo ODD que hemos creado y siguiendo 
 
 1. En la página principal de Roma, escoged la opción “Upload Customization” y elegid vuestro archivo ODD creado anteriormente con Roma (Figura \ref{L7_007}).
 
-![Roma. Subida del documento ODD \label{L7_007}](https://tthub-repo.github.io/lecciones/img/L7_007.png){height=350px}
+![Roma. Subida del documento ODD \label{L7_007}](https://tthub-repo.github.io/lecciones/img/L7_007.png)
 
 2. Como se puede ver, hemos recuperado las informaciones que habíamos introducido (Figura \ref{L7_008})
 
-![Roma. Informaciones del esquema personalizado \label{L7_008}](https://tthub-repo.github.io/lecciones/img/L7_008.png){height=350px}
+![Roma. Informaciones del esquema personalizado \label{L7_008}](https://tthub-repo.github.io/lecciones/img/L7_008.png)
 
 3. Ahora vayamos a la pestaña de “Módulos” y añadamos el módulo `verse` (Figura \ref{L7_009}).
 
-![Roma. Adición del módulo verse en el esquema \label{L7_009}](https://tthub-repo.github.io/lecciones/img/L7_009.png){height=350px}
+![Roma. Adición del módulo verse en el esquema \label{L7_009}](https://tthub-repo.github.io/lecciones/img/L7_009.png)
  
 4. Hagamos click en el módulo `verse`, eliminemos los elementos `<metDecl>` y `<metSym>` y guardemos los cambios (Figura \ref{L7_010}).
 
@@ -106,23 +96,23 @@ Hagamos otra prueba, retomando nuestro archivo ODD que hemos creado y siguiendo 
  
 5. Al interno del elemento `<caesura>` haremos un solo cambio: ampliaremos la “Descripción” (Figura \ref{L7_011}).
 
-![Roma. Modificación de la descripción de un elemento \label{L7_011}](https://tthub-repo.github.io/lecciones/img/L7_011.png){height=350px}
+![Roma. Modificación de la descripción de un elemento \label{L7_011}](https://tthub-repo.github.io/lecciones/img/L7_011.png)
 
 6. Al interno del elemento `<rhyme>`, modificaremos los valores de los atributos en la pestaña correspondiente “Modificación de atributos” y señalando los valores en la casilla “Lista de valores”. En nuestro caso, señalaremos el tipo de rima en “consonante” o “asonante”, separados por comas y sin espacios (Figura \ref{L7_012}). Esta modificación nos simplificaría la tarea al codificar, preestableciendo nuestros valores.
 
-![Roma. Modificaciones de los valores de un atributo \label{L7_012}](https://tthub-repo.github.io/lecciones/img/L7_012.png){height=350px}
+![Roma. Modificaciones de los valores de un atributo \label{L7_012}](https://tthub-repo.github.io/lecciones/img/L7_012.png)
  
 7. Si quisiéramos generar el esquema correspondiente iríamos a la pestaña “Esquema” y seleccionaríamos el tipo de esquema deseado (Figura \ref{L7_013}).
 
-![Roma. descarga del esquema RelaxNG \label{L7_013}](https://tthub-repo.github.io/lecciones/img/L7_013.png){height=350px}
+![Roma. descarga del esquema RelaxNG \label{L7_013}](https://tthub-repo.github.io/lecciones/img/L7_013.png)
  
 8. El esquema que nos hemos bajado debería ir a asociado ahora a un documento XML-TEI. Podemos hacer la prueba: cread un nuevo documento XML-TEI, asociad el esquema en el prólogo del documento, y codificad un pequeño poema. Al codificar, veremos que el mismo programa nos ofrece los valores que hemos establecido en el esquema (paso 6), tal y como vemos en la Figura \ref{L7_014}.
 
-![Oxygen. Valores por defecto establecidos en el esquema \label{L7_014}](https://tthub-repo.github.io/lecciones/img/L7_014.png){height=150px}
+![Oxygen. Valores por defecto establecidos en el esquema \label{L7_014}](https://tthub-repo.github.io/lecciones/img/L7_014.png)
 
 9. Generemos finalmente el documento ODD, clicando en “Guardar configuración personal” y abramos el documento con oXygen (Figura \ref{L7_015}).
 
-![Oxygen. Documento ODD final \label{L7_015}](https://tthub-repo.github.io/lecciones/img/L7_015.png){height=350px}
+![Oxygen. Documento ODD final \label{L7_015}](https://tthub-repo.github.io/lecciones/img/L7_015.png)
  
 Como vemos, el resultado es la suma de los cambios realizados en nuestro esquema:
 

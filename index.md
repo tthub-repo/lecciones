@@ -1,4 +1,7 @@
-# Repositorio para las lecciones de TTHUB
+---
+title: Repositorio para las lecciones de TTHub
+layout: default
+---
 
 En GitHub: <https://github.com/tthub-repo/lecciones>
 En tthub.io disponibles desde: <https://tthub.io/aprende/>
@@ -17,6 +20,6 @@ En tthub.io disponibles desde: <https://tthub.io/aprende/>
 
 [L7. ¿Qué es y para qué sirve el documento ODD?](https://tthub-repo.github.io/lecciones/L7_ODD) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3531693.svg)](https://doi.org/10.5281/zenodo.3531693)
 
-Cita sugerida: Apellidos, Nombre (2019). "Nombre de la lección", *TTHUB. Text Technologies Hub. Recursos sobre tecnologías del texto y edición digital*, URL_lección [Última consulta 00-00-000]
+Cita sugerida: Apellidos, Nombre (2019). "Nombre de la lección", *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*, URL_lección [Última consulta 00-00-000]
 
 

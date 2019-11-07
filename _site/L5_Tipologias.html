@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title></title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container-lg px-3 my-5 markdown-body">
+
+<h1><a href="https://tthub-repo.github.io/lecciones/">Lecciones en TTHub</a></h1>    
+
+    <h1 id="la-codificación-de-tipologías-textuales-prosa-poesía-drama-fuentes-primarias-y-edición-crítica">La codificación de tipologías textuales (prosa, poesía, drama, fuentes primarias y edición crítica)<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></h1>
+<h2 id="susanna-allés-torrent">Susanna Allés Torrent</h2>
+<h3 id="2019">2019</h3>
+<p><a href="https://doi.org/10.5281/zenodo.3531626"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3531626.svg" alt="DOI" /></a></p>
+
+<h1 id="introducción">Introducción</h1>
+
+<p>Esta lección ofrece la oportunidad de trabajar con más detalles con algunos módulos de la Text Encoding Initiative y algunas de las tipologías textuales más comunes. Aun así, es importante retener que para una información completa debemos siempre dirigirnos a las <em>Guías directrices</em><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Sólo así obtendremos una información detallada sobre las restricciones y el uso adecuado de los elementos, su estructura y su semántica.</p>
+
+<h1 id="i-prosa">I. Prosa</h1>
+
+<p>Las <a href="https://tei-c.org/guidelines/p5/"><em>Guías directrices</em></a> de TEI no tienen un módulo específico para la codificación de prosa, pues se trata de un término algo genérico y difícil de definir. La mayoría de los elementos utilizados para codificar textos en prosa pertenecen al módulo <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html">core</a> y <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html">textstructure</a>,es decir, los elementos que aparecen integrados en la estructura TEI por defecto y que explicamos en la <a href="https://tthub.io/aprende/l3-basicos-tei/">Estructura básica y elementos comunes de los documentos XML-TEI (L3)</a>.</p>
+
+<p>Al afrontar la codificación de un texto, debemos, en primer lugar, llevar a cabo un análisis del documento, aislando las unidades estructurales de las que se compone. Partamos de un ejemplo concreto y veamos de qué manera podría ser codificado:</p>
+
+<p><img src="https://tthub-repo.github.io/lecciones/img/L5_001.png" alt="Análisis estructural de un texto \label{L5_estructura}" /></p>
+
+<p>En la Figura \ref{L5_estructura} tenemos diferentes elementos que deberemos marcar, como
+por ejemplo:</p>
+
+<ul>
+  <li>Las divisiones que corresponden a la primera parte, a los apartados (1, 2…) y a los subapartados (1.1., 1.2., etc.)</li>
+  <li>Los títulos o encabezados</li>
+  <li>Los párrafos</li>
+  <li>Las citas bibliográficas</li>
+  <li>Las listas</li>
+  <li>Los números de página</li>
+  <li>Las referencias cruzadas</li>
+</ul>
+
+<p>A partir de aquí, la idea consiste en encontrar un elemento TEI que responda a cada uno de estos conceptos y expresarlo tal y como proponen las <em>Guías directrices</em>.</p>
+
+<h2 id="div-divisiones"><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html"><code class="highlighter-rouge">&lt;div&gt;</code></a> (divisiones)</h2>
+
+<p>Generalmente, las diferentes partes del texto se delimitan con un elemento genérico llamado <code class="highlighter-rouge">&lt;div&gt;</code>; de esta manera podemos crear una serie de divisiones jerárquicas tales como partes, capítulos, subcapítulos, secciones, subsecciones, etc. Debemos siempre recordar que las <code class="highlighter-rouge">&lt;div&gt;</code> pueden anidarse unas dentro de otras y pueden contener
+prácticamente todos los otros elementos TEI.</p>
+
+<p>Es muy frecuente que el elemento <code class="highlighter-rouge">&lt;div&gt;</code> conlleve, además, diversos
+atributos, entre ellos:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@type</code> para especificar y caracterizar el tipo de división.</li>
+  <li><code class="highlighter-rouge">@n</code> para otorgarle una numeración precisa, aunque no es obligatorio pues el procesador puede localizar fácilmente su orden de aparición a partir del elemento padre.</li>
+</ul>
+
+<h2 id="p-párrafos-y-ab-bloques-anónimos"><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-p.html"><code class="highlighter-rouge">&lt;p&gt;</code></a> (párrafos) y <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html"><code class="highlighter-rouge">&lt;ab&gt;</code></a> (bloques anónimos)</h2>
+
+<p>El elemento <code class="highlighter-rouge">&lt;p&gt;</code> indica un párrafo y puede aparecer en cualquier tipo
+de texto. Los párrafos no pueden anidarse unos al interior de los otros,
+sino que deben situarse consecutivamente y, normalmente, aparecen en el
+interior de un elemento <code class="highlighter-rouge">&lt;div&gt;</code>.</p>
+
+<p>A veces una sección textual no corresponde exactamente a la noción de
+párrafo, y en ese caso podría utilizarse el elemento <code class="highlighter-rouge">&lt;ab&gt;</code> (anonymous
+block). Por ejemplo, en nuestro documento, podríamos marcar el texto
+introductorio con <code class="highlighter-rouge">&lt;ab&gt;</code> y relegar el elemento <code class="highlighter-rouge">&lt;p&gt;</code> para los párrafos
+de los apartados y subapartados.</p>
+
+<h2 id="head-títulos-y-encabezados"><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-head.html"><code class="highlighter-rouge">&lt;head&gt;</code></a> (títulos y encabezados)</h2>
+
+<p>Los encabezados y títulos de cualquier tipo se marcan con el elemento
+<code class="highlighter-rouge">&lt;head&gt;</code> que puede conllevar, como en los casos anteriores, diversos
+atributos, como <code class="highlighter-rouge">@type</code>, para indicar el tipo de título.</p>
+
+<p>En nuestro documento, se podrían codificar como <code class="highlighter-rouge">&lt;head&gt;</code> todo lo que
+aparece en negrita y que hemos incluido en los cuadros verdes. Ahora
+bien, si quisiéramos clasificarlos en vista, por ejemplo, de una
+presentación podríamos establecer tipologías diferentes:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;head</span> <span class="na">type=</span><span class="s">"Principal"</span><span class="nt">&gt;</span>Unidad 1<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;head</span> <span class="na">type=</span><span class="s">"parte"</span><span class="nt">&gt;</span>PARTE I<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;head</span> <span class="na">type=</span><span class="s">"apartado"</span><span class="nt">&gt;</span>1. Introducción<span class="nt">&lt;/head&gt;</span>
+</code></pre></div></div>
+
+<p>Aun así, no sería ni mucho menos obligatorio porqué los diversos <code class="highlighter-rouge">&lt;head&gt;</code> son localizables por el procesador a partir del elemento del que forman parte, de manera que cada <code class="highlighter-rouge">&lt;head&gt;</code> podría tener una presentación diferente en función del elemento padre al que pertenece.</p>
+
+<h2 id="cit-citas"><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cit.html"><code class="highlighter-rouge">&lt;cit&gt;</code></a> (citas)</h2>
+
+<p>Las citas pueden ser de muchos tipos diferentes, pero las más habituales son aquellas en que se reproducen de manera literal las palabras de otra fuente, acompañadas de la indicación bibliográfica. En estos casos, se utiliza el elemento <code class="highlighter-rouge">&lt;cit&gt;</code> que debe estar formado, a su vez, por <code class="highlighter-rouge">&lt;quote&gt;</code> que encierra propiamente las palabras de la cita, y por <code class="highlighter-rouge">&lt;bibl&gt;</code> que debe contener la referencia bibliográfica:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;cit&gt;</span>
+	<span class="nt">&lt;quote&gt;</span>The TEI Guidelines for Electronic Text Encoding and Interchange define and document a markup language for representing the structural, renditional, and  conceptual features of 
+	<span class="nt">&lt;/quote&gt;</span> 
+	<span class="nt">&lt;bibl&gt;</span>TEI Consortium<span class="nt">&lt;/bibl&gt;</span>
+<span class="nt">&lt;/cit&gt;</span>
+</code></pre></div></div>
+
+<p>En un trabajo en prosa, y especialmente en monografías y trabajos de investigación, la bibliografía suele codificarse separadamente, tal y como lo haríamos tradicionalmente. Puede ir incluida en el <code class="highlighter-rouge">&lt;teiHeader&gt;</code>, pero también en el <code class="highlighter-rouge">&lt;front&gt;</code>, <code class="highlighter-rouge">&lt;back&gt;</code> o incluso dentro de <code class="highlighter-rouge">&lt;text&gt;</code> creando una división especial, del tipo:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"bibliografia"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>Cada ítem bibliográfico debe tener su identificador (<code class="highlighter-rouge">@xml:id</code>) para que
+pueda ser fácilmente localizable y recuperable. De esta manera, cuando
+en el cuerpo del texto nos aparezca una cita de ese ítem bibliográfico
+nos referimos a él con el atributo <code class="highlighter-rouge">@corresp</code> al interior del elemento
+<code class="highlighter-rouge">&lt;bibl&gt;</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;bibl</span> <span class="na">corresp=</span><span class="s">"#Guidelines"</span><span class="nt">&gt;</span>TEI Consortium<span class="nt">&lt;/bibl&gt;</span>
+</code></pre></div></div>
+
+<h2 id="list-listas"><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-list.html"><code class="highlighter-rouge">&lt;list&gt;</code></a> (listas)</h2>
+
+<p>En los textos en prosa, aparecen en muchos casos listas de elementos que, en TEI, deben marcarse con el elemento <code class="highlighter-rouge">&lt;list&gt;</code>, y cada uno de los ítems se codifica con el elemento <code class="highlighter-rouge">&lt;item&gt;</code>.</p>
+
+<p>Si a cada ítem lo antecede un título podríamos utilizar <code class="highlighter-rouge">&lt;label&gt;</code>; pero, quizás, lo más interesante sean los diferentes tipos de listas que podemos crear a partir del atributo <code class="highlighter-rouge">@type</code>, para indicar el tipo de contenido (TEI propone como valores: <code class="highlighter-rouge">gloss</code>, <code class="highlighter-rouge">index</code>, <code class="highlighter-rouge">instructions</code>, <code class="highlighter-rouge">litany</code>, <code class="highlighter-rouge">syllogism</code>), y los atributos <code class="highlighter-rouge">@rend</code> o <code class="highlighter-rouge">@style</code> para determinar el tipo de presentación, donde los valores propuestos son: <code class="highlighter-rouge">numbered</code>, <code class="highlighter-rouge">inline</code>, <code class="highlighter-rouge">bulleted</code>, <code class="highlighter-rouge">simple</code>.</p>
+
+<h2 id="referencias-cruzadas">Referencias cruzadas</h2>
+
+<p>Es también habitual que en un texto en prosa nos encontremos con referencias cruzadas que apunten al interior del documento o a una fuente externa. Los elementos para indicar este tipo de referencias y enlaces son <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ref.html"><code class="highlighter-rouge">&lt;ref&gt;</code></a> y <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ptr.html"><code class="highlighter-rouge">&lt;ptr/&gt;</code></a>. La diferencia básica entre los dos es que el primero puede tener contenido y corresponde en realidad al típico enlace tal cual estamos acostumbrados a ver, mientras que <code class="highlighter-rouge">&lt;ptr/&gt;</code> (pointer) es un elemento vacío e indica sólo que en ese punto del texto aparece algo que crea un enlace, como por ejemplo un tipo concreto de imagen.</p>
+
+<p>El posible resultado final -porqué recordad que no hay una sola manera correcta de codificar los textos- para un texto en prosa es el que encontraréis en el <a href="https://github.com/tthub-repo/ejemplos/blob/master/L5_Ejemplo_prosa.xml">Ejemplo en prosa (L5_Ejemplo_prosa.xml)</a>.</p>
+
+<h2 id="ejemplos">Ejemplos</h2>
+
+<p>Para ver otros ejemplos de prosa, consultad el corpus en abierto de
+novelas españolas y latinoamericanas en el CLiGS textbox:</p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/cligs/textbox/blob/master/spanish/novela-hispanoamericana">Collection of 19th Century Spanish-American Novels (1880-1916)</a>, Ulrike Henny-Krahmer (ed.) (24 novelas)</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/cligs/textbox/blob/master/spanish/novela-espanola">Corpus of Spanish Novels from 1880-1940</a>, José Calvo Tello (ed.) (39 novelas)</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/cligs/textbox/blob/master/spanish/cuentos-espanoles">Corpus of Spanish Short Stories from 1880-1940</a>, José Calvo Tello (ed.) (20 colecciones de narraciones breves y 302 narraciones)</p>
+  </li>
+</ul>
+
+<p>Sugiero también que sigan el tutorial de la parte correspondiente de <em>TEI By Example</em>:
+<a href="http://teibyexample.org/modules/TBED03v00.htm">Module 3: Prose</a></p>
+
+<h1 id="ii-poesía">II. Poesía</h1>
+
+<p>Centrémonos ahora en los elementos básicos para codificar composiciones en verso y véamos cómo funciona el vocabulario propuesto por TEI. En el apartado de <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html">6. Verse</a> de las <em>Guías directrices</em> se encuentra información mucho más detallada.</p>
+
+<p>Tomemos ahora este soneto de Federico García Lorca:</p>
+
+<blockquote>
+  <p>Tengo miedo a perder la maravilla<br />
+de tus ojos de estatua y el acento<br />
+que de noche me pone en la mejilla<br />
+la solitaria rosa de tu aliento.</p>
+</blockquote>
+
+<blockquote>
+  <p>Tengo pena de ser en esta orilla<br />
+tronco sin ramas; y lo que más siento<br />
+es no tener la flor, pulpa o arcilla,<br />
+para el gusano de mi sufrimiento.</p>
+</blockquote>
+
+<blockquote>
+  <p>Si tú eres el tesoro oculto mío,<br />
+si eres mi cruz y mi dolor mojado,<br />
+si soy el perro de tu señorío,</p>
+</blockquote>
+
+<blockquote>
+  <p>no me dejes perder lo que he ganado<br />
+y decora las aguas de tu río<br />
+con hojas de mi otoño enajenado.</p>
+</blockquote>
+
+<p>La totalidad del poema suele contenerse en el elemento <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html"><code class="highlighter-rouge">&lt;lg&gt;</code></a> (line
+group), mientras que el título, una vez más, se sitúa al interior de un
+elemento <code class="highlighter-rouge">&lt;head&gt;</code>; cada uno de los versos se codifica con el elemento
+que indica la línea: <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-l.html"><code class="highlighter-rouge">&lt;l&gt;</code></a>. Así mismo, para marcar las estrofas también
+se utiliza <code class="highlighter-rouge">&lt;lg&gt;</code>, pues permite la anidación de otros elementos
+idénticos en su interior.</p>
+
+<p>El elemento <code class="highlighter-rouge">&lt;lg&gt;</code> puede poseer una serie de atributos, tanto a nivel de
+poema, como a nivel de estrofa, entre los cuales podemos destacar:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@type</code> para indicar de qué tipo de composición se trata</li>
+  <li><code class="highlighter-rouge">@rhyme</code> para indicar el tipo de rima de la estrofa</li>
+  <li><code class="highlighter-rouge">@n</code> para señalar, por ejemplo, el número de estrofa</li>
+  <li><code class="highlighter-rouge">@xml:id</code> para otorgar un identificador a cada verso</li>
+</ul>
+
+<p>También el verso (<code class="highlighter-rouge">&lt;l&gt;</code>) puede tener sus atributos:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@n</code> para indicar el número del verso</li>
+  <li><code class="highlighter-rouge">@rhyme</code> para indicar la rima del verso</li>
+  <li><code class="highlighter-rouge">@xml:id</code> para otorgar un identificador a cada verso</li>
+</ul>
+
+<p>El vocabulario TEI prevé un elemento específico para codificar las rimas: <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-rhyme.html"><code class="highlighter-rouge">&lt;ryhme&gt;</code></a>; éste puede aparecer tanto a final de verso como en su interior, donde sea que aparezca la rima:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;lg</span> <span class="na">type=</span><span class="s">"cuarteto"</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;l</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>Tengo miedo a perder la marav<span class="nt">&lt;rhyme&gt;</span>illa<span class="nt">&lt;/rhyme&gt;&lt;/l&gt;</span>
+	<span class="nt">&lt;l</span> <span class="na">n=</span><span class="s">"2"</span><span class="nt">&gt;</span> de tus ojos de estatua y el ac<span class="nt">&lt;rhyme&gt;</span>ento<span class="nt">&lt;/rhyme&gt;&lt;/l&gt;</span>
+	<span class="nt">&lt;l</span> <span class="na">n=</span><span class="s">"3"</span><span class="nt">&gt;</span> que me pone de noche en la mej<span class="nt">&lt;rhyme&gt;</span>illa<span class="nt">&lt;/rhyme&gt;&lt;/l&gt;</span>
+	<span class="nt">&lt;l</span> <span class="na">n=</span><span class="s">"4"</span><span class="nt">&gt;</span>la solitaria rosa de tu ali<span class="nt">&lt;rhyme&gt;</span>ento<span class="nt">&lt;/rhyme&gt;</span>.<span class="nt">&lt;/l&gt;</span>
+<span class="nt">&lt;/lg&gt;</span>
+</code></pre></div></div>
+
+<p>Además, el elemento <code class="highlighter-rouge">&lt;rhyme&gt;</code> puede contener el atributo <code class="highlighter-rouge">@label</code> para señalar el tipo de rima, normalmente indicado con una letra del
+alfabeto:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>marav<span class="nt">&lt;rhyme</span> <span class="na">label=</span><span class="s">"a"</span><span class="nt">&gt;</span>`illa`<span class="nt">&lt;/rhyme&gt;</span>
+</code></pre></div></div>
+
+<p>Pero también puede indicarse en el interior del elemento <code class="highlighter-rouge">&lt;div&gt;</code>, <code class="highlighter-rouge">&lt;lg&gt;</code>
+e incluso <code class="highlighter-rouge">&lt;l&gt;</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;lg</span> <span class="na">type=</span><span class="s">"soneto"</span> <span class="na">rhyme=</span><span class="s">"ababababcdcdcd"</span><span class="nt">&gt;</span> 
+	<span class="nt">&lt;head&gt;</span>Soneto de la dulce queja<span class="nt">&lt;/head&gt;</span> 
+	<span class="nt">&lt;lg</span> <span class="na">type=</span><span class="s">"cuarteto"</span> <span class="na">n=</span><span class="s">"1"</span> <span class="na">rhyme=</span><span class="s">"abab"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;l</span> <span class="na">n=</span><span class="s">"1"</span> <span class="na">rhyme=</span><span class="s">"a"</span><span class="nt">&gt;</span>Tengo miedo a perder la marav<span class="nt">&lt;rhyme&gt;</span>illa<span class="nt">&lt;/rhyme&gt;&lt;/l&gt;</span>
+		<span class="nt">&lt;l</span> <span class="na">n=</span><span class="s">"2"</span> <span class="na">rhyme=</span><span class="s">"b"</span><span class="nt">&gt;</span> de tus ojos de estatua y el ac<span class="nt">&lt;rhyme&gt;</span>ento<span class="nt">&lt;/rhyme&gt;</span> <span class="nt">&lt;/l&gt;</span>
+		<span class="nt">&lt;l</span> <span class="na">n=</span><span class="s">"3"</span> <span class="na">rhyme=</span><span class="s">"a"</span><span class="nt">&gt;</span> que me pone de noche en la mej<span class="nt">&lt;rhyme&gt;</span>illa<span class="nt">&lt;/rhyme&gt;</span> <span class="nt">&lt;/l&gt;</span>
+		<span class="nt">&lt;l</span> <span class="na">n=</span><span class="s">"4"</span> <span class="na">rhyme=</span><span class="s">"b"</span><span class="nt">&gt;</span>la solitaria rosa de tu ali<span class="nt">&lt;rhyme&gt;</span>ento<span class="nt">&lt;/rhyme&gt;</span>.<span class="nt">&lt;/l&gt;</span>
+	<span class="nt">&lt;/lg&gt;</span>
+	<span class="c">&lt;!-- más estrofas... --&gt;</span>
+<span class="nt">&lt;lg&gt;</span>
+</code></pre></div></div>
+
+<p>En el caso que apareciera el nombre el poema, podríamos codificar su
+nombre en el interior del elemento <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-signed.html"><code class="highlighter-rouge">&lt;signed&gt;</code></a>.</p>
+
+<p>Si tuviéramos una serie de poemas, las estrategias a seguir podrían ser
+varias pero la más sencilla sería marcar cada poema independientemente
+en un elemento <code class="highlighter-rouge">&lt;lg&gt;</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"poemas"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;lg</span> <span class="na">type=</span><span class="s">"poema"</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;head&gt;</span>poema 1<span class="nt">&lt;/head&gt;</span>
+          <span class="nt">&lt;lg&gt;</span>
+            <span class="nt">&lt;l&gt;</span>verso 1<span class="nt">&lt;/l&gt;</span>
+            <span class="nt">&lt;l&gt;</span>verso 2<span class="nt">&lt;/l&gt;</span>
+            <span class="nt">&lt;l&gt;</span>verso 3<span class="nt">&lt;/l&gt;</span>
+          <span class="nt">&lt;/lg&gt;</span>
+	<span class="nt">&lt;/lg&gt;</span>
+	<span class="nt">&lt;lg</span> <span class="na">type=</span><span class="s">"poema"</span> <span class="na">n=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;head&gt;</span>poema 1<span class="nt">&lt;/head&gt;</span>
+          <span class="nt">&lt;lg&gt;</span>
+            <span class="nt">&lt;l&gt;</span> verso 1<span class="nt">&lt;/l&gt;</span>
+            <span class="nt">&lt;l&gt;</span>verso 2<span class="nt">&lt;/l&gt;</span>
+            <span class="nt">&lt;l&gt;</span>verso 3<span class="nt">&lt;/l&gt;</span>
+          <span class="nt">&lt;/lg&gt;</span>
+	<span class="nt">&lt;/lg&gt;</span>
+	<span class="nt">&lt;lg</span> <span class="na">type=</span><span class="s">"poema"</span> <span class="na">n=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;head&gt;</span>poema 1<span class="nt">&lt;/head&gt;</span>
+          <span class="nt">&lt;lg&gt;</span>
+            <span class="nt">&lt;l&gt;</span>verso 1<span class="nt">&lt;/l&gt;</span>
+            <span class="nt">&lt;l&gt;</span>verso 2<span class="nt">&lt;/l&gt;</span>
+            <span class="nt">&lt;l&gt;</span>verso 3<span class="nt">&lt;/l&gt;</span>
+          <span class="nt">&lt;/lg&gt;</span>
+	<span class="nt">&lt;/lg&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<p>Encontraréis otro ejemplo de marcado en el nuestro Repositorio de ejemplos en GitHub: <a href="https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_poema.xml">Ejemplo en verso</a>.</p>
+
+<p>Existen muchos otros elementos relacionados con las composiciones
+métricas, para más detalles os remito al módulo correspondiente <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html">6. Verse</a>. Así
+también, para completar esta sección, os dejo el enlace a la sección de
+<a href="https://teibyexample.org/modules/TBED04v00.htm">Module 4: Poetry</a> del <em>TEI By Example</em></p>
+
+<h1 id="iii-drama">III. Drama</h1>
+
+<p>Los textos dramáticos se caracterizan por tener una estructura más bien fija y unos elementos recurrentes: actos, escenas, acotaciones, indicaciones escénicas, diálogos, etc.</p>
+
+<p>Las <em>Guías directrices</em>, al igual que sucedía con las obras en verso, dedica un módulo específico a las obras dramática (véase <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html">7. Performance texts</a>, que os he dejado en formato pdf en la sección documentos.</p>
+
+<p>En primer lugar, es necesario crear la estructura general en la que acomodar el texto. Tal y como hemos procedido en las otras ocasiones, se podría establecer una división general para cada una de las escenas y para cada uno de los actos o jornadas, añadiendo un atributo <code class="highlighter-rouge">@type</code> para definirlas:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"acto"</span> <span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;head&gt;</span>Acto Primero<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"escena"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;head&gt;</span>Escena I<span class="nt">&lt;/head&gt;</span>
+          <span class="c">&lt;!-- ... --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"acto"</span> <span class="na">n=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;head&gt;</span>Acto Segundo<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">type=</span><span class="s">"escena"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;head&gt;</span>Escena I<span class="nt">&lt;/head&gt;</span>
+          <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>Cada una de las divisiones puede o no ir acompañado de un título,
+elemento aceptado en todos los documentos TEI.</p>
+
+<p>Para los diálogos se utilizan los elementos <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sp.html"><code class="highlighter-rouge">&lt;sp&gt;</code></a> (speech) que están
+constituidos de la persona que habla <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-speaker.html"><code class="highlighter-rouge">&lt;speaker&gt;</code></a> y del diálogo en sí,
+normalmente marcado en un simple <code class="highlighter-rouge">&lt;p&gt;</code>, aunque nada impediría que se
+utilizara <code class="highlighter-rouge">&lt;l&gt;</code> o <code class="highlighter-rouge">&lt;lg&gt;</code>, especialmente en aquellos casos en que se
+tratara de una versificación; o incluso podría también utilizar el
+elemento <code class="highlighter-rouge">&lt;seg&gt;</code>, pero en ningún caso el texto podría ir directamente
+dentro del elemento <code class="highlighter-rouge">&lt;sp&gt;</code> sin estructurar. Un diálogo quedaría así:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;sp</span> <span class="na">who=</span><span class="s">"#personaje1"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;speaker&gt;</span>Personaje 1<span class="nt">&lt;/speaker&gt;</span> Diálogo
+<span class="nt">&lt;/sp&gt;</span>
+<span class="nt">&lt;sp</span> <span class="na">who=</span><span class="s">"#personaje2"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;speaker&gt;</span>Personaje 2<span class="nt">&lt;/speaker&gt;</span> Diálogo
+<span class="nt">&lt;/sp&gt;</span>
+</code></pre></div></div>
+
+<p>En lo que concierne los personajes es importante crear de antemano una lista de todos los personajes que intervienen y otorgarles un identificador. Esta información puede colocarse o bien en una <code class="highlighter-rouge">&lt;div&gt;</code> creada a propósito, o bien (más recomendable) en el elemento <code class="highlighter-rouge">&lt;front&gt;</code>, que precede el <code class="highlighter-rouge">&lt;body&gt;</code>. Allí podríamos incluir dicha lista gracias al elemento <code class="highlighter-rouge">&lt;castlist&gt;</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;front&gt;</span>
+      <span class="nt">&lt;castList&gt;</span>
+        <span class="nt">&lt;head&gt;</span>Personajes<span class="nt">&lt;/head&gt;</span>
+        <span class="nt">&lt;castItem&gt;</span>
+          <span class="nt">&lt;role</span> <span class="na">xml:id=</span><span class="s">"#personaje1"</span><span class="nt">&gt;</span>Personaje 1<span class="nt">&lt;/role&gt;</span> <span class="nt">&lt;roleDesc&gt;</span>Descripción del personaje 2<span class="nt">&lt;/roleDesc&gt;</span>
+        <span class="nt">&lt;/castItem&gt;</span>
+        <span class="nt">&lt;castItem&gt;</span>
+          <span class="nt">&lt;role</span> <span class="na">xml:id=</span><span class="s">"#personaje2"</span><span class="nt">&gt;</span>Personaje 2<span class="nt">&lt;/role&gt;</span> <span class="nt">&lt;roleDesc&gt;</span>Descripción del personaje 2<span class="nt">&lt;/roleDesc&gt;</span>
+        <span class="nt">&lt;/castItem&gt;</span>
+      <span class="nt">&lt;/castList&gt;</span>
+<span class="nt">&lt;/front&gt;</span>
+</code></pre></div></div>
+
+<p>De esta manera cada vez que un personaje hable se podrá marcar al interior de <code class="highlighter-rouge">&lt;sp&gt;</code> con el atributo <code class="highlighter-rouge">@who</code>, para que todas sus intervenciones sean fácilmente localizables. De hecho, se podría eliminar la etiqueta <code class="highlighter-rouge">&lt;speaker&gt;</code> y recuperar la abreviación del
+personaje justamente a través del identificador que aparece como valor en el atributo <code class="highlighter-rouge">@who</code> al interior de <code class="highlighter-rouge">&lt;sp&gt;</code>. Es decir que podríamos expresar lo mismo de esta forma:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;sp</span> <span class="na">who=</span><span class="s">"#personaje1"</span><span class="nt">&gt;</span>Diálogo<span class="nt">&lt;/sp&gt;</span>
+<span class="nt">&lt;sp</span> <span class="na">who=</span><span class="s">"#personaje2"</span><span class="nt">&gt;</span>Diálogo<span class="nt">&lt;/sp&gt;</span>
+</code></pre></div></div>
+
+<p>Las indicaciones dramáticas o acotaciones, aquellas normalmente realizadas por el dramaturgo, pueden incluirse al interior de un elemento <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-stage.html"><code class="highlighter-rouge">&lt;stage&gt;</code></a>. También aquí se prevé la opción de añadir un atributo <code class="highlighter-rouge">@type</code> para caracterizar las diferentes acotaciones o tipos de indicaciones, por ejemplo:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;sp</span> <span class="na">who=</span><span class="s">"#personaje1"</span><span class="nt">&gt;</span>Diálogo<span class="nt">&lt;/sp&gt;</span>
+<span class="nt">&lt;sp</span> <span class="na">who=</span><span class="s">"#personaje2"</span><span class="nt">&gt;</span>Diálogo<span class="nt">&lt;/sp&gt;</span>
+<span class="nt">&lt;stage</span> <span class="na">type=</span><span class="s">"personajes"</span><span class="nt">&gt;</span>Descripción de los personajes que se encuentran en la escena.<span class="nt">&lt;/stage&gt;</span>
+<span class="nt">&lt;stage</span> <span class="na">type=</span><span class="s">"decorado"</span><span class="nt">&gt;</span>Descripción del decorado en la escena.<span class="nt">&lt;/stage&gt;</span>
+</code></pre></div></div>
+
+<p>Al interior del elemento <code class="highlighter-rouge">&lt;stage&gt;</code> podemos utilizar otros elementos que
+pueden sernos útiles en alguna ocasión como por ejemplo:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-move.html"><code class="highlighter-rouge">&lt;move&gt;</code></a>: para indicar los movimientos de los personajes. Podríamos incluso especificar los movimiento con el atributo <code class="highlighter-rouge">@type</code>, que conlleva unos valores predifinidos por defecto de entrada, salida y en escena: <code class="highlighter-rouge">entrance</code> o <code class="highlighter-rouge">exit</code> y <code class="highlighter-rouge">onStage</code>; así también podemos añadir el atributo <code class="highlighter-rouge">@who</code> para identificar fácilmente de qué personaje se trata y <code class="highlighter-rouge">@where</code> para señalar hacia dónde es el movimiento.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sound.html"><code class="highlighter-rouge">&lt;sound&gt;</code></a>: para describir fenómenos de sonido, añadiendo si es necesario el atributo <code class="highlighter-rouge">@type</code>.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-view.html"><code class="highlighter-rouge">&lt;view&gt;</code></a>: para describir el contexto visual de una parte del escenario, tal y como lo debe visualizar el espectador.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-camera.html"><code class="highlighter-rouge">&lt;camera&gt;</code></a> para dar indicaciones al cámara en el caso de grabaciones video, como películas.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-caption.html"><code class="highlighter-rouge">&lt;caption&gt;</code></a> para recoger las palabras que deberán proyectarse en pantalla.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-tech.html"><code class="highlighter-rouge">&lt;tech&gt;</code></a> otras informaciones técnicas.</li>
+</ul>
+
+<p><a href="https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_drama.xml">En el Repositorio de ejemplos en GitHub</a> encontraréis un ejemplo sencillo de codificación del inicio de una obra dramática en verso de Lope de Vega, <em>Amar sin saber a quien</em>. Miren la reproducción digital que aparece en la <a href="http://bib.cervantesvirtual.com/servlet/SirveObras/00363959755781806410046/ima0000.htm">Biblioteca Cervantes Virtual</a> y confrontadla con la codificación que he propuesto. <a href="http://bib.cervantesvirtual.com/servlet/SirveObras/01260529543471504100035/p0000001.htm#I_0_">Aquí</a> encontraréis también una edición digital en HTML.</p>
+
+<p>Recomiendo consultar otros recursos: en este caso el <a href="http://teibyexample.org/modules/TBED05v00.htm">Module 5: Drama</a> en <em>TEI by Example</em>, poniendo especial atención a los <a href="http://teibyexample.org/examples/TBED05v00.htm">ejemplos</a>, y la consulta de las <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html"><em>Guías directrices</em></a>.</p>
+
+<h1 id="iv-fuentes-primarias">IV. Fuentes primarias</h1>
+
+<p>Para la descripción de fuentes primarias existe un módulo específico: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html">11. Representation of Primary Sources</a>. Aún así, muchos de los elementos que nos servirán para la descripción de dichas fuentes pertenecen al módulo core o <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html">Elementos comunes a todos los documentos TEI</a>. De igual manera, algunos de los elementos de este módulo son útiles si queremos llevar a cabo una edición crítica y la creación de un aparato de variantes. Es importante, pues, tener en cuenta que al crear nuestro propio esquema necesitaremos seguramente integrar diferentes módulos, porque aunque cada uno de ellos aspira a cubrir una fenomenología diferente, puede ser que nuestra tipología textual o, sencillamente, nuestro texto nos obligue a contemplar elementos que pertenecen a otros módulos.</p>
+
+<p>Los elementos específicos del módulo sobre fuentes primarias son los
+siguientes:</p>
+
+<blockquote>
+  <p><a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-addSpan.html">addSpan,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-am.html">am</a><a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-damage.html">,
+damage,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-damageSpan.html">damageSpan,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-delSpan.html">delSpan,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-ex.html">ex,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-facsimile.html">facsimile,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-fw.html">fw</a><a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-handNotes.html">,
+handNotes,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-handShift.html">handShift,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-line.html">line,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-listTranspose.html">listTranspose</a>,
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-metamark.html">metamark,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-mod.html">mod</a><a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-redo.html">,
+redo</a><a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-restore.html">,
+restore,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-retrace.html">retrace,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-sourceDoc.html">sourceDoc,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-space.html">space,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-subst.html">subst,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-substJoin.html">substJoin,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-supplied.html">supplied,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-surface.html">surface</a><a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-surfaceGrp.html">,
+surfaceGrp</a><a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-surplus.html">,
+surplus</a><a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-transpose.html">,
+transpose,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-undo.html">undo,</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-zone.html">zone</a></p>
+</blockquote>
+
+<p>La fenomenología que podemos encontrarnos en una fuente primaria es realmente muy variada, desde adiciones, supresiones, errores, lecturas inciertas, lagunas, presencia de manos diferentes, cambios de tinta, notas y glosas, daño físicos, etc. Veamos a continuación algunos de los fenómenos y de los elementos que nos podrán ser más útiles.</p>
+
+<h2 id="descripción-de-la-fuente-primaria">Descripción de la fuente primaria</h2>
+
+<p>Muy frecuentemente nos encontramos con documentos en los que ha habido algún tipo de intervención, como son las adiciones, cancelaciones o substituciones.</p>
+
+<h3 id="a-adiciones">a. Adiciones</h3>
+
+<p>Para las adiciones usaremos el elemento <a href="https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-add.html"><code class="highlighter-rouge">&lt;add&gt;</code></a>, que pertenece al módulo <code class="highlighter-rouge">Core</code>. Habitualmente se suele señalar con el atributo <code class="highlighter-rouge">@place</code> el lugar donde se ha producido dicha adición; por defecto, tenemos como valores: <code class="highlighter-rouge">above</code>, <code class="highlighter-rouge">below</code>, <code class="highlighter-rouge">bottom</code>, <code class="highlighter-rouge">end</code>, <code class="highlighter-rouge">inline</code>, <code class="highlighter-rouge">margin</code>, <code class="highlighter-rouge">opposite</code>, <code class="highlighter-rouge">overleaf</code>, <code class="highlighter-rouge">top</code>. Tomemos el ejemplo que aparece en la Figura \ref{L5_add} y veamos cómo lo podríamos codificar:</p>
+
+<p><img src="https://tthub-repo.github.io/lecciones/img/L5_002.png" alt="Ejemplo de una adición. [*La primera y segunda parte de Plutharcho* / traducida por Alfonso de Palencia, Sevilla, 1491. BNE, Inc/314-Inc/315, f. 2r](http://bdh.bne.es/bnesearch/detalle/bdh0000005043) \label{L5_add}" /></p>
+
+<p>Si quisiéramos sólo señalar que aparece una adición en el margen lo podríamos señalar de la siguiente manera:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>doctrina: y en integridad de costumbres: 
+e no poco dichoso en ser maestro de tan 
+mentado <span class="nt">&lt;add</span> <span class="na">place=</span><span class="s">"margin"</span><span class="nt">&gt;</span>nombrado<span class="nt">&lt;/add&gt;</span> 
+emperador de los Romanos
+</code></pre></div></div>
+
+<h3 id="b-cancelaciones-o-omisiones">b. Cancelaciones o omisiones</h3>
+
+<p>En el caso de las supresiones, ya sea porqué se ha tachado una parte del texto ya sea porqué se ha omitido puede utilizarse <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html"><code class="highlighter-rouge">&lt;del&gt;</code></a> (deletion), que también corresponde al módulo core. Podemos añadir un atributo <code class="highlighter-rouge">@type</code> para caracterizar el tipo de cancelación o de omisión. Retomando el mismo ejemplo de la Figura \ref{L5_add}:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>doctrina: y en integridad de costumbres:
+e no poco dichoso en ser maestro de tan
+<span class="nt">&lt;del&gt;</span>mentado<span class="nt">&lt;/del&gt;</span>
+<span class="nt">&lt;add</span> <span class="na">place=</span><span class="s">"margin"</span><span class="nt">&gt;</span>nombrado<span class="nt">&lt;/add&gt;</span>
+emperador de los Romanos
+</code></pre></div></div>
+
+<p>Además, el módulo de representación de fuentes primarias tiene otro elemento útil para aquellos casos en los que un fragmento largo ha sido omitido o cancelado. En estos casos, podríamos introducir el texto eliminado señalando el inicio del texto con el elemento
+<a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-delSpan.html"><code class="highlighter-rouge">&lt;delSpan&gt;</code></a>, acompañado del atributo <code class="highlighter-rouge">@spanTo</code> que apuntaría al punto de anclaje donde finaliza dicho fragmento. Véanse los ejemplos en las <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-delSpan.html%20"><em>Guías directrices</em></a>.</p>
+
+<h3 id="c-substituciones">c. Substituciones</h3>
+
+<p>Cuando describimos la fuente primaria y nos encontramos con una corrección o substitución de cualquier tipo la marcaremos utilizando <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html"><code class="highlighter-rouge">&lt;del&gt;</code></a> y <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html"><code class="highlighter-rouge">&lt;add&gt;</code></a>, agrupados en un elemento <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-subst.html"><code class="highlighter-rouge">&lt;subst&gt;</code></a> si lo consideramos conveniente; también podemos especificar, con el atributo <code class="highlighter-rouge">@hand</code>, la mano responsable de dicha corrección y, con <code class="highlighter-rouge">@resp</code>, el editor que ha interpretado dicha corrección en la fuente primaria. Por ejemplo:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>doctrina: y en integridad de costumbres:
+e no poco dichoso en ser maestro de tan
+<span class="nt">&lt;subst</span> <span class="na">hand=</span><span class="s">"#lector"</span> <span class="na">resp=</span><span class="s">"#SAT"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;del</span> <span class="na">type=</span><span class="s">"tachado"</span><span class="nt">&gt;</span>mentado<span class="nt">&lt;/del&gt;</span>
+<span class="nt">&lt;add</span> <span class="na">place=</span><span class="s">"margin"</span><span class="nt">&gt;</span>nombrado<span class="nt">&lt;/add&gt;</span>
+<span class="nt">&lt;/subst&gt;</span> emperador de los Romanos
+</code></pre></div></div>
+
+<h3 id="d-abreviaturas">d. Abreviaturas</h3>
+
+<p>Las abreviaturas pueden codificarse de maneras diferentes, la más
+sencilla de las cuales es simplemente marcar la abreviatura dentro del
+elemento <a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-abbr.html"><code class="highlighter-rouge">&lt;abbr&gt;</code></a>. Pero en la mayoría de los casos, vale la pena indicar la forma expandida. En la Figura \ref{L5_abbr} (extraído del mismo folio anterior) podemos ver diferentes casos de abreviaturas:</p>
+
+<p><img src="https://tthub-repo.github.io/lecciones/img/L5_003.png" alt="Ejemplos de abreviaturas. [*La primera y segunda parte de Plutharcho* / traducida por Alfonso de Palencia, Sevilla, 1491. BNE, Inc/314-Inc/315, f. 2r](http://bdh.bne.es/bnesearch/detalle/bdh0000005043) \label{L5_abbr}" /></p>
+
+<p>Para ello, podemos proceder de la siguiente manera:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gua griega: <span class="nt">&lt;expan&gt;&lt;abbr&gt;</span>quisiero<span class="nt">&lt;/abbr&gt;&lt;ex&gt;</span>n<span class="nt">&lt;/ex&gt;&lt;/expan&gt;</span> dar obra a la tan prouechosa traducçion: cada uno dellos <span class="nt">&lt;expan&gt;&lt;abbr&gt;</span>segu<span class="nt">&lt;ex&gt;</span>n<span class="nt">&lt;/ex&gt;</span>d<span class="nt">&lt;/abbr&gt;</span>
+<span class="nt">&lt;/expan&gt;</span> lo <span class="nt">&lt;expan&gt;&lt;abbr&gt;</span>q<span class="nt">&lt;/abbr&gt;&lt;ex&gt;</span>ue<span class="nt">&lt;/ex&gt;&lt;/expan&gt;</span> <span class="nt">&lt;expan&gt;&lt;abbr&gt;</span>p<span class="nt">&lt;/abbr&gt;&lt;ex&gt;</span>er<span class="nt">&lt;/ex&gt;</span>miti<span class="nt">&lt;abbr&gt;</span>a<span class="nt">&lt;/abbr&gt;&lt;ex&gt;</span>n<span class="nt">&lt;/ex&gt;&lt;/expan&gt;</span> sus negoçios particulares de que no podian vacar: saluo breue <span class="nt">&lt;expan&gt;&lt;abbr&gt;</span>tie<span class="nt">&lt;ex&gt;</span>m<span class="nt">&lt;/ex&gt;</span>po<span class="nt">&lt;/abbr&gt;&lt;/expan&gt;</span>. 
+</code></pre></div></div>
+
+<p>Como veis, cada abreviatura se sitúa al interior de <code class="highlighter-rouge">&lt;expan&gt;</code>, mientras que la forma abreviada aparecen dentro de <code class="highlighter-rouge">&lt;abbr&gt;</code> y la expansión en el elemento <code class="highlighter-rouge">&lt;ex&gt;</code>. Esta opción puede llegar a cargar el marcado, por lo que a veces se prefiere este otro sistema en el que el elemento <code class="highlighter-rouge">&lt;choice&gt;</code> contiene la forma abreviada en el interior del elemento <code class="highlighter-rouge">&lt;abbr&gt;</code> y la forma expandida completa en el elemento <code class="highlighter-rouge">&lt;expan&gt;</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lengua griega: <span class="nt">&lt;choice&gt;</span>
+   <span class="nt">&lt;abbr&gt;</span>quisiero<span class="nt">&lt;/abbr&gt;</span>
+   <span class="nt">&lt;expan&gt;</span>quisieron<span class="nt">&lt;/expan&gt;</span>
+<span class="nt">&lt;/choice&gt;</span> dar obra a la tan prouechosa traducçión: cada uno dellos <span class="nt">&lt;choice&gt;</span>
+   <span class="nt">&lt;abbr&gt;</span>segud<span class="nt">&lt;/abbr&gt;</span>
+   <span class="nt">&lt;expan&gt;</span>segund<span class="nt">&lt;/expan&gt;</span>
+<span class="nt">&lt;/choice&gt;</span> lo <span class="nt">&lt;choice&gt;</span>
+   <span class="nt">&lt;abbr&gt;</span>q<span class="nt">&lt;/abbr&gt;</span>
+   <span class="nt">&lt;expan&gt;</span>que<span class="nt">&lt;/expan&gt;</span>
+<span class="nt">&lt;/choice&gt;</span> <span class="nt">&lt;choice&gt;</span>
+   <span class="nt">&lt;abbr&gt;</span>pmitia<span class="nt">&lt;/abbr&gt;</span>
+   <span class="nt">&lt;expan&gt;</span>permitian<span class="nt">&lt;/expan&gt;&lt;/choice&gt;</span> sus negoçios particulares de que no podian vacar: saluo breve tiempo.
+</code></pre></div></div>
+
+<h3 id="e-establecer-diferentes-manos-de-un-manuscrito">e. Establecer diferentes manos de un manuscrito</h3>
+
+<p>Puede ser que en algunos casos nos encontremos con una fuente en la que aparecen manos diferentes; en el caso que queramos señalarlas las codificaremos con el elemento <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-handNote.html"><code class="highlighter-rouge">&lt;handNote&gt;</code></a> que se halla en el tei Header (/TEI/teiHeader/fileDesc/sourceDesc/msDesc/physDesc/handDesc). Además, le podemos atribuir un identificador propio a cada una de las manos:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;physDesc&gt;</span>
+    <span class="nt">&lt;handDesc&gt;</span>
+      <span class="nt">&lt;handNote</span> <span class="na">xml:id=</span><span class="s">"copista"</span><span class="nt">&gt;</span>El copista del manuscrito<span class="nt">&lt;/handNote&gt;</span>
+     <span class="nt">&lt;handNote</span> <span class="na">xml:id=</span><span class="s">"Lector"</span><span class="nt">&gt;</span>Un lector posterior que anotó el manuscrito<span class="nt">&lt;/handNote&gt;</span>
+    <span class="nt">&lt;/handDesc&gt;</span>
+<span class="nt">&lt;/physDesc&gt;</span>
+</code></pre></div></div>
+
+<p>Así, podemos también señalar cuando se produce un cambio de mano en nuestra fuente, gracias al elemento <a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-handShift.html"><code class="highlighter-rouge">&lt;handShift&gt;</code></a>.</p>
+
+<h3 id="f-daños">f. Daños</h3>
+
+<p>Si nuestro texto posee alguna zona dañada, frecuente en los manuscritos e impresos antiguos, podemos marcar dicho pasaje con el elemento <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-damage.html"><code class="highlighter-rouge">&lt;damage&gt;</code></a>. En su interior pueden utilizarse diversos atributos, como <code class="highlighter-rouge">@agent</code> para marcar el motivo del daño; o bien, en aquellos casos en que el daño atañe a un fragmento largo del texto podemos utilizar, como en <code class="highlighter-rouge">&lt;delSpan&gt;</code>, el elemento <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-damageSpan.html"><code class="highlighter-rouge">&lt;damageSpan&gt;</code></a> con el atributo <code class="highlighter-rouge">@spanTo</code> que apuntará hacia el anclaje que indica el final del texto dañado.</p>
+
+<h3 id="g-otros-elementos">g. Otros elementos</h3>
+
+<p>En fin, hay otra serie de fenómenos que quizás queramos marcar como por
+ejemplo:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-fw.html"><code class="highlighter-rouge">&lt;fw&gt;</code></a> (forme work) para indicar los números originales de las páginas, o incluso la numeración de los cuadernos o los hilitos de los encabezados.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html"><code class="highlighter-rouge">&lt;space&gt;</code></a> para indicar el espacio vacío en nuestra copia, como sucede en la Figura \ref{L5_space}</li>
+</ul>
+
+<p><img src="https://tthub-repo.github.io/lecciones/img/L5_004.png" alt="Ejemplo de un espacio. Plutarco, *Vitae illustrium Virorum*, Nicolas Jenson, Venecia 1478, f. 115v. [Bayerische Staatsbibliothek, München, BSB-Ink P-626 - GW M34480](http://daten.digitale-sammlungen.de/0006/bsb00060043/images/index.html?id=00060043&amp;groesser=&amp;fip=193.174.98.30&amp;no=&amp;seite=236) \label{L5_space}" /></p>
+
+<p>Podríamos codificar este fenómeno de la siguiente manera, señalando el espacio en blanco y aportando incluso la cantidad aproximada de las letras omitidas y el tipo de unidad (unit) del tipo de medida (caracteres, milímetros, centímetros, etc.).:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>... quos 
+<span class="nt">&lt;space</span> <span class="na">quantity=</span><span class="s">"10"</span> <span class="na">unit=</span><span class="s">"chars"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;supplied</span> <span class="na">resp=</span><span class="s">"#SAT"</span><span class="nt">&gt;</span>φἰλαγρος<span class="nt">&lt;/supplied&gt;</span> 
+appellant graeci. Hanc...
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-surplus.html"><code class="highlighter-rouge">&lt;surplus&gt;</code></a>: para indicar un texto en la fuente que el editor considera
+superficial o redundante.</li>
+</ul>
+
+<h2 id="intervenciones-editoriales">Intervenciones editoriales</h2>
+
+<p>En general, podemos diferenciar aquellos fenómenos que “objetivamente” encontramos en nuestra fuente, de aquellos otros que corresponden a una intervención del editor o del que codifica. En este sentido, podemos utilizar:</p>
+
+<ul>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-unclear.html"><code class="highlighter-rouge">&lt;unclear&gt;</code></a> para la transcripción y la codificación de aquellas lecturas inciertas. Normalmente se acompaña del atributo <code class="highlighter-rouge">@resp</code> para indicar la responsabilidad del editor, y de <code class="highlighter-rouge">@reason</code> para señalar el motivo.</li>
+  <li><a href="https://www.tei-c.org/release/doc/tei-p5-doc/es/html/examples-supplied.html"><code class="highlighter-rouge">&lt;supplied&gt;</code></a> indica el texto que ha sido restablecido por el editor. En el ejemplo de la Figura \ref{L5_space}, sabíamos qué palabra debía ir en el espacio en blanco con lo cual hemos podido marcarlo con este elemento, pues lo hemos restablecido.</li>
+  <li>En lo que concierne las correcciones en calidad de editores del texto electrónico, debemos utilizar los elementos <code class="highlighter-rouge">&lt;sic&gt;</code> y <code class="highlighter-rouge">&lt;corr&gt;</code>, y agrupados al interior de <code class="highlighter-rouge">&lt;choice&gt;</code>. En la siguiente Figura \ref{L5_corr}:</li>
+</ul>
+
+<p><img src="https://tthub-repo.github.io/lecciones/img/L5_005.png" alt="Ejemplo de una corrección editorial. [*La primera y segunda parte de Plutharcho* / traducida por Alfonso de Palencia, Sevilla, 1491. BNE, Inc/314-Inc/315, f. 165v](http://bdh-rd.bne.es/viewer.vm?id=0000005043&amp;page=1) \label{L5_corr}" /></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>... Aqueste mas luenga mente 
+<span class="nt">&lt;choice&gt;</span>
+   <span class="nt">&lt;sic&gt;</span>qua<span class="nt">&lt;/sic&gt;</span>
+   <span class="nt">&lt;corr</span> <span class="na">resp=</span><span class="s">"#SAT"</span><span class="nt">&gt;</span>que<span class="nt">&lt;/corr&gt;</span>
+<span class="nt">&lt;/choice&gt;</span> la razon queria ...
+</code></pre></div></div>
+
+<h2 id="reproducción-facsimilar-de-la-fuente">Reproducción facsimilar de la fuente</h2>
+
+<p>La práctica más habitual para conectar una página de la fuente primaria a su reproducción fotográfica es a través del uso del atributo <code class="highlighter-rouge">@facs</code>. Este atributo apunta hacia el conjunto o una parte de la imagen en cuestión que corresponde al contenido de elemento. Por ejemplo, si quisiéramos asociar cada página con su imagen respectiva, lo más sencillo sería incluir el atributo al interior del cambio de página y crear una estructura de este tipo:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;TEI</span> <span class="na">xmlns=</span><span class="s">"http://www.tei-c.org/ns/1.0"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;teiHeader&gt;</span>
+	<span class="c">&lt;!--... --&gt;</span>
+	<span class="nt">&lt;/teiHeader&gt;</span>
+	<span class="nt">&lt;text&gt;</span>
+		<span class="nt">&lt;body&gt;</span>
+        	<span class="nt">&lt;pb</span> <span class="na">facs=</span><span class="s">"pagina1.png"</span><span class="nt">/&gt;</span>
+        	<span class="c">&lt;!-- El texto de la página número 1--&gt;</span>
+			<span class="nt">&lt;pb</span> <span class="na">facs=</span><span class="s">"pagina2.png"</span><span class="nt">/&gt;</span>
+      <span class="c">&lt;!-- El texto de la página número 2--&gt;</span>
+		<span class="nt">&lt;body&gt;</span>
+	<span class="nt">&lt;text&gt;</span>
+</code></pre></div></div>
+
+<p>Las imágenes pueden también codificarse y anotarse describiéndolas en general o por zonas concretas y permitiendo, por ejemplo, una transcripción fina por línea. Este tema reviste algo más de complejidad, por lo que me remito a las mismas <em>Guías directrices</em> para aquellos que quieran profundizar.</p>
+
+<h1 id="v-edición-crítica">V. Edición crítica</h1>
+
+<p>Con el fin de llevar a cabo ediciones científicas, TEI propone un módulo para la creación de un aparato crítico: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html">12. Critical Apparatus</a>. Ahora nos centraremos básicamente en dos aspectos: cómo establecer una lista de manuscritos y cómo codificar las diferentes lecturas o variantes.</p>
+
+<p>Los elementos del módulo relativo a la creación de un aparato crítico son:</p>
+
+<blockquote>
+  <p><a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-app.html">app</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-lacunaEnd.html">lacunaEnd</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-lacunaStart.html">lacunaStart</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-lem.html">lem</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-listApp.html">listApp</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-listWit.html">listWit</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-rdg.html">rdg</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-rdgGrp.html">rdgGrp</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-variantEncoding.html">variantEncoding</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-wit.html">wit</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-witDetail.html">witDetail</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-witEnd.html">witEnd</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-witStart.html">witStart</a>
+<a href="http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-witness.html">witness</a></p>
+</blockquote>
+
+<h2 id="lista-de-testimonios">Lista de testimonios</h2>
+
+<p>La lista de los testimonios utilizados en la edición se sitúan en el teiHeader, más preceisamente en fileDesc&gt;sourceDesc, al interior del elemento <code class="highlighter-rouge">&lt;listWit&gt;</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;listwit&gt;</span>
+    <span class="nt">&lt;witness</span> <span class="na">xml:id=</span><span class="s">"testimonio1"</span><span class="nt">&gt;&lt;/witness&gt;</span>
+    <span class="nt">&lt;witness</span> <span class="na">xml:id=</span><span class="s">"testimonio2"</span><span class="nt">&gt;&lt;/witness&gt;</span>
+    <span class="nt">&lt;witness</span> <span class="na">xml:id=</span><span class="s">"testimonio3"</span><span class="nt">&gt;&lt;/witness&gt;</span>
+    <span class="nt">&lt;witness</span> <span class="na">xml:id=</span><span class="s">"testimonio4"</span><span class="nt">&gt;&lt;/witness&gt;</span>
+<span class="nt">&lt;/listwit&gt;</span>
+</code></pre></div></div>
+
+<p>Cada manuscrito se codifica con el elemento <code class="highlighter-rouge">&lt;witness&gt;</code> y debe tener un identificador, de manera que cuando establezcamos las variantes textuales podamos referirnos a él de manera directa. Podemos utilizar otros elementos en su interior y escribir las informaciones básicas, como por ejemplo su referencia completa:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;listwit&gt;</span>
+     <span class="nt">&lt;witness</span> <span class="na">xml:id=</span><span class="s">"NLV"</span><span class="nt">&gt;</span>Napoli, Biblioteca Nazionale Vittorio 
+     Emanuele III di Napoli, ms. LV BB 20<span class="nt">&lt;/witness&gt;</span>
+     <span class="nt">&lt;witness</span> <span class="na">xml:id=</span><span class="s">"NXXX"</span><span class="nt">&gt;</span>Firenze, Biblioteca Nazionale Centrale 
+     di Firenze, Magl. XXX, 154<span class="nt">&lt;/witness&gt;</span>
+     <span class="nt">&lt;witness</span> <span class="na">xml:id=</span><span class="s">"M211"</span><span class="nt">&gt;</span>Madrid, Biblioteca Nacional de España, 
+     RES/423<span class="nt">&lt;/witness&gt;</span>
+<span class="nt">&lt;/listwit&gt;</span>
+</code></pre></div></div>
+
+<h2 id="variantes-y-aparato-crítico">Variantes y aparato crítico</h2>
+
+<p>La codificación de una edición puede llevarse a cabo de muchas maneras diferentes. Lo más habitual, y más práctico, es marcar todas las lecturas del texto en un mismo documento y a medida que aparecen en el texto. El procedimiento recomendado sería el que vemos en este esquema:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;l&gt;</span>línea 1<span class="nt">&lt;/l&gt;</span>
+<span class="nt">&lt;l&gt;</span>línea 2
+	<span class="nt">&lt;app&gt;</span>
+		<span class="nt">&lt;rdg</span> <span class="na">wit=</span><span class="s">"#testimonio1"</span><span class="nt">&gt;</span>variante1<span class="nt">&lt;/rdg&gt;</span>
+		<span class="nt">&lt;rdg</span> <span class="na">wit=</span><span class="s">"#testimonio2"</span><span class="nt">&gt;</span>variante2<span class="nt">&lt;/rdg&gt;</span>
+		<span class="nt">&lt;rdg</span> <span class="na">wit=</span><span class="s">"#testimonio3"</span><span class="nt">&gt;</span>variante3<span class="nt">&lt;/rdg&gt;</span>
+	<span class="nt">&lt;/app&gt;</span> <span class="nt">&lt;/l&gt;</span>
+<span class="nt">&lt;l&gt;</span>línea 3<span class="nt">&lt;/l&gt;</span>
+</code></pre></div></div>
+
+<p>El marcado, pues, es el responsable de registrar todas las variantes textuales, cada una conectada con el identificador del testimonio correspondiente. De esta manera, si quisiéramos recuperar todas las variantes del <code class="highlighter-rouge">#testimonio1</code>, por ejemplo, el proceso es extremadamente fácil. Es decir, al mismo tiempo que marcamos las variantes, estamos en
+realidad construyendo el aparato crítico que recuperaremos a posteriori bajo la forma que deseemos.</p>
+
+<p>Existe también la posibilidad de señalar el lema principal de entre las variantes textuales:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;l&gt;</span>línea 1<span class="nt">&lt;/l&gt;</span>
+<span class="nt">&lt;l&gt;</span>línea 2
+	<span class="nt">&lt;app&gt;</span>
+		<span class="nt">&lt;lem</span> <span class="na">wit=</span><span class="s">"#testimonio1"</span><span class="nt">&gt;</span>lema<span class="nt">&lt;/lem&gt;</span>
+		<span class="nt">&lt;rdg</span> <span class="na">wit=</span><span class="s">"#testimonio1"</span><span class="nt">&gt;</span>variante1<span class="nt">&lt;/rdg&gt;</span>
+		<span class="nt">&lt;rdg</span> <span class="na">wit=</span><span class="s">"#testimonio2"</span><span class="nt">&gt;</span>variante2<span class="nt">&lt;/rdg&gt;</span>
+		<span class="nt">&lt;rdg</span> <span class="na">wit=</span><span class="s">"#testimonio3"</span><span class="nt">&gt;</span>variante3<span class="nt">&lt;/rdg&gt;</span>
+	<span class="nt">&lt;/app&gt;</span> 
+<span class="nt">&lt;/l&gt;</span>
+<span class="nt">&lt;l&gt;</span>línea 3<span class="nt">&lt;/l&gt;</span>
+</code></pre></div></div>
+
+<p>En estos casos <code class="highlighter-rouge">&lt;lem&gt;</code> contiene el lema o texto base de la variante textual (presente o no en algún testimonio), mientras que <code class="highlighter-rouge">&lt;rdg&gt;</code> (reading) contiene una sola lectura o variante textual.</p>
+
+<p>Recomiendo, además de la sección al <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html">Aparato crítico en las <em>Guías directrices</em></a> y de los ejemplos en nuestro <a href="https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_aparato_critico.xml">Repositorio de Ejemplos en GitHub</a>, los materiales que aparecen en el <a href="https://teibyexample.org/modules/TBED07v00.htm">Module 7: Critical Editing</a> de <em>TEI By Example</em>. Además, un excelente tutorial es el propuesto por Marjorie Burghart y Elena Pierazzo: <a href="https://teach.dariah.eu/course/view.php?id=32&amp;section=0">Digital Scholarly Editions: Manuscripts, Texts and TEI Encoding</a> (2017). En fin, para aquellos interesados en trabajar con aparatos críticos, pueden experimentar una posible visualización con el <a href="http://teicat.huma-num.fr/">TEI Critical Apparatus TextBox</a>.</p>
+
+<h3 id="cita-propuesta">Cita propuesta:</h3>
+
+<p>Allés Torrent, Susanna (2019). “La codificación de tipologías textuales (prosa, poesía, drama, fuentes primarias y edición crítica)”. <em>TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital</em>. <a href="https://tthub.io/aprende/l5-tipologias/">https://tthub.io/aprende/l5-tipologias/</a> DOI: <a href="https://doi.org/10.5281/zenodo.3531626">10.5281/zenodo.3531626</a></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Estos materiales fueron creados en el marco del certificado de Experto Profesional en Humanidades Digitales, ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Para una primera aproximación, véase la lección <a href="https://tthub.io/aprende/l4-guias/">Las <em>Guías directrices</em>, su manejo y su traducción al español (L4)</a>. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+      
+<div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+This site is open source. <a href="https://github.com/tthub-repo/lecciones/edit/master/index.md">Improve this page</a>.
+</div>
+</div>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+    
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Susanna Allés Torrent" />
+  <meta name="dcterms.date" content="2019-01-01" />
+  <title>Esquemas RNG y personalización de TEI</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">Esquemas RNG y personalización de TEI<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h1>
+<p class="author">Susanna Allés Torrent</p>
+<p class="date">2019</p>
+</header>
+<h1 id="page.title">{{ page.title }}</h1>
+<h2 id="page.author">{{ page.author }}</h2>
+<h3 id="page.date">{{ page.date }}</h3>
+<p><a href="https://doi.org/10.5281/zenodo.3531662"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3531662.svg" alt="DOI" /></a></p>
+<h1 id="i.-principios-fundamentales-del-esquema">I. Principios fundamentales del esquema</h1>
+<p>En esta lección veremos con un poco de detalle qué son los esquemas y cómo llevar a cabo la personalización de un documento TEI a través de estos. Para ello, presentaremos de manera general la función del esquema al interno de los proyectos de edición digital en TEI, centrándonos en el lenguaje <a href="https://relaxng.org/">Relax NG</a>, y en la aplicación online Roma, que facilita la personalización de los esquemas que acompañan los documentos XML-TEI.</p>
+<p>Para trabajar con un documento XML y aplicar un tipo concreto de marcado debemos tener un modelo de trabajo; una especie de guía que nos indique de qué modo debemos proceder para codificar ese texto, de manera que si interviene más de una persona, todas lleven a cabo un marcado homogéneo.</p>
+<p>Para ello, necesitamos asociar nuestro documento XML con un esquema que sirva justamente para establecer el tipo de marcado que podemos aplicar a un documento XML. Los esquemas son archivos autónomos que se asocian al documento XML-TEI en su prólogo. La comunidad TEI ofrece algunos esquemas ya construidos a los que podemos asociar nuestro documento. Por ejemplo, si quisiéramos asociar nuestro documento a un esquema general que llaman <code>tei all</code> lo haríamos de la siguiente manera:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">&lt;?xml-model</span> href=&quot;http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng&quot; type=&quot;application/xml&quot; schematypens=&quot;http://relaxng.org/ns/structure/1.0&quot;<span class="kw">?&gt;</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">&lt;TEI</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.tei-c.org/ns/1.0&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">…</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw">&lt;/TEI&gt;</span></a></code></pre></div>
+<p>Si, en cambio, quisiéramos asociar nuestro documento a un esquema que nosotros mismos hemos creado, deberíamos indicarlo a través de una URL (al interno del elemento <code>@href</code>), apuntando a la ubicación en local o en línea:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">&lt;?xml-model</span> href=&quot;/esquema/nuestro_esquema.rng&quot; schematypens=&quot;http://relaxng.org/ns/structure/1.0&quot;<span class="kw">?&gt;</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">&lt;TEI</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.tei-c.org/ns/1.0&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">…</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="kw">&lt;/TEI&gt;</span></a></code></pre></div>
+<p>En este caso, como puede verse, el esquema estaría en una carpeta llamada “esquema” al mismo nivel que el documento XML-TEI.</p>
+<p>En el programa oXygen, para cambiar el esquema y asociar uno nuevo debemos ir a Document &gt; Schema &gt; Associate Schema; obviamente puede también hacerse de manera manual.</p>
+<p>Los esquemas, como se explica brevemente en <a href="https://tthub.io/aprende/l2-xml/">L2. El lenguaje XML (eXtensible Markup Language) y conceptos generales</a>, son los responsables de la validación de nuestro documento. Recordad que una cuestión es el estar bien formado, según las normas del lenguaje XML, y la otra ser válido, según las normas de un esquema.</p>
+<p>En general, los proyectos de edición digital no necesitan los 21 módulos ni todos los 505 elementos de las <em>Guías directrices</em>, de manera que es conveniente restringir y concretar lo más posible el esquema. Por otro lado, hay que tener también en cuenta que eventualmente TEI puede no ofrecer el elemento idóneo para marcar un determinado fenómeno o estructura que sí aparece en vuestro texto; en dicho caso, se podrían crear otros elementos y atributos, pero se recomienda no abusar de este método y utilizarlo con mucho cuidado, pues obtendríamos un esquema no conforme a las <em>Guías directrices</em>.</p>
+<p>Un esquema establece la representación formal de los elementos y atributos cuyo uso se permitirá en el documento a codificar. Así, por ejemplo, establece cuál será el elemento raíz del documento, los nombres de los elementos utilizados, los nombres y los tipos de datos (cadena de caracteres, números, etc.), las reglas sobre cómo los elementos deben anidarse, e incluso, a veces, los valores por defecto de los atributos.</p>
+<p>Un esquema, pues, especifica la estructura y la nomenclatura de nuestro fichero; la semántica de los elementos, por otro lado, queda como siempre relegada a las <em>Guías directrices</em> TEI.</p>
+<h1 id="ii.-tipos-de-esquemas">II. Tipos de esquemas</h1>
+<p>Un modelo de codificación en XML se construye a partir de una sintaxis concreta que se establece en lo que llamamos esquemas. Existen diferentes tipos de esquema, entre los cuales encontramos:</p>
+<ul>
+<li>DTD: responde a las siglas “Document Type Definition” y se definió al interno de la norma del lenguaje XML 1.0. Permite definir una lista de los elementos de un documento (nombre y modelo de contenido), los atributos (por nombre, tipo y categoría) y las entidades. En el campo de TEI ya no suele usarse, por considerarse demasiado rígida y ofrecer poca flexibilidad. Un tutorial simple está disponible en <a href="https://www.w3schools.com/xml/xml_dtd_intro.asp">W3Schools DTD Tutorial</a>, y tenéis un ejemplo en el Repositorio de un fichero XML (<a href="https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml">L2_ejemplo-2.xml</a>) que está asociado y validado por una DTD (<a href="https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2-DTD.dtd">L2_ejemplo-2-DTD</a>).</li>
+<li>W3C esquema: fueron propuestos por el W3C y los primeros en expresarse en XML. Se aprobó en mayo de 2001 y una segunda edición se publicó en octubre 2004, dividida en tres partes: <a href="https://www.w3.org/TR/xmlschema-0/">XML Schema Part 0</a>; <a href="https://www.w3.org/TR/xmlschema-1/">Part : Structures1</a>; <a href="https://www.w3.org/TR/xmlschema-2/">Part 2: Datatypes</a>. Un tutorial simple está disponible en <a href="https://www.w3schools.com/xml/schema_intro.asp">W3Schools XML Scheme Tutorial</a>.</li>
+<li><a href="https://relaxng.org/">Relax NG</a>: en 2003 se estableció como norma <a href="https://www.iso.org/standard/52348.html">ISO/IEC 19757-2</a>, actualizada en 2008 y es el más utilizado por la comunidad TEI.</li>
+</ul>
+<p>Aquí encontraréis un artículo de E. Van der Vlist donde se comparan los tres tipos de esquema: «<a href="https://dyomedea.com/papers/2005-xmlprague/schemas-compared.pdf">Comparing XML Schema Languages</a>» (12 Diciembre 2001), <em>XML.com</em>.</p>
+<h1 id="iii.-esquema-relaxng">III. Esquema RelaxNG</h1>
+<p>Al trabajar con XML-TEI, lo más habitual es el uso de esquemas Relax NG, pues son los que permiten más granularidad y flexibilidad. Relax NG responde a las siglas: REgular LAnguage for XML Next Generation y su especificación fue publicada por el Consortium OASIS el 3 de diciembre de 2001. Poco después, en 2003, se convirtió en norma ISO (ISO/IEC 19757-2:2003) y en 2008 hubo una nueva publicación que remplazaba la segunda: <a href="https://www.iso.org/standard/52348.html">ISO/IEC 19757-2:2008</a> Document Schema Definition Language (DSDL) – Part 2: Regular grammar-based validation – RELAX NG.</p>
+<p>Relax NG se expresa en XML y es relativamente sencillo y fácil de aprender. A diferencia de las DTD, por ejemplo, admite espacios de nombre y por tanto la capacidad de trabajar con uno o con varios. Para una lista más detallada de las ventajas, véanse <a href="https://www.oasis-open.org/committees/relax-ng/charter.php">las especificaciones del Relax NG</a>.</p>
+<p>Este tipo de esquema propone una determinada estructura para cada una de las instancias XML, estableciendo un modelo concreto de contenido tanto de los elementos como de los atributos. Al interno del esquema, todos los elementos deben ser definidos. Para dar una idea general del tipo de gramática utilizada, veamos por ejemplo de qué manera Relax NG indicaría que el elemento raíz de un documento TEI puede ser doble:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">&lt;start&gt;</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">    <span class="kw">&lt;choice&gt;</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">        <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_TEI&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">        <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_teiCorpus&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">    <span class="kw">&lt;/choice&gt;</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="kw">&lt;/start&gt;</span></a></code></pre></div>
+<p>El elemento <code>&lt;start&gt;</code> indica el elemento raíz, mientras que <code>&lt;choice&gt;</code> indica las opciones de anidación al interno de esa etiqueta. A continuación, deberíamos definir a su vez los elementos <code>&lt;TEI&gt;</code> y <code>&lt;teiCorpus&gt;</code> (de otra manera el esquema no estaría bien formado).</p>
+<p>Tomemos otro ejemplo, el elemento <code>&lt;text&gt;</code> tal y como aparece definido en el esquema Relax NG según las <em>Guías directrices</em> de TEI:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb4-1" data-line-number="1">    <span class="kw">&lt;define</span><span class="ot"> name=</span><span class="st">&quot;tei_text&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">    <span class="kw">&lt;element</span><span class="ot"> name=</span><span class="st">&quot;text&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">    <span class="co">&lt;!-- Aquí aparece la documentación que concierne al elemento: --&gt;</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">      <span class="kw">&lt;a:documentation</span> </a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="ot">        xmlns:a=</span><span class="st">&quot;http://relaxng.org/ns/compatibility/annotations/1.0&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">        contiene un único texto de cualquier tipo, sea este unitario o </a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">        combinado, p.ej. un texto en verso o teatral, una recopilación </a>
+<a class="sourceLine" id="cb4-8" data-line-number="8">        de ensayos, una novela, un diccionario, o una fragmento de corpus. </a>
+<a class="sourceLine" id="cb4-9" data-line-number="9">        [4. 15.1. ]<span class="kw">&lt;/a:documentation&gt;</span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10">    <span class="co">&lt;!-- Al interior de &lt;text&gt; podemos encontrar un grupo de elementos: --&gt;</span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11">         <span class="kw">&lt;group&gt;</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12">            <span class="kw">&lt;zeroOrMore&gt;</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13">         <span class="co">&lt;!-- En este punto pueden aparecer ninguna o múltiples veces una </span></a>
+<a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">         serie de elementos permitidos en cualquier punto de un documento </span></a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">         XML-TEI. Véase la lista aquí:</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">         http://www.tei-c.org/release/doc/tei-p5-doc/es/html/</span></a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">         ref-model.global.html --&gt;</span></a>
+<a class="sourceLine" id="cb4-18" data-line-number="18">                <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_model.global&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb4-19" data-line-number="19">             <span class="kw">&lt;/zeroOrMore&gt;</span></a>
+<a class="sourceLine" id="cb4-20" data-line-number="20">             <span class="kw">&lt;optional&gt;</span></a>
+<a class="sourceLine" id="cb4-21" data-line-number="21">   <span class="co">&lt;!-- Opcionalmente podemos tener un elemento &lt;front&gt; al interno de &lt;text&gt; --&gt;</span></a>
+<a class="sourceLine" id="cb4-22" data-line-number="22">                <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_front&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb4-23" data-line-number="23">                 <span class="kw">&lt;zeroOrMore&gt;</span></a>
+<a class="sourceLine" id="cb4-24" data-line-number="24">                     <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_model.global&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb4-25" data-line-number="25">                  <span class="kw">&lt;/zeroOrMore&gt;</span></a>
+<a class="sourceLine" id="cb4-26" data-line-number="26">               <span class="kw">&lt;/optional&gt;</span></a>
+<a class="sourceLine" id="cb4-27" data-line-number="27">               <span class="kw">&lt;choice&gt;</span></a>
+<a class="sourceLine" id="cb4-28" data-line-number="28">  <span class="co">&lt;!-- Debemos elegir entre incluir un elemento &lt;body&gt; o un elemento &lt;group&gt; --&gt;</span></a>
+<a class="sourceLine" id="cb4-29" data-line-number="29">                   <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_body&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb4-30" data-line-number="30">                   <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_group&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb4-31" data-line-number="31">                <span class="kw">&lt;/choice&gt;</span></a>
+<a class="sourceLine" id="cb4-32" data-line-number="32">                <span class="kw">&lt;zeroOrMore&gt;</span></a>
+<a class="sourceLine" id="cb4-33" data-line-number="33">                   <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_model.global&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb4-34" data-line-number="34">                <span class="kw">&lt;/zeroOrMore&gt;</span></a>
+<a class="sourceLine" id="cb4-35" data-line-number="35">                <span class="kw">&lt;optional&gt;</span></a>
+<a class="sourceLine" id="cb4-36" data-line-number="36">    <span class="co">&lt;!-- Opcionalmente podemos tener un elemento &lt;back&gt; al interno de &lt;text&gt; --&gt;</span></a>
+<a class="sourceLine" id="cb4-37" data-line-number="37">                    <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_back&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb4-38" data-line-number="38">                    <span class="kw">&lt;zeroOrMore&gt;</span></a>
+<a class="sourceLine" id="cb4-39" data-line-number="39">                       <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_model.global&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb4-40" data-line-number="40">                     <span class="kw">&lt;/zeroOrMore&gt;</span></a>
+<a class="sourceLine" id="cb4-41" data-line-number="41">                 <span class="kw">&lt;/optional&gt;</span></a>
+<a class="sourceLine" id="cb4-42" data-line-number="42">             <span class="kw">&lt;/group&gt;</span></a>
+<a class="sourceLine" id="cb4-43" data-line-number="43"><span class="co">&lt;!-- Aquí la lista de los tipos de atributos que puede contener el </span></a>
+<a class="sourceLine" id="cb4-44" data-line-number="44"><span class="co">elemento &lt;text&gt; --&gt;</span></a>
+<a class="sourceLine" id="cb4-45" data-line-number="45">           <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_att.global.attributes&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb4-46" data-line-number="46">           <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_att.declaring.attributes&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb4-47" data-line-number="47">           <span class="kw">&lt;ref</span><span class="ot"> name=</span><span class="st">&quot;tei_att.typed.attributes&quot;</span><span class="kw">/&gt;</span></a>
+<a class="sourceLine" id="cb4-48" data-line-number="48">          <span class="kw">&lt;empty/&gt;</span></a>
+<a class="sourceLine" id="cb4-49" data-line-number="49">    <span class="kw">&lt;/element&gt;</span></a>
+<a class="sourceLine" id="cb4-50" data-line-number="50"><span class="kw">&lt;/define&gt;</span></a></code></pre></div>
+<p>El esquema puede encontrarse en nuestro Repositorio de ejemplos: <a href="https://github.com/tthub-repo/ejemplos/blob/master/L6_Ejemplo_simple_comentado.rng">L6_Ejemplo_simple_comentado.rng</a>.</p>
+<p>Para llevar a cabo un proyecto de edición digital y de marcado XML-TEI es indispensable tener un esquema creado a nuestra medida. El esquema es el que nos permite establecer qué tipo de elementos necesitamos para marcar determinados fenómenos textuales, para poder localizarlos y procesarlos posteriormente. También supone que podamos establecer los atributos, los valores e incluso el orden de todos ellos.</p>
+<p>Normalmente en un proyecto hay múltiples personas trabajando en la codificación, por lo que es muy importante que todos codifiquen de la misma manera y con los mismos procedimientos y elementos.</p>
+<p>Para la creación de un esquema el proceso siempre es el mismo. La condición indispensable es que analicemos el texto y que definamos qué elementos aparecen en el mismo, tanto cuestiones estructurales, como semánticas. Una vez hemos elaborado la lista de fenómenos que nos gustaría codificar, deberemos encontrar la manera de expresarlo según las <em>Guías directrices</em> y elaborar nuestro esquema Relax NG propio.</p>
+<h1 id="iv.-aplicación-roma">IV. Aplicación Roma</h1>
+<p>La sintaxis de los esquemas puede parecer complicada a simple vista, pero el esquema Relax NG realmente es el más sencillo y podríamos crearlo y modificarlo a mano. Aún así, el consorcio TEI pone a nuestra disposición una serie de <a href="http://www.tei-c.org/guidelines/customization/">customizaciones</a> y hasta una plataforma, llamada Roma, para la creación y la manipulación de un esquema a nuestra medida.</p>
+<p>En este apartado vamos a ver cómo funciona Roma y cómo construir un esquema a nuestra medida. Hay dos opciones a la hora de construir un esquema:</p>
+<ul>
+<li>Elegir un esquema ya creado por la comunidad TEI, como puede ser la ya mencionada versión mínima, llamada <a href="http://www.tei-c.org/Guidelines/Customization/Lite/">TEI Lite</a> o, más recientemente, <a href="https://github.com/TEIC/TEI-Simple">TEI Simple</a>, o la que incluye todos los elementos TEI All. En este <a href="https://tei-c.org/Guidelines/Customization/">enlace</a> encontraréis los diferentes modelos. El programa oXygen también contiene estos esquemas.</li>
+<li>Crear un nuevo modelo a partir de la <a href="https://roma2.tei-c.org/">aplicación Roma</a>.</li>
+</ul>
+<p>En la Figura  vemos la interfaz de inicio de la plataforma ROMA, donde aparece un enlace a la nueva plataforma en la que están trabajando <a href="https://romabeta.tei-c.org/">Roma-ODD Customization</a>.</p>
+<figure>
+<img src="https://tthub-repo.github.io/lecciones/img/L6_001.png" alt="Aplicación Roma, pantalla de inicio " /><figcaption>Aplicación Roma, pantalla de inicio </figcaption>
+</figure>
+<p>Las opciones disponibles son las siguientes:</p>
+<ul>
+<li><em>Build up</em>: Construir un modelo personalizado a partir de una versión mínima con sólo los cuatro módulos obligatorios. El proceso consiste en añadir módulos y personalizar los elementos y atributos.</li>
+<li><em>Reduce</em>: Construir un modelo personalizado a partir una versión máxima con todos los módulos TEI. El proceso consiste en eliminar módulos y elementos y atributos.</li>
+<li><em>Create a new customization starting from a template</em>: Crear un modelo a partir de una de las plantillas propuestas por TEI.</li>
+<li><em>Use or modify an existing TEI-defined customization</em>: Crear un modelo a partir de la modificación del modelo TEI Lite.</li>
+<li><em>Upload a customization</em>: Sección para subir a la plataforma un modelo ya existente en forma de documento ODD.</li>
+</ul>
+<p>Elegiremos la primera opción <em>Build up</em>, es decir, crearemos un esquema a partir de una versión mínima que sólo contiene los módulos obligatorios. La siguiente Figura  corresponde a los metadatos:</p>
+<figure>
+<img src="https://tthub-repo.github.io/lecciones/img/L6_002.png" alt="Aplicación Roma, personalización " /><figcaption>Aplicación Roma, personalización </figcaption>
+</figure>
+<p>En este caso las opciones que se nos ofrecen son las siguientes:</p>
+<ul>
+<li><em>Title</em></li>
+<li><em>Filename</em></li>
+<li><em>Namespace for new elements</em></li>
+<li><em>Prefix for TEI pattern names in schema</em></li>
+<li><em>Language</em></li>
+<li><em>Author name</em></li>
+<li><em>Description</em></li>
+</ul>
+<p>Cambiemos las informaciones por defecto por las nuestras y seleccionemos como lengua de la interfaz el “Español”:</p>
+<figure>
+<img src="https://tthub-repo.github.io/lecciones/img/L6_003.png" alt="Aplicación Roma, cambio de idioma" /><figcaption>Aplicación Roma, cambio de idioma</figcaption>
+</figure>
+<p>A continuación, guardamos el esquema, clicando en el botón rojo “Save”.</p>
+<p>Fíjense que lo único que ha cambiado es el nombre de nuestro esquema que en lugar de llamarse “My extension TEI”, ahora tiene el nombre que le hemos dado “Mi primer esquema”.</p>
+<p>Veamos ahora las otras opciones:</p>
+<ul>
+<li><strong>1. Nuevo</strong>: retrocede a la pantalla de inicio.</li>
+<li><strong>2. Personalizar</strong>: corresponde a la pantalla donde hemos creado el título y los otros metadatos del esquema.</li>
+<li><strong>3. Lengua</strong>: En este apartado tenemos la posibilidad de elegir entre diferentes lenguas, esto nos proporcionará una documentación de los elementos en la lengua escogida (siempre que exista una traducción). En nuestro caso, podemos escoger “Español”, aunque las <em>Guías directrices</em> no ofrecen todas las traducciones de los elementos y secciones. La más actualizada y completa es la versión en inglés.</li>
+<li><strong>4. Módulos</strong>: esta es una de las pantallas más importantes, pues es aquí donde elegiremos qué módulos vamos a incluir en nuestro esquema (Figura ).</li>
+</ul>
+<figure>
+<img src="https://tthub-repo.github.io/lecciones/img/L6_004.png" alt="Aplicación Roma, lista de los módulos " /><figcaption>Aplicación Roma, lista de los módulos </figcaption>
+</figure>
+<p>Como veis, la columna de la izquierda contiene todos y cada uno de los módulos TEI, mientras que el de la derecha recoge sólo los obligatorios: <code>core</code>, <code>tei</code>, <code>header</code>, <code>textstructure</code>. A partir de aquí, debemos saber a qué módulos pertenecen los fenómenos textuales que queremos codificar. Por lo general, si trabajamos con textos teatrales, tendremos que incluir el módulo <code>drama</code>, si trabajamos con poesía el módulo <code>verse</code>, si trabajamos con diccionarios el módulo <code>dictionaries</code>, etc.</p>
+<p>Podemos acceder a cada uno de los módulos y ver todos los elementos que contiene. Por ejemplo, si accedemos al módulo <code>textcrit</code>, observamos la lista completa (Figura )</p>
+<figure>
+<img src="https://tthub-repo.github.io/lecciones/img/L6_005.png" alt="Aplicación Roma, lista de elementos del módulo textcrit " /><figcaption>Aplicación Roma, lista de elementos del módulo textcrit </figcaption>
+</figure>
+<p>Una vez estamos en la sección de los módulos, podemos “Excluir” aquellos elementos que no necesitemos para nuestra codificación. En lo que concierne al “Nombre” conviene dejarlo tal y como está para no provocar confusiones con el sistema estándar TEI de nombres de elementos, es decir, si cambiamos, por ejemplo, <code>&lt;app&gt;</code> por <code>&lt;aparato&gt;</code>, la etiqueta en nuestro documento XML-TEI aparecería como <code>&lt;aparato&gt;</code> y no como <code>&lt;app&gt;</code>. Además, tenemos la posibilidad de modificar los atributos, manteniendo los que nos interesan y suprimiendo los que no necesitamos.</p>
+<p>Al interior de cada uno de los elementos, tenemos la posibilidad de detallar ulteriormente la “Descripción” de ese elemento. Dicha descripción es la que aparecerá en el apartado correspondiente de la documentación. Por ejemplo, retomemos el elemento <code>&lt;app&gt;</code> e imaginemos que queremos encuadrarlo en nuestro proyecto, de manera que sea útil a las personas que elaborarán la codificación, o incluso, para nosotros mismos.</p>
+<figure>
+<img src="https://tthub-repo.github.io/lecciones/img/L6_006.png" alt="Aplicación Roma, descripción personalizada de un elemento" /><figcaption>Aplicación Roma, descripción personalizada de un elemento</figcaption>
+</figure>
+<p>Supongamos que queremos hacer la edición crítica de una obra lírica del Siglo de Oro. Para ello, en primer lugar, deberemos seleccionar los módulos que nos interesen, en este caso, <code>textcrit</code> y <code>verse</code>. Pero también podemos prever que codificaremos los nombres de los personajes y los diferentes lugares que aparecen en el texto, en ese caso incluimos: <code>namesdates</code>.</p>
+<p>Una vez añadidos los diferentes módulos que nos interesan veremos en la columna de la derecha los módulos seleccionados:</p>
+<figure>
+<img src="https://tthub-repo.github.io/lecciones/img/L6_007.png" alt="Aplicación Roma, modulos seleccionados para el esquema" /><figcaption>Aplicación Roma, modulos seleccionados para el esquema</figcaption>
+</figure>
+<ul>
+<li><strong>5. Añadir elemento</strong>: A continuación, pasamos a la pestaña “Añadir elemento”, en el caso que queramos crear un nuevo elemento que no nos proporciona TEI; para ello, tendríamos que adjudicarle una clase de modelo y una clase de atributos. Esta práctica debe evitarse en línea de máxima a no ser que sea estrictamente necesario.</li>
+<li><strong>6. Cambiar clase</strong>: Lo mismo sucede con esta pestaña; podría darse el caso que un determinado elemento no tuviera los atributos que necesitamos, en tal caso, podríamos modificarlos y añadir otros nuevos en esta sección.</li>
+<li><p><strong>7. Esquema</strong>: esta sección permite escoger el tipo de esquema que queremos: DTD, W3C, RelaxNG, etc. Este es uno de los momentos claves, pues aquí es donde podremos obtener un esquema en el formato que deseemos. Las opciones que se nos ofrecen son las siguientes:</p>
+<ul>
+<li>Relax NG schema (compact syntax) .rnc</li>
+<li>Relax NG schema (XML syntax) .rng</li>
+<li>ISO Schematron</li>
+<li>Schematron</li>
+<li>W3C Schema .xsd</li>
+<li>DTD .dtd</li>
+</ul></li>
+</ul>
+<p>Escogeremos la opción Relax NG schema (XML syntax) (no “compact syntax”) y pulsaremos “Generate”; acto seguido se nos descargará el esquema que hemos elaborado (Figura ):</p>
+<figure>
+<img src="https://tthub-repo.github.io/lecciones/img/L6_008.png" alt="Aplicación Roma, cambio de idioma label{L6_008}" /><figcaption>Aplicación Roma, cambio de idioma label{L6_008}</figcaption>
+</figure>
+<ul>
+<li><strong>8. Documentación</strong>: Permite escoger que tipo de formato se prefiere para la documentación del esquema. Tenemos la posibilidad de bajarnos en un único documento la descripción de cada uno de los elementos y atributos elegidos en nuestro esquema según las <em>Guías directrices</em>. Los formatos pueden ser: HTML web page, PDF, TEI Lite o TEI ODD.</li>
+</ul>
+<p>La opción más útil es la HTML, pues nos generará un simple documento HTML donde tendremos todos los elementos y atributos incluidos en nuestro esquema para poder consultarlos fácilmente en forma de página web (Figura ):</p>
+<figure>
+<img src="https://tthub-repo.github.io/lecciones/img/L6_009.png" alt="Aplicación Roma, descarga de la documentación en html " /><figcaption>Aplicación Roma, descarga de la documentación en html </figcaption>
+</figure>
+<ul>
+<li><strong>9. Guardar configuración personal</strong>: Esta pantalla también es de vital importancia porqué es la que genera el archivo ODD que se explica en la lección <a href="https://tthub.io/aprende/l7-odd/">Qué es y para qué sirve el documento ODD (One Document Does it All)</a>. En pocas palabras, se trata de un fichero XML que recoge todas las características del esquema personalizado y permite rehacerlo cuantas veces lo deseemos, conservando las modificaciones hechas. Si no se conserva este documento, no se podrá recuperar la personalización que hemos creado.</li>
+<li><strong>10. Sanity Checker</strong>: Permite comprobar la validez de las decisiones hechas para tu personalización. Normalmente, si no se han incluido nuevos elementos o eliminado partes esenciales, suele dar positivo.</li>
+</ul>
+<p>Una vez tenemos un esquema generado, quedan dos últimos pasos de vital importancia: el primero es generar el documento ODD (véase <a href="https://tthub.io/aprende/l7-odd/">Qué es y para qué sirve el documento ODD (One Document Does it All)</a>) y la otra es aosciar correctamente el esquema al documento XMLL-TEI que queremos validar. Así, por ejemplo, si tuviéramos los dos documentos (documento XML-TEI y esquema Relax NG) en una única carpeta y los quisiéramos asociar, deberíamos indicarlo en el prólogo del documento XML-TEI de la siguiente manera:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="kw">&lt;?xml-model</span> href=&quot;Mi_esquema.rng&quot; type=&quot;application/xml&quot; schematypens=&quot;http://relaxng.org/ns/structure/1.0&quot;<span class="kw">?&gt;</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="kw">&lt;TEI</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.tei-c.org/ns/1.0&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">…</a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="kw">&lt;/TEI&gt;</span></a></code></pre></div>
+<p>En cambio, si el documento XML-TEI estuviera asociado con un esquema en línea, como en el caso de Tei Lite, tendríamos lo siguiente:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="kw">&lt;?xml-model</span> href=&quot;http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/teilite.rng&quot; schematypens=&quot;http://relaxng.org/ns/structure/1.0&quot;<span class="kw">?&gt;</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="kw">&lt;TEI</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.tei-c.org/ns/1.0&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">…</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="kw">&lt;/TEI&gt;</span></a></code></pre></div>
+<p>La URL relativa o absoluta corresponde al valor del <code>@href</code> en la instrucción de procesamiento de <code>&lt;?xml-model&gt;</code>. Si no asociamos bien nuestro esquema al documento XML-TEI, no podremos validarlo.</p>
+<h1 id="v.-recursos">V. Recursos</h1>
+<p>Aquí podréis ver el <a href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng">esquema Relax NG Lite</a> que proponen la <em>Guías directrices</em>. Lo podéis abrir con el programa oXygen e intentar entender la estructura (File &gt; Open URL &gt; Pegad la URL en “File URL” y pulsar “OK”).</p>
+<h2 id="lecturas-y-tutoriales">Lecturas y tutoriales:</h2>
+<ul>
+<li>Eric van der Vlist, <em>Relax NG</em>, O’Reilly &amp; Associates, 2003. Acceso al libro en versión digital <a href="http://books.xmlschemata.org/relaxng/page2.html" class="uri">http://books.xmlschemata.org/relaxng/page2.html</a>.</li>
+<li>OASIS Consortium, <em>Relax NG Tutorial</em> (Committee Specification 3 December 2001), <a href="https://relaxng.org/tutorial-20011203.html" class="uri">https://relaxng.org/tutorial-20011203.html</a>.</li>
+<li>E. Van der Vlist, «<a href="http://eric.van-der-vlist.com/blog/2006/07/06/2814_relax_ng_and_w3c_xml_schema_compared_continued/">Relax NG, Compared</a>» (23 Enero 2002), XML.com</li>
+</ul>
+<h3 id="cita-propuesta">Cita propuesta:</h3>
+<p>Allés Torrent, Susanna (2019). “Esquemas RNG y personalización de TEI”. <em>TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital</em>. <a href="https://tthub.io/aprende/l6-esquemas/" class="uri">https://tthub.io/aprende/l6-esquemas/</a> DOI: <a href="https://doi.org/10.5281/zenodo.3531662">10.5281/zenodo.3531662</a></p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Estos materiales fueron creados en el marco del certificado de <a href="http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/">Experto Universitario en Humanidades Digitales</a>, ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+</body>
+</html>
