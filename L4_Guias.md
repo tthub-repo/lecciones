@@ -1,5 +1,5 @@
 ---
-title: Las *Guías directrices*, su manejo y su traducción al español[^1]
+title: Las *Guías directrices* de la Text Encoding Initiative, su manejo y su traducción al español[^1]
 author: Susanna Allés Torrent
 date: 2019
 # Todo esto son indicaciones para el pdf
@@ -7,16 +7,19 @@ colorlinks: blue
 header-includes: |
     \usepackage{fancyhdr}
     \pagestyle{fancy}
-    \fancyhead[LO,RE]{}
-    \fancyfoot[RO,LE]{}
+    \fancyhead[LO,RE]{Allés Torrent, S.}
+    \fancyfoot[RO,LE]{https://doi.org/10.5281/zenodo.3531573}
 	\usepackage{fancyvrb}
 	\fvset{%
 	fontsize=\small,
 	numbers=left}
 	\usepackage{fvextra}
 	\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-geometry: margin=1in
+geometry: 
+	- margin=1in
+	- foot=0.6in
 fontsize: 12pt
+lang: es
 --- 
 
 # I. Introducción
@@ -94,7 +97,7 @@ Cada módulo define una serie de etiquetas propias (de un total de aproximadamen
 
 Cada módulo tiene una presentación general, donde se explica el funcionamiento de cada uno de sus elementos. Por ejemplo, si estamos interesados en los diccionarios, tenemos a nuestra disposición la [explicación general](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html) sobre diccionarios en las *Guías directrices*, y si necesitamos uno de sus elementos podemos acceder a su información individualizada, pongamos por caso [`<entryFree>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-entryFree.html) (véase Figura 1).
 
-![Captura de pantalla para el elemento "EntryFree"](img/L4_001.png)
+![Definición del elemento "EntryFree" en las GD](img/L4_001.png)
 
 Cada uno de los elementos, contiene siempte: 
 
@@ -128,7 +131,7 @@ Las *Guías directrices* pueden descargarse en diferentes formatos:
 
 Una de las opciones más interesantes es la posibilidad de instalarnos una copia de las *Guías directrices* en nuestro ordenador personal a través de SVN (Version Control System), pero ello está indicado especialmente para que los usuarios más avanzados puedan probar los últimos desarrollos y proveer feedback sobre lo que piensan y como deberían desarrollarse. Lo que sí, en cambio, es muy útil es la descarga de la última versión de las *Guías directrices*, disponible [aquí](https://sourceforge.net/projects/tei/files/TEI-P5-all/). Se puede descargar una copia y conservarla en su ordenador para que pueda ser consultada incluso cuando no se esté en línea.
 
-## III. Recursos
+# III. Recursos
 
 En el apartado de las [Guidelines](http://www.tei-c.org/Guidelines/), a parte de las *Guías* propiamente dichas, encontramos otra serie de materiales y recursos relacionados que conviene conocer. En la página se encuentran las siguientes secciones:
 
@@ -149,7 +152,7 @@ En el apartado de las [Guidelines](http://www.tei-c.org/Guidelines/), a parte de
 
 ### Cita propuesta: 
 
-Allés Torrent, Susanna (2019). "Las *Guías directrices*, su manejo y su traducción al español". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/> DOI: 
+Allés Torrent, Susanna (2019). "Las *Guías directrices* de la Text Encoding Initiative, su manejo y su traducción al español". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l4-guias/> DOI: [10.5281/zenodo.3531573](https://doi.org/10.5281/zenodo.3531573)
 
 
 [^1]: Estos materiales fueron creados en el marco del certificado de [Experto Universitario en Humanidades Digitales](http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/), ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia. 

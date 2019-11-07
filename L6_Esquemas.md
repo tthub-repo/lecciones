@@ -1,5 +1,5 @@
 ---
-title: Esquemas y personalización de TEI[^1]
+title: Esquemas RNG y personalización de TEI[^1]
 author: Susanna Allés Torrent
 date: 2019
 # Todo esto son indicaciones para el pdf
@@ -8,7 +8,7 @@ header-includes: |
     \usepackage{fancyhdr}
     \pagestyle{fancy}
     \fancyhead[LO,RE]{Allés Torrent, S.}
-    \fancyfoot[RO,LE]{}
+    \fancyfoot[RO,LE]{https://doi.org/10.5281/zenodo.3531662}
 	\usepackage{fancyvrb}
 	\fvset{%
 	fontsize=\small,
@@ -17,6 +17,7 @@ header-includes: |
 	\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 geometry: margin=1in
 fontsize: 12pt
+lang: es
 ---
 
 # I. Principios fundamentales del esquema
@@ -55,7 +56,7 @@ Un esquema establece la representación formal de los elementos y atributos cuyo
 
 Un esquema, pues, especifica la estructura y la nomenclatura de nuestro fichero; la semántica de los elementos, por otro lado, queda como siempre relegada a las *Guías directrices* TEI.
 
-## II. Tipos de esquemas
+# II. Tipos de esquemas
 
 Un modelo de codificación en XML se construye a partir de una sintaxis concreta que se establece en lo que llamamos esquemas. Existen diferentes tipos de esquema, entre los cuales encontramos:
 
@@ -276,6 +277,6 @@ Aquí podréis ver el [esquema Relax NG Lite](http://www.tei-c.org/release/xml/t
 
 ### Cita propuesta: 
 
-Allés Torrent, Susanna (2019). "Esquemas y personalización de TEI". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/> DOI: 
+Allés Torrent, Susanna (2019). "Esquemas RNG y personalización de TEI". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l6-esquemas/> DOI: [10.5281/zenodo.3531662](https://doi.org/10.5281/zenodo.3531662)
 
 [^1]: Estos materiales fueron creados en el marco del certificado de [Experto Universitario en Humanidades Digitales](http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/), ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia.

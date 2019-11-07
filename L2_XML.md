@@ -1,5 +1,5 @@
 ---
-title: El lenguaje XML (eXtensible Markup Language) y algunos conceptos generales[^1]
+title: El lenguaje XML y algunos conceptos generales[^1]
 author: Susanna Allés Torrent
 date: 2019
 # Todo esto son indicaciones para el pdf
@@ -8,7 +8,7 @@ header-includes: |
     \usepackage{fancyhdr}
     \pagestyle{fancy}
     \fancyhead[LO,RE]{Allés Torrent, S.}
-    \fancyfoot[RO,LE]{}
+    \fancyfoot[RO,LE]{https://doi.org/10.5281/zenodo.3530805}
 	\usepackage{fancyvrb}
 	\fvset{%
 	fontsize=\small,
@@ -17,6 +17,7 @@ header-includes: |
 	\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 geometry: margin=1in
 fontsize: 12pt
+lang: es
 --- 
 
 # I. Estándares web y XML 
@@ -450,7 +451,7 @@ Existe una enorme cantidad de tutoriales en línea, entre los cuales destacamos:
 
 ### Cita propuesta: 
 
-Allés Torrent, Susanna (2019). "El lenguaje XML (eXtensible Markup Language) y algunos conceptos generales". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/> DOI: 
+Allés Torrent, Susanna (2019). "El lenguaje XML y algunos conceptos generales". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l2-xml/> DOI: [10.5281/zenodo.3530805](https://doi.org/10.5281/zenodo.3530805)
 
 
 [^1]: Estos materiales fueron creados en el marco del certificado de [Experto Universitario en Humanidades Digitales](http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/), ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia. 

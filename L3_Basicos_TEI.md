@@ -8,20 +8,21 @@ header-includes: |
     \usepackage{fancyhdr}
     \pagestyle{fancy}
     \fancyhead[LO,RE]{Allés Torrent, S.}
-    \fancyfoot[RO,LE]{}
+    \fancyfoot[RO,LE]{https://doi.org/10.5281/zenodo.3531506}
 	\usepackage{fancyvrb}
 	\fvset{%
 	fontsize=\small,
 	numbers=left}
 	\usepackage{fvextra}
 	\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-geometry: margin=1in
+geometry: margin=0.9in
 fontsize: 12pt
+lang: es
 --- 
 
 # I. Introducción
 
-En esta lección nos centraremos en la estructura básica de los documentos XML-TEI, viendo solo aquellos elementos obligatorios e indispensables para empezar a trabajar con un documento TEI válido.
+En esta lección nos centraremos en la estructura básica de los documentos XML-TEI, viendo solo aquellos elementos obligatorios e indispensables para empezar a trabajar con un documento TEI válido y bien formado.
 
 Recapitulando algunas nociones básicas, recordaremos que XML-TEI es:
 
@@ -40,10 +41,10 @@ Un documento TEI es un documento XML de manera que sigue la misma sintaxis que c
 
 ![Estructura básica de un documento XML-TEI](https://tthub-repo.github.io/lecciones/img/L3_001.jpg)
 
-En el prólogo del documento XML-TEI encontramos elementos que ya hemos visto anteriormente:
+En el prólogo del documento XML-TEI encontramos los elementos típicos de un documento XML:
 
 * La declaración XML nos indica que se trata de un documento XML y que el tipo de codificación utilizado es el UTF-8.
-* La asociación del modelo de esquema: en este caso se trata de un esquema RelaxNG (.rng). Es la misma asociación que establecían las DTD a través del DOCTYPE (como vimos en el [Ejemplo 2](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml)). Gracias a esta indicación sabemos que este documento XML-TEI depende de un esquema concreto, el [TEI-Lite](http://www.tei-c.org/Guidelines/Customization/Lite/), que es un modelo minimalista de TEI donde se contemplan los elementos obligatorios y algunos de los más utilizados.
+* La asociación del modelo de esquema: en este caso se trata de un esquema RelaxNG (.rng). Es la misma asociación que establecían las DTD a través del DOCTYPE (como se ve en el [Ejemplo 2](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml)). Gracias a esta indicación sabemos que este documento XML-TEI depende de un esquema concreto, el [TEI-Lite](http://www.tei-c.org/Guidelines/Customization/Lite/), que es un modelo minimalista de TEI donde se contemplan los elementos obligatorios y algunos de los más utilizados.
 
 Acabado el prólogo, aparece el elemento raíz `<TEI>` que engloba la totalidad del documento. Aquí irán todos los otros elementos XML-TEI: el encabezado y el texto, con la siguiente estructura:
 
@@ -70,13 +71,13 @@ Por ahora veamos cuáles son las partes obligatorias que debe tener cualquier do
 <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Titulo del fichero XML</title>
+        <title>Título del fichero XML</title>
       </titleStmt>
       <publicationStmt>
-        <p>Informacion sobre la publicacion digital</p>
+        <p>Información sobre la publicación digital</p>
       </publicationStmt>
       <sourceDesc>
-        <p>Informacion sobre el texto original</p>
+        <p>Información sobre el texto original</p>
       </sourceDesc>
     </fileDesc>
 </teiHeader>
@@ -96,16 +97,16 @@ Pongamos un ejemplo de la Biblioteca Virtual Miguel de Cervantes; imaginemos que
 	<teiheader>
 		<filedesc>
      		<titlestmt>
-				<title>La Regenta, por Leopoldo Alas (Clarin); prologo 
-				de Benito Perez Galdos</title>
+				<title>La Regenta, por Leopoldo Alas (Clarin); prólogo 
+				de Benito Pérez Galdós</title>
 			</titlestmt>
             <publicationstmt>
                 <pubplace>Alicante</pubplace>        
                 <publisher>Biblioteca Virtual Miguel de Cervantes</publisher>
                 <date>2000</date>      
             </publicationstmt>
-            <sourcedesc>La Regenta, por Leopoldo Alas (Clarin). Prologo 
-            de Benito Perez Galdos, Madrid, Libreria de Fernando 
+            <sourcedesc>La Regenta, por Leopoldo Alas (Clarin). Prólogo 
+            de Benito Pérez Galdós, Madrid, Librería de Fernando 
             Fe 1900</sourcedesc>
         </filedesc>
     </teiheader>
@@ -149,6 +150,7 @@ Siguiendo con el ejemplo anterior podríamos marcar el texto con la siguiente es
     </body>
 </text>
 ```
+En línea de máxima, como sucede con los nombres de los elementos y de los atributos, es mejor no utilizar acentos ni espacios tampoco en los valores de los atributos. 
 
 # IV. Divisiones 
 
@@ -173,22 +175,20 @@ El texto o la masa textual se incluye siempre al interior de elementos más conc
 
 # V. Elementos comunes de todo documento TEI
 
-Pasamos ahora a aquellos elementos generales y comunes en todos los documentos XML-TEI, como pueden ser párrafos, cuestiones de puntuación o de tipografía, nombres, fechas, abreviaturas, listas, notas a pie de página o de otra naturaleza, indexación, entre otros aspectos.
+En primer lugar, conviene recordar que el sistema de codificación TEI se divide en módulos, cada uno destinado a una tipología textual: verso, drama, transcripciones de discurso, diccionarios, etc. Cada uno de estos módulos es descrito en las [*Guías directrices*](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html). A su vez, los módulos pueden ser obligatorios o optativos. Así, los módulos obligatorios son cuatro: [`tei`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ST.html), [`core`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/CO.html), [`header`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/HD.html), [`textstructure`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/DS.html); sin estos no tendríamos un documento válido. Los módulos optativos, en cambio, responden a tipologías textuales concretas.
 
-En primer lugar, conviene recordar que el sistema de codificación TEI se divide en módulos, cada uno destinado a una tipología textual: verso, drama, transcripciones de discurso, diccionarios, etc. Cada uno de estos módulos es descrito en las [*Guías directrices*](https://tei-c.org/guidelines/P5/).
+Ahora, veremos aquellos elementos generales y comunes en todos los documentos TEI, como pueden ser párrafos, cuestiones de puntuación o de tipografía, nombres, fechas, abreviaturas, listas, notas a pie de página o de otra naturaleza, indexación, entre otros aspectos. Todos estos elementos se encuentran explicados en la sección ["3. Elements Available in All TEI Documents"](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html) de las *Guías directrices*. 
 
-Los módulos pueden ser obligatorios o optativos. Así, los módulos obligatorios son cuatro: [`tei`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ST.html), [`core`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/CO.html), [`header`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/HD.html), [`textstructure`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/DS.html); sin estos no tendríamos un documento válido. Los módulos optativos responden a tipologías textuales concretas.
+Más arriba vimos aquellos elementos que constituían la estructura obligatoria y básica de un documento TEI. Vamos, aquí, a centrarnos en el módulo llamado «core», que contiene una serie de elementos o etiquetas que pueden utilizarse en cualquier documento, incluso en la versión más minimalista [TEI Lite](https://tei-c.org/guidelines/customization/lite/). La panorámica que ofreceremos no es completa, pero corresponde a los más utilizados.
 
-Más arriba vimos aquellos elementos que constituían la estructura obligatoria y básica de un documento TEI. Vamos, aquí, a centrarnos en el módulo llamado «core», que contiene una serie de elementos o etiquetas que pueden utilizarse en cualquier documento, incluso en la versión más minimalista TEI Lite. La panorámica que ofreceremos no es completa, pero corresponde a los más utilizados. Encontraréis la parte correspondiente a este tema de las Guidelines en la página web del consorcio.
+Vamos a dividir los elementos en: Párrafos, Cuestiones de puntuación, Elementos tipográficos, Citas, Nombres, números, fechas, Listas, notas, anotaciones, indexación, referencias, y un último apartado con Otros elementos frecuentemente utilizados.
 
-Vamos a dividir los elementos en: Párrafos y cuestiones de puntuación, Elementos tipográficos, citas, Nombres, números, fechas, y Listas, notas, anotaciones, indexación, referencias, y un último apartado con Otros elementos frecuentemente utilizados.
-
-## Párrafos y puntuación
+## Párrafos
 
 El párrafo es la unidad más pequeña en la que un texto en prosa puede dividirse. El elemento utilizado para marcar los párrafos es `<p>`.
 
 ```xml
-<p>El único defecto que hallan en mi es el de que estoy muy delgadito, a fuerza de estudiar. Para que engorde se proponen no dejarme estudiar ni leer un papel mientras aquí permanezca, y además hacerme comer cuantos primores de cocina y de repostería se confeccionan en el lugar. Está visto: quieren cebarme. No hay familia conocida que no me haya enviado algun obsequio. Ya me envían una torta de bizcocho, ya un cuajado, ya una pirámide de piñonate, ya un tarro de almibar.</p>
+<p>El único defecto que hallan en mi es el de que estoy muy delgadito, a fuerza de estudiar. Para que engorde se proponen no dejarme estudiar ni leer un papel mientras aquí permanezca, y además hacerme comer cuantos primores de cocina y de repostería se confeccionan en el lugar. Está visto: quieren cebarme. No hay familia conocida que no me haya enviado algún obsequio. Ya me envían una torta de bizcocho, ya un cuajado, ya una pirámide de piñonate, ya un tarro de almibar.</p>
 <p>Los obsequios que me hacen no son sólo estos presentes enviados a casa, sino que también me han convidado a comer tres o cuatro personas de las más importantes del lugar.</p>
 <p>Mañana como en casa de la famosa Pepita Jiménez, de quien Vd. habrá oído hablar sinduda alguna. Nadie ignora aquí que mi padre la pretende.</p>
 ```
@@ -197,11 +197,11 @@ El párrafo es la unidad más pequeña en la que un texto en prosa puede dividir
 En los casos, por ejemplo, que quisiéramos dividir ulteriormente un párrafo, podríamos utilizar otros elementos como [`<s>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) (segment) para dividir otro tipo de segmentos, como por ejemplo, las frases:
 
 ```xml
-<s type="frase">El unico defecto que hallan en mi es el de que estoy muy delgadito, a fuerza de estudiar.</s> 
+<s type="frase">El único defecto que hallan en mí es el de que estoy muy delgadito, a fuerza de estudiar.</s> 
 <s type="frase">Para que engorde se proponen no dejarme estudiar ni leer un papel mientras aquí permanezca, y además hacerme comer cuantos primores de cocina y de repostería se confeccionan en el lugar.</s> 
 <s type="frase">Está visto: quieren cebarme.</s> 
 <s>No hay familia conocida que no me haya enviado algún obsequio.</s> 
-<s type="frase">Ya me envian una torta de bizcocho, ya un cuajado, ya una pirámide de piñonate, ya un tarro de almibar.</s>
+<s type="frase">Ya me envían una torta de bizcocho, ya un cuajado, ya una pirámide de piñonate, ya un tarro de almíbar.</s>
 ```
 (Juan Valera, *Pepita Jiménez*, Cap. I)
 
@@ -262,7 +262,7 @@ Te espero en el <foreign xml:lang="en">lobby</foreign>
 * [`<emph>`]() indica una palabra o frase a la que se atribuye un énfasis especial:
 
 ```xml
-<p>Aquí, como en todas partes, la gente es muy aficionada al dinero. Y digo mal <emph>como en todas partes</emph>: en las ciudades populosas, en los grandes centros de civilización, hay otras distinciones que se ambicionan tanto o más que el dinero, porque abren camino y dan credito y consideracion en el mundo</p>
+<p>Aquí, como en todas partes, la gente es muy aficionada al dinero. Y digo mal <emph>como en todas partes</emph>: en las ciudades populosas, en los grandes centros de civilización, hay otras distinciones que se ambicionan tanto o más que el dinero, porque abren camino y dan crédito y consideración en el mundo</p>
 ```
 
 * [`<distinct>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-distinct.html) indica un término diferente lingüísticamente (arcaísmo, tecnicismo, dialectalismo, coloquialismo, etc.).
@@ -280,10 +280,10 @@ La marcas tipográficas también pueden utilizarse, como es sabido, para señala
 * [`<q>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-q.html) (quoted) puede utilizarse para marcar el estilo directo, un pensamiento o algún término técnico, normalmente en las fuentes escritas aparece entre comillas:
 
 ```xml
-<p>Al día siguiente, Bioy me llamo desde Buenos Aires. Me dijo que tenía a la vista el artículo sobre Uqbar, en el volumen XXVI de la Enciclopedia. No constaba el nombre del heresiarca, pero si la noticia de su doctrina, formulada en palabras casi idénticas a las repetidas por el, aunque -tal vez- literariamente inferiores. El había recordado:  <q xml:lang="en">Copulation and mirrors are abominable</q>. El texto de la Enciclopedia decía: <q>Para uno de esos gnósticos, el visible universo era una ilusión o (más precisamente) un sofisma. Los espejos y la paternidad son abominables (<foreign xml:lang="en">mirrors and fatherhood are hateful</foreign>) porque lo multiplican y lo 
+<p>Al día siguiente, Bioy me llamó desde Buenos Aires. Me dijo que tenía a la vista el artículo sobre Uqbar, en el volumen XXVI de la Enciclopedia. No constaba el nombre del heresiarca, pero si la noticia de su doctrina, formulada en palabras casi idénticas a las repetidas por él, aunque -tal vez- literariamente inferiores. Él había recordado:  <q xml:lang="en">Copulation and mirrors are abominable</q>. El texto de la Enciclopedia decía: <q>Para uno de esos gnósticos, el visible universo era una ilusión o (más precisamente) un sofisma. Los espejos y la paternidad son abominables (<foreign xml:lang="en">mirrors and fatherhood are hateful</foreign>) porque lo multiplican y lo 
 divulgan.</q> Le dije, sin faltar a la verdad, que <q>me gustaria 
-ver ese articulo</q>. A los pocos dias lo trajo. Lo cual me sorprendió, 
-porque los escrupulosos indices cartográficos de la Erdkunde de Ritter 
+ver ese articulo</q>. A los pocos días lo trajo. Lo cual me sorprendió, 
+porque los escrupulosos índices cartográficos de la Erdkunde de Ritter 
 ignoraban con plenitud el nombre de Uqbar.</p>
 ```
 (Borges, *Ficciones*)
@@ -291,17 +291,17 @@ ignoraban con plenitud el nombre de Uqbar.</p>
 * [`<said>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-said.html) (speech or thought) discurso hablado o pensamiento:
 
 ```xml
-<p> Asi es que un dia ambas se quedaron atonitas y pasmadas cuando, despues de varios requiebros, entre burlas y veras, D. Gumersindo soltó con la mayor formalidad y a boca de jarro la siguiente categórica pregunta:</p> 
+<p> Así es que un día ambas se quedaron atónitas y pasmadas cuando, después de varios requiebros, entre burlas y veras, D. Gumersindo soltó con la mayor formalidad y a boca de jarro la siguiente categórica pregunta:</p> 
 <said>Muchacha, ¿quieres casarte conmigo?</said>
 <p> Pepita, aunque la pregunta venía después de mucha broma, y pudiera tomarse por broma, y aunque inexperta de las cosas del mundo, por cierto instinto adivinatorio que hay en las mujeres y sobre todo en las mozas, por cándidas que sean, conoció que aquello iba por lo serio, se puso colorada como una guinda, y no contestó nada. La madre contestó por ella:</p>
-<said>Niña, no seas mal criada; contesta a tu tio lo que debes contestar: Tio, con mucho gusto; cuando Vd. quiera.</said>
+<said>Niña, no seas mal criada; contesta a tu tío lo que debes contestar: Tío, con mucho gusto; cuando Vd. quiera.</said>
 ```
 (J. Valera, *Pepita Jiménez*)
 
 * [`<quote>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-quote.html) pasaje atribuido a una fuente externa:
 
 ```xml
-<p> No conozco aún a Pepita Jimenez. Todos dicen que es muy linda. Yo sospecho que será una beldad lugareña y algo rústica. Por lo que de ella se cuenta, no acierto a decidir si es buena o mala moralmente; pero si que es de gran despejo natural. Pepita tendrá veinte años; es viuda; solo tres años estuvo casada. Era hija de doña Francisca Gálvez, viuda, como Vd. sabe, de un capitán retirado <quote>Que le dejo a su muerte, Solo su honrosa espada por herencia,</quote> según dice el poeta. Hasta la edad de diez y seis años vivió Pepita con su madre en la mayor estrechez, casi en la miseria.</p>
+<p> No conozco aún a Pepita Jiménez. Todos dicen que es muy linda. Yo sospecho que será una beldad lugareña y algo rústica. Por lo que de ella se cuenta, no acierto a decidir si es buena o mala moralmente; pero sí que es de gran despejo natural. Pepita tendrá veinte años; es viuda; solo tres años estuvo casada. Era hija de doña Francisca Gálvez, viuda, como Vd. sabe, de un capitán retirado <quote>Que le dejo a su muerte, Solo su honrosa espada por herencia,</quote> según dice el poeta. Hasta la edad de diez y seis años vivió Pepita con su madre en la mayor estrechez, casi en la miseria.</p>
 ```
 
 * [`<cit>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cit.html) se utiliza para citar de manera completa una referencia bibliográfica:
@@ -393,7 +393,6 @@ Las listas suelen ser un fenómeno habitual en muchos de los textos impresos. Lo
 	<item n="2">Huevos</item>
 	<item n="3">Azucar</item>
 </list>
-
 <list type="gloss">
   <head>Lista de medidas (traducción)</head>
   <label>height</label>
@@ -465,7 +464,7 @@ Puede ocurrir que la fuente original no tenga un índice, pero que queramos cons
 ```xml
 <index indexName="Personajes"><term xml:id="PJ">Pepita</term></index> tendrá veinte años; es viuda; sólo tres años estuvo casada. Era hija de doña <index indexName="Personajes"> <term xml:id="FG">Francisca Gálvez</term></index>, viuda, como Vd. sabe, de un capitán retirado.
 ```
-De esta manera sería fácil autogenerar un índice con los nombres de los personajes.
+De esta manera sería fácil autogenerar un índice con los nombres de los personajes, por ejemplo, con un simple script en XSLT.
 
 ### Enlaces y referencias
 
@@ -545,7 +544,8 @@ Dentro de la categoría que las *Guías directrices* denominan “Milestone” e
 
 ### Cita propuesta: 
 
-Allés Torrent, Susanna (2019). "Estructura básica y elementos comunes de los documentos XML-TEI". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/> DOI: 
+Allés Torrent, Susanna (2019). "Estructura básica y elementos comunes de los documentos XML-TEI". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l3-basicos-tei/> DOI: [10.5281/zenodo.3531506](https://doi.org/10.5281/zenodo.3531506)
+
 
 
 [^1]: Estos materiales fueron creados en el marco del certificado de [Experto Universitario en Humanidades Digitales](http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/), ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia. 

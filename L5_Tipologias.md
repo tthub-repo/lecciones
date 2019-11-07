@@ -1,5 +1,5 @@
 ---
-title: La codificación de tipologías textuales (Prosa, poesía, drama, fuentes primarias y edición crítica)[^1]
+title: La codificación de tipologías textuales (prosa, poesía, drama, fuentes primarias y edición crítica)[^1]
 author: Susanna Allés Torrent
 date: 2019
 # Todo esto son indicaciones para el pdf
@@ -8,7 +8,7 @@ header-includes: |
     \usepackage{fancyhdr}
     \pagestyle{fancy}
     \fancyhead[LO,RE]{Allés Torrent, S.}
-    \fancyfoot[RO,LE]{}
+    \fancyfoot[RO,LE]{https://doi.org/10.5281/zenodo.3531626}
 	\usepackage{fancyvrb}
 	\fvset{%
 	fontsize=\small,
@@ -17,6 +17,7 @@ header-includes: |
 	\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 geometry: margin=1in
 fontsize: 12pt
+lang: es
 --- 
 
 # Introducción
@@ -140,7 +141,7 @@ novelas españolas y latinoamericanas en el CLiGS textbox:
 * [Corpus of Spanish Short Stories from 1880-1940](https://github.com/cligs/textbox/blob/master/spanish/cuentos-espanoles), José Calvo Tello (ed.) (20 colecciones de narraciones breves y 302 narraciones)
 
 Sugiero también que sigan el tutorial de la parte correspondiente de *TEI By Example*:
-[http://teibyexample.org/modules/TBED03v00.htm](http://teibyexample.org/modules/TBED03v00.htm)
+[Module 3: Prose](http://teibyexample.org/modules/TBED03v00.htm)
 
 # II. Poesía 
 
@@ -202,7 +203,7 @@ Además, el elemento `<rhyme>` puede contener el atributo `@label` para señalar
 alfabeto:
 
 ```xml
-`marav<rhyme label="a">`illa`</rhyme>`
+marav<rhyme label="a">`illa`</rhyme>
 ```
 
 Pero también puede indicarse en el interior del elemento `<div>`, `<lg>`
@@ -638,8 +639,8 @@ Recomiendo, además de la sección al [Aparato crítico en las *Guías directric
 
 ### Cita propuesta: 
 
-Allés Torrent, Susanna (2019). "La codificación de tipologías textuales (Prosa, poesía, drama, fuentes primarias y edición crítica)". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/> DOI: 
+Allés Torrent, Susanna (2019). "La codificación de tipologías textuales (prosa, poesía, drama, fuentes primarias y edición crítica)". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l5-tipologias/> DOI: [10.5281/zenodo.3531626](https://doi.org/10.5281/zenodo.3531626)
 
 
 [^1]: Estos materiales fueron creados en el marco del certificado de Experto Profesional en Humanidades Digitales, ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia.
-[^2]: Para una primera aproxmación, véase la lección [Las *Guías directrices*, su manejo y su traducción al español (L4)](https://tthub.io/aprende/l4-guias/).
+[^2]: Para una primera aproximación, véase la lección [Las *Guías directrices*, su manejo y su traducción al español (L4)](https://tthub.io/aprende/l4-guias/).
