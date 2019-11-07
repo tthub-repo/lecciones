@@ -3,8 +3,7 @@ title: Repositorio para las lecciones de TTHub
 layout: default
 ---
 
-En GitHub: <https://github.com/tthub-repo/lecciones>
-En tthub.io disponibles desde: <https://tthub.io/aprende/>
+Las lecciones están albergadas en GitHub: <https://github.com/tthub-repo/lecciones> y publicadas en tthub.io: <https://tthub.io/aprende/>
 
 [L1. Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos](https://tthub-repo.github.io/lecciones/L1_Intro_a_TEI) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3530772.svg)](https://doi.org/10.5281/zenodo.3530772)
 
