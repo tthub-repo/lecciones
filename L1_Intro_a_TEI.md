@@ -67,7 +67,7 @@ El texto es una idea abstracta que presupone la existencia de una secuencia de s
 Centrémonos por un momento en los siguientes ejemplos e intentemos reflexionar sobre dónde está el texto:   
 
 
-![Primera Parte del Ingenioso Hidalgo, 1605](img/L1_003.png) 
+![Primera Parte del Ingenioso Hidalgo, 1605](https://tthub-repo.github.io/lecciones/img/L1_003.png) 
 ![Alfonso de Palencia, *Parallelae*, Sevilla 1491](https://tthub-repo.github.io/lecciones/img/L1_004.jpg)  
 
 ![Hunain Ibn Ishaq, *Libro de los buenos proverbios*, s. IX ](https://tthub-repo.github.io/lecciones/img/L1_005.jpg) 
