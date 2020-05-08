@@ -86,7 +86,7 @@ Cada módulo define una serie de etiquetas propias (de un total de aproximadamen
 
 Cada módulo tiene una presentación general, donde se explica el funcionamiento de cada uno de sus elementos. Por ejemplo, si estamos interesados en los diccionarios, tenemos a nuestra disposición la [explicación general](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html) sobre diccionarios en las *Guías directrices*, y si necesitamos uno de sus elementos podemos acceder a su información individualizada, pongamos por caso [`<entryFree>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-entryFree.html) (véase Figura 1).
 
-![Definición del elemento "EntryFree" en las GD](img/L4_001.png)
+![Definición del elemento "EntryFree" en las GD](https://tthub-repo.github.io/lecciones/img/L4_001.png)
 
 Cada uno de los elementos, contiene siempte: 
 
