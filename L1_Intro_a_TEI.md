@@ -31,7 +31,7 @@ TEI posee una plataforma web donde se publican tanto las *Guías directrices*, c
 
 > [English] The *TEI Guidelines for Electronic Text Encoding and Interchange* define and document a markup language for representing the structural, renditional, and conceptual features of texts. They focus (though not exclusively) on the encoding of documents in the humanities and social sciences, and in particular on the representation of primary source materials for research and analysis. These guidelines are expressed as a modular, extensible XML schema, accompanied by detailed documentation, and are published under an open-source license. The Guidelines are maintained and developed by the TEI Consortium, through its Technical Council, with the support and participation of the TEI community.
 
-> [Español] "Las *Guías Directrices para la codificación y el intercambio de textos electrónicos* definen y documentan un lenguaje de marcado para la representación de las características estructurales, físicas y conceptuales de los textos. Su foco de atención es el marcado de documentos en Humanidades y Ciencias Sociales (aunque no exclusivamente), y en particular la representación de fuentes primarias para su explotación y análisis. Estas líneas directrices se expresan de forma modular, a través de esquemas XML extensibles, están acompañadas de una documentación detallada, y publicadas bajo una licencia en acceso abierto. Las *Guías Directrices* son mantenidas y desarrolladas por el Conaoexio TEI, a través de su Comité Técnico, con el respaldo y la participación de la comunidad TEI". 
+> [Español] "Las *Guías Directrices para la codificación y el intercambio de textos electrónicos* definen y documentan un lenguaje de marcado para la representación de las características estructurales, físicas y conceptuales de los textos. Su foco de atención es el marcado de documentos en Humanidades y Ciencias Sociales (aunque no exclusivamente), y en particular la representación de fuentes primarias para su explotación y análisis. Estas líneas directrices se expresan de forma modular, a través de esquemas XML extensibles, están acompañadas de una documentación detallada, y publicadas bajo una licencia en acceso abierto. Las *Guías Directrices* son mantenidas y desarrolladas por el Consorcio TEI, a través de su Comité Técnico, con el respaldo y la participación de la comunidad TEI". 
 http://www.tei-c.org/Guidelines/ 
   
 Veamos paso por paso los diferentes puntos básicos de esta definición:  
@@ -116,7 +116,7 @@ Así pues, en 1987 tuvo lugar la primera reunión en el Vassar College (Poughkee
 
 En los años sucesivos, un comité, con la participación de más de 50 colaboradores, empezó la redacción de lo que acabaría siendo la primera propuesta de las *Guías Directrices*, conocida como TEI P1, publicada en junio de 1990. Se inició, posteriormente, una segunda fase con la creación de los hoy habituales "working groups" o grupos de trabajo por disciplina, con más de 100 colaboradores que, tras un trabajo de revisión y mejoras, publicaron una segunda propuesta. Pocos años después, en mayo de 1994, salieron las primeras *Guías directrices* oficiales (P3), para las cuales se había contado ya con más de 200 colaboradores.
 
-Empezó entonces un enorme trabajo de difusión del modelo, a través de seminarios y talleres, pero sobretodo con muchos test y la retroalimentación de los colaboradores, que es lo que todavía hoy ayuda a identificar problemas, señalar necesidades concretas y proponer soluciones; para tal fin, TEI utiliza la plataforma GitHub donde se pueden solicitar nuevas funcionalidades TEI (["Feature Requests"](https://github.com/TEIC/TEI/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+FeatureRequest%22)) o llamar la atención sobre errores existentes (["Bug"](https://github.com/TEIC/TEI/issues)).
+Empezó entonces un enorme trabajo de difusión del modelo, a través de seminarios y talleres, pero sobre todo con muchos test y la retroalimentación de los colaboradores, que es lo que todavía hoy ayuda a identificar problemas, señalar necesidades concretas y proponer soluciones; para tal fin, TEI utiliza la plataforma GitHub donde se pueden solicitar nuevas funcionalidades TEI (["Feature Requests"](https://github.com/TEIC/TEI/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+FeatureRequest%22)) o llamar la atención sobre errores existentes (["Bug"](https://github.com/TEIC/TEI/issues)).
 
 En el año 2000 se creó, en fin, el Consorcio TEI que aspiraba a constituirse como una organización sin ánimo de lucro, permanente, académica y económicamente independiente. Una de las prioridades más urgentes que se planteó en ese momento fue la conversión de las *Guías Directrices* al lenguaje XML, pues las primeras se habían creado a partir del lenguaje [SGML](https://www.w3.org/MarkUp/SGML/), un sistema más complejo, pesado y no tan ágil como XML. Así, solo dos años después, en 2002, apareció la P4, que por primera vez proponía un marco de trabajo basado ya en XML.
 
@@ -147,7 +147,7 @@ Además, TEI cuenta con otros dos niveles de participación y organización que 
 
 Todo ello, se engloba en la gran comunidad de usuarios conectada a través de la [lista de correo electrónico](http://www.tei-c.org/support/#tei-l) y de espacios participativos como la [Wiki](https://wiki.tei-c.org/index.php/Main_Page).  
 
-Además de los talleres y seminarios que pueden tener lugar a lo largo del año, el Consorcio organiza des del año 2001 una conferencia anual, las últimas de las cuales han tenido lugar en [Lyon](http://tei2015.huma-num.fr/en/) (2015), [Vienna](http://tei2016.acdh.oeaw.ac.at/) (2016), y [Victoria](https://hcmc.uvic.ca/tei2017/index.php) (2017), [Tokyo](https://tei2018.dhii.asia/) (2018) y  [Graz](https://graz-2019.tei-c.org/) (2019).  
+Además de los talleres y seminarios que pueden tener lugar a lo largo del año, el Consorcio organiza desde el año 2001 una conferencia anual, las últimas de las cuales han tenido lugar en [Lyon](http://tei2015.huma-num.fr/en/) (2015), [Vienna](http://tei2016.acdh.oeaw.ac.at/) (2016), y [Victoria](https://hcmc.uvic.ca/tei2017/index.php) (2017), [Tokyo](https://tei2018.dhii.asia/) (2018) y  [Graz](https://graz-2019.tei-c.org/) (2019).  
 
 En este esquema se refleja el engranaje de la comunidad TEI:  
 
@@ -169,7 +169,7 @@ El uso más extendido de XML-TEI es, sin duda, la edición de textos. Esta es su
 * [Le Petit Thalamus de Montpellier](http://thalamus.huma-num.fr/chronique-francaise/annee-1502.html)
 * [Les manuscrits de Madame Bovary](https://www.bovary.fr/)
 * [Mark Twain Project](http://www.marktwainproject.org/homepage.html)
-* [Peter Plaoul: The Electronic Critical Edition of Plaoul's Commentary on the Sentences](http://scta.lombardpress.org/text/questions/plaoulcommentary) 
+* [Peter Plaoul: The Electronic Critical Edition of Plaoul's Commentary on the Sentences](https://scta.lombardpress.org/#/) 
 
 Algunas de las ediciones aprovechan las posibilidades del medio digital para ofrecer los textos de múltiples ediciones en paralelo e incluso los textos originales junto con sus traducciones, como por ejemplo los dos proyectos siguientes:
 
@@ -251,7 +251,7 @@ Algunos de estos proyectos son:
 
 ## Corpus lingüísticos
 
-TEI permite tanto una codificación generalista (por corpus, subcorpus, obras, autores, períodos, etc.), como un nivel de granularidad muy fino que comprende incluso las unidades léxicas; por ello, en algunos de los corpus la utilización de este sistema es especialmente interesante para la lematización de sus textos, es decir, para añadir la información gramatical a cada una de las palabras.
+TEI permite tanto una codificación generalista (por corpus, subcorpus, obras, autores, períodos, etc.), como un nivel de detalle muy fino que comprende incluso las unidades léxicas; por ello, en algunos de los corpus la utilización de este sistema es especialmente interesante para la lematización de sus textos, es decir, para añadir la información gramatical a cada una de las palabras.
 
 Algunos corpus que utilizan TEI son:
 
@@ -269,14 +269,14 @@ Algunas editoriales han decidido adoptar el marcado TEI-XML como método de publ
 
 ## Otras aplicaciones
 
-TEI-XML puede aplicarse también en función de la utilización de otras herramientas. Así, y sólo por citar dos, existen ejemplos para elaborar líneas cronológicas ([Timeline](https://en.wikibooks.org/wiki/XQuery/TEI\_Document\_Timeline)), o para realizar transcripciones de facsímiles por zonas de píxeles, como en el proyecto del [*Album interactif de paléographie médiévale*](http://paleographie.huma-num.fr/exo.php?id=minuscule_caroline).
+TEI-XML puede aplicarse también en función de la utilización de otras herramientas. Así, y sólo por citar dos, existen ejemplos para elaborar líneas cronológicas ([Timeline](https://en.wikibooks.org/wiki/XQuery/TEI\_Document\_Timeline)), o para realizar transcripciones de facsímiles por zonas de píxeles, como en el proyecto del [*Album interactif de paléographie médiévale*](https://paleographie.huma-num.fr/).
 
 # IV. Algunos recursos donde aprender XML-TEI
 
 Además de la sección "Aprende" en nuestro proyecto [*TTHub. Tecnologías del texto y edición digital*](https://tthub.io/aprende/), donde encontrarás lecciones, recursos, ejemplos, ejercicios y un espacio colaborativo, recomiendo: 
 
 * Burghart, Marjorie & Elena Pierazzo. "[Digital Scholarly Editions: Manuscripts, Texts and TEI Encoding](https://teach.dariah.eu/course/view.php?id=32&section=0)". #dariahTeach. DH Teaching material,2017. 
-* Schreibman, Susan & Roman Bleier. "[Text encoding and the TEI](https://teach.dariah.eu/course/view.php?id=23)". #dariahTeach. DH Teaching material, 2017.
+* Schreibman, Susan & Roman Bleier. "[Text encoding and the TEI](https://teach.dariah.eu/course/view.php?id=23)". #dariahTeach. DH Teaching material, 2017. Dsponible también en español ["La Codificación textual y la iniciativa TEI"](https://teach.dariah.eu/course/view.php?id=51).
 * [Teach Yourself TEI](http://www.tei-c.org/support/learn/teach-yourself-tei/): Esta es la página de recursos que ofrece el mismo Consorcio TEI.
 * [TEI By Example](http://teibyexample.org/): Aunque tiene ahora ya algunos años, sigue siendo uno de los tutoriales más completos para estudiar TEI-XML.  
 * [TEI@Oxford Teaching Pages](http://tei.it.ox.ac.uk/Talks/): La universidad de Oxford es conocida especialmente por sus cursos de verano sobre HD, aquí podréis encontrar una gran cantidad de presentaciones, teoría y ejercicios que os serán de mucha utilidad. 
