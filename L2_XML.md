@@ -15,7 +15,7 @@ lang: es
 
 XML (Extensible Markup Language) es uno de los lenguajes más utilizados en el mundo de la informática, pues es uno de los más simples, flexibles y adecuados para asegurar la interoperabilidad con una gran cantidad de aplicaciones, plataformas y lenguajes informáticos.
 
-En nuestras vidas lo utilizamos casi diariamente, incluso sin saberlo: ¿sabías que a la base de un documento Word está XML? Pues sí, si descomprimen un documento de Microsoft Word o OpenOffice, por ejemplo, descubrirán que el documento está compuesto por una serie de documentos XML.
+En nuestras vidas lo utilizamos casi diariamente, incluso sin saberlo: ¿sabías que detrás de un documento Word está XML? Pues sí, si descomprimes un documento de Microsoft Word o OpenOffice, por ejemplo, descubrirás que el documento está compuesto por una serie de documentos XML.
 
 En esta lección veremos los principios fundamentales que rigen el XML para así poder comprender los mecanismos de la Text Encoding Initiative.
 
@@ -26,7 +26,7 @@ Un estándar web es un conjunto de prácticas consensuadas que permiten el inter
 
 Al igual que sucede en las lenguas modernas, donde existe un “estándar” y un conjunto de reglas gramaticales, la web tiene también diferentes lenguajes regidos por una serie de reglas y recomendaciones.
 
-El uso de estándares permite que todo el mundo tenga acceso a la totalidad de la información en la red y propicia un desarrollo más rápido y más sólido. Por ejemplo, el uso de estándares facilita la visualización de los sitios en todos los navegadores y permite una indexación de los metadatos de una manera más eficiente.
+El uso de estándares permite que todo el mundo tenga acceso a la totalidad de la información en la red y propicia un desarrollo más rápido y más sólido. Por ejemplo, el uso de estándares facilita la visualización de los sitios en todos los navegadores y permite una indexación de los metadatos de una manera más eficiente. 
 
 Una lectura útil y aclaradora sobre los estándares web la podéis encontrar aquí: [¿Qué son los estándares web y por qué debería usarlos?](https://www.webstandards.org/learn/faq/faq_es/)
 
@@ -51,6 +51,8 @@ Os recomiendo esta breve historia del World Wide Web por Tim Berners-Lee ([The W
 Existen otros tipos de estándares, no necesariamente relacionados o creados para la Web. En algún momento habrán oído hablar de los [estándares ISO](https://www.iso.org/standards.html), aquellos creados por la Organización Internacional para la Estandarización (en inglés, [International Ogranization for Standardization](https://www.iso.org/standards.html)).
 
 Esta organización se encarga de publicar estándares bajo forma de documentos oficiales que estipulan los requisitos, las especificaciones, guías directrices o características que pueden ser usadas de manera consistente para asegurar qué materiales, productos, procesos o servicios se adecuan a sus propósitos. XML no es una norma ISO pero sí puede utilizar algunos estándares aprobados por ISO, como es por ejemplo la codificación de los caracteres.
+
+El uso de estándares además de la interoperabilidad, contribuye al acceso abierto, porqué promueve formatos abiertos y gratuitos, disponibles para todo el mundo. Cualquier persona puede publicar un documento en XML o HTML utilizando un simple editor de texto plano. Esto contrasta con otros formatos que son propietarios como el Microsoft Word, del que existe una equivalencia abierta el Formato de Documento Abierto (.odt, ods, etc.). O el mismo pdf, que aunque es un estándar ISO y podemos visualizarlo e incluso generarlo (desde un .doc, un .md, o otros), pertenece en origen a Adobe y solo puede ser editado con una licencia. 
 
 ## El estándar XML
 
@@ -126,12 +128,12 @@ Y un ejemplo concreto podría ser este:
 <autor id="esquilo">Esquilo</autor>
 ```
 
-* Un documento XML tiene forma de árbol. La estructura consiste en la anidación sin límites de unos elementos al interior de otros, construyendo así una especie de árbol o estructura arbórea. Por eso, necesitamos siempre un solo elemento raíz del que cuelguen todos los otros. En el ejemplo, el elemento `<catalogo>`, engloba una serie de libros (`<libro>`), que a su vez, tienen dos elementos descendientes: `<autor>` y `<titulo>`.
+* Un documento XML tiene forma de árbol. La estructura consiste en la anidación sin límites de unos elementos en el interior de otros, construyendo así una especie de árbol o estructura arbórea. Por eso, necesitamos siempre un solo elemento raíz del que cuelguen todos los otros. En el ejemplo, el elemento `<catalogo>`, engloba una serie de libros (`<libro>`), que a su vez, tienen dos elementos descendientes: `<autor>` y `<titulo>`.
 * Los elementos y los atributos son sensibles a las mayúsculas y minúsculas, de manera que si se equivocan en una sola letra, poniéndola en mayúscula en lugar de minúscula o viceversa, se encontrarán con un error.
 
 # III. Estructura de un documento
 
-Pasemos ahora a ver con más detalle cada una de las partes de un documento XML. Les aconsejo que para esta sección abran el documento [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml), que es un pequeño fichero XML comentado. Lo pueden copiar, abrir con oXygen u cualquier programa de edición XML, y anotar libremente con sus comentarios.
+Pasemos ahora a ver con más detalle cada una de las partes de un documento XML. Te aconsejo que para esta sección abras el documento [Ejemplo 2: un documento XML asociado a una DTD](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml), que es un pequeño fichero XML comentado. Lo puedes copiar, abrir con oXygen o cualquier programa de edición XML, y anotar libremente con sus comentarios.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -194,11 +196,11 @@ Este elemento no puede ir precedido por ningún comentario, ni espacio en blanco
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 ```
 
-* Los valores del atributo “standalone” pueden ser afirmativo “yes” o negativo “no”; en el primer caso significa que no depende de ningún esquema externo y que por tanto el documento se regirá solo según las reglas del lenguaje XML; en cambio, si no es “standalone” significa que depende de un modelo abstracto concreto, es decir, concretamente de un esquema o DTD externos.
+* Los valores del atributo “standalone” pueden ser afirmativo “yes” o negativo “no”; en el primer caso significa que no depende de ningún esquema externo y que por tanto el documento se regirá solo según las reglas del lenguaje XML; en cambio, si no es “standalone” significa que depende de un modelo abstracto específico, es decir, concretamente de un esquema o DTD externos.
 
 ## Declaración de tipo de documento
 
-En algunos casos, un documento XML puede depender de un modelo abstracto que puede tener diferentes formas. Un caso frecuente es el modelo de la [DTD](https://es.wikipedia.org/wiki/Definici%C3%B3n_de_tipo_de_documento) (Document Type Definition), ampliamente utilizado en XML, aunque en desuso en el campo de TEI (donde se prefieren los esquemas [RelaxNG](https://en.wikipedia.org/wiki/RELAX_NG)). De esta manera, podemos encontrarnos en el prólogo del documento con una declaración del tipo de documento, “Documento Type” que tiene esta forma:
+A contniuación, en el prólogo de todo archivo XML, nos encontramos con la declaración del tipo del documento con el que estamos trabajando (Document Type, abreviado DOCTYPE]. En algunos casos, un documento XML puede depender de un modelo abstracto que puede tener diferentes formas. Un caso frecuente es el modelo de la [DTD](https://es.wikipedia.org/wiki/Definici%C3%B3n_de_tipo_de_documento) (Document Type Definition), ampliamente utilizado en XML, aunque en desuso en el campo de TEI (donde se prefieren los esquemas [RelaxNG](https://en.wikipedia.org/wiki/RELAX_NG) por estar también escritos en XML). La declaración del tipo de documento tiene esta forma:
 
 ```xml
 <!DOCTYPE curso SYSTEM "ejemplo-2-DTD.dtd">
@@ -292,7 +294,7 @@ Todo documento XML tiene un solo elemento raíz (en inglés, “root”), el ún
 
 ![Ejemplo de esquema en árbol](https://tthub-repo.github.io/lecciones/img/L2_001.jpg)
  
-Como vemos, la estructura arbórea consta de un solo elemento raíz (“curso”), del que descienden todos los otros elementos. Estos elementos pueden constituirse en lo que llamamos “nodos” (en inglés “nodes”) que pueden ser: a) un subárbol: por ejemplo, metadatos con sus cuatro elementos descendientes titulo, fecha, profesor, universidad; b) un simple elemento, por ejemplo, el nodo titulo; c) la misma secuencia de caracteres que encontramos como contenido al interior de los elementos. Es importante conocer esta nomenclatura y utilizar este vocabulario para no dar lugar a equívocos.
+Como vemos, la estructura arbórea consta de un solo elemento raíz (“curso”), del que descienden todos los otros elementos. Estos elementos pueden constituirse en lo que llamamos “nodos” (en inglés “nodes”) que pueden ser: a) un subárbol: por ejemplo, metadatos con sus cuatro elementos descendientes titulo, fecha, profesor, universidad; b) un simple elemento, por ejemplo, el nodo titulo; c) la misma secuencia de caracteres que encontramos como contenido en el interior de los elementos. Es importante conocer esta nomenclatura y utilizar este vocabulario para no dar lugar a equívocos.
 
 ## Elementos y contenido
 
@@ -307,17 +309,17 @@ En lo que concierne a los identificadores, es importante recordar que:
 
 ## Atributos y valores
 
-Los elementos pueden poseer atributos que añadan una característica adicional al propio elemento; su orden y número no es relevante. El nombre del atributo va siempre al interior de la etiqueta de apertura y va precedido de un espacio, seguido del símbolo =, y de comillas, dentro de las cuales aparece el “valor”. He aquí un ejemplo:
+Los elementos pueden poseer atributos que añadan una característica adicional al propio elemento; su orden y número no es relevante. El nombre del atributo va siempre dentro de la etiqueta de apertura y va precedido de un espacio, seguido del símbolo =, y de comillas, dentro de las cuales aparece el “valor”. He aquí un ejemplo:
 
 ```xml
 <fecha cuando="2017-11-09">09 noviembre 2017</fecha>
 ```
 
-Los nombres de los atributos deben formularse igual que los nombres de los elementos. Su orden al interior del elemento es libre, siempre y cuando no se repita.
+Los nombres de los atributos deben formularse igual que los nombres de los elementos. Su orden en el interior del elemento es libre, siempre y cuando no se repita.
 
 ## Comentarios y entidades 
 
-Los documentos XML pueden contener comentarios para que los autores puedan dejar sus notas, normalmente relativas al proceso de codificación del mismo documento. Pueden aparecer en cualquier lugar del documento mientras sea contenido; no podrán nunca situarse al interior de una marca o etiqueta. Por regla general, no están destinados a ser procesados por la máquina, y de hecho, son ignorados por defecto. Los comentarios están delimitados por `<!--` y `-->`. Por ejemplo:
+Los documentos XML pueden contener comentarios para que los autores puedan dejar sus notas, normalmente relativas al proceso de codificación del mismo documento. Pueden aparecer en cualquier lugar del documento mientras sea contenido; no podrán nunca situarse dentro de una marca o etiqueta. Por regla general, no están destinados a ser procesados por la máquina, y de hecho, son ignorados por defecto. Los comentarios están delimitados por `<!--` y `-->`. Por ejemplo:
 
 ```xml
 <!-- ¡esto es un comentario! -->
@@ -341,7 +343,7 @@ Los esquemas constituyen, en general, un fichero diferente, de esta manera podem
 <curso> .... </curso>
 ```
 
-Un esquema establece la serie de elementos, sus nombres y los atributos que estos podrán contener; además, establece de qué manera se podrán anidar los unos con los otros. El parser que debe validar el documento compara el marcado XML con el esquema y recoge aquellos puntos en que el documento difiere de sus reglas. Algunos parsers si encuentran defectos, rechazarán el documento, otros no, depende de las reglas que establezca el mismo. Todas las reglas, a parte obviamente de aquellas que pertenecen a la buena formación de cualquier documento XML, deben declararse en el esquema, de no ser así el documento será “inválido”.
+Un esquema establece la serie de elementos, sus nombres y los atributos que estos podrán contener; además, establece de qué manera se podrán anidar los unos con los otros. El parser que debe validar el documento compara el marcado XML con el esquema y recoge aquellos puntos en que el documento difiere de sus reglas. Algunos parsers si encuentran defectos, rechazarán el documento, otros no, depende de las reglas que establezca el mismo. Todas las reglas, aparte obviamente de aquellas que pertenecen a la buena formación de cualquier documento XML, deben declararse en el esquema, de no ser así el documento será “inválido”.
 
 Hay diferentes tipos de esquema:
 
@@ -359,7 +361,7 @@ Un documento XML debe estar [bien formado y ser válido](https://es.wikipedia.or
 La expresión “bien formado” significa que el documento XML debe estar expresado correctamente según la gramática de XML. Entre las reglas que debemos seguir escrupulosamente señalaremos las siguientes:
 
 * Debe haber un único nodo raíz que contenga la totalidad del documento XML.
-* Todos los elementos deben estar bien anidados (“nested”) al interior de un nodo raíz y nunca deben solaparse los unos con los otros. Así, por ejemplo, esto sería correcto:
+* Todos los elementos deben estar bien anidados (“nested”) en el interior de un nodo raíz y nunca deben solaparse los unos con los otros. Así, por ejemplo, esto sería correcto:
 
 ```xml
 <metadatos>
