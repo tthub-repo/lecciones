@@ -19,7 +19,7 @@ En el ámbito de las humanidades y las ciencias sociales, el texto representa, e
 
 La iniciativa de marcado de textos nace pues de la necesidad de procesar los textos desde un punto de vista informático, para que, en definitiva, no sea susceptible solo de una lectura "plana", sino para que sea procesable a través de múltiples herramientas como pueden ser programas de concordancias, análisis estilométricos, gráficos de frecuencias, segmentación gramatical o, sobretodo, su publicación web y la posibilidad de realizar búsquedas inteligentes.
 
-![Logo de la Text Encoding Initiative](https://tthub-repo.github.io/lecciones/img/L1_002.png){ height=200px }
+![Logo de la Text Encoding Initiative](https://tthub-repo.github.io/lecciones/img/L1_002.png){height=200px}
 
 La [Text Encoding Initiative](http://www.tei-c.org/) surgió a finales de los años ochenta y fue la primera iniciativa científica destinada a la codificación informática de textos, actualmente es una de las más utilizadas y uno de los temas centrales en la disciplina de las humanidades digitales.
 
