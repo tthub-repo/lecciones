@@ -9,7 +9,7 @@ lang: es
 # {{ page.title }}
 ## {{ page.author }}
 ### {{ page.date }}
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3530805.svg)](https://doi.org/10.5281/zenodo.3530805)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4445737.svg)](https://doi.org/10.5281/zenodo.4445737)
 
 # I. Estándares web y XML 
 
@@ -444,4 +444,4 @@ Existe una enorme cantidad de tutoriales en línea, entre los cuales destacamos:
 
 ### Cita propuesta: 
 
-Allés Torrent, Susanna (2019). "El lenguaje XML y algunos conceptos generales". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l2-xml/> DOI: [10.5281/zenodo.3530805](https://doi.org/10.5281/zenodo.3530805) y se han ido actualizando periódicamente. 
+Allés Torrent, Susanna (2019). "El lenguaje XML y algunos conceptos generales". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l2-xml/> DOI: [10.5281/zenodo.4445737](https://doi.org/10.5281/zenodo.4445737) y se han ido actualizando periódicamente. 
