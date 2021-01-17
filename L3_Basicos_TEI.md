@@ -9,7 +9,7 @@ lang: es
 # {{ page.title }}
 ## {{ page.author }}
 ### {{ page.date }}
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3531506.svg)](https://doi.org/10.5281/zenodo.3531506)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4446128.svg)](https://doi.org/10.5281/zenodo.4446128)
 
 # I. Introducción
 
@@ -26,16 +26,16 @@ En la [lección *El lenguaje XML (eXtensible Markup Language) y algunos concepto
 
 Un documento TEI es un documento XML de manera que sigue la misma sintaxis que cualquier otro documento XML. En esta imagen se reproduce la estructura mínima de un documento XML-TEI, que básicamente se compone de:
 
-* el prólogo XML
-* el encabezado
-* el cuerpo del texto
+* el prólogo XML (en inglés "[Prolog](https://sbnwiki.astro.umd.edu/wiki/Anatomy_of_the_XML_Prolog)" que comprende todo lo que va desde el principio del documento hasta el elemento raíz, e incluye normalmente la declaración XML y cualquier instrucción de procesamiento como la asociación de un esquema.
+* elemento raíz ("root element"), en este caso `TEI`
+* el encabezado ("header"), `teiHeader`
+* el cuerpo del texto ("text", "body"), `text`y `body`
 
 ![Estructura básica de un documento XML-TEI](https://tthub-repo.github.io/lecciones/img/L3_001.jpg)
 
 En el prólogo del documento XML-TEI encontramos los elementos típicos de un documento XML:
-
-* La declaración XML nos indica que se trata de un documento XML y que el tipo de codificación utilizado es el UTF-8.
-* La asociación del modelo de esquema: en este caso se trata de un esquema RelaxNG (.rng). Es la misma asociación que establecían las DTD a través del DOCTYPE (como se ve en el [Ejemplo 2](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml)). Gracias a esta indicación sabemos que este documento XML-TEI depende de un esquema concreto, el [TEI-Lite](http://www.tei-c.org/Guidelines/Customization/Lite/), que es un modelo minimalista de TEI donde se contemplan los elementos obligatorios y algunos de los más utilizados.
+* La declaración XML nos indica que se trata de un documento XML y que el tipo de codificación utilizado es el [UTF-8](https://es.wikipedia.org/wiki/UTF-8), el formato de codificación de caracteres de Unicode más utilizado.
+* La asociación del modelo de esquema: en este caso se trata de un esquema RelaxNG (.rng). Es la misma asociación que establecían las DTD a través del DOCTYPE (como se ve en el [Ejemplo 2](https://github.com/tthub-repo/ejemplos/blob/master/L2_ejemplo-2.xml)). Gracias a esta indicación sabemos que este documento XML-TEI depende de un esquema concreto, el [TEI-Lite](http://www.tei-c.org/Guidelines/Customization/Lite/), que es un modelo minimalista de TEI donde se contemplan los elementos obligatorios y sólo los más utilizados.
 
 Acabado el prólogo, aparece el elemento raíz `<TEI>` que engloba la totalidad del documento. Aquí irán todos los otros elementos XML-TEI: el encabezado y el texto, con la siguiente estructura:
 
@@ -79,7 +79,7 @@ En nuestro repositorio de ejemplos en GitHub, también encontraréis un ejemplo 
 El `<teiHeader>` tiene un solo elemento obligatorio, llamado [`<fileDesc>`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-fileDesc.html). Este elemento es el responsable de contener tanto la información sobre el fichero XML-TEI con el que estamos trabajando, como los detalles de la fuente primaria:
 
 * [`<titleStmt>`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-titleStmt.html) contiene la información sobre el título del fichero propiamente dicho; éste a su vez debe ir dentro de un elemento más específico llamado `<title>`.
-* [`<publicationStmt>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-publicationStmt.html) recoge la información sobre la publicación digital; la información debe ir organizada en párrafos: `<p>`
+* [`<publicationStmt>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-publicationStmt.html) recoge la información sobre la publicación digital; la información puede ir organizada en párrafos: `<p>` o bien en elementos propios como los que vemos en el ejemplo (`pubplace`, `publisher`, `date`).
 * [`<sourceDesc>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-sourceDesc.html) contiene la información de la fuente original.
 
 Pongamos un ejemplo de la Biblioteca Virtual Miguel de Cervantes; imaginemos que estamos haciendo la edición digital de una edición antigua de la La Regenta (tal y como aparece en [este caso](http://www.cervantesvirtual.com/obra/la-regenta--1/). El encabezado podría marcarse de esta manera:
@@ -96,9 +96,9 @@ Pongamos un ejemplo de la Biblioteca Virtual Miguel de Cervantes; imaginemos que
                 <publisher>Biblioteca Virtual Miguel de Cervantes</publisher>
                 <date>2000</date>      
             </publicationstmt>
-            <sourcedesc>La Regenta, por Leopoldo Alas (Clarin). Prólogo 
+            <sourcedesc><p>La Regenta, por Leopoldo Alas (Clarin). Prólogo 
             de Benito Pérez Galdós, Madrid, Librería de Fernando 
-            Fe 1900</sourcedesc>
+            Fe 1900</p></sourcedesc>
         </filedesc>
     </teiheader>
 ```
@@ -115,7 +115,7 @@ En las [*Guías directrices*](https://tei-c.org/guidelines/P5/) de TEI encontrar
 
 El cuerpo del documento corresponde al elemento `<text>` que puede contener, a su vez, tres (sub)elementos:
 
-* [`<front>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-front.html): se utiliza para marcar elementos paratextuales que preceden el texto, tales como prefacios, prólogos, cartas dedicatorias, una lista de personajes, etc. No es obligatorio.
+* [`<front>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-front.html): se utiliza para marcar elementos paratextuales que preceden el texto, tales como prefacios, prólogos, cartas dedicatorias, una lista de personajes, etc. y no es obligatorio.
 * [`<body>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-body.html): se consagra al texto propiamente dicho del documento y es obligatorio.
 * [`<back>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-back.html): puede utilizarse para añadir los apéndices, índices, cronologías, bibliografías, etc. No es obligatorio.
 
@@ -155,18 +155,18 @@ Del ejemplo anterior, se puede observar cómo hemos utilizado el elemento `<div>
 
 Al afrontar cualquier estructuración de un texto, es pues un buen ejercicio empezar identificando las diferentes secciones del texto con `<div>` diferentes. Normalmente, cada una de las `<div>` tiene un atributo `@type` que ayuda a caracterizar esa sección en particular. El valor que puede conllevar `@type` es libre, con lo cual podemos utilizar el que mejor nos convenga (ej. libro, capítulo, escena, acto, poema, estrofa, etc.) y en la lengua que queramos.
 
-Otro atributo muy utilizado es el `@xml:id` que asigna un identificador único a aquella sección particular del texto. Este mecanismo es imprescindible en el caso que queramos aislar determinadas porciones del texto. Por ejemplo, con este mecanismo al buscar una palabra podremos recuperar fácilmente en qué sección del libro estaba. El `@xml:id` se puede utilizar en una gran variedad de elementos, como bien podéis imaginaros es realmente útil en los casos de capítulos, líneas, versos, páginas, etc. Además, identificando las secciones de esta manera facilitamos el que otras partes del documento apunten a esa sección en concreto; de hecho, para la creación de “links”, este es un requisito indispensable: para crear un enlace necesitamos decirle al ordenador que vaya de un punto hacia otro, es decir, de un punto hacia un identificador concreto. Un elemento `<div>` con los atributos mencionados tendría esta forma:
+Otro atributo muy utilizado es el `@xml:id` que asigna un identificador único a una sección particular del texto. Este mecanismo es imprescindible en el caso de que queramos aislar determinadas porciones del texto. Por ejemplo, con este mecanismo al buscar una palabra podremos recuperar fácilmente en qué sección del libro estaba. El `@xml:id` se puede utilizar en una gran variedad de elementos, como bien podéis imaginar es realmente útil en los casos de capítulos, líneas, versos, páginas, etc. Además, identificando las secciones de esta manera facilitamos el que otras partes del documento apunten a esa sección en concreto; de hecho, para la creación de “links”, este es un requisito indispensable: para crear un enlace necesitamos decirle al ordenador que vaya de un punto hacia otro, es decir, de un punto hacia un identificador concreto. Un elemento `<div>` con los atributos mencionados tendría esta forma:
 
 ```xml
 <div type="tomo" xml:id="tomo_1" > ...</div>
 ```
 
-El texto o la masa textual se incluye siempre al interior de elementos más concretos; no podemos añadir texto directamente dentro del elemento `<div>`. Por eso, en el caso que tengamos párrafos, utilizaremos el elemento `<p>`, en el caso que tuviéramos otros fragmentos de texto que no fueran párrafos, se podrían utilizar otros elementos más genéricos, como `<ab>` “anonymous block”, que indica cualquier unidad textual sin una semántica concreta (como es el caso, por ejemplo de “párrafo”, o “frase”).
+El texto o la masa textual se incluye siempre en el interior de elementos más concretos; no podemos añadir texto directamente dentro del elemento `<div>`. Por eso, en el caso que tengamos párrafos, utilizaremos el elemento `<p>`, en el caso que tuviéramos otros fragmentos de texto que no fueran párrafos, se podrían utilizar otros elementos más genéricos, como `<ab>` “anonymous block”, que indica cualquier unidad textual sin una semántica concreta (como es el caso, por ejemplo de “párrafo”, o “frase”).
 
 
 # V. Elementos comunes de todo documento TEI
 
-En primer lugar, conviene recordar que el sistema de codificación TEI se divide en módulos, cada uno destinado a una tipología textual: verso, drama, transcripciones de discurso, diccionarios, etc. Cada uno de estos módulos es descrito en las [*Guías directrices*](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html). A su vez, los módulos pueden ser obligatorios o optativos. Así, los módulos obligatorios son cuatro: [`tei`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ST.html), [`core`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/CO.html), [`header`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/HD.html), [`textstructure`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/DS.html); sin estos no tendríamos un documento válido. Los módulos optativos, en cambio, responden a tipologías textuales concretas.
+En primer lugar, conviene recordar que el sistema de codificación TEI se divide en módulos, cada uno destinado a una tipología textual: verso, drama, transcripciones de discurso, diccionarios, etc. Cada uno de estos módulos es descrito en las [*Guías directrices*](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html). A su vez, los módulos pueden ser obligatorios u optativos. Así, los módulos obligatorios son cuatro: [`tei`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ST.html), [`core`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/CO.html), [`header`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/HD.html), [`textstructure`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/DS.html); sin estos no tendríamos un documento válido. Los módulos optativos, en cambio, responden a tipologías textuales concretas y los veremos con más detalle en la [Lección 4: Las Guías directrices de la Text Encoding Initiative, su manejo y su traducción al español](https://tthub.io/aprende/l4-guias/). 
 
 Ahora, veremos aquellos elementos generales y comunes en todos los documentos TEI, como pueden ser párrafos, cuestiones de puntuación o de tipografía, nombres, fechas, abreviaturas, listas, notas a pie de página o de otra naturaleza, indexación, entre otros aspectos. Todos estos elementos se encuentran explicados en la sección ["3. Elements Available in All TEI Documents"](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html) de las *Guías directrices*. 
 
@@ -196,7 +196,7 @@ En los casos, por ejemplo, que quisiéramos dividir ulteriormente un párrafo, p
 ```
 (Juan Valera, *Pepita Jiménez*, Cap. I)
 
-El elemento `<p>` puede contener una gran variedad de elementos en su interior, prácticamente todos los que veremos a continuación.
+El elemento `<p>` puede contener una gran variedad de atributos (por ejemplo, `type` o `xml:id`) y elementos en su interior, prácticamente todos los que veremos a continuación.
 
 ## Puntuación
 
@@ -312,9 +312,9 @@ En múltiples ocasiones podemos encontrar en los textos nombres (ya sean topóni
 
 ### Nombres
 
-Un elemento general para codificar todo tipo de nombres o incluso frases es `<name>`; más adelante, veremos como existe un módulo específico para el marcado de nombres de lugar, de persona, etc. Otro elemento recurrente es `<rs>` (referring string) que indica un nombre con una denominación genérica o una cadena de referencia.
+Un elemento general para codificar todo tipo de nombres o incluso frases es `<name>`; más adelante, veremos cómo existe un módulo específico para el marcado de nombres de lugar, de persona, etc. Otro elemento recurrente es `<rs>` (referring string) que indica un nombre con una denominación genérica o una cadena de referencia.
 
-Los atributos más utilizados, a parte de `@xml:id`, son `@type` para especificarlos ulteriormente, y `@key` o `@ref` para referirse a un identificador concreto. Por ejemplo, supongamos esta frase: “Pepita Jiménez era hija de Francisca Gálvez quien la quería casar con D. Gumersindo”; la podríamos marcar de la siguiente manera:
+Los atributos más utilizados, a parte de `@xml:id`, son `@type` para especificarlos aparte, y `@key` o `@ref` para referirse a un identificador concreto. Por ejemplo, supongamos esta frase: “Pepita Jiménez era hija de Francisca Gálvez quien la quería casar con D. Gumersindo”; la podríamos marcar de la siguiente manera:
 
 ```xml
 <p><name xml:id="PJ">Pepita Jiménez</name> era hija de 
@@ -330,7 +330,7 @@ una vez establecidos los identificadores, podríamos referirnos a los personajes
 
 ### Fechas
 
-En lo que concierne a las fechas, se utiliza el elemento [`<date>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-date.html) y se regulariza su formato (de manera que la máquina la interprete correctamente) al interior del `@when`, cuyo formato es: año-mes-día. He aquí algunos ejemplos.
+En lo que concierne a las fechas, se utiliza el elemento [`<date>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-date.html) y se regulariza su formato (de manera que la máquina la interprete correctamente) en el interior de `@when`, cuyo formato es: año-mes-día. He aquí algunos ejemplos.
 
 ```xml
 <date when="1980-03-23">23 de marzo de 1980</date>
@@ -412,6 +412,7 @@ Pueden también establecerse diferentes tipos de lista a través del atributo `@
   <item n="5">...</item>
 </list>
 ```
+Este elemento sirve para listas genéricas que responden más bien a un formato presentacional. En muchos casos, cuando tenemos listas semánticas, donde el contenidos es más específico, las Guías directrices de TEI contemplan elementos más concretos, como por ejemplo `listBibl`para una lista de bibliografía, o `castList` para una lista de personajes. 
 
 ### Notas
 
@@ -429,7 +430,7 @@ Las notas pueden marcarse de dos maneras diferentes; una opción es situarla don
 Opción 1:
 
 ```xml
-<head>Historia y organización<note n="1">Todas las discusiones e informaciones relativas entorno a TEI desde sus inicios se encuentran en el repositorio de la lista TEI</note></head>
+<head>Historia y organización<note n="1">Todas las discusiones e informaciones relativas a TEI desde sus inicios se encuentran en el repositorio de la lista TEI</note></head>
 ```
 
 Opción 2:
@@ -439,7 +440,7 @@ Opción 2:
 ....
 [...]
 <div type="notas">
-<note xml:id="nota1" target="#referencia1">Todas las discusiones e informaciones relativas entorno a TEI desde sus inicios se encuentran en el repositorio de la lista TEI </note>
+<note xml:id="nota1" target="#referencia1">Todas las discusiones e informaciones relativas a TEI desde sus inicios se encuentran en el repositorio de la lista TEI </note>
 </div>
 ```
 
@@ -517,7 +518,7 @@ Hay otro tipo de intervenciones que pueden codificarse de manera aislada, como l
 Dentro de la categoría que las *Guías directrices* denominan “Milestone” encontramos diversos elementos que pueden indicar ciertas características físicas del documento. Entre estos elementos encontramos:
 
 * [`<milestone>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-milestone.html): marca un punto límite separando cualquier tipo de sección de un texto.
-* [`<gb>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gb.html) (gathering begins) puede indicar el inicio o final de la folación de un manuscrito, por ejemplo donde empieza y donde acaba un cuaderno.
+* [`<gb>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gb.html) (gathering begins) puede indicar el inicio o final de la foliación de un manuscrito, por ejemplo donde empieza y donde acaba un cuaderno.
 * [`<pb>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) (page break): indica el cambio de página.
 * [`<lb>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html) (line break): indica el cambio de línea.
 * [`<cb>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cb.html) (column break): indica el cambio de columna
@@ -535,8 +536,8 @@ Dentro de la categoría que las *Guías directrices* denominan “Milestone” e
 
 ### Cita propuesta: 
 
-Allés Torrent, Susanna (2019). "Estructura básica y elementos comunes de los documentos XML-TEI". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l3-basicos-tei/> DOI: [10.5281/zenodo.3531506](https://doi.org/10.5281/zenodo.3531506)
+Allés Torrent, Susanna (2019). "Estructura básica y elementos comunes de los documentos XML-TEI" (v.2). *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l3-basicos-tei/> DOI: [10.5281/zenodo.4446128](https://doi.org/10.5281/zenodo.4446128)
 
 
 
-[^1]: Estos materiales fueron creados en el marco del certificado de [Experto Universitario en Humanidades Digitales](http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/), ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia. 
+[^1]: Estos materiales fueron creados en el marco del certificado de [Experto Universitario en Humanidades Digitales](http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/), ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia y se han ido actualizando periódicamente. 
