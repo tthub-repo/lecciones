@@ -444,7 +444,4 @@ Existe una enorme cantidad de tutoriales en línea, entre los cuales destacamos:
 
 ### Cita propuesta: 
 
-Allés Torrent, Susanna (2019). "El lenguaje XML y algunos conceptos generales". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l2-xml/> DOI: [10.5281/zenodo.3530805](https://doi.org/10.5281/zenodo.3530805)
-
-
-[^1]: Estos materiales fueron creados en el marco del certificado de [Experto Universitario en Humanidades Digitales](http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/), ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia. 
+Allés Torrent, Susanna (2019). "El lenguaje XML y algunos conceptos generales". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l2-xml/> DOI: [10.5281/zenodo.3530805](https://doi.org/10.5281/zenodo.3530805) y se han ido actualizando periódicamente. 
