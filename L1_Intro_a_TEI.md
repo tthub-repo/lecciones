@@ -1,5 +1,5 @@
 ---
-title: Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos[^1]
+title: Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos
 author: Susanna Allés Torrent
 date: 2019
 layout: default
@@ -8,7 +8,6 @@ lang: es
 
 # {{ page.title }}
 ## {{ page.author }}
-### {{ page.date }}
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4430863.svg)](https://doi.org/10.5281/zenodo.4430863)
 
 Esta lección ofrece una primera aproximación a la Text Encoding Initiative, un marco de trabajo, utilizado internacionalmente y por una gran comunidad de usuarios, concebido especialmente para la codificación, la explotación informática, la publicación en línea y la preservación de textos en ciencias sociales y humanidades. Para ello, se tratan conceptos generales como la codificación de los textos, su utilidad o los campos de aplicación.
@@ -315,7 +314,4 @@ TEI Consortium (2014), "TEI: History". <http://www.tei-c.org/about/history/>.
 
 ### Cita propuesta:
 
-Allés Torrent, Susanna (2019). "Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l1-intro-a-tei/> DOI: [10.5281/zenodo.4430863](https://doi.org/10.5281/zenodo.4430863)
-
-
-[^1]: Estos materiales fueron creados en el marco del certificado de [Experto Universitario en Humanidades Digitales](http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/), ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia y se han ido actualizando periódicamente.
+Allés Torrent, Susanna (2019). "Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos" (v.2). *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l1-intro-a-tei/> DOI: [10.5281/zenodo.4430863](https://doi.org/10.5281/zenodo.4430863)
