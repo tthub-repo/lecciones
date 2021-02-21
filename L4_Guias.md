@@ -144,4 +144,4 @@ En el apartado de las [Guidelines](http://www.tei-c.org/Guidelines/), aparte de 
 
 ### Cita propuesta: 
 
-Allés Torrent, Susanna (2019). "Las *Guías directrices* de la Text Encoding Initiative, su manejo y su traducción al español". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l4-guias/> DOI: [10.5281/zenodo.3531573](https://doi.org/10.5281/zenodo.3531573)
+Allés Torrent, Susanna (2019). "Las *Guías directrices* de la Text Encoding Initiative, su manejo y su traducción al español" (v.2). *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l4-guias/> DOI: [10.5281/zenodo.3531573](https://doi.org/10.5281/zenodo.3531573)
