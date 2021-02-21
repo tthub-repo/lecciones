@@ -1,5 +1,5 @@
 ---
-title: Las *Guías directrices* de la Text Encoding Initiative, su manejo y su traducción al español[^1]
+title: Las *Guías directrices* de la Text Encoding Initiative, su manejo y su traducción al español
 author: Susanna Allés Torrent
 date: 2019
 layout: default
@@ -8,7 +8,6 @@ lang: es
 
 # {{ page.title }}
 ## {{ page.author }}
-### {{ page.date }}
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3531573.svg)](https://doi.org/10.5281/zenodo.3531573)
 
 # I. Introducción
@@ -28,7 +27,7 @@ De esta definición podemos establecer, pues, diferentes puntos:
 *  Las *Guías directrices* pretenden definir un modelo concreto de codificación basado en el lenguaje XML.
 * El modelo se acompaña de una documentación detallada que razona y ejemplifica el tipo de codificación para cada una de las fenomenologías textuales.
 * Su objetivo principal es el de representar los rasgos de la estructura, de la presentación y de la semántica textuales.
-* Es un modelo destinado especialmente a documentos procedentes de las disciplinas en Humanidades y Ciencias Sociales y, sobretodo, pensado para la codificación de fuentes primarias para su análisis, procesamiento, edición y explotación.
+* Es un modelo destinado especialmente a documentos procedentes de las disciplinas en Humanidades y Ciencias Sociales y, sobre todo, pensado para la codificación de fuentes primarias para su análisis, procesamiento, edición y explotación.
 * Establece un sistema modular donde cada uno de los módulos define una serie de fenomenologías textuales con soluciones específicas.
 * Todo documento TEI se basa en un esquema XML.
 * Es un sistema de código abierto y por tanto tenemos acceso de manera gratuita.
@@ -122,9 +121,13 @@ Una de las opciones más interesantes es la posibilidad de instalarnos una copia
 
 # III. Recursos
 
-En el apartado de las [Guidelines](http://www.tei-c.org/Guidelines/), a parte de las *Guías* propiamente dichas, encontramos otra serie de materiales y recursos relacionados que conviene conocer. En la página se encuentran las siguientes secciones:
+En el apartado de las [Guidelines](http://www.tei-c.org/Guidelines/), aparte de las *Guías* propiamente dichas, encontramos otra serie de materiales y recursos relacionados que conviene conocer. En la página se encuentran las siguientes secciones:
 
-* [Personalización de las Guidelines](http://www.tei-c.org/Guidelines/Customization/index.xml): Las *Guías directrices* están concebidas para ser personalizadas, de manera que cada proyecto e incluso disciplina puede crear una versión personalizada y adaptada a las necesidades y prácticas particulares. TEI ofrece una herramienta, llamada ROMA, que permite elegir los módulos necesarios para nuestro proyecto y personalizar así nuestro esquema (añadiendo y eliminando elementos y atributos no utilizados, y estableciendo valores predeterminados para los atributos, etc.)
+* [Personalización de las Guidelines](https://roma.tei-c.org/): Las *Guías directrices* están concebidas para ser personalizadas, de manera que cada proyecto e incluso disciplina puede crear una versión personalizada y adaptada a las necesidades y prácticas particulares. TEI ofrece una herramienta, llamada ROMA, que permite elegir los módulos necesarios para nuestro proyecto y personalizar así nuestro esquema (añadiendo y eliminando elementos y atributos no utilizados, y estableciendo valores predeterminados para los atributos, etc.)
+
+* [OxGarage](https://oxgarage2.tei-c.org/): Oxgarage es una herramienta que permite la transformación automática de documentos desde formatos diferentes a TEI. Desde la misma plataforma pueden subirse documentos en .doc, .md, .txt y convertirlos en TEI. 
+
+* [TEI Guidelines staticSearch page](https://hcmc.uvic.ca/people/martin/guidelines/search.html?Language=en&Page%20type=Chapters): StaticSearch es otra herramienta muy útil que permite buscar en las *Guías directrices* cualquier contenido. Esta es la mejor opción de búsqueda a día de hoy. 
 
 * [Internacionalización](http://www.tei-c.org/Tools/I18N/): Las *Guías directrices* están todavía en curso de traducción en otras lenguas diferentes del inglés. Este apartado ofrece información sobre el estado de dichas traducciones que son llevadas a cabo de manera espontánea y gratuita. En el caso del español, aunque se indique que disponemos de un “stable relase”, lo cierto es que no es completa y algunas partes, como la introducción a XML, carece todavía de una traducción.
 
@@ -142,6 +145,3 @@ En el apartado de las [Guidelines](http://www.tei-c.org/Guidelines/), a parte de
 ### Cita propuesta: 
 
 Allés Torrent, Susanna (2019). "Las *Guías directrices* de la Text Encoding Initiative, su manejo y su traducción al español". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l4-guias/> DOI: [10.5281/zenodo.3531573](https://doi.org/10.5281/zenodo.3531573)
-
-
-[^1]: Estos materiales fueron creados en el marco del certificado de [Experto Universitario en Humanidades Digitales](http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/), ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia. 
