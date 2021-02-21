@@ -1,5 +1,5 @@
 ---
-title: Estructura básica y elementos comunes de los documentos XML-TEI[^1]
+title: Estructura básica y elementos comunes de los documentos XML-TEI
 author: Susanna Allés Torrent
 date: 2019
 layout: default
@@ -8,7 +8,6 @@ lang: es
 
 # {{ page.title }}
 ## {{ page.author }}
-### {{ page.date }}
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4446128.svg)](https://doi.org/10.5281/zenodo.4446128)
 
 # I. Introducción
@@ -538,6 +537,3 @@ Dentro de la categoría que las *Guías directrices* denominan “Milestone” e
 
 Allés Torrent, Susanna (2019). "Estructura básica y elementos comunes de los documentos XML-TEI" (v.2). *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l3-basicos-tei/> DOI: [10.5281/zenodo.4446128](https://doi.org/10.5281/zenodo.4446128)
 
-
-
-[^1]: Estos materiales fueron creados en el marco del certificado de [Experto Universitario en Humanidades Digitales](http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/), ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia y se han ido actualizando periódicamente. 
