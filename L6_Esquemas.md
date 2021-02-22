@@ -265,4 +265,4 @@ Aquí podréis ver el [esquema Relax NG Lite](http://www.tei-c.org/release/xml/t
 
 ### Cita propuesta: 
 
-Allés Torrent, Susanna (2019). "Esquemas RNG y personalización de TEI". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l6-esquemas/> DOI: [10.5281/zenodo.4555346](https://doi.org/10.5281/zenodo.4555346)
+Allés Torrent, Susanna (2019). "Esquemas RNG y personalización de TEI". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital* (v.2). <https://tthub.io/aprende/l6-esquemas/> DOI: [10.5281/zenodo.4555346](https://doi.org/10.5281/zenodo.4555346)
