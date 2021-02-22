@@ -1,5 +1,5 @@
 ---
-title: ¿Qué es y para qué sirve el documento ODD?[^1]
+title: ¿Qué es y para qué sirve el documento ODD?
 author: Susanna Allés Torrent
 date: 2019
 layout: default
@@ -8,18 +8,17 @@ lang: es
 
 # {{ page.title }}
 ## {{ page.author }}
-### {{ page.date }}
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3531693.svg)](https://doi.org/10.5281/zenodo.3531693)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4555607.svg)](https://doi.org/10.5281/zenodo.4555607)
 
 # I. ¿Qué es un ODD?
 
-En esta lección, veremos en qué consiste un documento ODD y cuál es su función al interno de un proyecto de codificación TEI. Sus siglas proceden de la expresión "One Document Does it All", así que podemos ya hacernos una idea de la importancia de este archivo. 
+En esta lección, veremos en qué consiste un documento ODD y cuál es su función en el seno de un proyecto de codificación TEI. Sus siglas proceden de la expresión "One Document Does it All", así que podemos ya hacernos una idea de la importancia de este archivo. 
 
 Como es sabido, el sistema de codificación TEI consiste en una lista de módulos que contienen una serie de elementos con sus especificaciones. A su vez, cada uno de los elementos TEI tiene un nombre “estándar” o canónico (como pueden ser `p`, `div`, `corr`, `sic`, etc.), una descripción de su función, la indicación del modelo o clase al que pertenece, una definición de los atributos que puede contener, así como una lista de ejemplos; esta es la estructura que, de hecho, vemos cada vez que consultamos un elemento en las *Guías directrices*.
 
-A parte de estas especificaciones generales, el esquema utilizado para validar documentos en TEI puede ser de diferentes tipos (DTD, esquema W3C, RelaxNG), y podemos personalizarlo según nuestras necesidades. El más utilizado es el esquema RelaxNG, del que nos ocupamos en la lección ["Esquemas y personalización de TEI"](https://tthub.io/aprende/l6-esquemas/). Estos esquemas tienen como función recoger todas las referencias a los módulos, elementos, etc. que establece el modelo general de TEI; además, tenemos la posibilidad de personalizar estos esquemas, modificando módulos, elementos, atributos o clases, etc.
+Aparte de estas especificaciones generales, el esquema utilizado para validar documentos en TEI puede ser de diferentes tipos (DTD, esquema W3C, RelaxNG), y podemos personalizarlo según nuestras necesidades. El más utilizado es el esquema RelaxNG, del que nos ocupamos en la lección ["Esquemas y personalización de TEI"](https://tthub.io/aprende/l6-esquemas/). Estos esquemas tienen como función recoger todas las referencias a los módulos, elementos, etc. que establece el modelo general de TEI; además, tenemos la posibilidad de personalizar estos esquemas, modificando módulos, elementos, atributos o clases, etc.
 
-En todo este engranado, hay una última etapa que es de vital importancia, y esto es, el documento ODD. Este archivo es el que conservará todas y cada una de las modificaciones y de las singularidades o especificaciones de nuestro esquema (¡pero obviamente no el de nuestro marcado XML-TEI!).
+En todo este engranaje, hay una última etapa que es de vital importancia, y esto es, el documento ODD. Este archivo es el que conservará todas y cada una de las modificaciones y de las singularidades o especificaciones de nuestro esquema (¡pero obviamente no el de nuestro marcado XML-TEI!).
 
 El documento ODD consiste en un archivo XML-TEI, a partir del cual podremos generar el esquema en diferentes lenguajes y recuperar la documentación de nuestro proyecto.
 
@@ -34,9 +33,9 @@ Veamos cuales son las prestaciones que nos ofrece el documento ODD:
 
 Pasemos ahora a ver cómo podemos crear y manipular un documento ODD con la aplicación Roma. Obviamente podríamos crearlo a mano, si conocemos bien la sintaxis a utilizar, tal y como ocurría con los esquemas, pero la práctica habitual es el uso de la aplicación [Roma](https://roma2.tei-c.org/).
 
-Para tomar una primera toma de contacto con un fichero ODD, pueden crear uno con el programa oXygen, siguiendo estos pasos (Figura \ref{L7_001}):
+Para tomar una primera toma de contacto con un fichero ODD, podéis crear uno con el programa oXygen, siguiendo estos pasos (Figura \ref{L7_001}):
 
-`File > New > Framework templates > TEI ODD > ODD [TEI ODD] > Create`
+`File > New > Framework templates > TEI > ODD Customization > Create`
  
 ![Programa Oxygen. Pasos a seguir para crear un documento ODD \label{L7_001}](https://tthub-repo.github.io/lecciones/img/L7_001.png)
 
@@ -134,7 +133,5 @@ Resumiendo, lo que siempre debemos tener para trabajar en cualquier proyecto de 
 
 ### Cita propuesta: 
 
-Allés Torrent, Susanna (2019). "¿Qué es y para qué sirve el documento ODD?". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l7-odd/> DOI: [10.5281/zenodo.3531693](https://doi.org/10.5281/zenodo.3531693)
+Allés Torrent, Susanna (2019). "¿Qué es y para qué sirve el documento ODD?" (v.2). *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l7-odd/> DOI: [10.5281/zenodo.4555607](https://doi.org/10.5281/zenodo.4555607)
 
-
-[^1]: Estos materiales fueron creados en el marco del certificado de [Experto Universitario en Humanidades Digitales](http://linhd.uned.es/p/experto-universitario-humanidades-digitales-2019/), ofrecido desde 2014 por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia.
