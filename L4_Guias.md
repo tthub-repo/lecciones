@@ -12,8 +12,6 @@ lang: es
 
 # I. Introducción
 
-Esta breve lección tiene como objetivo familiarizarse y aprender a manejar las *Guidelines* o *Guías directrices* (*GD*) de la Text Encoding Initiative.
-
 La Text Encoding Initiative se sustenta en primer lugar en las [*Guías directrices*](http://www.tei-c.org/Guidelines/) que establecen un modelo concreto de codificación. Estas pautas son publicadas por el mismo Consorcio, en acceso abierto, en su página oficial. La versión actual es la P5 (donde P corresponde a "Proposal") y se remontan al año 2007, aunque cada pocos meses la versión es actualizada con pequeñas mejoras. Su problema principal es que no son muy amigables, si se considera que su edición en papel llega casi a las 2.000 páginas. Aún así, constituyen el núcleo de cualquier trabajo en TEI, y su consulta es siempre inevitable. 
 
 Empecemos con la definición que ofrece la misma página web del Consorcio TEI:
