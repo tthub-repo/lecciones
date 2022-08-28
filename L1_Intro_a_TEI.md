@@ -311,7 +311,3 @@ Sahle, P. (2015), "[Digital Modelling (modelling the digital edition)](http://di
 
 TEI Consortium (2014), "TEI: History". <http://www.tei-c.org/about/history/>.
 
-
-### Cita propuesta:
-
-Allés Torrent, Susanna (2019). "Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos" (v.2). *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l1-intro-a-tei/> DOI: [10.5281/zenodo.4430863](https://doi.org/10.5281/zenodo.4430863)
