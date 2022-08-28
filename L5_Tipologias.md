@@ -11,7 +11,7 @@ lang: es
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4555173.svg)](https://doi.org/10.5281/zenodo.4555173)
 
-Esta lección ofrece la oportunidad de trabajar con más detalles con algunos módulos de la Text Encoding Initiative y algunas de las tipologías textuales más comunes. Aun así, es importante retener que para una información completa debemos siempre dirigirnos a las *Guías directrices*[^1]. Sólo así obtendremos una información detallada sobre las restricciones y el uso adecuado de los elementos, su estructura y su semántica.
+Esta lección ofrece la oportunidad de trabajar con más detalles con algunos módulos de la Text Encoding Initiative y algunas de las tipologías textuales más comunes. Aun así, es importante retener que para una información completa debemos siempre dirigirnos a las Guías directrices. Sólo así obtendremos una información detallada sobre las restricciones y el uso adecuado de los elementos, su estructura y su semántica.
 
 # I. Prosa
 
