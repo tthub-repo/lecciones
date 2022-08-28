@@ -12,8 +12,6 @@ lang: es
 
 # I. Introducción
 
-En esta lección nos centraremos en la estructura básica de los documentos XML-TEI, viendo solo aquellos elementos obligatorios e indispensables para empezar a trabajar con un documento TEI válido y bien formado.
-
 Recapitulando algunas nociones básicas, recordaremos que XML-TEI es:
 
 * un marco de trabajo basado en el lenguaje de marcado XML que define una serie de guías directrices y recomendaciones para marcar electrónicamente textos de cualquier disciplina y de cualquier época.
