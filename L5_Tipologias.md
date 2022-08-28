@@ -45,14 +45,14 @@ atributos, entre ellos:
 * `@type` para especificar y caracterizar el tipo de división.
 * `@n` para otorgarle una numeración precisa, aunque no es obligatorio pues el procesador puede localizar fácilmente su orden de aparición a partir del elemento padre.
 
-## `<p>` y `<ab>`: párrafos y bloques anónimos
+## Párrafos y bloques anónimos
 
 El elemento [`<p>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-p.html) indica un párrafo y puede aparecer en cualquier tipo de texto. Los párrafos no pueden anidarse unos en el interior de los otros, sino que deben situarse consecutivamente y, normalmente, aparecen en el interior de un elemento `<div>`.
 
 A veces una sección textual no corresponde exactamente a la noción de párrafo, y en ese caso podría utilizarse el elemento [`<ab>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html) (anonymous
 block). Por ejemplo, en nuestro documento, podríamos marcar el texto introductorio con `<ab>` y relegar el elemento `<p>` para los párrafos de los apartados y subapartados.
 
-## `<head>`: títulos y encabezados
+## Títulos y encabezados
 
 Los encabezados y títulos de cualquier tipo se marcan con el elemento [`<head>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-head.html) que puede conllevar, como en los casos anteriores, diversos atributos, como `@type`, para indicar el tipo de título.
 
@@ -66,7 +66,7 @@ En nuestro documento, se podrían codificar como `<head>` todo lo que aparece en
 
 Aun así, no sería ni mucho menos obligatorio porque los diversos `<head>` son localizables por el procesador a partir del elemento del que forman parte, de manera que cada `<head>` podría tener una presentación diferente en función del elemento padre al que pertenece.
 
-## `<cit>`: citas
+## Citas
 
 Las citas pueden ser de muchos tipos diferentes, pero las más habituales son aquellas en que se reproducen de manera literal las palabras de otra fuente, acompañadas de la indicación bibliográfica. En estos casos, se utiliza el elemento [`<cit>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cit.html) que debe estar formado, a su vez, por `<quote>` que encierra propiamente las palabras de la cita, y por `<bibl>` que debe contener la referencia bibliográfica:
 
@@ -94,7 +94,7 @@ nos referimos a él con el atributo `@corresp` al interior del elemento
 <bibl corresp="#Guidelines">TEI Consortium</bibl>
 ```
 
-## `<list>`: listas
+## Listas
 
 En los textos en prosa aparecen en muchos casos listas de elementos que, en TEI, deben marcarse con el elemento [`<list>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-list.html), y cada uno de los ítems se codifica con el elemento `<item>`.
 
