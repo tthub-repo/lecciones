@@ -19,9 +19,9 @@ Las [*Guías directrices*](https://tei-c.org/guidelines/p5/) de TEI no tienen un
 
 Al afrontar la codificación de un texto, debemos, en primer lugar, llevar a cabo un análisis del documento, aislando las unidades estructurales de las que se compone. Partamos de un ejemplo concreto y veamos de qué manera podría ser codificado:
 
-![Análisis estructural de un texto \label{L5_estructura}](https://tthub-repo.github.io/lecciones/img/L5_001.png)
+![Análisis estructural de un texto](https://tthub-repo.github.io/lecciones/img/L5_001.png)
 
-En la Figura \ref{L5_estructura} tenemos diferentes elementos que deberemos marcar, como
+En la Figura anterior tenemos diferentes elementos que deberemos marcar, como
 por ejemplo:
 
 * Las divisiones que corresponden a la primera parte, a los apartados (1, 2...) y a los subapartados (1.1., 1.2., etc.)
