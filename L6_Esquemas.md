@@ -257,7 +257,7 @@ La URL relativa o absoluta corresponde al valor del `@href` en la instrucción d
 
 Aquí podréis ver el [esquema Relax NG Lite](http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng) que proponen la *Guías directrices*. Lo podéis abrir con el programa oXygen e intentar entender la estructura (File > Open URL > Pegad la URL en “File URL” y pulsar “OK”).
 
-## Lecturas y tutoriales: 
+## Lecturas y tutoriales 
 
 * Eric van der Vlist, *Relax NG*, O’Reilly & Associates, 2003. Acceso al libro en versión digital <http://books.xmlschemata.org/relaxng/page2.html>.
 * OASIS Consortium, *Relax NG Tutorial* (Committee Specification 3 December 2001), <https://relaxng.org/tutorial-20011203.html>.
