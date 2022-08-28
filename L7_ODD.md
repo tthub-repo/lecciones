@@ -91,7 +91,7 @@ Hagamos otra prueba, retomando nuestro archivo ODD que hemos creado y siguiendo 
  
 4. Hagamos click en el módulo `verse`, eliminemos los elementos `<metDecl>` y `<metSym>` y guardemos los cambios:
 
-![Roma. Modificaciones del esquema](https://tthub-repo.github.io/lecciones/img/L7_010.png){height=350px}
+![Roma. Modificaciones del esquema](https://tthub-repo.github.io/lecciones/img/L7_010.png)
  
 5. Al interno del elemento `<caesura>` haremos un solo cambio: ampliaremos la “Descripción”:
 
