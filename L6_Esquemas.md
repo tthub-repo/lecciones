@@ -10,9 +10,9 @@ lang: es
 ## {{ page.author }}
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4555346.svg)](https://doi.org/10.5281/zenodo.4555346)
 
-# I. Principios fundamentales del esquema
+En esta lección veremos con un poco de detalle qué son los esquemas y cómo llevar a cabo la personalización de un documento TEI a través de estos. Para ello, presentaremos de manera general la función del esquema en los proyectos de edición digital en TEI, centrándonos en el lenguaje Relax NG, y en la aplicación online Roma, que facilita la personalización de los esquemas que acompañan los documentos XML-TEI.
 
-En esta lección veremos con un poco de detalle qué son los esquemas y cómo llevar a cabo la personalización de un documento TEI a través de estos. Para ello, presentaremos de manera general la función del esquema en los proyectos de edición digital en TEI, centrándonos en el lenguaje [Relax NG](https://relaxng.org/), y en la aplicación online Roma, que facilita la personalización de los esquemas que acompañan los documentos XML-TEI.
+# I. Principios fundamentales del esquema
 
 Para trabajar con un documento XML y aplicar un tipo concreto de marcado debemos tener un modelo de trabajo; una especie de guía que nos indique de qué modo debemos proceder para codificar ese texto, de manera que si interviene más de una persona, todas lleven a cabo un marcado homogéneo.
 
@@ -36,7 +36,7 @@ Si, en cambio, quisiéramos asociar nuestro documento a un esquema que nosotros 
 ```
 En este caso, como puede verse, el esquema estaría en una carpeta llamada "esquema" al mismo nivel que el documento XML-TEI. 
 
-En el programa oXygen, para cambiar el esquema y asociar uno nuevo debemos ir a Document > Schema > Associate Schema; obviamente puede también hacerse de manera manual.
+En el programa oXygen, para cambiar el esquema y asociar uno nuevo debemos ir a `Document > Schema > Associate Schema`; obviamente puede también hacerse de manera manual.
 
 Los esquemas, como se explica brevemente en [L2. El lenguaje XML (eXtensible Markup Language) y conceptos generales](https://tthub.io/aprende/l2-xml/), son los responsables de la validación de nuestro documento. Recordad que una cuestión es el estar bien formado, según las normas del lenguaje XML, y la otra ser válido, según las normas de un esquema.
 
@@ -149,9 +149,9 @@ En este apartado vamos a ver cómo funciona Roma y cómo construir un esquema a 
 * Elegir un esquema ya creado por la comunidad TEI, como puede ser la ya mencionada versión mínima, llamada [TEI Lite](http://www.tei-c.org/Guidelines/Customization/Lite/) o, más recientemente, [TEI Simple](https://github.com/TEIC/TEI-Simple), o la que incluye todos los elementos TEI All. En este [enlace](https://tei-c.org/Guidelines/Customization/) encontraréis los diferentes modelos. El programa oXygen también contiene estos esquemas.
 * Crear un nuevo modelo a partir de la [aplicación Roma](https://roma2.tei-c.org/). 
 
-En la Figura \ref{L6_001} vemos la interfaz de inicio de la plataforma ROMA, donde aparece un enlace a la nueva plataforma en la que están trabajando [Roma-ODD Customization](https://romabeta.tei-c.org/). 
+En la Figura siguiente vemos la interfaz de inicio de la plataforma ROMA, donde aparece un enlace a la nueva plataforma en la que están trabajando [Roma-ODD Customization](https://romabeta.tei-c.org/). 
 
-![Aplicación Roma, pantalla de inicio \label{L6_001}](https://tthub-repo.github.io/lecciones/img/L6_001.png)
+![Aplicación Roma, pantalla de inicio](https://tthub-repo.github.io/lecciones/img/L6_001.png)
 
  Las opciones disponibles son las siguientes:
  
@@ -181,18 +181,18 @@ Fijaros que lo único que ha cambiado es el nombre de nuestro esquema que en lug
 
 Veamos ahora las otras opciones:
 
-* **1. Nuevo**: retrocede a la pantalla de inicio.
-* **2. Personalizar**: corresponde a la pantalla donde hemos creado el título y los otros metadatos del esquema.
-* **3. Lengua**: En este apartado tenemos la posibilidad de elegir entre diferentes lenguas, esto nos proporcionará una documentación de los elementos en la lengua escogida (siempre que exista una traducción). En nuestro caso, podemos escoger “Español”, aunque las *Guías directrices* no ofrecen todas las traducciones de los elementos y secciones. La más actualizada y completa es la versión en inglés.
-* **4. Módulos**: esta es una de las pantallas más importantes, pues es aquí donde elegiremos qué módulos vamos a incluir en nuestro esquema (Figura \ref{L6_004}).
+1. **Nuevo**: retrocede a la pantalla de inicio.
+2. **Personalizar**: corresponde a la pantalla donde hemos creado el título y los otros metadatos del esquema.
+3. **Lengua**: En este apartado tenemos la posibilidad de elegir entre diferentes lenguas, esto nos proporcionará una documentación de los elementos en la lengua escogida (siempre que exista una traducción). En nuestro caso, podemos escoger “Español”, aunque las *Guías directrices* no ofrecen todas las traducciones de los elementos y secciones. La más actualizada y completa es la versión en inglés.
+4. **Módulos**: esta es una de las pantallas más importantes, pues es aquí donde elegiremos qué módulos vamos a incluir en nuestro esquema:
  
-![Aplicación Roma, lista de los módulos \label{L6_004}](https://tthub-repo.github.io/lecciones/img/L6_004.png)
+![Aplicación Roma, lista de los módulos](https://tthub-repo.github.io/lecciones/img/L6_004.png)
 
 Como veis, la columna de la izquierda contiene todos y cada uno de los módulos TEI, mientras que el de la derecha recoge solo los obligatorios: `core`, `tei`, `header`, `textstructure`. A partir de aquí, debemos saber a qué módulos pertenecen los fenómenos textuales que queremos codificar. Por lo general, si trabajamos con textos teatrales, tendremos que incluir el módulo `drama`, si trabajamos con poesía el módulo `verse`, si trabajamos con diccionarios el módulo `dictionaries`, etc.
 
-Podemos acceder a cada uno de los módulos y ver todos los elementos que contiene. Por ejemplo, si accedemos al módulo `textcrit`, observamos la lista completa (Figura \ref{L6_005})
+Podemos acceder a cada uno de los módulos y ver todos los elementos que contiene. Por ejemplo, si accedemos al módulo `textcrit`, observamos la lista completa:
 
-![Aplicación Roma, lista de elementos del módulo textcrit \label{L6_005}](https://tthub-repo.github.io/lecciones/img/L6_005.png)
+![Aplicación Roma, lista de elementos del módulo textcrit](https://tthub-repo.github.io/lecciones/img/L6_005.png)
  
 Una vez estamos en la sección de los módulos, podemos “Excluir” aquellos elementos que no necesitemos para nuestra codificación. En lo que concierne al “Nombre” conviene dejarlo tal y como está para no provocar confusiones con el sistema estándar TEI de nombres de elementos, es decir, si cambiamos, por ejemplo, `<app>` por `<aparato>`, la etiqueta en nuestro documento XML-TEI aparecería como `<aparato>` y no como `<app>`. Además, tenemos la posibilidad de modificar los atributos, manteniendo los que nos interesan y suprimiendo los que no necesitamos.
 
@@ -206,9 +206,9 @@ Una vez añadidos los diferentes módulos que nos interesan veremos en la column
 
 ![Aplicación Roma, modulos seleccionados para el esquema](https://tthub-repo.github.io/lecciones/img/L6_007.png)
 
-* **5. Añadir elemento**: A continuación, pasamos a la pestaña “Añadir elemento”, en el caso que queramos crear un nuevo elemento que no nos proporciona TEI; para ello, tendríamos que adjudicarle una clase de modelo y una clase de atributos. Esta práctica debe evitarse en línea de máxima a no ser que sea estrictamente necesario.
-* **6. Cambiar clase**: Lo mismo sucede con esta pestaña; podría darse el caso que un determinado elemento no tuviera los atributos que necesitamos, en tal caso, podríamos modificarlos y añadir otros nuevos en esta sección.
-* **7. Esquema**: esta sección permite escoger el tipo de esquema que queremos: DTD, W3C, RelaxNG, etc. Este es uno de los momentos claves, pues aquí es donde podremos obtener un esquema en el formato que deseemos. Las opciones que se nos ofrecen son las siguientes:
+5. **Añadir elemento**: A continuación, pasamos a la pestaña “Añadir elemento”, en el caso que queramos crear un nuevo elemento que no nos proporciona TEI; para ello, tendríamos que adjudicarle una clase de modelo y una clase de atributos. Esta práctica debe evitarse en línea de máxima a no ser que sea estrictamente necesario.
+6. **Cambiar clase**: Lo mismo sucede con esta pestaña; podría darse el caso que un determinado elemento no tuviera los atributos que necesitamos, en tal caso, podríamos modificarlos y añadir otros nuevos en esta sección.
+7. **Esquema**: esta sección permite escoger el tipo de esquema que queremos: DTD, W3C, RelaxNG, etc. Este es uno de los momentos claves, pues aquí es donde podremos obtener un esquema en el formato que deseemos. Las opciones que se nos ofrecen son las siguientes:
 
 	* Relax NG schema (compact syntax) .rnc
 	* Relax NG schema (XML syntax) .rng
@@ -217,18 +217,18 @@ Una vez añadidos los diferentes módulos que nos interesan veremos en la column
 	* W3C Schema .xsd
 	* DTD .dtd
 
-Escogeremos la opción Relax NG schema (XML syntax) (no “compact syntax”) y pulsaremos “Generate”; acto seguido se nos descargará el esquema que hemos elaborado (Figura \ref{L6_008}):
+Escogeremos la opción Relax NG schema (XML syntax) (no “compact syntax”) y pulsaremos “Generate”; acto seguido se nos descargará el esquema que hemos elaborado:
  
-![Aplicación Roma, cambio de idioma label{L6_008}](https://tthub-repo.github.io/lecciones/img/L6_008.png)
+![Aplicación Roma, cambio de idioma label](https://tthub-repo.github.io/lecciones/img/L6_008.png)
 
-* **8. Documentación**: Permite escoger qué tipo de formato se prefiere para la documentación del esquema. Tenemos la posibilidad de bajarnos en un único documento la descripción de cada uno de los elementos y atributos elegidos en nuestro esquema según las *Guías directrices*. Los formatos pueden ser: HTML web page, PDF, TEI Lite o TEI ODD.
+8. **Documentación**: Permite escoger qué tipo de formato se prefiere para la documentación del esquema. Tenemos la posibilidad de bajarnos en un único documento la descripción de cada uno de los elementos y atributos elegidos en nuestro esquema según las *Guías directrices*. Los formatos pueden ser: HTML web page, PDF, TEI Lite o TEI ODD.
 
-La opción más útil es la HTML, pues nos generará un simple documento HTML donde tendremos todos los elementos y atributos incluidos en nuestro esquema para poder consultarlos fácilmente en forma de página web (Figura \ref{L6_009}):
+La opción más útil es la HTML, pues nos generará un simple documento HTML donde tendremos todos los elementos y atributos incluidos en nuestro esquema para poder consultarlos fácilmente en forma de página web:
 
-![Aplicación Roma, descarga de la documentación en html \label{L6_009}](https://tthub-repo.github.io/lecciones/img/L6_009.png)
+![Aplicación Roma, descarga de la documentación en html](https://tthub-repo.github.io/lecciones/img/L6_009.png)
 
-* **9. Guardar configuración personal**: Esta pantalla también es de vital importancia porque es la que genera el archivo ODD que se explica en la lección [Qué es y para qué sirve el documento ODD (One Document Does it All)](https://tthub.io/aprende/l7-odd/). En pocas palabras, se trata de un fichero XML que recoge todas las características del esquema personalizado y permite rehacerlo cuantas veces lo deseemos, conservando las modificaciones hechas. Si no se conserva este documento, no se podrá recuperar la personalización que hemos creado. 
-* **10. Sanity Checker**: Permite comprobar la validez de las decisiones hechas para tu personalización. Normalmente, si no se han incluido nuevos elementos o eliminado partes esenciales, suele dar positivo.
+9. **Guardar configuración personal**: Esta pantalla también es de vital importancia porque es la que genera el archivo ODD que se explica en la lección [Qué es y para qué sirve el documento ODD (One Document Does it All)](https://tthub.io/aprende/l7-odd/). En pocas palabras, se trata de un fichero XML que recoge todas las características del esquema personalizado y permite rehacerlo cuantas veces lo deseemos, conservando las modificaciones hechas. Si no se conserva este documento, no se podrá recuperar la personalización que hemos creado. 
+10. **Sanity Checker**: Permite comprobar la validez de las decisiones hechas para tu personalización. Normalmente, si no se han incluido nuevos elementos o eliminado partes esenciales, suele dar positivo.
 
 Una vez tenemos un esquema generado, quedan dos últimos pasos de vital importancia: el primero es generar el documento ODD (véase [Qué es y para qué sirve el documento ODD (One Document Does it All)](https://tthub.io/aprende/l7-odd/)) y la otra es aosciar correctamente el esquema al documento XML-TEI que queremos validar. Así, por ejemplo, si tuviéramos los dos documentos (documento XML-TEI y esquema Relax NG) en una única carpeta y los quisiéramos asociar, deberíamos indicarlo en el prólogo del documento XML-TEI de la siguiente manera: 
 
@@ -263,6 +263,3 @@ Aquí podréis ver el [esquema Relax NG Lite](http://www.tei-c.org/release/xml/t
 * OASIS Consortium, *Relax NG Tutorial* (Committee Specification 3 December 2001), <https://relaxng.org/tutorial-20011203.html>.
 * E. Van der Vlist, «[Relax NG, Compared](http://eric.van-der-vlist.com/blog/2006/07/06/2814_relax_ng_and_w3c_xml_schema_compared_continued/)» (23 Enero 2002), XML.com
 
-### Cita propuesta: 
-
-Allés Torrent, Susanna (2019). "Esquemas RNG y personalización de TEI" (v.2). *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l6-esquemas/> DOI: [10.5281/zenodo.4555346](https://doi.org/10.5281/zenodo.4555346)
