@@ -28,9 +28,7 @@ Los enlaces o hipervínculos se escriben así: [texto del enlace](URL_al_enlace)
 
 [Visual Studio Code](https://code.visualstudio.com/)
 
-Las imagenes deben siempre llegar el siguiente formato: 
-
-![Leyenda que debe aparecer abajo de la imagen](URL)
+Las imagenes deben siempre llegar el siguiente formato: `![Leyenda que debe aparecer abajo de la imagen](URL)`
 
 Por ejemplo:
 
