@@ -431,7 +431,7 @@ Rusty Harold, E. – Scott Means, S. «Part I. XML Concepts». En *XML in a Nuts
 
 TEI Consortium, *A Gentle Introduction to XML*. <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html>.
 
-## Tutoriales: 
+## Tutoriales 
 
 Existe una enorme cantidad de tutoriales en línea, entre los cuales destacamos:
 
@@ -441,6 +441,3 @@ Existe una enorme cantidad de tutoriales en línea, entre los cuales destacamos:
 * Tutorial de XML <http://zvon.org/xxl/XMLTutorial/General_spa/book.html> (en español)
 * Manual de XML <https://desarrolloweb.com/manuales/manual-introduccion-xml.html> (en español)
 
-### Cita propuesta: 
-
-Allés Torrent, Susanna (2019). "El lenguaje XML y algunos conceptos generales" (v.2). *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l2-xml/> DOI: [10.5281/zenodo.4445737](https://doi.org/10.5281/zenodo.4445737) y se han ido actualizando periódicamente. 
