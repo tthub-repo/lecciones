@@ -45,29 +45,18 @@ atributos, entre ellos:
 * `@type` para especificar y caracterizar el tipo de división.
 * `@n` para otorgarle una numeración precisa, aunque no es obligatorio pues el procesador puede localizar fácilmente su orden de aparición a partir del elemento padre.
 
-## [`<p>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-p.html) (párrafos) y [`<ab>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html) (bloques anónimos)
+## `<p>` y `<ab>`: párrafos y bloques anónimos
 
-El elemento `<p>` indica un párrafo y puede aparecer en cualquier tipo
-de texto. Los párrafos no pueden anidarse unos en el interior de los otros,
-sino que deben situarse consecutivamente y, normalmente, aparecen en el
-interior de un elemento `<div>`.
+El elemento [`<p>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-p.html) indica un párrafo y puede aparecer en cualquier tipo de texto. Los párrafos no pueden anidarse unos en el interior de los otros, sino que deben situarse consecutivamente y, normalmente, aparecen en el interior de un elemento `<div>`.
 
-A veces una sección textual no corresponde exactamente a la noción de
-párrafo, y en ese caso podría utilizarse el elemento `<ab>` (anonymous
-block). Por ejemplo, en nuestro documento, podríamos marcar el texto
-introductorio con `<ab>` y relegar el elemento `<p>` para los párrafos
-de los apartados y subapartados.
+A veces una sección textual no corresponde exactamente a la noción de párrafo, y en ese caso podría utilizarse el elemento [`<ab>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html) (anonymous
+block). Por ejemplo, en nuestro documento, podríamos marcar el texto introductorio con `<ab>` y relegar el elemento `<p>` para los párrafos de los apartados y subapartados.
 
-## [`<head>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-head.html) (títulos y encabezados)
+## `<head>`: títulos y encabezados
 
-Los encabezados y títulos de cualquier tipo se marcan con el elemento
-`<head>` que puede conllevar, como en los casos anteriores, diversos
-atributos, como `@type`, para indicar el tipo de título.
+Los encabezados y títulos de cualquier tipo se marcan con el elemento [`<head>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-head.html) que puede conllevar, como en los casos anteriores, diversos atributos, como `@type`, para indicar el tipo de título.
 
-En nuestro documento, se podrían codificar como `<head>` todo lo que
-aparece en negrita y que hemos incluido en los cuadros verdes. Ahora
-bien, si quisiéramos clasificarlos en vista, por ejemplo, de una
-presentación podríamos establecer tipologías diferentes:
+En nuestro documento, se podrían codificar como `<head>` todo lo que aparece en negrita y que hemos incluido en los cuadros verdes. Ahora bien, si quisiéramos clasificarlos en vista, por ejemplo, de una presentación podríamos establecer tipologías diferentes:
 
 ```xml
 <head type="Principal">Unidad 1</head>
@@ -77,9 +66,9 @@ presentación podríamos establecer tipologías diferentes:
 
 Aun así, no sería ni mucho menos obligatorio porque los diversos `<head>` son localizables por el procesador a partir del elemento del que forman parte, de manera que cada `<head>` podría tener una presentación diferente en función del elemento padre al que pertenece.
 
-## [`<cit>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cit.html) (citas)
+## `<cit>`: citas
 
-Las citas pueden ser de muchos tipos diferentes, pero las más habituales son aquellas en que se reproducen de manera literal las palabras de otra fuente, acompañadas de la indicación bibliográfica. En estos casos, se utiliza el elemento `<cit>` que debe estar formado, a su vez, por `<quote>` que encierra propiamente las palabras de la cita, y por `<bibl>` que debe contener la referencia bibliográfica:
+Las citas pueden ser de muchos tipos diferentes, pero las más habituales son aquellas en que se reproducen de manera literal las palabras de otra fuente, acompañadas de la indicación bibliográfica. En estos casos, se utiliza el elemento [`<cit>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cit.html) que debe estar formado, a su vez, por `<quote>` que encierra propiamente las palabras de la cita, y por `<bibl>` que debe contener la referencia bibliográfica:
 
 ```xml
 <cit>
@@ -105,9 +94,9 @@ nos referimos a él con el atributo `@corresp` al interior del elemento
 <bibl corresp="#Guidelines">TEI Consortium</bibl>
 ```
 
-## [`<list>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-list.html) (listas)
+## `<list>`: listas
 
-En los textos en prosa aparecen en muchos casos listas de elementos que, en TEI, deben marcarse con el elemento `<list>`, y cada uno de los ítems se codifica con el elemento `<item>`.
+En los textos en prosa aparecen en muchos casos listas de elementos que, en TEI, deben marcarse con el elemento [`<list>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-list.html), y cada uno de los ítems se codifica con el elemento `<item>`.
 
 Si a cada ítem lo antecede un título podríamos utilizar `<label>`; pero, quizás, lo más interesante sean los diferentes tipos de listas que podemos crear a partir del atributo `@type`, para indicar el tipo de contenido (TEI propone como valores: `gloss`, `index`, `instructions`, `litany`, `syllogism`), y los atributos `@rend` o `@style` para determinar el tipo de presentación, donde los valores propuestos son: `numbered`, `inline`, `bulleted`, `simple`.
 
@@ -627,9 +616,3 @@ En estos casos `<lem>` contiene el lema o texto base de la variante textual (pre
 
 Recomiendo, además de la sección [Aparato crítico en las *Guías directrices*](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html) y de los ejemplos en nuestro [Repositorio de Ejemplos en GitHub](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_aparato_critico.xml), los materiales que aparecen en el [Module 7: Critical Editing](https://teibyexample.org/modules/TBED07v00.htm) de *TEI By Example*. Además, un excelente tutorial es el propuesto por Marjorie Burghart y Elena Pierazzo: [Digital Scholarly Editions: Manuscripts, Texts and TEI Encoding](https://teach.dariah.eu/course/view.php?id=32&section=0) (2017). En fin, para aquellos interesados en trabajar con aparatos críticos, pueden experimentar una posible visualización con el [TEI Critical Apparatus TextBox](http://teicat.huma-num.fr/) y consultar el trabajo realizado para la edición crítica digital de las [Soledades de Góngora](http://soledades.uni-koeln.de/#/critical?d=doc_1&e=critical) cuyos documentos XML-TEI están en [GitHub](https://github.com/arojascastro/soledades).
 
-### Cita propuesta: 
-
-Allés Torrent, Susanna (2019). "La codificación de tipologías textuales (prosa, poesía, drama, fuentes primarias y edición crítica)". *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital* (v.2). <https://tthub.io/aprende/l5-tipologias/> DOI: [10.5281/zenodo.4555173](https://doi.org/10.5281/zenodo.4555173)
-
-
-[^1]: Para una primera aproximación, véase la lección [Las *Guías directrices*, su manejo y su traducción al español (L4)](https://tthub.io/aprende/l4-guias/).
