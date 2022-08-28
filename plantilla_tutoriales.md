@@ -44,7 +44,7 @@ Por ejemplo:
 
 ![*La Dama Boba*, http://damaboba.unibo.it/](https://raw.githubusercontent.com/gabrielcalarco/lecciones/master/img/L1_013.png)
 
-Al escribir código, si se trata de un término breve en el cuerpo del documento, se señala con un asterisco, `, por ejemplo, `<etiqueta codig>`. En otras ocasiones se aportan fragmentos de código que debemos marcar de la siguiente manera: 
+Al escribir código, si se trata de un término breve en el cuerpo del documento, se señala con una tilde en la apertura y en el cierre, por ejemplo, `<etiqueta_codigo>`. En otras ocasiones se aportan fragmentos de código que debemos marcar de la siguiente manera: 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
