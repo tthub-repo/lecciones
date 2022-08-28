@@ -139,7 +139,3 @@ En el apartado de las [Guidelines](http://www.tei-c.org/Guidelines/), aparte de 
 
 * [Aprende TEI](http://www.tei-c.org/Support/Learn/). TEI mantiene una lista extremadamente útil de recursos y materiales que ayudan a iniciarse en el estudio de las de TEI, incluyendo enlaces a talleres, documentación de proyectos y tutoriales en línea.
 
-
-### Cita propuesta: 
-
-Allés Torrent, Susanna (2019). "Las *Guías directrices* de la Text Encoding Initiative, su manejo y su traducción al español" (v.2). *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l4-guias/> DOI: [10.5281/zenodo.4554709](https://doi.org/10.5281/zenodo.4554709)
