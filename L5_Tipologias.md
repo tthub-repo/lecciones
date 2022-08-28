@@ -34,7 +34,7 @@ por ejemplo:
 
 A partir de aquí, la idea consiste en encontrar un elemento TEI que responda a cada uno de estos conceptos y expresarlo tal y como proponen las *Guías directrices*.
 
-## `<div>`: divisiones
+## Divisiones
 
 Generalmente, las diferentes partes del texto se delimitan con un elemento genérico llamado [`<div>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html); de esta manera podemos crear una serie de divisiones jerárquicas tales como partes, capítulos, subcapítulos, secciones, subsecciones, etc. Debemos siempre recordar que las `<div>` pueden anidarse unas dentro de otras y pueden contener
 prácticamente todos los otros elementos TEI.
