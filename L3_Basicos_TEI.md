@@ -525,13 +525,7 @@ Dentro de la categoría que las *Guías directrices* denominan “Milestone” e
 
 * Burnard, L. (2014), What is the Text Encoding Initiative. How to add intelligent markup to digital resources, Marserille: OpenEdition Press <https://books.openedition.org/oep/681>
 
-## Tutoriales:
+## Tutoriales
 
 * "Module 1: Common Structure and Elements." *TEI by Example*, <http://teibyexample.org/modules/TBED01v00.htm>
 * Schreibman, Susan & Roman Bleier. "[Text encoding and the TEI](https://teach.dariah.eu/course/view.php?id=23)". #dariahTeach. DH Teaching material, 2017.
-
-
-### Cita propuesta: 
-
-Allés Torrent, Susanna (2019). "Estructura básica y elementos comunes de los documentos XML-TEI" (v.2). *TTHUB. Text Technologies Hub: Recursos sobre tecnologías del texto y edición digital*. <https://tthub.io/aprende/l3-basicos-tei/> DOI: [10.5281/zenodo.4446128](https://doi.org/10.5281/zenodo.4446128)
-
