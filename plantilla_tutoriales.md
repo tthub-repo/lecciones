@@ -10,21 +10,31 @@ En este primer párrafo se añade una introducción sobre la lección.
 
 # 1. Título
 
-Los títulos de primer nivel son los que aparecerán en el menú de la izquierda. Consejos: elige un título breve, sin tipografías. 
+Los títulos de primer nivel son los que aparecerán en el menú de la izquierda y van precedido con una almohadilla, con o sin número `# 1. Título`. Consejos: elige un título breve, sin tipografías. 
 
 ## Subtítulo 
 
-Los subtítulos aparecen en el menú de la derecha para poder navegar la página mejor. 
+Los subtítulos aparecen en el menú de la derecha para poder navegar la página mejor y van precedido por dos almohadillas `## Subtítulo`. 
 
 Las listas pueden ser con puntos: 
 
+```markdown
 * Item 1 de la lista 
 * Item 2 de la lista
 * etc. 
+```
 
-Las cuestiones tipográficas son simples: el asterisco para la *cursiva* y el doble asterisco para las **negritas**. 
+o con números: 
 
-Los enlaces o hipervínculos se escriben así: [texto del enlace](URL_al_enlace), por ejemplo: 
+```markdown
+1. Item 1 de la lista 
+2. Item 2 de la lista
+3. etc. 
+```
+
+Las cuestiones tipográficas son simples: el asterisco para la `*cursiva*` (*cursiva*) y el doble asterisco para las `**negritas**` (**negritas**). 
+
+Los enlaces o hipervínculos se escriben así: `[texto del enlace](URL_al_enlace)`, por ejemplo: 
 
 [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -34,7 +44,7 @@ Por ejemplo:
 
 ![*La Dama Boba*, http://damaboba.unibo.it/](https://raw.githubusercontent.com/gabrielcalarco/lecciones/master/img/L1_013.png)
 
-En muchas ocasiones se aportan fragmentos de código que debemos codificar de la siguiente manera: 
+Al escribir código, si se trata de un término breve en el cuerpo del documento, se señala con un asterisco, `, por ejemplo, `<etiqueta codig>`. En otras ocasiones se aportan fragmentos de código que debemos marcar de la siguiente manera: 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
