@@ -10,17 +10,17 @@ lang: es
 ## {{ page.author }}
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4430863.svg)](https://doi.org/10.5281/zenodo.4430863)
 
-Esta lección ofrece una primera aproximación a la Text Encoding Initiative, un marco de trabajo, utilizado internacionalmente y por una gran comunidad de usuarios, concebido especialmente para la codificación, la explotación informática, la publicación en línea y la preservación de textos en ciencias sociales y humanidades. Para ello, se tratan conceptos generales como la codificación de los textos, su utilidad o los campos de aplicación.
+Esta lección ofrece una primera aproximación a la Text Encoding Initiative, un marco de trabajo, utilizado internacionalmente y por una gran comunidad de usuarios, concebido especialmente para la codificación, la explotación informática, la publicación en línea y la preservación de textos en Humanidades y Ciencias Sociales. Para ello, se tratan conceptos generales como la codificación de los textos, su utilidad o los campos de aplicación.
 
 # I. Codificación de los textos y TEI
 
-En el ámbito de las humanidades y las ciencias sociales, el texto representa, en la mayoría de los casos, el punto de partida de muchas investigaciones. La introducción de métodos y herramientas propios de la ciencia informática llevaron hace ya más de veinte años a replantearse la importancia del texto y su procesamiento informático. La gran cantidad de textos a nuestra disposición conlleva la adopción de nuevas estrategias para la creación, la explotación y su conservación.
+En el ámbito humanístico, el texto representa, en la mayoría de los casos, el punto de partida de muchas investigaciones. La introducción de métodos y herramientas propios de la ciencia informática llevaron hace ya más de veinte años a replantearse la importancia del texto y su procesamiento informático. La gran cantidad de textos a nuestra disposición conlleva la adopción de nuevas estrategias para la creación, la explotación y su conservación.
 
 La iniciativa de marcado de textos nace pues de la necesidad de procesar los textos desde un punto de vista informático, para que, en definitiva, no sea susceptible solo de una lectura "plana", sino para que sea procesable a través de múltiples herramientas como pueden ser programas de concordancias, análisis estilométricos, gráficos de frecuencias, segmentación gramatical o, sobretodo, su publicación web y la posibilidad de realizar búsquedas inteligentes.
 
 ![Logo de la Text Encoding Initiative](https://tthub-repo.github.io/lecciones/img/L1_002.png)
 
-La [Text Encoding Initiative](http://www.tei-c.org/) surgió a finales de los años ochenta y fue la primera iniciativa científica destinada a la codificación informática de textos, actualmente es una de las más utilizadas y uno de los temas centrales en la disciplina de las humanidades digitales.
+La [Text Encoding Initiative](http://www.tei-c.org/) surgió a finales de los años ochenta y fue la primera iniciativa científica destinada a la codificación informática de textos, actualmente es una de las más utilizadas y uno de los temas centrales en la disciplina de las Humanidades Digitales (HD).
 
 ## ¿Qué es TEI?
 
@@ -117,9 +117,9 @@ En definitiva, el hecho de separar la forma o su presentación de su contenido f
 
 ## Un poco de historia...
 
-Hacia los años ochenta, diferentes tecnologías ya habían entrado a formar parte de ciertos campos de las humanidades y las ciencias sociales; recordemos por ejemplo que la lingüística de corpus ya había visto aparecer diferentes iniciativas de proyectos lexicográficos a gran escala, como el *Index Thomisticus* del padre [Roberto Busa](https://en.wikipedia.org/wiki/Roberto_Busa) que contó con la colaboración de IBM.
+Hacia los años ochenta, diferentes tecnologías ya habían entrado a formar parte de ciertos campos de las Humanidades y Ciencias Sociales; recordemos por ejemplo que la lingüística de corpus ya había visto aparecer diferentes iniciativas de proyectos lexicográficos a gran escala, como el *Index Thomisticus* del padre [Roberto Busa](https://en.wikipedia.org/wiki/Roberto_Busa) que contó con la colaboración de IBM.
 
-El reto que se planteó entonces fue el de desarrollar, mantener y publicar un método de codificación para los datos en humanidades en un formato electrónico que fuera independiente tanto de *hardware* y sistemas operativos como de programas informáticos. Ante el crecimiento de sistemas diferentes de representación de materiales textuales, incluidos procesadores de texto, urgía la necesidad de ofrecer a la comunidad científica un método sólido para alargar la vida de sus datos y poder reutilizarlos en el futuro con objetivos diferentes. El hecho de que cada compañía ofreciera un programa y formatos propietarios entorpecía el trabajo académico y hacía difícil la planificación de proyectos a gran escala y de la larga duración.
+El reto que se planteó entonces fue el de desarrollar, mantener y publicar un método de codificación de datos en un formato electrónico que fuera independiente tanto de *hardware* y sistemas operativos como de programas informáticos. Ante el crecimiento de sistemas diferentes de representación de materiales textuales, incluidos procesadores de texto, urgía la necesidad de ofrecer a la comunidad científica un método sólido para alargar la vida de sus datos y poder reutilizarlos en el futuro con objetivos diferentes. El hecho de que cada compañía ofreciera un programa y formatos propietarios entorpecía el trabajo académico y hacía difícil la planificación de proyectos a gran escala y de la larga duración.
 
 Así pues, en 1987 tuvo lugar la primera reunión en el Vassar College (Poughkeepsie, NY), financiada por la [*Association for Computers in the Humanities*](http://ach.org/) y el [*National Endowment for the Humanities*](https://www.neh.gov/), con el fin de crear un sistema para la codificación de textos electrónicos. El texto que de ahí salió se puede consultar todavía en [*Design Principles for Text Encoding Guidelines*](http://www.tei-c.org/Vault/ED/edp01.htm).
 
@@ -133,7 +133,7 @@ Finalmente, en noviembre de 2007, apareció la P5, que corresponde a la quinta p
 
 ## Estructura interna de la organización TEI
 
-La Text Encoding Initiative es una organización internacional, fundada en el año 1987, encargada de desarrollar, mantener y publicar unas guías directrices para la codificación electrónica de textos en humanidades y ciencias sociales.
+La Text Encoding Initiative es una organización internacional, fundada en el año 1987, encargada de desarrollar, mantener y publicar unas guías directrices para la codificación electrónica de textos en Humanidades y Ciencias Sociales.
 
 Desde el año 2000 su estructura organizativa se oficializó con la creación del Consorcio TEI que tiene una serie de [objetivos](http://www.tei-c.org/about/mission/):
 
