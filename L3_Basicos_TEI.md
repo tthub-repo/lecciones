@@ -10,7 +10,7 @@ lang: es
 ## {{ page.author }}
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4446128.svg)](https://doi.org/10.5281/zenodo.4446128)
 
-# I. Introducción
+# I. Básicos
 
 Recapitulando algunas nociones básicas, recordaremos que XML-TEI es:
 
