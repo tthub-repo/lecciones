@@ -10,7 +10,7 @@ lang: es
 ## {{ page.author }}
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4445737.svg)](https://doi.org/10.5281/zenodo.4445737)
 
-# I. Estándares web y XML 
+# I. Estándares web y XML
 
 XML (Extensible Markup Language) es uno de los lenguajes más utilizados en el mundo de la informática, pues es uno de los más simples, flexibles y adecuados para asegurar la interoperabilidad con una gran cantidad de aplicaciones, plataformas y lenguajes informáticos.
 
@@ -80,7 +80,7 @@ En apariencia XML se parece mucho a HTML, pero es crucial entender algunas difer
 * XML, como hemos dicho, se centra en la descripción semántica de los fragmentos de texto, mientras que HTML se ocupa solo de la presentación. Por ejemplo, imaginemos que tenemos un texto donde aparecen palabras en cursiva, unas indican palabras extranjeras y las otras indican títulos de obras. Si quisiéramos convertirlo en una página web y usar HTML, marcaríamos seguramente las palabras en cuestión con la etiqueta de cursiva, es decir, de la siguiente manera: `<i>palabra</i>`; en cambio, XML marcaría las palabra con etiquetas que indicaran “palabra extranjera” y “título”: `<palabraExtranjera>palabra</palabraExtranjera>` o `<titulo>El título</titulo>`. XML se preocupa del qué son las cosas, y no del cómo lucen; separa, en definitiva, el contenido de la presentación.
 * XML puede ser validado a través de un esquema específico, un aspecto que veremos más abajo. Los documentos XML, además de las reglas intrínsecas del mismo lenguaje, pueden depender de un esquema que determine qué elementos se pueden utilizar y de qué manera se pueden anidar, qué tipos de atributos pueden llevar, etc. En el caso de que el documento XML cumpla los requisitos del esquema, será “válido”.
 
-# II. Reglas y conceptos generales 
+# II. Reglas y conceptos generales
 
 Veamos enseguida qué aspecto tiene un fichero XML e intentemos comprender la noción de marcado, así como algunas reglas generales:
 
