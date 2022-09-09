@@ -140,7 +140,7 @@ Siguiendo con el ejemplo anterior podríamos marcar el texto con la siguiente es
 ```
 En línea de máxima, como sucede con los nombres de los elementos y de los atributos, es mejor no utilizar acentos ni espacios tampoco en los valores de los atributos. 
 
-# IV. Divisiones 
+# IV. Divisiones
 
 Uno de los elementos más utilizados en el cuerpo del documento es el de “división”, [`<div>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html), que es utilizado para marcar cualquier tipo de sección estructural del texto, como tomos o volúmenes, libros, capítulos, partes, apartados, etc.
 
