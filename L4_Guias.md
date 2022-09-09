@@ -10,7 +10,7 @@ lang: es
 ## {{ page.author }}
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4554709.svg)](https://doi.org/10.5281/zenodo.4554709)
 
-# I. Introducción
+# I. Presentación de las Guías
 
 La Text Encoding Initiative se sustenta en primer lugar en las [*Guías directrices*](http://www.tei-c.org/Guidelines/) que establecen un modelo concreto de codificación. Estas pautas son publicadas por el mismo Consorcio, en acceso abierto, en su página oficial. La versión actual es la P5 (donde P corresponde a "Proposal") y se remontan al año 2007, aunque cada pocos meses la versión es actualizada con pequeñas mejoras. Su problema principal es que no son muy amigables, si se considera que su edición en papel llega casi a las 2.000 páginas. Aún así, constituyen el núcleo de cualquier trabajo en TEI, y su consulta es siempre inevitable. 
 
