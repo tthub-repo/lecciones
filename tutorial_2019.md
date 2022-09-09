@@ -14,12 +14,12 @@ Este tutorial consta de 7 lecciones: la primera trata conceptos como el marcado 
 
 Todas las Lecciones están albergadas en en nuestro repositorio en GitHub y ofrecemos también una versión en PDF descargable con su correspiende DOI en el respositorio de [TEI en español](https://zenodo.org/communities/tei_espanol/?page=1&size=20) en Zenodo: 
 
-1. Definición, aplicaciones prácticas y recursos [DOI:10.5281/zenodo.4430863](https://doi.org/10.5281/zenodo.4430863)
-2. El lenguaje XML y algunos conceptos generales [DOI:10.5281/zenodo.4445737](https://doi.org/10.5281/zenodo.4445737)
-3. Estructura básica y elementos comunes de los documentos XML-TEI [DOI:10.5281/zenodo.4446128](https://doi.org/10.5281/zenodo.4446128)
-4. Las Guías directrices de la Text Encoding Initiative, su manejo y traducción en español [DOI:10.5281/zenodo.4554709](https://doi.org/10.5281/zenodo.4554709)
-5. La codificación de tipologías textuales (prosa, poesía, drama, fuentes primarias y edición crítica) [DOI:10.5281/zenodo.4555173](https://doi.org/10.5281/zenodo.4555173)
-6. Esquemas RNG y personalización de TEI [DOI:10.5281/zenodo.4555346](https://doi.org/10.5281/zenodo.4555346)
-7. ¿Qué es y para qué sirve el documento ODD [DOI:10.5281/zenodo.4555607](https://doi.org/10.5281/zenodo.4555607)
+1. Definición, aplicaciones prácticas y recursos. [DOI:10.5281/zenodo.4430863](https://doi.org/10.5281/zenodo.4430863)
+2. El lenguaje XML y algunos conceptos generales. [DOI:10.5281/zenodo.4445737](https://doi.org/10.5281/zenodo.4445737)
+3. Estructura básica y elementos comunes de los documentos XML-TEI. [DOI:10.5281/zenodo.4446128](https://doi.org/10.5281/zenodo.4446128)
+4. Las Guías directrices de la Text Encoding Initiative, su manejo y traducción en español. [DOI:10.5281/zenodo.4554709](https://doi.org/10.5281/zenodo.4554709)
+5. La codificación de tipologías textuales (prosa, poesía, drama, fuentes primarias y edición crítica). [DOI:10.5281/zenodo.4555173](https://doi.org/10.5281/zenodo.4555173)
+6. Esquemas RNG y personalización de TEI. [DOI:10.5281/zenodo.4555346](https://doi.org/10.5281/zenodo.4555346)
+7. ¿Qué es y para qué sirve el documento ODD. [DOI:10.5281/zenodo.4555607](https://doi.org/10.5281/zenodo.4555607)
 
 Estos materiales fueron creados, en su origen, en el marco del actual [Máster en Humanidades Digitales](https://linhd.uned.es/master-universitario/), ofrecido por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia que lleva ofreciéndose desde 2014.
