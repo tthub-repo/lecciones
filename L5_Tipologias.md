@@ -120,7 +120,7 @@ novelas españolas y latinoamericanas en el CLiGS textbox:
 Sugiero también que sigáis el tutorial de la parte correspondiente de *TEI By Example*:
 [Module 3: Prose](http://teibyexample.org/modules/TBED03v00.htm)
 
-# II. Poesía 
+# II. Poesía
 
 Centrémonos ahora en los elementos básicos para codificar composiciones en verso y véamos cómo funciona el vocabulario propuesto por TEI. En el apartado de [6. Verse](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html) de las *Guías directrices* se encuentra información mucho más detallada. 
 
