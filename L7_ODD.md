@@ -12,7 +12,7 @@ lang: es
 
 En esta lección, veremos en qué consiste un documento ODD y cuál es su función en el seno de un proyecto de codificación TEI. Sus siglas proceden de la expresión "One Document Does it All", así que podemos ya hacernos una idea de la importancia de este archivo.
 
-# I. ¿Qué es un ODD? 
+# I. ¿Qué es un ODD?
 
 Como es sabido, el sistema de codificación TEI consiste en una lista de módulos que contienen una serie de elementos con sus especificaciones. A su vez, cada uno de los elementos TEI tiene un nombre “estándar” o canónico (como pueden ser `p`, `div`, `corr`, `sic`, etc.), una descripción de su función, la indicación del modelo o clase al que pertenece, una definición de los atributos que puede contener, así como una lista de ejemplos; esta es la estructura que, de hecho, vemos cada vez que consultamos un elemento en las *Guías directrices*.
 
