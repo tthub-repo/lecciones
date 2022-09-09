@@ -10,12 +10,5 @@ lang: es
 
 Todas las Lecciones están albergadas en en nuestro repositorio en GitHub y ofrecemos también una versión en PDF descargable con su correspiende DOI en el respositorio de TEI en español en Zenodo: 
 
-1. Introducción a la Text Encoding Initiative. Definición, aplicaciones prácticas y recursos  <a href="https://doi.org/10.5281/zenodo.4430863"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4430863.svg" alt="DOI"></a>
-2. El lenguaje XML y algunos conceptos generales  <a href="https://doi.org/10.5281/zenodo.4445737"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4445737.svg" alt="DOI"></a>
-3. Estructura básica y elementos comunes de los documentos XML-TEI <a href="https://doi.org/10.5281/zenodo.4446128"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4446128.svg" alt="DOI"></a>
-4. Las Guías directrices de la Text Encoding Initiative, su manejo y traducción en español <a href="https://doi.org/10.5281/zenodo.4554709"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4554709.svg" alt="DOI"></a>
-5. La codificación de tipologías textuales (prosa, poesía, drama, fuentes primarias y edición crítica) <a href="https://doi.org/10.5281/zenodo.4555173"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4555173.svg" alt="DOI"></a>
-6. Esquemas RNG y personalización de TEI <a href="https://doi.org/10.5281/zenodo.4555346"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4555346.svg" alt="DOI"></a>
-7. ¿Qué es y para qué sirve el documento ODD <a href="https://doi.org/10.5281/zenodo.4555607"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4555607.svg" alt="DOI"></a>
 
 Estos materiales fueron creados, en su origen, en el marco del actual [Máster en Humanidades Digitales](https://linhd.uned.es/master-universitario/), ofrecido por el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia que lleva ofreciéndose desde 2014.
