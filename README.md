@@ -2,7 +2,7 @@
 
 ## Lecciones 
 
-Este repositorio alberga los tutoriales y sus lecciones sobre tecnologías del texto y edición digital del proyecto TTHUB <https://tthub.io> coordinado por [Susanna Allés Torrent](http://susannalles.com) (University of Miami) y [Gimena del Rio Riande](https://www.aacademica.org/gimena.delrio.riande) (CONICET), con la colaboración de Gabriel Calarco.
+Este repositorio alberga los tutoriales y sus lecciones sobre tecnologías del texto y edición digital del proyecto TTHUB <https://tthub.io> coordinado por [Susanna Allés Torrent](http://susannalles.com) (University of Miami) y [Gimena del Rio Riande](https://www.aacademica.org/gimena.delrio.riande) (CONICET), con la colaboración de [Gabriel Calarco](https://www.aacademica.org/gabriel.calarco).
 
 Los materiales de este repositorio se publican en la sección [Aprende](https://tthub.io/aprende) de TTHub. La redacción de las lecciones se hace en Markdown y de ahí se obtienen la salida web a través de un script en PHP.  
 
