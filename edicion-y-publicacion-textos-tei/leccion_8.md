@@ -43,7 +43,7 @@ La comunidad TEI ofrece algunos esquemas ya construidos a los que podemos asocia
 
 En este apartado vamos a ver cómo funciona [**Roma**](https://roma.tei-c.org/) y cómo construir un esquema Relax NG a nuestra medida y guardar las opciones de nuestra personalización como un documento ODD [*One Document Does it all*](https://wiki.tei-c.org/index.php/ODD), un archivo XML-TEI a partir del cual podremos generar el esquema en diferentes lenguajes y recuperar la documentación de nuestro proyecto. Comencemos nuestro recorrido en la página de portada de la aplicación:
 
-![Pantalla inicial de Roma](img/L8_001.png)
+![Pantalla inicial de Roma](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L8_001.png)
 
 En la captura de pantalla podemos ver la interfaz de inicio de la plataforma Roma, donde aparece un enlace a la nueva plataforma en la que se está trabajando actualmente, *Roma-ODD Customization*. Sin embargo, esta nueva plataforma se encuentra aún en una versión beta, por lo que utilizaremos la versión tradicional de Roma. Las opciones disponibles en esta primera pantalla son las siguientes:
 
@@ -55,7 +55,7 @@ En la captura de pantalla podemos ver la interfaz de inicio de la plataforma Rom
 
 Para comenzar, elegiremos la primera opción *Build up*, es decir, crearemos un esquema a partir de una versión mínima que sólo contiene los módulos obligatorios. Al seleccionar esta opción se nos abrirá la siguiente pantalla, que corresponde a los metadatos del esquema:
 
-![Metadatos del esquema en Roma](img/L8_002.png)
+![Metadatos del esquema en Roma](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L8_002.png)
 
 En esta pantalla se puede cambiar las informaciones por defecto por las nuestras y seleccionar como lengua de la interfaz el “Español”. A continuación, podemos guardar el esquema, haciendo clic en el botón rojo (Save). Al guardar el esquema, se aplicará el cambio de lengua de la plataforma; a partir de este punto nos referiremos a las pestañas y opciones por su nombre en la interfaz en español. 
 En las pestañas que aparecen en la parte superior de la pantalla veremos las diferentes secciones que la plataforma Roma nos ofrece para la creación de nuestro esquema. Veamos las primeras cuatro:
@@ -91,17 +91,17 @@ Alcaraz Martínez y Vázquez Puig (2016) nos ofrecen una versión en castellano 
 
 A continuación veremos esta pantalla con más detalle:
 
-![Pestaña de Módulos en Roma](img/L8_003.png)
+![Pestaña de Módulos en Roma](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L8_003.png)
 
 Como puede verse en la captura de pantalla, en la columna de la izquierda aparecen todos los módulos de TEI, mientras que en la derecha encontramos los módulos que queremos incluir en nuestro esquema. En un principio tendremos solo los módulos obligatorios: *core*, *tei*, *header*, *textstructure*. A partir de aquí, debemos saber a qué módulos pertenecen los fenómenos textuales que queremos codificar. Por lo general, si trabajamos con textos teatrales, tendremos que incluir el módulo *drama*, si trabajamos con poesía el módulo *verse*, etc. 
 
 Roma también nos permite acceder al interior de cada uno de los módulos y ver todos los elementos que contiene. Por ejemplo, si accedemos al módulo `textcrit`, observamos la lista completa:
 
-![Modificación de un módulo en Roma](img/L8_004.png)
+![Modificación de un módulo en Roma](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L8_004.png)
 
 Una vez estamos en la sección de los módulos, podemos “Excluir” aquellos elementos que no necesitemos para nuestra codificación. En lo que concierne al “Nombre” podemos cambiar `<abbr>` por `<abreviatura>`, por ejemplo; sin embargo conviene dejarlo tal y como está para no provocar confusiones con el sistema estándar TEI de nombres de elementos. También tenemos la posibilidad de modificar los atributos, manteniendo los que nos interesan y suprimiendo los que no necesitamos. Finalmente, si hacemos clic sobre el nombre del elemento podremos acceder a más opciones, para detallar la “Descripción” de ese elemento. Dicha descripción es la que aparecerá en el apartado correspondiente de la documentación. Por ejemplo, retomemos el elemento `<abbr>` e imaginemos que queremos encuadrarlo en nuestro proyecto, de manera que sea útil a las personas que elaborarán la codificación, o incluso, para nosotros mismos.
 
-![Modificación de un elemento en Roma](img/L8_005.png)
+![Modificación de un elemento en Roma](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L8_005.png)
 
 Una vez añadidos los diferentes módulos que nos interesan, los veremos en la columna de la derecha. A continuación veremos las funciones que ofrecen el resto de las pestañas de Roma:
 
@@ -118,7 +118,7 @@ Una vez añadidos los diferentes módulos que nos interesan, los veremos en la c
 
 Escogeremos la opción “Relax NG schema (XML syntax) .rng”, ya que este formato es compatible con la extensión *Scholarly XML*, y por lo tanto nos permitirá validar nuestros documentos TEI en VS Code.  Por último, pulsaremos “Generate” y se descargará el esquema que hemos elaborado:
 
-![Descarga del esquema RelaxNG en Roma](img/L8_006.png)
+![Descarga del esquema RelaxNG en Roma](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L8_006.png)
 
 * **Documentación**: Permite escoger que tipo de formato se prefiere para la documentación del esquema. Tenemos la posibilidad de bajarnos en un único documento la descripción de cada uno de los elementos y atributos elegidos en nuestro esquema según las *Guías directrices*. Los formatos de salida que podemos elegir son: “HTML web page”, “Word”, “TEI ODD”, “TEI Lite” o “LaTex”.
 * Guardar configuración personal: La última pestaña de Roma nos da la opción de guardar nuestra personalización TEI como un documento ODD en formato XML. No debemos confundir este archivo con el esquema Relax NG que generamos en la pestaña de esquema, ya que sus funciones son diferentes. El archivo Relax NG se asocia al documento TEI para validar el marcado, pero una vez que lo generamos no podemos seguir modificándolo en la aplicación Roma (lo que sí se puede hacer es abrir el archivo del esquema en un editor de código y modificar sus valores manualmente, pero esto requiere un buen dominio de la sintaxis de Relax NG). En cambio, el archivo XML que descargamos en esta pestaña puede volver a ser cargado en la aplicación Roma en la primera de sus pantallas y a partir de ahí introducir nuevas modificaciones para generar un nuevo esquema y documentación actualizada (de ahí el nombre “One Document Does it all” que se le da a estos archivos en la comunidad de TEI). Esta opción es de gran utilidad para el desarrollo de esquemas en proyectos de larga duración.
