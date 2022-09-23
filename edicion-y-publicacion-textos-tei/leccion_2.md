@@ -30,7 +30,7 @@ Para utilizar VS Code solo debes ir a la [página de descarga de la aplicación]
 
 Una vez que hayas completado la instalación de VS Code, el próximo paso será instalar la extensión Scholarly XML. Para eso, debes seleccionar el ícono de extensiones del menú lateral de VS Code (paso 1) y en el cuadro de búsqueda ingresar la palabra “Schorlarly” (paso 2). Cuando aparezca la opción que deseamos utilizar, solo debes presionar el botón “install” (paso 3):
  
-![Instalación de Scholarly XML en VS Code](img/L2_001.png)
+![Instalación de Scholarly XML en VS Code](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L2_001.png)
 <p align="center">Pasos para instalar la extensión Scholarly XML en VS Code.</p>
  
 Con esta extensión incorporamos en VS Code algunas funciones que nos serán de gran utilidad para la codificación de textos en XML-TEI:
@@ -156,7 +156,7 @@ Para practicar las reglas de la sintaxis de XML puedes ir al [ejercicio 4](enlac
  
 La extensión Scholarly XML, que instalamos en VS Code nos permite comprobar la correcta formación de archivos XML. Si abrimos el archivo que estamos usando como ejemplo, encontraremos un mensaje en la barra inferior que nos indicará si el documento se encuentra bien formado (*XML is well formed*):
  
-![Mensaje de bien formado en VS Code](img/L2_002.png)
+![Mensaje de bien formado en VS Code](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L2_002.png)
  <p align="center">Mensaje de bien formado (<i>well formed</i>) que aparece en la marquesina inferior de la pantalla de VS Code cuando abrimos un archivo XML si tenemos instalada la extensión Scholarly XML.</p>
 
 ## Documento válido
