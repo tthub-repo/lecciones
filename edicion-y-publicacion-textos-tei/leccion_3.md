@@ -26,7 +26,7 @@ La estructura mínima de un documento XML-TEI se compone básicamente de los sig
 * **Encabezado**, `teiHeader`
 * **Cuerpo del texto**, `text`y `body`
  
-![Estructura básica de un documento XML-TEI](img/L3_001.jpg)
+![Estructura básica de un documento XML-TEI](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L3_001.jpg)
  
 A continuación desarrollaremos cada una de estas partes. Para seguir esta lección te sugerimos que abras en VS Code el archivo [ejemplo_tei_1.xml](enlace) y que busques en el archivo las diferentes partes del documento a las que se refiere cada sección de esta lección. 
  
