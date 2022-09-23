@@ -18,7 +18,7 @@ La forma más básica del texto digital es el **texto plano** (.txt), que solo c
  
 Otro concepto importante para entender la función de la codificación informática de textos es el de los **metadatos**. Si tomamos a un texto digital como un conjunto de datos (es decir, una sucesión de caracteres), toda la información referida a ellos (como su título, lengua en la que está escrito o su tipología textual) son sus metadatos. Los metadatos que pueden acompañar a los textos digitales son variados y existen varias propuestas de codificación con sus características particulares, pero todas apuntan a un mismo objetivo: proporcionar un contexto para el conjunto de datos que son los objetos digitales. Los metadatos cumplen un rol fundamental para el trabajo en humanidades, ya que permiten que los textos digitales sean clasificados, conservados y compartidos.
  
-![Logo de la Text Encoding Initiative](img/L1_001.png)
+![Logo de la Text Encoding Initiative](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_001.png)
  
 La [Text Encoding Initiative](http://www.tei-c.org/) surgió a finales de los años ochenta y fue la primera iniciativa científica destinada a la **codificación informática de textos**, actualmente es una de las más utilizadas y uno de los temas centrales en la disciplina de las humanidades. Este lenguaje de marcado nos permite estructurar tanto en lo formal como lo semántico los textos con los que deseamos trabajar de tal forma que estos puedan ser procesados y “entendidos” por sistemas informáticos, tanto para su presentación en ediciones digitales como para operaciones de [lectura distante](http://dictionaryworldliterature.org/index.php/Lectura_distante).
  
@@ -35,7 +35,7 @@ Hay muchas razones para utilizar TEI, ya que permite capturar distinciones impor
  
 Las posibilidades que ofrece la edición digital son múltiples, una opción muy utilizada es el trabajo de **comparación y presentación de textos en diferentes versiones**. En una aplicación de este concepto, la edición de *La Dama Boba* de Lope de Vega, realizada por el grupo [Prolope](http://prolope.uab.cat/) nos permite comparar los textos de diferentes testimonios de la obra en sus varios estadíos, con una disposición en tres columnas:
  
-![*La Dama Boba*](img/L1_002.png)
+![*La Dama Boba*](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_002.png)
 
 <p align="center"> Fuente: <a href="http://damaboba.unibo.it/">http://damaboba.unibo.it/</a></p>
  
@@ -49,7 +49,7 @@ Algunas ediciones aprovechan las posibilidades del medio digital para ofrecer lo
 ## Edición como enriquecimiento
 Otra característica comúnmente adoptada en muchas ediciones digitales es la de acompañar al texto con una variedad de **elementos visuales** que permiten añadirle una nueva capa de información. Por ejemplo, en la edición de la *La Argentina Manuscrita* de Rui Díaz de Guzmán, realizada por el [HD CAICYT Lab](http://hdlab.space/) además de proporcionar la reproducción facsimilar de la fuente impresa a partir de la cual se realizó la edición, ciertos términos se encuentran destacados y permiten abrir una nota de información adicional al posar el cursor sobre ellos. Adicionalmente, si el término destacado se trata de un nombre de lugar, se incluye la geolocalización del mismo en el mapa. En la siguiente captura, se puede observar la nota que se despliega al situar el cursor sobre la palabra “Fortunadas”:
  
-![*La Argentina Manuscrita*](img/L1_003.png)
+![*La Argentina Manuscrita*](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_003.png)
 <p align="center"> Fuente: <a href="http://hdlab.space/La-Argentina-Manuscrita/">http://hdlab.space/La-Argentina-Manuscrita/</a></p>
 
 ## Edición para el análisis de redes 
@@ -57,7 +57,7 @@ Otra característica comúnmente adoptada en muchas ediciones digitales es la de
 Otra opción de procesamiento informático, ligado a la visualización de datos, que nos permiten los textos marcados con XML-TEI es el **análisis de redes**; es decir, el estudio computarizado de las relaciones que establecen entre sí diferentes entidades en un texto o corpus textual. En el siguiente ejemplo podemos observar un análisis de redes de las interacciones de los personajes de la obra *La vida es sueño* de Calderón de la Barca, que se ofrece en el corpus de ediciones digitales del sitio [Dracor](https://dracor.org/):
  
  
-![análisis de red de *La vida es sueño*](img/L1_004.png)
+![análisis de red de *La vida es sueño*](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_004.png)
 <p align="center">Fuente: <a href="https://dracor.org/cal/la-vida-es-sueno">https://dracor.org/cal/la-vida-es-sueno</a></p>
  
 ## Proyectos de edición de autores
@@ -87,11 +87,11 @@ El texto es una idea abstracta que presupone la existencia de una secuencia de s
  
 Consideremos por un momento en los siguientes ejemplos e intentemos reflexionar sobre dónde está el texto en cada uno:
  
-![Primera Parte del Ingenioso Hidalgo, 1605](img/L1_005.png)
+![Primera Parte del Ingenioso Hidalgo, 1605](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_005.png)
 
-![Hunain Ibn Ishaq, *Libro de los buenos proverbios*, s. IX ](img/L1_006.jpg)
+![Hunain Ibn Ishaq, *Libro de los buenos proverbios*, s. IX ](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_006.jpg)
 
-![*Dictionnaire Gaffiot latin-français*, Paris: Hachette, 1934](img/L1_007.jpg)
+![*Dictionnaire Gaffiot latin-français*, Paris: Hachette, 1934](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_007.jpg)
  
  
 Cada una de estas tipologías contiene aspectos diferentes y todos en realidad tienen un texto. El diccionario contiene voces y significados; el manuscrito antiguo puede contener diversas obras, la edición del siglo XVI contiene un rico frontispicio con informaciones sobre la impresión, etc. Además hay otros aspectos que en realidad también forman parte del texto aunque sea desde un punto de vista físico: la estructura textual (párrafos, listas, tablas...), en el caso del manuscrito vemos letras dañadas, caracteres especiales, líneas del folio, abreviaciones, anotaciones manuscritas, correcciones de autor, errores, entre otra casuística. Todas estas variantes son tomadas en cuenta a la hora de emprender la codificación de un texto, especialmente, como veremos, en el modelado de los datos.
