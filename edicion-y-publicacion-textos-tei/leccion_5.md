@@ -12,7 +12,7 @@ En la lección anterior comenzamos a ver algunos de los elementos de los módulo
  
 Al afrontar la codificación de un texto, debemos, en primer lugar, llevar a cabo un análisis del documento, aislando las unidades estructurales de las que se compone. Partamos de un ejemplo concreto y veamos de qué manera podría ser codificado:
  
-![Análisis estructural de un texto](img/L5_001.png)
+![Análisis estructural de un texto](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L5_001.png)
  
 En este caso tenemos diferentes elementos que deberemos marcar, como por ejemplo:
  
