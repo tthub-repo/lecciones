@@ -128,11 +128,11 @@ una vez establecidos los identificadores, podríamos referirnos a los personajes
  
 Otra forma de referenciar nombres con el atributo `@ref` es a través de un archivo de autoridades como [VIAF](http://viaf.org/) (Virtual International Authority File), que nos permitirá asignar un identificador a estos elementos en forma de un enlace permanente (URI: Identificador de Recursos Uniforme). Si abrimos la página principal de VIAF ([viaf.org](http://viaf.org/)) encontraremos un cuadro de búsquedas (es conveniente acotar los criterios de búsqueda para no obtener una cantidad excesiva de resultados; por ejemplo, para buscar el nombre “Perú”, es conveniente elegir la categoría “Geographic Names” en la pestaña “Select Field”):
  
-![Búsqueda de entidades en VIAF](img/L4_001.png)
+![Búsqueda de entidades en VIAF](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L4_001.png)
  
 Si entramos a la página de VIAF para Perú, encontraremos el enlace permanente o *permalink* (destacado en rojo) que nos permitirá referenciar el elemento al que estemos agregando este atributo en nuestro archivo TEI
  
-![Entrada de una entidad en VIAF](img/L4_002.png)
+![Entrada de una entidad en VIAF](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L4_002.png)
 
 El elemento referenciado, quedaría entonces de la siguiente forma:
  
