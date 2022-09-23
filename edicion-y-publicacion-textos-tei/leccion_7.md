@@ -18,7 +18,7 @@ La fenomenología que podemos encontrarnos en una fuente primaria es realmente m
  
 Para las adiciones usaremos el elemento [`<add>`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-add.html), que pertenece al módulo `Core`. Habitualmente se suele señalar con el atributo `@place` el lugar donde se ha producido dicha adición; por defecto, tenemos como valores: `above`, `below`, `bottom`, `end`, `inline`, `margin`, `opposite`, `overleaf`, `top`. Tomemos el siguiente ejemplo y veamos cómo lo podríamos codificar:
  
-![Ejemplo de una adición. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 1v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](img/L7_001.jpg)
+![Ejemplo de una adición. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 1v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_001.jpg)
  
 Si quisiéramos sólo señalar que aparece una adición en el margen lo podríamos señalar de la siguiente manera:
  
@@ -40,7 +40,7 @@ Además, el módulo de representación de fuentes primarias tiene otro elemento 
  
 Cuando describimos la fuente primaria y nos encontramos con una corrección o substitución de cualquier tipo la marcaremos utilizando [`<del>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) y [`<add>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html), agrupados en un elemento [`<subst>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-subst.html) si lo consideramos conveniente; también podemos especificar, con el atributo `@hand`, la mano responsable de dicha corrección y, con `@resp`, el editor que ha interpretado dicha corrección en la fuente primaria. Por ejemplo:
  
-![Ejemplo de una corrección. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 51v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](img/L7_003.jpg) 
+![Ejemplo de una corrección. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 51v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_003.jpg) 
  
 ```xml
 Bien auie y x mill carros: de los sauios senneros
@@ -58,7 +58,7 @@ Las abreviaturas pueden codificarse de maneras diferentes, la más
 sencilla de las cuales es simplemente marcar la abreviatura dentro del
 elemento [`<abbr>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-abbr.html). Pero en la mayoría de los casos, vale la pena indicar la forma expandida. En el siguiente ejemplo podemos ver diferentes casos de abreviaturas:
  
-![Ejemplos de abreviaturas. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 51v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](img/L7_004.jpg) 
+![Ejemplos de abreviaturas. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 51v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_004.jpg) 
  
 Para ello, podemos proceder de la siguiente manera:
  
@@ -115,7 +115,7 @@ Puede ser que en algunos casos nos encontremos con una fuente en la que aparecen
 Así, podemos también señalar cuando se produce un cambio de mano en nuestra fuente, gracias al elemento [`<handShift>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-handShift.html). En el siguiente ejemplo, podríamos señalar que la segunda mitad del primer verso fue añadida por un lector posterior:
  
  
-![Ejemplos de cambio de mano. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 51v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](img/L7_005.jpg) 
+![Ejemplos de cambio de mano. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 51v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_005.jpg) 
  
 ```xml
 El ñino mano & mano  <handShift resp="Lector">toliose la capiella</handShift>
@@ -128,7 +128,7 @@ pareçiage la rancura: del cor enna maxiella
  
 Si nuestro texto posee alguna zona dañada, frecuente en los manuscritos e impresos antiguos, podemos marcar dicho pasaje con el elemento [`<damage>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-damage.html). En su interior pueden utilizarse diversos atributos, como `@agent` para marcar el motivo del daño; o bien, en aquellos casos en que el daño atañe a un fragmento largo del texto podemos utilizar, como en `<delSpan>`, el elemento [`<damageSpan>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-damageSpan.html) con el atributo `@spanTo` que apuntará hacia el anclaje que indica el final del texto dañado. Por ejemplo:
  
-![Ejemplo de un daño. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 3v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](img/L7_007.jpg) 
+![Ejemplo de un daño. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 3v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_007.jpg) 
  
 ```xml
 <damage>non</damage> se me podria celar: quanto ual vn accento
@@ -241,8 +241,8 @@ También puedes añadir la indicación de la versión digital, distinguiendo un 
  
 ## 11.2. Reproducciones
  
-![Ed. 1610, fol. 69r](img/8.Lope_fol.69r.jpg)
-![Ed. 1610, fol. 69v](img/8.Lope_fol.69v.jpg)
+![Ed. 1610, fol. 69r](https://raw.githubusercontent.com/tthub-repo/ejercicios/master/img/8.Lope_fol.69r.jpg)
+![Ed. 1610, fol. 69v](https://raw.githubusercontent.com/tthub-repo/ejercicios/master/img/8.Lope_fol.69v.jpg)
 
  
  
