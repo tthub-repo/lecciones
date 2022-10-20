@@ -1,6 +1,6 @@
 ---
 title: Edición filológica digital con Visual Studio Code
-author: Gabriel Calarco y Carles Márquez Molins
+author: Gabriel Calarco, Carles Márquez Molins
 date: 2022
 layout: default
 lang: es
@@ -8,16 +8,14 @@ lang: es
 
 Falta intro.... 
 
-# 1. Edición filológica digital con Visual Studio Code
-
-## 1. Textos digitales y editores de código
+# 1. Textos digitales y editores de código
 
 Antes de entrar en detalles sobre qué es Visual Studio Code y para que se utiliza es importante tener en mente algunas definiciones básicas sobre el trabajo con textos en las Humanidades Digitales. Comencemos por la diferencia entre un texto digitalizado y un texto digital: mientras que el texto digitalizado puede ser definido como una colección de imágenes que reproducen las páginas de un libro en papel o similar (usualmente reunidas en un documento PDF), el texto digital se construye como una cadena de caracteres, reconocibles tanto para los lectores humanos como para las computadoras. Esto hace que el texto digital ofrezca la posibilidad de realizar algunas operaciones que no se encuentran disponibles para las digitalizaciones, como buscar una cadena de caracteres determinada, efectuar reemplazos automáticos o editar el contenido textual.  
 La forma más básica del texto digital es el texto plano (.txt), que solo contiene caracteres (entre ellos, los espacios), sin añadir ningún tipo de formato a los mismos. Por otra parte, el texto digital también puede ser enriquecido con información adicional sobre la estructura del texto y la forma en que este será presentado en los dispositivos; estos datos se incorporan mediante el uso de un lenguaje de marcado, como el que ofrece la Text Encoding Initiative (TEI). Este lenguaje de marcado permite estructurar tanto en lo formal como lo semántico los textos con los que deseamos trabajar de tal forma que estos puedan ser procesados y “entendidos” por sistemas informáticos, tanto para su presentación en ediciones digitales como para operaciones de lectura distante (si deseas saber más sobre TEI puedes dirigirte a nuestros tutoriales sobre edición de textos con TEI).
 Cuando queremos crear o editar un documento TEI, los procesadores de texto más usados, como Microsoft Word o WordPad, no nos serán de utilidad, ya que fácilmente se pueden agregar accidentalmente formatos y caracteres extra y/o invisibles que pueden generar problemas. Los editores de texto plano son una opción más adecuada, pero la mejor alternativa para trabajar en este tipo de documentos es utilizar un programa específicamente diseñado para editar códigos informáticos, es decir, un editor de código.
 
 
-## 2. Visual Studio Code, un editor gratuito y de código abierto 
+# 2. Visual Studio Code, un editor gratuito y de código abierto 
 
 [Visual Studio Code](https://code.visualstudio.com/) (usualmente abreviado VS Code) es un editor de código gratuito que nos ofrece una gran variedad de funciones adicionales a las que puede ofrecer un editor de texto plano. Una de las principales ventajas de VS Code es que nos ofrece la posibilidad de instalar extensiones con funciones adicionales, entre las cuales podemos encontrar algunas específicamente desarrolladas para trabajar con documentos XML-TEI.
 Para utilizar VS Code solo debes ir a la 
@@ -43,7 +41,7 @@ Como complemento al tutorial, también te ofrecemos esta tabla con alguno de los
 Para más información, pueden consultar la [lista completa de atajos de VS Code para Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) o presionar ‘Crtl+K’ seguido de ‘Ctrl+S’ en VS Code para abrir la lista de atajos y editarlos. 
 Como ya señalamos, una de las principales ventajas de utilizar VS Code como editor de código es que nos permite acceder a una variedad de extensiones que le añaden nuevas funcionalidades al programa. A continuación explicaremos brevemente algunas de las que pueden llegar a resultar más útiles para editar archivos codificados con TEI.
 
-## 3. Scholarly XML 
+# 3. Scholarly XML 
 
 Una de las extensiones que nos resultarán más útiles al momento de trabajar sobre archivos TEI en VS Code es *Scholarly XML*, ya que fue diseñada especialmente para la codificación de textos en XML-TEI y nos permitirá incorporar algunas funciones que nos serán de gran utilidad:
  
@@ -59,7 +57,7 @@ Para instalar esta extensión debes seleccionar el ícono de extensiones del men
 
 <!-- Fig. 1 Pasos para instalar la extensión Scholarly XML en VS Code. -->
 
-## 4. TEI Publisher
+# 4. TEI Publisher
 
 VS Code nos permite realizar visualizaciones de los textos codificados con TEI que pueden servirnos como una primera aproximación a las transformaciones XSLT. Sin entrar en mayores detalles, baste por el momento decir que las transformaciones XSLT ([eXtensible Stylesheet Language Transformations](https://es.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations)) nos permiten traducir nuestros documentos XML-TEI a otros dialectos del lenguaje XML. En proyectos de Humanidades Digitales, y especialmente en el campo de la Edición Digital Filológica, la transformación más habitual es a [HTML](https://es.wikipedia.org/wiki/HTML), ya que este formato nos permitirá poner nuestros textos marcados con TEI a disposición del público y determinar qué aspectos del marcado TEI se reflejarán en la presentación del texto en el navegador y de qué forma. Sin embargo, este proceso requiere del manejo de varias tecnologías complementarias cuya curva de aprendizaje, si bien está lejos de ser inaccesible, requiere de una dedicación considerable, de la que en muchos casos puede no disponerse. Por este motivo se han desarrollado algunas herramientas que ayudan a simplificar este proceso. Una de las principales iniciativas en las que se ha venido trabajando en este sentido es [TEI Publisher](https://teipublisher.com/index.html), un proyecto colaborativo y sin fin de lucro, que ofrece una [plataforma en línea](https://teipublisher.com/exist/apps/tei-publisher/index.html?tab=0) orientada a la edición digital de textos codificados en XML-TEI Recientemente TEI Publisher desarrolló una extensión para VS Code que nos permite elegir entre varias [hojas de estilo](https://es.wikipedia.org/wiki/Hoja_de_estilo) para generar visualizaciones de nuestros textos marcados con TEI. Para instalar esta extensión debes ir a la pestaña de extensiones del VS Code (1), ingresar el texto “TEI Publisher” en el buscador (2) y hacer clic en el botón “install” (3):
 
@@ -93,7 +91,7 @@ Puedes probar otras alternativas de hojas de estilo sobre sus archivos TEI y com
 
 A continuación, se presentarán brevemente otras 4 extensiones que pueden ser de utilidad para trabajar con XML-TEI. Son 1) *Git History*; 2) *XML*; 3) *XML Tools* y 4) *xslt-transform*.
 
-### 5.1. Git y Git History
+## 5.1. Git y Git History
 
 Para saber un poco más cómo trabajar con Git conviene acercarse a su uso en VS Code. Este editor de código posee soporte nativo para Git, lo único que hemos de hacer es instalar este control de versiones para nuestro sistema operativo descargándolo desde el siguiente enlace: https://git-scm.com/downloads. 
 Primeramente nos acercaremos al control de código fuente de VS Code.
@@ -123,7 +121,7 @@ Una vez abierta la carpeta, podemos seleccionar uno de los archivos y pedirle a 
 
 Los propósitos de [*Git History*](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) son claros: 1) ver y buscar registros de *git* al tiempo que gráficos y detalles; 2) visualizar una copia previa del trabajo; 3) visualizar y buscar en el historial (por ejemplo, visualizar el historial de toda o de una de las ramas (*branches*); esto es lo que se denomina git log; o visualizar el historial de un autor). Mediante esta extensión también se pueden comparar ramas, compromisos (*commit*) o comparar archivos entre compromisos.
 
-### 5.2. XML
+## 5.2. XML
 
 [*XML*](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml) es una distribución desarrollada por RedHat, quienes han contribuido, por ejemplo, al desarrollo de distribuciones de Linux como Fedora o de programas como Libreoffice. Esta extensión se centra en dotar al VS Code de las herramientas necesarias para reconocer adecuadamente el XML. Así, permite el cierre automático de las etiquetas (por ejemplo, al escribir `<p>`, también se escribirá automáticamente `</p>`). También añade soporte para XSL y para renombrar etiquetas. Este segundo funciona de la siguiente manera:
 
@@ -142,7 +140,7 @@ Los propósitos de [*Git History*](https://marketplace.visualstudio.com/items?it
 
 Pueden consultarse todas las funciones de esta extensión en el enlace facilitado anteriormente.
 
-### 5.3. XML Tools
+## 5.3. XML Tools
 
 Por otro lado, *XML Tools* (<https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml>) tiene una serie de características que son: 1) dar formato al XML, 2) visualización del árbol de XML (es decir, cómo está estructurado el documento), evaluación de XPath –lenguaje pensado para transformar documentos XML–; 3) enhebrado de XQuery –lenguaje pensado para consultar documentos XML–; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
 Veamos un ejemplo de otra de sus funciones, simplificar el XML:
@@ -161,7 +159,7 @@ La caja de comandos se puede abrir con *Ctrl + shift + P* o haciendo clic derech
 
 <!-- Fig. 15 Resultado del XML simplificado. -->
 
-### 5.4. xslt-transform
+## 5.4. xslt-transform
 
 El cometido de la última extensión, [xslt-transform](<https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform>), es transformar el XML en el que hemos trabajado a un HTML o un PDF mediante el lenguaje XSLT. Mostraremos un ejemplo de cómo transformar un XML en HTML en VS Code:
 
@@ -185,6 +183,6 @@ Tras este paso, cargaremos el archivo .xsl o .xslt que hayamos preparado para la
 
 <!-- Fig. 19 Disfrutamos del resultado en un HTML sencillo. -->
 
-## 6. Conclusiones
+# 6. Conclusiones
 
 Como hemos visto a lo largo del tutorial, VS Code destaca, entre otras cosas, por ser un editor de código libre y gratuito, lo que lo convierte en una herramienta accesible para cualquier tipo de usuario. Además, hemos aprendido a instalar extensiones en VS Code, unos añadidos que le aportan gran versatilidad a este programa. En primer lugar, nos hemos centrado en la extensión *Scholarly XML* y en *TEI Publisher*, las cuales nos serán de gran ayuda al trabajar en XML-TEI. También se ha ofrecido una tabla con los atajos más habituales y útiles para VS Code. Por otra parte, hemos hecho un breve repaso de otras extensiones que pueden resultar provechosas para todo aquel que desee trabajar en XML-TEI con VS Code (*Git History*, *XML*, *XML Tools* y *xslt-transform*). En definitiva, VS Code es un programa con mucho potencial –buena parte de él se lo añaden las extensiones– y que nos va a permitir trabajar perfectamente con XML, con otros lenguajes de marcado e incluso con lenguajes de programación. 
