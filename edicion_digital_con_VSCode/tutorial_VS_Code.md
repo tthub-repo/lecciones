@@ -8,7 +8,7 @@ lang: es
 
 Falta intro.... 
 
-# Edición filológica digital con Visual Studio Code
+# 1. Edición filológica digital con Visual Studio Code
 
 ## 1. Textos digitales y editores de código
 
