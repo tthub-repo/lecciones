@@ -47,19 +47,21 @@ Como ya señalamos, una de las principales ventajas de utilizar VS Code como edi
 
 # 3. Scholarly XML
 
-Una de las extensiones que nos resultarán más útiles al momento de trabajar con archivos TEI en VS Code es [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml), ya que fue diseñada especialmente para la codificación de textos en XML-TEI y nos permitirá incorporar algunas funciones que nos serán de gran utilidad:
- 
-* Siempre que nuestro documento TEI se encuentre asociado a un esquema Relax NG, VS Code nos informará si nuestros archivos son válidos y están bien formados.
-* Si estamos trabajando en TEI recibiremos sugerencias de elementos que podemos utilizar de acuerdo con el esquema con el que estemos trabajando.
-* Permite seleccionar una porción de texto y utilizar el atajo `Ctrl+E` para marcarlo con una etiqueta de inicio al comienzo y una de cierre al final.
+Una de las extensiones que nos resultarán más útiles al momento de trabajar con archivos TEI en VS Code es [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml), ya que fue diseñada especialmente para la codificación de textos en XML-TEI. 
 
 Para instalar esta extensión debes seleccionar el ícono de extensiones del menú lateral de VS Code (paso 1) y en el cuadro de búsqueda ingresar la palabra `schorlarly` (paso 2). Cuando aparezca la opción que desees utilizar, solo debes presionar el botón `install` (paso 3):
 
 ![Fig. 1. Pasos para instalar la extensión Scholarly XML en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen1.png)
 
-<!-- Fig. 1 Pasos para instalar la extensión Scholarly XML en VS Code. -->
+Instalar esta extensión en VS Code nos permitirá incorporar algunas funciones que nos serán de gran utilidad:
+ 
+* Siempre que nuestro documento TEI se encuentre asociado a un esquema Relax NG, VS Code nos informará si nuestros archivos son válidos y están bien formados.
+* Si estamos trabajando en TEI recibiremos sugerencias de elementos que podemos utilizar de acuerdo con el esquema con el que estemos trabajando.
+* Permite seleccionar una porción de texto y utilizar el atajo `Ctrl+E` para marcarlo con una etiqueta de inicio al comienzo y una de cierre al final.
 
 <span style="color:red">SAT: Añadir otra imagen donde se vea un ejemplo donde se complete un elemento o algo más concreto del uso, y añadir dos frases de conclusión.</span> 
+
+Gracias a estas funciones adicionales (en particular la posibilidad de validar documentos a partir de un esquema, que resulta fundamental para el trabajo con este tipo de archivos), VS Code es una herramienta sumamente útil y efectiva para la edición de textos digitales con TEI, cuyas prestaciones son coparables a las de los programas con licencias pagas, aunque con la ventaja de que al tratarse de una aplicación gratuita se encuentra al alcance de toda la comunidad.
 
 # 4. TEI Publisher
 
