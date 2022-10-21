@@ -55,7 +55,7 @@ Una de las extensiones que nos resultarán más útiles al momento de trabajar c
 
 Para instalar esta extensión debes seleccionar el ícono de extensiones del menú lateral de VS Code (paso 1) y en el cuadro de búsqueda ingresar la palabra `schorlarly` (paso 2). Cuando aparezca la opción que desees utilizar, solo debes presionar el botón `install` (paso 3):
 
-![Fig. 1 Pasos para instalar la extensión Scholarly XML en VS Code.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen1.png)
+![Fig. 1 Pasos para instalar la extensión Scholarly XML en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen1.png)
 
 <!-- Fig. 1 Pasos para instalar la extensión Scholarly XML en VS Code. -->
 
@@ -63,27 +63,27 @@ Para instalar esta extensión debes seleccionar el ícono de extensiones del men
 
 VS Code nos permite realizar visualizaciones de los textos codificados con TEI que pueden servirnos como una primera aproximación a las transformaciones XSLT. Sin entrar en mayores detalles, baste por el momento decir que las transformaciones XSLT ([eXtensible Stylesheet Language Transformations](https://es.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations)) nos permiten traducir nuestros documentos XML-TEI a otros dialectos del lenguaje XML. En proyectos de Humanidades Digitales, y especialmente en el campo de la edición digital filológica, la transformación más habitual es hacia un formato web en [HTML](https://es.wikipedia.org/wiki/HTML). Esta transformación, de XML a HTML a través de XSLT, nos permitirá poner nuestros textos marcados con TEI en línea a disposición del público y determinar qué aspectos del marcado TEI se reflejarán en la presentación del texto en el navegador y de qué forma. Sin embargo, este proceso requiere del manejo de varias tecnologías complementarias cuya curva de aprendizaje, si bien está lejos de ser inaccesible, requiere de una dedicación considerable, de la que en muchos casos puede no disponerse. Por este motivo se han desarrollado algunas herramientas que ayudan a simplificar este proceso. Una de las principales iniciativas en las que se ha venido trabajando en este sentido es [TEI Publisher](https://teipublisher.com/index.html), un proyecto colaborativo y sin fines de lucro, que ofrece una [plataforma en línea](https://teipublisher.com/exist/apps/tei-publisher/index.html?tab=0) orientada a la edición digital de textos codificados en XML-TEI. Recientemente TEI Publisher desarrolló una extensión para VS Code que nos permite elegir entre varias [hojas de estilo](https://es.wikipedia.org/wiki/Hoja_de_estilo) para generar visualizaciones de nuestros textos marcados con TEI. Para instalar esta extensión debes ir a la pestaña de extensiones del VS Code (Paso 1), ingresar el texto “TEI Publisher” en el buscador (2) y hacer clic en el botón “install” (3):
 
-![Fig. 2 Búsqueda de la extensión.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen2.png)
+![Fig. 2 Búsqueda de la extensión.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen2.png)
 
 <!-- Fig. 2 Búsqueda de la extensión. -->
 
 Una vez que se complete la instalación verás que un nuevo ícono con el logo de *TEI Publisher* aparece en la barra lateral izquierda, debajo de la pestaña de extensiones. En ese ícono podremos encontrar la primera de dos funciones que nos ofrece *TEI Publisher* para trabajar con archivos TEI en VS Code, que consiste en un buscador de identificadores permanentes para el marcado de entidades <span style="color:red">(puedes volver a la unidad anterior para refrescar lo que aprendimos sobre el marcado de entidades)</span>. Para usar esta herramienta, primero debes abrir la pestaña de *TEI Publisher* (Paso 1), ingresar el nombre de la entidad que deseas marcar en el cuadro de búsqueda (2), y opcionalmente también puedes seleccionar el tipo de entidad que vas a buscar (personas, lugares, organizaciones o términos) (3). Después de hacer clic en el botón azul con una la lupa (4), aparecerá una lista de resultados, a continuación, debes seleccionar el nombre de la entidad en el texto que estás marcando (5) y hacer clic en el botón con el signo `+` que aparece al lado del resultado que mejor se ajuste a tu búsqueda (6). El resultado será que la extensión introducirá las etiquetas del elemento TEI que corresponde al tipo de entidad que estamos marcando y añadirá un atributo `@ref` cuyo valor es un identificador permanente proporcionado por la DNB ([*Deutschen National Bibliothek*](https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html)):
 
-![Fig. 3. Marcado de entidades con la extensión de TEI Publisher.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen3.png)
+![Fig. 3. Marcado de entidades con la extensión de TEI Publisher.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen3.png)
 
 <!-- Fig. 3. Marcado de entidades con la extensión de TEI Publisher. -->
 
 
 Esta función puede tener su utilidad para facilitar un marcado fuertemente centrado en el reconocimiento de entidades; sin embargo, no es el motivo principal por el cual instalamos la extensión. Como ya anunciamos nuestro objetivo es obtener una primera visualización de nuestros textos codificados con TEI, con este fin vamos a usar la segunda función que nos ofrece la extensión de *TEI Publisher*. Esta función solo aparece visible en la pantalla cuando tenemos un documento XML-TEI abierto en el VS Code, y lo podemos encontrar en la barra superior en el costado derecho. Al hacer clic en este ícono se desplegará una lista de hojas de estilo en formato ODD entre las cuales podemos elegir:
 
-![Fig. 4. Selección de plantilla de estilo con la extensión de TEI Publisher.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen4.png)
+![Fig. 4. Selección de plantilla de estilo con la extensión de TEI Publisher.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen4.png)
 
 <!-- Fig. 4. Selección de plantilla de estilo con la extensión de TEI Publisher. -->
 
 
 Si seleccionamos la primera opción, por ejemplo, y se la aplicamos a un texto en prosa codificado con TEI, obtendremos el siguiente resultado:
 
-![Fig. 5. Resultado de la visualización en HTML con la extensión de TEI Publisher.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen5.png)
+![Fig. 5. Resultado de la visualización en HTML con la extensión de TEI Publisher.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen5.png)
 
 <!-- Fig. 5. Resultado de la visualización en HTML con la extensión de *TEI Publisher*. -->
 
@@ -99,25 +99,25 @@ El editor VS Code posee soporte nativo para Git, lo único que debemos hacer es 
 
 Primeramente nos acercaremos al control de código fuente de VS Code.
 
-![Fig. 6. Ubicación del Control de código fuente en VS Code.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen6.png)
+![Fig. 6. Ubicación del Control de código fuente en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen6.png)
 
 <!-- Fig. 6. Ubicación del Control de código fuente en VS Code. -->
 
 
 En segundo lugar, abrimos una carpeta que ya contenga un repositorio Git. Si todavía no tenemos una, tendremos que clonarla desde GitHub. Aquí es importante señalar que es preciso estar registrado en GitHub para poder emplear Git. El registro es gratuito, y la plataforma GitHub nos permitirá, entre otras cosas, almacenar y compartir nuestro código.
 
-![Fig. 7. Abrimos la carpeta que contiene el repositorio git.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen7.png)
+![Fig. 7. Abrimos la carpeta que contiene el repositorio git.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen7.png)
 
 <!-- Fig. 7. Abrimos la carpeta que contiene el repositorio git. -->
 
 Una vez abierta la carpeta, podemos seleccionar uno de los archivos y pedirle a Git que nos muestre el historial de este. Lo que se muestra en la Figura 9 es dicho historial.
 
-![Fig. 8. Solicitamos el acceso al historial del archivo.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen8.png)
+![Fig. 8. Solicitamos el acceso al historial del archivo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen8.png)
 
 <!-- Fig. 8. Solicitamos el acceso al historial del archivo. -->
 
 
-![Fig. 9. Visualización el historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen9.png)
+![Fig. 9. Visualización el historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen9.png)
 
 <!-- Fig. 9. Visualizamos el historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub. -->
 
@@ -129,16 +129,16 @@ La extensión [*XML*](https://marketplace.visualstudio.com/items?itemName=redhat
 
 <span style="color:red">Añadir texto entre imágenes.</span>
 
-![Fig. 10. Selección de un fragmento de código para el cambio de nombre del símbolo.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen10.png)
+![Fig. 10. Selección de un fragmento de código para el cambio de nombre del símbolo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen10.png)
 
 <!-- Fig. 10. Selección de un fragmento de código para el cambio de nombre del símbolo. -->
 
-![Fig. 11. Símbolo por el que queremos remplazar el símbolo actual.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen11.png)
+![Fig. 11. Símbolo por el que queremos remplazar el símbolo actual.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen11.png)
 
 <!-- Fig. 11. Escribimos el símbolo por el que queremos cambiar el símbolo actual. -->
 
 
-![Fig. 12. Resultado en VsCode.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen12.png)
+![Fig. 12. Resultado en VsCode.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen12.png)
 
 <!-- Fig. 12. Vemos el resultado en VsCode. -->
 
@@ -150,17 +150,17 @@ Por otro lado, [XML Tools](https://marketplace.visualstudio.com/items?itemName=D
 
 Veamos un ejemplo de otra de sus funciones, simplificar el XML:
 
-![Fig. 13. Nuestro código en XML.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen13.png)
+![Fig. 13. Nuestro código en XML.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen13.png)
 
 <!-- Fig. 13. Nuestro código en XML. -->
 
-![Fig. 14. Búsqueda en el panel de comandos del proceso de simplificación de XML.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen14.png)
+![Fig. 14. Búsqueda en el panel de comandos del proceso de simplificación de XML.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen14.png)
 
 <!-- Fig. 14. Búsqueda en el panel de comandos del proceso de simplificación de XML. -->
 
 La caja de comandos se puede abrir con `Ctrl+shift+P` o haciendo clic derecho en cualquier punto del documento y seleccionando dicho panel.
 
-![Fig. 15 Resultado del XML simplificado.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen15.png)
+![Fig. 15 Resultado del XML simplificado.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen15.png)
 
 <!-- Fig. 15 Resultado del XML simplificado. -->
 
@@ -172,21 +172,21 @@ En primer lugar, instalamos la extensión *xslt-transform*.
 
 <span style="color:red">Explicar los textos en un párrafo, no como leyenda de la figura</span> 
 
-![Fig. 16 Nuestro archivo en VS Code.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen16.png)
+![Fig. 16 Nuestro archivo en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen16.png)
 
 <!-- Fig. 16 Abrimos nuestro archivo en VS Code. -->
 
-![Fig. 17 Buscamos el comando que nos permite hacer la transformación mediante XSLT (XSLT: Run Transformation)](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen17.png)
+![Fig. 17 Buscamos el comando que nos permite hacer la transformación mediante XSLT (XSLT: Run Transformation)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen17.png)
 
 <!-- Fig. 17 Buscamos el comando que nos permite hacer la transformación mediante XSLT (XSLT: Run Transformation). -->
 
 Tras este paso, cargaremos el archivo .xsl o .xslt que hayamos preparado para la transformación. En nuestro caso, hemos partido de un archivo .xsl que ha generado Susanna Allés Torrent y lo hemos modificado para los propósitos de este tutorial.
 
-![Fig. 18 Guardamos el archivo resultante de la transformación como .html](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen18.png)
+![Fig. 18 Guardamos el archivo resultante de la transformación como .html](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen18.png)
 
 <!-- Fig. 18 Guardamos el archivo resultante de la transformación como .html -->
 
-![Fig. 19 Disfrutamos del resultado en un HTML sencillo.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen19.png)
+![Fig. 19 Disfrutamos del resultado en un HTML sencillo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen19.png)
 
 <!-- Fig. 19 Disfrutamos del resultado en un HTML sencillo. -->
 
