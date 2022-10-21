@@ -147,7 +147,7 @@ Puede ocurrir que la fuente original no tenga un índice, pero que queramos cons
 La Guidelines proponen un tipo concreto de lenguaje de marcado que consiste en aislar a través de “<index indexName="conceptosXMLTEI"><term xml:id="mrc">marcas</term></index>” o “<index indexName="conceptosXMLTEI"> <term xml:id="etq">etiquetas</term></index>”.
 ```
  
-# 3. Ejemplos codificado
+# 3. Ejemplos
  
 El posible resultado final -recordemos que no hay una sola manera correcta de codificar- para un texto en prosa puede ser como el que se encuentra en el [Ejemplo en prosa (L5_Ejemplo_prosa.xml)](https://github.com/tthub-repo/ejemplos/blob/master/L5_Ejemplo_prosa.xml). 
  
