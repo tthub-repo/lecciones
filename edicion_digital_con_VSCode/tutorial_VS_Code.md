@@ -55,7 +55,7 @@ Una de las extensiones que nos resultarán más útiles al momento de trabajar c
 
 Para instalar esta extensión debes seleccionar el ícono de extensiones del menú lateral de VS Code (paso 1) y en el cuadro de búsqueda ingresar la palabra `schorlarly` (paso 2). Cuando aparezca la opción que desees utilizar, solo debes presionar el botón `install` (paso 3):
 
-![Fig. 1 Pasos para instalar la extensión Scholarly XML en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen1.png)
+![Fig. 1. Pasos para instalar la extensión Scholarly XML en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen1.png)
 
 <!-- Fig. 1 Pasos para instalar la extensión Scholarly XML en VS Code. -->
 
@@ -65,7 +65,7 @@ Para instalar esta extensión debes seleccionar el ícono de extensiones del men
 
 VS Code nos permite realizar visualizaciones de los textos codificados con TEI que pueden servirnos como una primera aproximación a las transformaciones XSLT. Sin entrar en mayores detalles, baste por el momento decir que las transformaciones XSLT ([eXtensible Stylesheet Language Transformations](https://es.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations)) nos permiten traducir nuestros documentos XML-TEI a otros dialectos del lenguaje XML. En proyectos de Humanidades Digitales, y especialmente en el campo de la edición digital filológica, la transformación más habitual es hacia un formato web en [HTML](https://es.wikipedia.org/wiki/HTML). Esta transformación, de XML a HTML a través de XSLT, nos permitirá poner nuestros textos marcados con TEI en línea a disposición del público y determinar qué aspectos del marcado TEI se reflejarán en la presentación del texto en el navegador y de qué forma. Sin embargo, este proceso requiere del manejo de varias tecnologías complementarias cuya curva de aprendizaje, si bien está lejos de ser inaccesible, requiere de una dedicación considerable, de la que en muchos casos puede no disponerse. Por este motivo se han desarrollado algunas herramientas que ayudan a simplificar este proceso. Una de las principales iniciativas en las que se ha venido trabajando en este sentido es [TEI Publisher](https://teipublisher.com/index.html), un proyecto colaborativo y sin fines de lucro, que ofrece una [plataforma en línea](https://teipublisher.com/exist/apps/tei-publisher/index.html?tab=0) orientada a la edición digital de textos codificados en XML-TEI. Recientemente TEI Publisher desarrolló una extensión para VS Code que nos permite elegir entre varias [hojas de estilo](https://es.wikipedia.org/wiki/Hoja_de_estilo) para generar visualizaciones de nuestros textos marcados con TEI. Para instalar esta extensión debes ir a la pestaña de extensiones del VS Code (Paso 1), ingresar el texto “TEI Publisher” en el buscador (2) y hacer clic en el botón “install” (3):
 
-![Fig. 2 Búsqueda de la extensión.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen2.png)
+![Fig. 2. Búsqueda de la extensión.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen2.png)
 
 <!-- Fig. 2 Búsqueda de la extensión. -->
 
@@ -131,6 +131,8 @@ La extensión [*XML*](https://marketplace.visualstudio.com/items?itemName=redhat
 
 <span style="color:red">Añadir texto entre imágenes.</span>
 
+En primer lugar, seleccionamos un fragmento de código para el cambio de nombre del símbolo. A continuación, seleccionamos cuál es el símbolo por el que queremos reemplazar el símbolo actual. En este caso reemplazaremos `<p>` y `</p>` por `<l>` y `</l>`. En la figura 12 podemos ver el resultado en VS Code.
+
 ![Fig. 10. Selección de un fragmento de código para el cambio de nombre del símbolo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen10.png)
 
 <!-- Fig. 10. Selección de un fragmento de código para el cambio de nombre del símbolo. -->
@@ -162,7 +164,7 @@ Veamos un ejemplo de otra de sus funciones, simplificar el XML:
 
 La caja de comandos se puede abrir con `Ctrl+shift+P` o haciendo clic derecho en cualquier punto del documento y seleccionando dicho panel.
 
-![Fig. 15 Resultado del XML simplificado.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen15.png)
+![Fig. 15. Resultado del XML simplificado.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen15.png)
 
 <!-- Fig. 15 Resultado del XML simplificado. -->
 
@@ -174,21 +176,23 @@ En primer lugar, instalamos la extensión *xslt-transform*.
 
 <span style="color:red">Explicar los textos en un párrafo, no como leyenda de la figura</span> 
 
-![Fig. 16 Nuestro archivo en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen16.png)
+Primeramente abrimos nuestro archivo en VS Code. En segundo lugar, buscamos el comando que nos permite hacer la transformación mediante XSLT (XSLT: Run Transformation).
+
+![Fig. 16. Nuestro archivo en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen16.png)
 
 <!-- Fig. 16 Abrimos nuestro archivo en VS Code. -->
 
-![Fig. 17 Buscamos el comando que nos permite hacer la transformación mediante XSLT (XSLT: Run Transformation)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen17.png)
+![Fig. 17. Comando XSLT: Run Transformation](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen17.png)
 
 <!-- Fig. 17 Buscamos el comando que nos permite hacer la transformación mediante XSLT (XSLT: Run Transformation). -->
 
-Tras este paso, cargaremos el archivo .xsl o .xslt que hayamos preparado para la transformación. En nuestro caso, hemos partido de un archivo .xsl que ha generado Susanna Allés Torrent y lo hemos modificado para los propósitos de este tutorial.
+Tras este paso, cargaremos el archivo .xsl o .xslt que hayamos preparado para la transformación. En nuestro caso, hemos partido de un archivo .xsl que ha generado Susanna Allés Torrent y lo hemos modificado para los propósitos de este tutorial. Después de esto, guardaremos el archivo resultante de la transformación como .html y disfrutaremos del resultado, que puede verse en la figura 19.
 
-![Fig. 18 Guardamos el archivo resultante de la transformación como .html](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen18.png)
+![Fig. 18. Guardamos el archivo como .html](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen18.png)
 
 <!-- Fig. 18 Guardamos el archivo resultante de la transformación como .html -->
 
-![Fig. 19 Disfrutamos del resultado en un HTML sencillo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen19.png)
+![Fig. 19. Disfrutamos del resultado en un HTML sencillo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen19.png)
 
 <!-- Fig. 19 Disfrutamos del resultado en un HTML sencillo. -->
 
