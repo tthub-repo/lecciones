@@ -45,7 +45,7 @@ Para más información, pueden consultar la [lista completa de atajos de VS Code
 
 Como ya señalamos, una de las principales ventajas de utilizar VS Code como editor de código es que nos permite acceder a una variedad de extensiones que le añaden nuevas funcionalidades al programa. A continuación explicaremos brevemente algunas de las que pueden llegar a resultar más útiles para editar archivos codificados con TEI.
 
-# 3. Scholarly XML 
+# 3. Scholarly XML
 
 Una de las extensiones que nos resultarán más útiles al momento de trabajar con archivos TEI en VS Code es [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml), ya que fue diseñada especialmente para la codificación de textos en XML-TEI y nos permitirá incorporar algunas funciones que nos serán de gran utilidad:
  
