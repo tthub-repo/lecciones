@@ -146,7 +146,8 @@ Pueden consultarse todas las funciones de esta extensión en el enlace facilitad
 
 ## 5.3. XML Tools
 
-Por otro lado, *XML Tools* (<https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml>) tiene una serie de características que son: 1) dar formato al XML, 2) visualización del árbol de XML (es decir, cómo está estructurado el documento), evaluación de XPath –lenguaje pensado para transformar documentos XML–; 3) enhebrado de XQuery –lenguaje pensado para consultar documentos XML–; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
+Por otro lado, [XML Tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) tiene una serie de características que son: 1) dar formato al XML, 2) visualización del árbol de XML (es decir, cómo está estructurado el documento), evaluación de XPath –lenguaje pensado para navegar y parsear los documentos XML–; 3) enhebrado de XQuery –lenguaje pensado para consultar documentos XML–; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
+
 Veamos un ejemplo de otra de sus funciones, simplificar el XML:
 
 ![Fig. 13. Nuestro código en XML.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen13.png)
@@ -157,7 +158,7 @@ Veamos un ejemplo de otra de sus funciones, simplificar el XML:
 
 <!-- Fig. 14. Búsqueda en el panel de comandos del proceso de simplificación de XML. -->
 
-La caja de comandos se puede abrir con *Ctrl + shift + P* o haciendo clic derecho en cualquier punto del documento y seleccionar dicho panel.
+La caja de comandos se puede abrir con `Ctrl+shift+P` o haciendo clic derecho en cualquier punto del documento y seleccionando dicho panel.
 
 ![Fig. 15 Resultado del XML simplificado.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen15.png)
 
@@ -165,11 +166,13 @@ La caja de comandos se puede abrir con *Ctrl + shift + P* o haciendo clic derech
 
 ## 5.4. xslt-transform
 
-El cometido de la última extensión, [xslt-transform](<https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform>), es transformar el XML en el que hemos trabajado a un HTML o un PDF mediante el lenguaje XSLT. Mostraremos un ejemplo de cómo transformar un XML en HTML en VS Code:
+El cometido de la última extensión, [xslt-transform](https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform), es transformar el XML en una salida HTML o un PDF mediante el lenguaje XSLT. Mostraremos un ejemplo de cómo transformar un XML en HTML en VS Code:
 
-En primer lugar, instalamos la extensión *xslt-transform*.
+En primer lugar, instalamos la extensión *xslt-transform*. 
 
-![Fig. 16 Abrimos nuestro archivo en VS Code.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen16.png)
+<span style="color:red">Explicar los textos en un párrafo, no como leyenda de la figura</span> 
+
+![Fig. 16 Nuestro archivo en VS Code.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen16.png)
 
 <!-- Fig. 16 Abrimos nuestro archivo en VS Code. -->
 
@@ -189,4 +192,4 @@ Tras este paso, cargaremos el archivo .xsl o .xslt que hayamos preparado para la
 
 # 6. Conclusiones
 
-Como hemos visto a lo largo del tutorial, VS Code destaca, entre otras cosas, por ser un editor de código libre y gratuito, lo que lo convierte en una herramienta accesible para cualquier tipo de usuario. Además, hemos aprendido a instalar extensiones en VS Code, unos añadidos que le aportan gran versatilidad a este programa. En primer lugar, nos hemos centrado en la extensión *Scholarly XML* y en *TEI Publisher*, las cuales nos serán de gran ayuda al trabajar en XML-TEI. También se ha ofrecido una tabla con los atajos más habituales y útiles para VS Code. Por otra parte, hemos hecho un breve repaso de otras extensiones que pueden resultar provechosas para todo aquel que desee trabajar en XML-TEI con VS Code (*Git History*, *XML*, *XML Tools* y *xslt-transform*). En definitiva, VS Code es un programa con mucho potencial –buena parte de él se lo añaden las extensiones– y que nos va a permitir trabajar perfectamente con XML, con otros lenguajes de marcado e incluso con lenguajes de programación. 
+Como hemos visto a lo largo del tutorial, VS Code destaca, entre otras cosas, por ser un editor de código libre y gratuito, lo que lo convierte en una herramienta accesible para cualquier tipo de usuario. Además, hemos aprendido a instalar extensiones en VS Code, unos añadidos que le aportan gran versatilidad a este programa. En primer lugar, nos hemos centrado en la extensión *Scholarly XML* y en *TEI Publisher*, las cuales nos serán de gran ayuda al trabajar en XML-TEI. También se ha ofrecido una tabla con los atajos más habituales y útiles para VS Code. Por otra parte, hemos hecho un breve repaso de otras extensiones que pueden resultar provechosas para todo aquel que desee trabajar en XML-TEI con VS Code (*Git History*, *XML*, *XML Tools* y *xslt-transform*). En definitiva, VS Code es un programa con mucho potencial –buena parte de él se lo añaden las extensiones– y que nos va a permitir trabajar cómodamente con XML, con otros lenguajes de marcado e incluso con lenguajes de programación. 
