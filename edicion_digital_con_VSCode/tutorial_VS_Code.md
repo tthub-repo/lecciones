@@ -10,14 +10,14 @@ En este breve tutorial explicamos cómo utilizar el programa libre y gratuito [V
 
 # 1. Textos digitales y editores de código
 
-Antes de entrar en detalles sobre qué es Visual Studio Code y para qué se utiliza es importante tener en mente algunas definiciones básicas sobre el trabajo con textos en las Humanidades Digitales. Comencemos por la diferencia entre un texto digitalizado y un texto digital: mientras que el texto digitalizado puede ser definido como una colección de imágenes que reproducen las páginas de un libro en papel o similar (normalmente reunidas en un documento PDF), el texto digital se construye como una cadena de caracteres, reconocibles tanto para los lectores humanos como para las computadoras. Esto hace que el texto digital ofrezca la posibilidad de realizar algunas operaciones que no se encuentran disponibles para las digitalizaciones, como buscar una cadena de caracteres determinada, efectuar reemplazos automáticos o editar el contenido textual.  
+Antes de entrar en detalles sobre qué es [Visual Studio Code](https://code.visualstudio.com/) y para qué se utiliza es importante tener en mente algunas definiciones básicas sobre el trabajo con textos en las Humanidades Digitales. Comencemos por la diferencia entre un texto digitalizado y un texto digital: mientras que el texto digitalizado puede ser definido como una colección de imágenes que reproducen las páginas de un libro en papel o similar (normalmente reunidas en un documento PDF), el texto digital se construye como una cadena de caracteres, reconocibles tanto para los lectores humanos como para las computadoras. Esto hace que el texto digital ofrezca la posibilidad de realizar algunas operaciones que no se encuentran disponibles para las digitalizaciones, como buscar una cadena de caracteres determinada, efectuar reemplazos automáticos o editar el contenido textual.  
 
 La forma más básica del texto digital es el texto plano (.txt), que sólo contiene caracteres (entre ellos, los espacios), sin añadir ningún tipo de formato a los mismos. Por otra parte, el texto digital también puede ser enriquecido con información adicional sobre la estructura del texto y la forma en que este será presentado en los dispositivos; estos datos se incorporan mediante el uso de un lenguaje de marcado, como el que ofrece la [Text Encoding Initiative](https://tei-c.org/) (TEI). Este lenguaje de marcado permite estructurar formal y semánticamente los textos con los que deseamos trabajar de tal forma que estos puedan ser procesados y “entendidos” por sistemas informáticos, tanto para su presentación en ediciones digitales como para operaciones de lectura distante (si deseas saber más sobre TEI puedes dirigirte a [nuestros tutoriales](https://tthub.io/aprende) sobre edición de textos con TEI).
 
 Cuando queremos crear o editar un documento TEI, los procesadores de texto más usados, como Microsoft Word o WordPad, no nos son de utilidad, ya que fácilmente se pueden agregar accidentalmente formatos y caracteres extra y/o invisibles que pueden generar problemas. Los editores de texto plano son una opción más adecuada, pero la mejor alternativa para trabajar en este tipo de documentos es utilizar un programa específicamente diseñado para editar códigos informáticos, es decir, un editor de código.
 
 
-# 2. Visual Studio Code, un editor gratuito y de código abierto 
+# 2. VS Code, un editor gratuito y de código abierto 
 
 [Visual Studio Code](https://code.visualstudio.com/) (normalmente abreviado VS Code) es un editor de código gratuito que nos ofrece una gran variedad de funciones adicionales a las que posee un editor de texto plano. Desde el punto de vista de la edición filológica digital, VS Code brinda la posibilidad de instalar diversas extensiones entre las cuales encontramos algunas específicamente desarrolladas para trabajar con documentos XML-TEI.
 
@@ -47,15 +47,13 @@ Como ya señalamos, una de las principales ventajas de utilizar VS Code como edi
 
 # 3. Scholarly XML 
 
-Una de las extensiones que nos resultarán más útiles al momento de trabajar sobre archivos TEI en VS Code es *Scholarly XML*, ya que fue diseñada especialmente para la codificación de textos en XML-TEI y nos permitirá incorporar algunas funciones que nos serán de gran utilidad:
+Una de las extensiones que nos resultarán más útiles al momento de trabajar con archivos TEI en VS Code es [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml), ya que fue diseñada especialmente para la codificación de textos en XML-TEI y nos permitirá incorporar algunas funciones que nos serán de gran utilidad:
  
 * Siempre que nuestro documento TEI se encuentre asociado a un esquema Relax NG, VS Code nos informará si nuestros archivos son válidos y están bien formados.
-
 * Si estamos trabajando en TEI recibiremos sugerencias de elementos que podemos utilizar de acuerdo con el esquema con el que estemos trabajando.
+* Permite seleccionar una porción de texto y utilizar el atajo `Ctrl+E` para marcarlo con una etiqueta de inicio al comienzo y una de cierre al final.
 
-* Permite seleccionar una porción de texto y utilizar el atajo ‘*Ctrl+E*’ para marcarlo con una etiqueta de inicio al comienzo y una de cierre al final.
-
-Para instalar esta extensión debes seleccionar el ícono de extensiones del menú lateral de VS Code (paso 1) y en el cuadro de búsqueda ingresar la palabra “*schorlarly*” (paso 2). Cuando aparezca la opción de deseamos utilizar, solo debes presionar el botón “*install*” (paso 3):
+Para instalar esta extensión debes seleccionar el ícono de extensiones del menú lateral de VS Code (paso 1) y en el cuadro de búsqueda ingresar la palabra `schorlarly` (paso 2). Cuando aparezca la opción que desees utilizar, solo debes presionar el botón `install` (paso 3):
 
 ![Fig. 1 Pasos para instalar la extensión Scholarly XML en VS Code.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen1.png)
 
@@ -63,13 +61,13 @@ Para instalar esta extensión debes seleccionar el ícono de extensiones del men
 
 # 4. TEI Publisher
 
-VS Code nos permite realizar visualizaciones de los textos codificados con TEI que pueden servirnos como una primera aproximación a las transformaciones XSLT. Sin entrar en mayores detalles, baste por el momento decir que las transformaciones XSLT ([eXtensible Stylesheet Language Transformations](https://es.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations)) nos permiten traducir nuestros documentos XML-TEI a otros dialectos del lenguaje XML. En proyectos de Humanidades Digitales, y especialmente en el campo de la Edición Digital Filológica, la transformación más habitual es a [HTML](https://es.wikipedia.org/wiki/HTML), ya que este formato nos permitirá poner nuestros textos marcados con TEI a disposición del público y determinar qué aspectos del marcado TEI se reflejarán en la presentación del texto en el navegador y de qué forma. Sin embargo, este proceso requiere del manejo de varias tecnologías complementarias cuya curva de aprendizaje, si bien está lejos de ser inaccesible, requiere de una dedicación considerable, de la que en muchos casos puede no disponerse. Por este motivo se han desarrollado algunas herramientas que ayudan a simplificar este proceso. Una de las principales iniciativas en las que se ha venido trabajando en este sentido es [TEI Publisher](https://teipublisher.com/index.html), un proyecto colaborativo y sin fin de lucro, que ofrece una [plataforma en línea](https://teipublisher.com/exist/apps/tei-publisher/index.html?tab=0) orientada a la edición digital de textos codificados en XML-TEI Recientemente TEI Publisher desarrolló una extensión para VS Code que nos permite elegir entre varias [hojas de estilo](https://es.wikipedia.org/wiki/Hoja_de_estilo) para generar visualizaciones de nuestros textos marcados con TEI. Para instalar esta extensión debes ir a la pestaña de extensiones del VS Code (1), ingresar el texto “TEI Publisher” en el buscador (2) y hacer clic en el botón “install” (3):
+VS Code nos permite realizar visualizaciones de los textos codificados con TEI que pueden servirnos como una primera aproximación a las transformaciones XSLT. Sin entrar en mayores detalles, baste por el momento decir que las transformaciones XSLT ([eXtensible Stylesheet Language Transformations](https://es.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations)) nos permiten traducir nuestros documentos XML-TEI a otros dialectos del lenguaje XML. En proyectos de Humanidades Digitales, y especialmente en el campo de la edición digital filológica, la transformación más habitual es hacia un formato web en [HTML](https://es.wikipedia.org/wiki/HTML). Esta transformación, de XML a HTML a través de XSLT, nos permitirá poner nuestros textos marcados con TEI en línea a disposición del público y determinar qué aspectos del marcado TEI se reflejarán en la presentación del texto en el navegador y de qué forma. Sin embargo, este proceso requiere del manejo de varias tecnologías complementarias cuya curva de aprendizaje, si bien está lejos de ser inaccesible, requiere de una dedicación considerable, de la que en muchos casos puede no disponerse. Por este motivo se han desarrollado algunas herramientas que ayudan a simplificar este proceso. Una de las principales iniciativas en las que se ha venido trabajando en este sentido es [TEI Publisher](https://teipublisher.com/index.html), un proyecto colaborativo y sin fines de lucro, que ofrece una [plataforma en línea](https://teipublisher.com/exist/apps/tei-publisher/index.html?tab=0) orientada a la edición digital de textos codificados en XML-TEI. Recientemente TEI Publisher desarrolló una extensión para VS Code que nos permite elegir entre varias [hojas de estilo](https://es.wikipedia.org/wiki/Hoja_de_estilo) para generar visualizaciones de nuestros textos marcados con TEI. Para instalar esta extensión debes ir a la pestaña de extensiones del VS Code (Paso 1), ingresar el texto “TEI Publisher” en el buscador (2) y hacer clic en el botón “install” (3):
 
 ![Fig. 2 Búsqueda de la extensión.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen2.png)
 
 <!-- Fig. 2 Búsqueda de la extensión. -->
 
-Una vez que se complete la instalación verás que un nuevo ícono con el logo de *TEI Publisher* aparece en la barra lateral izquierda, debajo de la pestaña de extensiones. En ese ícono podremos encontrar la primera de dos funciones que nos ofrece *TEI Publisher* para trabajar con archivos TEI en VS Code, que consiste en un buscador de identificadores permanentes para el marcado de entidades (puedes volver a la unidad anterior para refrescar lo que aprendimos sobre el marcado de entidades). Para usar esta herramienta, primero debes abrir la pestaña de *TEI Publisher* (1), ingresar el nombre de la entidad que deseas marcar en el cuadro de búsqueda (2), y opcionalmente también puedes seleccionar el tipo de entidad que vas a buscar (personas, lugares, organizaciones o términos) (3). Luego de hacer clic en el botón azul con una la lupa (4), aparecerá una lista de resultados, a continuación, debes seleccionar el nombre de la entidad en el texto que estás marcando (5) y hacer clic en el botón con el signo “+” que aparece al lado del resultado que mejor se ajuste a tu búsqueda (6). El resultado será que la extensión introducirá las etiquetas del elemento TEI que corresponde al tipo de entidad que estamos marcando y añadirá un atributo @ref cuyo valor es un identificador permanente proporcionado por la DNB (*Deutschen National Bibliothek* - Biblioteca Nacional Alemana):
+Una vez que se complete la instalación verás que un nuevo ícono con el logo de *TEI Publisher* aparece en la barra lateral izquierda, debajo de la pestaña de extensiones. En ese ícono podremos encontrar la primera de dos funciones que nos ofrece *TEI Publisher* para trabajar con archivos TEI en VS Code, que consiste en un buscador de identificadores permanentes para el marcado de entidades <span style="color:red;">(puedes volver a la unidad anterior para refrescar lo que aprendimos sobre el marcado de entidades)</span>. Para usar esta herramienta, primero debes abrir la pestaña de *TEI Publisher* (Paso 1), ingresar el nombre de la entidad que deseas marcar en el cuadro de búsqueda (2), y opcionalmente también puedes seleccionar el tipo de entidad que vas a buscar (personas, lugares, organizaciones o términos) (3). Después de hacer clic en el botón azul con una la lupa (4), aparecerá una lista de resultados, a continuación, debes seleccionar el nombre de la entidad en el texto que estás marcando (5) y hacer clic en el botón con el signo `+` que aparece al lado del resultado que mejor se ajuste a tu búsqueda (6). El resultado será que la extensión introducirá las etiquetas del elemento TEI que corresponde al tipo de entidad que estamos marcando y añadirá un atributo `@ref` cuyo valor es un identificador permanente proporcionado por la DNB ([*Deutschen National Bibliothek*](https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html)):
 
 ![Fig. 3. Marcado de entidades con la extensión de TEI Publisher.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen3.png)
 
@@ -91,13 +89,14 @@ Si seleccionamos la primera opción, por ejemplo, y se la aplicamos a un texto e
 
 Puedes probar otras alternativas de hojas de estilo sobre sus archivos TEI y comparar los resultados. Encontrarás que algunas ofrecen mejores resultados que otras, eso dependerá del tipo de texto con el que estemos trabajando y principalmente de la propuesta de marcado que hayamos adoptado. Sin embargo, debes tener en cuenta que esta función está pensada para generar una previsualización rápida de los textos y no para su presentación final al público. Aunque esta extensión nos ofrece la posibilidad de generar una visualización de nuestros archivos XML mientras estamos trabajando en VS Code, dista mucho de agotar todas las posibilidades de presentación que podemos generar a partir de nuestros textos marcados con TEI.
 
-## 5. Otras extensiones para trabajar con XML-TEI en VS Code
+## 5. Otras extensiones para XML-TEI en VS Code
 
-A continuación, se presentarán brevemente otras 4 extensiones que pueden ser de utilidad para trabajar con XML-TEI. Son 1) *Git History*; 2) *XML*; 3) *XML Tools* y 4) *xslt-transform*.
+A continuación, se presentarán brevemente otras 4 extensiones que pueden ser de utilidad para trabajar con XML-TEI. Son 1) Git History; 2) XML; 3) XML Tools y 4) xslt-transform.
 
 ## 5.1. Git y Git History
 
-Para saber un poco más cómo trabajar con Git conviene acercarse a su uso en VS Code. Este editor de código posee soporte nativo para Git, lo único que hemos de hacer es instalar este control de versiones para nuestro sistema operativo descargándolo desde el siguiente enlace: https://git-scm.com/downloads. 
+El editor VS Code posee soporte nativo para Git, lo único que debemos hacer es instalar este control de versiones para nuestro sistema operativo descargándolo desde el siguiente enlace: https://git-scm.com/downloads. 
+
 Primeramente nos acercaremos al control de código fuente de VS Code.
 
 ![Fig. 6. Ubicación del Control de código fuente en VS Code.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen6.png)
@@ -105,12 +104,11 @@ Primeramente nos acercaremos al control de código fuente de VS Code.
 <!-- Fig. 6. Ubicación del Control de código fuente en VS Code. -->
 
 
-En segundo lugar, abrimos una carpeta que ya contenga un repositorio git. Si todavía no tenemos una habremos de clonarla desde GitHub. Aquí es importante señalar que es preciso estar registrado en GitHub para poder emplear Git. El registro es gratuito, y la plataforma GitHub nos permitirá, entre otras cosas, almacenar y compartir nuestro código.
+En segundo lugar, abrimos una carpeta que ya contenga un repositorio Git. Si todavía no tenemos una, tendremos que clonarla desde GitHub. Aquí es importante señalar que es preciso estar registrado en GitHub para poder emplear Git. El registro es gratuito, y la plataforma GitHub nos permitirá, entre otras cosas, almacenar y compartir nuestro código.
 
 ![Fig. 7. Abrimos la carpeta que contiene el repositorio git.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen7.png)
 
 <!-- Fig. 7. Abrimos la carpeta que contiene el repositorio git. -->
-
 
 Una vez abierta la carpeta, podemos seleccionar uno de los archivos y pedirle a Git que nos muestre el historial de este. Lo que se muestra en la Figura 9 es dicho historial.
 
@@ -119,26 +117,28 @@ Una vez abierta la carpeta, podemos seleccionar uno de los archivos y pedirle a 
 <!-- Fig. 8. Solicitamos el acceso al historial del archivo. -->
 
 
-![Fig. 9. Visualizamos el historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen9.png)
+![Fig. 9. Visualización el historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen9.png)
 
 <!-- Fig. 9. Visualizamos el historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub. -->
 
-Los propósitos de [*Git History*](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) son claros: 1) ver y buscar registros de *git* al tiempo que gráficos y detalles; 2) visualizar una copia previa del trabajo; 3) visualizar y buscar en el historial (por ejemplo, visualizar el historial de toda o de una de las ramas (*branches*); esto es lo que se denomina git log; o visualizar el historial de un autor). Mediante esta extensión también se pueden comparar ramas, compromisos (*commit*) o comparar archivos entre compromisos.
+Los objetivos de [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) son: 1) ver y buscar registros de Git al tiempo que gráficos y detalles; 2) visualizar una copia previa del trabajo; 3) visualizar y buscar en el historial (por ejemplo, visualizar el historial de toda o de una de las ramas (*branches*); esto es lo que se denomina Git log; o visualizar el historial de un autor). Mediante esta extensión también se pueden comparar ramas, compromisos (*commit*) o comparar archivos entre compromisos.
 
 ## 5.2. XML
 
-[*XML*](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml) es una distribución desarrollada por RedHat, quienes han contribuido, por ejemplo, al desarrollo de distribuciones de Linux como Fedora o de programas como Libreoffice. Esta extensión se centra en dotar al VS Code de las herramientas necesarias para reconocer adecuadamente el XML. Así, permite el cierre automático de las etiquetas (por ejemplo, al escribir `<p>`, también se escribirá automáticamente `</p>`). También añade soporte para XSL y para renombrar etiquetas. Este segundo funciona de la siguiente manera:
+La extensión [*XML*](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml) es una distribución desarrollada por RedHat, quienes han contribuido, por ejemplo, al desarrollo de distribuciones de Linux como Fedora o de programas como Libreoffice. Esta extensión se centra en dotar a VS Code de las herramientas necesarias para reconocer adecuadamente el XML. Así, permite el cierre automático de las etiquetas (por ejemplo, al escribir `<p>`, también se escribirá automáticamente `</p>`). También añade soporte para XSL y para renombrar etiquetas. Este segundo funciona de la siguiente manera:
+
+<span style="color:red;">Añadir texto entre imágenes. </span>
 
 ![Fig. 10. Selección de un fragmento de código para el cambio de nombre del símbolo.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen10.png)
 
 <!-- Fig. 10. Selección de un fragmento de código para el cambio de nombre del símbolo. -->
 
-![Fig. 11. Escribimos el símbolo por el que queremos cambiar el símbolo actual.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen11.png)
+![Fig. 11. Símbolo por el que queremos remplazar el símbolo actual.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen11.png)
 
 <!-- Fig. 11. Escribimos el símbolo por el que queremos cambiar el símbolo actual. -->
 
 
-![Fig. 12. Vemos el resultado en VsCode.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen12.png)
+![Fig. 12. Resultado en VsCode.](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen12.png)
 
 <!-- Fig. 12. Vemos el resultado en VsCode. -->
 
