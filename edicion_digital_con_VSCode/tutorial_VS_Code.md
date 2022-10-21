@@ -91,7 +91,7 @@ Si seleccionamos la primera opción, por ejemplo, y se la aplicamos a un texto e
 
 Puedes probar otras alternativas de hojas de estilo sobre sus archivos TEI y comparar los resultados. Encontrarás que algunas ofrecen mejores resultados que otras, eso dependerá del tipo de texto con el que estemos trabajando y principalmente de la propuesta de marcado que hayamos adoptado. Sin embargo, debes tener en cuenta que esta función está pensada para generar una previsualización rápida de los textos y no para su presentación final al público. Aunque esta extensión nos ofrece la posibilidad de generar una visualización de nuestros archivos XML mientras estamos trabajando en VS Code, dista mucho de agotar todas las posibilidades de presentación que podemos generar a partir de nuestros textos marcados con TEI.
 
-## 5. Otras extensiones para XML-TEI en VS Code
+# 5. Otras extensiones para XML-TEI en VS Code
 
 A continuación, se presentarán brevemente otras 4 extensiones que pueden ser de utilidad para trabajar con XML-TEI. Son 1) Git History; 2) XML; 3) XML Tools y 4) xslt-transform.
 
