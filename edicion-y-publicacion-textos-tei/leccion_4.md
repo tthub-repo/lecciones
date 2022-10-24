@@ -245,16 +245,18 @@ Estos son los elementos que deberemos marcar según las directrices de la TEI, u
  
 Aquí van unas pistas:
  
-4. Para cada uno de los niveles deberemos crear una división, todas ellas anidadas según su jerarquía. Utilizad para ello el elemento `<div>` y añadid un `@type` para especificar cada uno de estos niveles, de manera que os quede algo parecido a esto:
+4. Para cada uno de los niveles deberemos crear una división, todas ellas anidadas según su jerarquía. Utiliza para ello el elemento `<div>` y añade un `@type` para especificar cada uno de estos niveles.
  
-![Estructura para el texto en prosa](https://raw.githubusercontent.com/tthub-repo/ejercicios/master/img/estructura.png)
- 
-5. A continuación, copiad el texto que se os ofrece más abajo en su `<div>` correspondiente. Para ello, utilizad el elemento `<head>` para todos los títulos, incluido el argumento del primer capítulo. Emplead el elemento `<p>` para incluir el texto “En un lugar de la mancha...”, aunque el párrafo no termine allí.
+5. A continuación, copia el texto que se os ofrece más abajo en su `<div>` correspondiente. Para ello, utiliza el elemento `<head>` para todos los títulos, incluido el argumento del primer capítulo. Emplea el elemento `<p>` para incluir el texto “En un lugar de la mancha...”, aunque el párrafo no termine allí.
+
 6. Marca el principio y el final de las páginas con `<pb/>` (page break) acompañado de su atributo `@n` con el valor del número de la página que viene a continuación (números 57 y 58). Si deseas realizar un marcado aún más granular, también puedes añadir los `<lb/>` (line begining) al comienzo de cada línea de la fuente impresa.
+
 7. Marca los diferentes nombres que aparecen en el texto, ya sean nombres propios (`<persName>`) o de lugar (`<placeName>`), puedes intentar utilizar el atributo `@ref` para referenciarlos con un diccionario de autoridades como VIAF, pero ten en cuenta que en ocasiones puedes toparte con nombres que no aparecen listados en estos diccionarios.
+
 8. Puedes añadir otros elementos que creas oportuno, como por ejemplo las notas a pie de página, colocando una `<div type="notas">` en el elemento `<back>`.
+
 9. Comprueba que el documento esté bien formado y sea válido.
- 
+
 ## El texto a codificar
  
 ```
