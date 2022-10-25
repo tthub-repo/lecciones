@@ -51,7 +51,7 @@ Gracias a esta indicación sabemos que este documento XML depende de un esquema 
 
 Las posibilidades de personalización que ofrece el marcado TEI se relacionan directamente con su naturaleza modular. La TEI agrupa en un mismo “módulo” a un grupo de elementos pensados para el marcado de una tipología o fenómeno textual (como pueden ser poesía, drama, descripción de manuscritos, diccionarios, etc.). 
 
-La forma en que se seleccionan los módulos que utilizaremos en nuestro marcado es a través de la construcción de un esquema RelaxNG. Más adelante (Lección 8) veremos en detalle los pasos necesarios para construir nuestros propios esquemas; por el momento es importante que tengas el [esquema de ejemplo](enlace) en la misma carpeta que el [ejemplo TEI](enlace) sobre el que estamos trabajando, para que estos dos archivos interactúen y VSCode pueda indicarnos si nuestro documento TEI es válido.
+La forma en que se seleccionan los módulos que utilizaremos en nuestro marcado es a través de la construcción de un esquema RelaxNG. Más adelante (Lección 8) veremos en detalle los pasos necesarios para construir nuestros propios esquemas; por el momento es importante que tengas el [esquema de ejemplo](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo_esquema.rng) en la misma carpeta que los documentos TEI sobre los que iremos trabajando, para que estos archivos interactúen y VSCode pueda indicarnos si nuestro documento TEI es válido.
  
 # 3. Elemento raíz y espacio de nombre
 
@@ -176,7 +176,7 @@ Si quieres seguir profundizando en las opciones de codificación que ofrece el e
  
 El cuerpo del documento corresponde al elemento `<text>` que puede contener, a su vez, tres (sub)elementos:
  
-* [`<front>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-front.html) se utiliza para marcar secciones paratextuales que preceden el texto, tales como prefacios, prólogos, cartas dedicatorias, una lista de personajes, etc. y no es obligatorio (en el [ejemplo TEI 1](enlace) se puede observar que este elemento se utiliza para marcar el prólogo de la novela.
+* [`<front>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-front.html) se utiliza para marcar secciones paratextuales que preceden el texto, tales como prefacios, prólogos, cartas dedicatorias, una lista de personajes, etc. y no es obligatorio (en el [ejemplo TEI 1](https://github.com/tthub-repo/ejemplos/blob/master/L3_Ejemplo_novela.xml) se puede observar que este elemento se utiliza para marcar el prólogo de la novela).
 * [`<body>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-body.html) se consagra al texto propiamente dicho del documento y es obligatorio.
 * [`<back>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-back.html) puede utilizarse para añadir los apéndices, índices, cronologías, bibliografías, etc. No es obligatorio.
  
@@ -184,7 +184,7 @@ El cuerpo del documento corresponde al elemento `<text>` que puede contener, a s
  
 Uno de los elementos más utilizados en el cuerpo del documento es el de “división”, [`<div>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html), que es utilizado para marcar cualquier tipo de sección estructural del texto, como tomos o volúmenes, libros, capítulos, partes, apartados, etc.
  
-<span style="color:red">En nuestro ejemplo</span> <!--Aquí habéis suprimido el ejemplo de text front divs tomos etc., y creo que no se sabe bien a qué hace referencia --> se puede observar cómo hemos utilizado el elemento `<div>` para:
+En [nuestro ejemplo](https://github.com/tthub-repo/ejemplos/blob/master/L3_Ejemplo_novela.xml) se puede observar cómo hemos utilizado el elemento `<div>` para:
 
 * caracterizar el “prólogo”.
 * diferenciar los diferentes “tomos”.
@@ -232,7 +232,7 @@ Para aplicar de forma práctica los contenidos de esta lección crearemos un doc
  
 ## Paso 1
 
-Incluir la declaración XML y la asociación al esquema. Puedes copiar el prólogo XML tal cual como aparece en el ejemplo TEI de esta lección, pero recuerda que, para que funcione la validación, el archivo ejemplo_esquema.rng debe estar guardado en la misma carpeta que el archivo XML en el que estamos trabajando. 
+Incluir la declaración XML y la asociación al esquema. Puedes copiar el prólogo XML tal cual como aparece en el [ejemplo TEI](https://github.com/tthub-repo/ejemplos/blob/master/L3_Ejemplo_novela.xml) de esta lección, pero recuerda que, para que funcione la validación, el archivo [ejemplo_esquema.rng](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo_esquema.rng) debe estar guardado en la misma carpeta que el archivo XML en el que estamos trabajando. 
  
 ## Paso 2
 
