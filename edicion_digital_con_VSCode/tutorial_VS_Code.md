@@ -59,7 +59,7 @@ Instalar esta extensión en VS Code nos permitirá incorporar algunas funciones 
 * Si estamos trabajando en TEI recibiremos sugerencias de elementos que podemos utilizar de acuerdo con el esquema con el que estemos trabajando.
 * Permite seleccionar una porción de texto y utilizar el atajo `Ctrl+E` para marcarlo con una etiqueta de inicio al comienzo y una de cierre al final.
 
-![Fig. 2. Elementos sugeridos por Scholarly XML en VS Code en base al esquema.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen1b.png)
+![Fig. 2. Elementos sugeridos por Scholarly XML en VS Code en base al esquema.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen1b.jpg)
 
 Gracias a estas funciones adicionales (en particular la posibilidad de validar documentos a partir de un esquema, que resulta fundamental para el trabajo con este tipo de archivos), VS Code es una herramienta sumamente útil y efectiva para la edición de textos digitales con TEI, cuyas prestaciones son coparables a las de los programas con licencias pagas, aunque con la ventaja de que al tratarse de una aplicación gratuita se encuentra al alcance de toda la comunidad.
 
