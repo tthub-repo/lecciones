@@ -99,7 +99,8 @@ que eran de fin oro: & de piedras <choice>
    <expan>cristales</expan>
 </choice>.
 ```
- # 6. Establecer diferentes manos de un manuscrito
+
+# 6. Establecer diferentes manos de un manuscrito
  
 Puede ser que en algunos casos nos encontremos con una fuente en la que aparecen manos diferentes y queramos describir los aspectos físicos o externos del manuscrito ([`physDesc`](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-physDesc.html)); en el caso que queramos señalarlas, las codificaremos con el elemento [`<handNote>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-handNote.html) que se halla en el tei Header (/TEI/teiHeader/fileDesc/sourceDesc/msDesc/physDesc/handDesc). Además, le podemos atribuir un identificador propio a cada una de las manos:
  
@@ -140,7 +141,7 @@ ejemplo:
  
 * [`<surplus>`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-surplus.html): para indicar un texto en la fuente que el editor considera superficial o redundante.
  
- * [`<space>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) para indicar el espacio vacío en nuestra copia, como sucede en la Figura \ref{L5_space}
+* [`<space>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) para indicar el espacio vacío en nuestra copia, como sucede en la Figura \ref{L5_space}
  
 * [`<fw>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-fw.html) (forme work) para indicar los números originales de las páginas, o incluso la numeración de los cuadernos o los hilitos de los encabezados.
  
