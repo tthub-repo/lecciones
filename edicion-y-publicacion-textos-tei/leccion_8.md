@@ -146,14 +146,12 @@ El objetivo de este ejercicio es crear un esquema RelaxNG utilizando la herramie
 
 **[Paso 1]** Ingresa a [ROMA](https://roma.tei-c.org/) y selecciona la opción "Build up".
 
-**[Paso 2]** Completa los datos de la pestaña inicial, recuerda que si lo deseas puedes configurar el idioma de ROMA en español
+**[Paso 2]** Completa los datos de la pestaña inicial, recuerda que si lo deseas puedes configurar el idioma de ROMA en español.
 
 **[Paso 3]** En la pestaña "módulos", añade los módulos "verse" y "drama" y añade una nueva descripción para el elemento `<rhyme>`.
 
-**[Paso 4]** Descarga el esquema en formato Relax NG (XML Syntax)
+**[Paso 4]** Descarga el esquema en formato Relax NG (XML Syntax).
 
-**[Paso 5]** Descarga el archivo ODD con la personalización que creamos en este ejercicio
+**[Paso 5]** Descarga el archivo ODD con la personalización que creamos en este ejercicio.
 
-**[Paso 6]** Asocia el archivo Relax NG del esquema que creamos al documento TEI que creamos en el ejercicio de drama y asegúrate de que te permita comprobar la validez del documento,
-
-
+**[Paso 6]** Asocia el archivo Relax NG del esquema que creamos al documento TEI que creamos en el ejercicio de drama y asegúrate de que te permita comprobar la validez del documento.
