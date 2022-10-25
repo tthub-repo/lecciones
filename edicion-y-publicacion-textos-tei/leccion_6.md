@@ -207,7 +207,7 @@ pueden sernos útiles en alguna ocasión como por ejemplo:
 * [`<caption>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-caption.html) para recoger las palabras que deberán proyectarse en pantalla.
 * [`<tech>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-tech.html) otras informaciones técnicas.
  
-<span style="color:red">Cambiar enlaces</span> En el [Repositorio de ejemplos en GitHub](https://github.com/tthub-repo/ejemplos/) puede encontrarse un [ejemplo sencillo de codificación](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_drama.xml) y otro ejemplo con el inicio de una obra dramática en verso de [Lope de Vega, *Amar sin saber a quien*](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_drama_Lope_Amar_sin_saber_a_quien.xml). También puedes ver la reproducción digital que aparece en la [Biblioteca Cervantes Virtual](http://bib.cervantesvirtual.com/servlet/SirveObras/00363959755781806410046/ima0000.htm) y confrontarla con la codificación que proponemos. [Aquí](http://bib.cervantesvirtual.com/servlet/SirveObras/01260529543471504100035/p0000001.htm#I_0_) encontraréis también una edición digital en HTML.
+<span style="color:red">Cambiar enlaces</span> En el [Repositorio de ejemplos en GitHub](https://github.com/tthub-repo/ejemplos/) puede encontrarse un [ejemplo sencillo de codificación](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_drama.xml) y otro ejemplo con el inicio de una obra dramática en verso de [Lope de Vega, *Amar sin saber a quien*](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_drama_Lope_Amar_sin_saber_a_quien.xml). También puedes ver la reproducción digital que aparece en la [Biblioteca Cervantes Virtual](https://www.cervantesvirtual.com/descargaPdf/amar-sin-saber-a-quien--1/) y confrontarla con la codificación que proponemos. [Aquí](https://www.cervantesvirtual.com/obra-visor/amar-sin-saber-a-quien--0/html/) encontraréis también una edición digital en HTML.
  
 Otros recursos que pueden ser de utilidad son el [Module 5: Drama](http://teibyexample.org/modules/TBED05v00.htm) en *TEI by Example*, con especial atención a los [ejemplos](http://teibyexample.org/examples/TBED05v00.htm), y la consulta de las [*Guías directrices*](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html).
 
@@ -253,7 +253,7 @@ es un afán caduco, y, bien mirado,
 es cadáver, es polvo, es sombra, es nada.
 ```
 
-Fuente: [Sor Juana Inés de la Cruz. Obras escogidas. Espasa-Calve: Madrid](https://www.cervantesvirtual.com/obra-visor/obras-escogidas--0/html/c7822235-3f49-4a31-9ea3-485840a7c278_3.html) <span style="color:red">falta año</span>
+Fuente: [Sor Juana Inés de la Cruz. Obras escogidas. Espasa-Calpe: Madrid. 1976.](https://www.cervantesvirtual.com/obra-visor/obras-escogidas--0/html/c7822235-3f49-4a31-9ea3-485840a7c278_3.html)
  
 # 4. Práctica: texto dramático
 
