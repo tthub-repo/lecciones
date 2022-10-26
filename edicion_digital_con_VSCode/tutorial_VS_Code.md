@@ -156,11 +156,9 @@ La caja de comandos se puede abrir con `Ctrl+shift+P` o haciendo clic derecho en
 
 El cometido de la última extensión, [xslt-transform](https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform), es transformar el XML en una salida HTML o un PDF mediante el lenguaje XSLT. Mostraremos un ejemplo de cómo transformar un XML en HTML en VS Code:
 
-En primer lugar, instalamos la extensión *xslt-transform*. 
+En primer lugar, instalamos la extensión *xslt-transform* y, seguidamente, abrimos nuestro archivo en VS Code. 
 
 <span style="color:red">Explicar los textos en un párrafo, no como leyenda de la figura</span> 
-
-Primeramente abrimos nuestro archivo en VS Code. 
 
 ![Nuestro archivo en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen16.png)
 
