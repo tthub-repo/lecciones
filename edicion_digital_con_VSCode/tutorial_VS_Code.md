@@ -6,7 +6,7 @@ layout: default
 lang: es
 ---
 
-En este breve tutorial explicamos cómo utilizar el software de código abierto [Visual Studio Code](https://code.visualstudio.com/) para la edición de documentos en XML-TEI. Además, mostramos cómo instalar el plugin [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml) creado por Raffaele Viglianti y concebido para validar este tipo de archivos con esquemas RELAX-NG y facilitar el autocompletado, junto con otras extensiones de interés para el trabajo de edición filológica digital
+En este breve tutorial explicamos cómo utilizar el software de código abierto [Visual Studio Code](https://code.visualstudio.com/) para el trabajo con documentos en XML-TEI. Además, mostramos cómo instalar el plugin [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml) creado por Raffaele Viglianti y concebido para validar este tipo de archivos con esquemas RELAX NG y facilitar el autocompletado, junto con otras extensiones de interés para el trabajo de edición filológica digital
 
 # 1. Textos digitales y editores de código
 
@@ -135,7 +135,7 @@ Pueden consultarse todas las funciones de esta extensión en el enlace facilitad
 
 ## 5.3. XML Tools
 
-Por otro lado, [XML Tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) tiene una serie de características que son: 1) dar formato al XML, 2) visualización del árbol de XML (es decir, cómo está estructurado el documento), evaluación de XPath –lenguaje pensado para navegar y parsear los documentos XML–; 3) enhebrado de XQuery –lenguaje pensado para consultar documentos XML–; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
+Por otro lado, [XML Tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) tiene una serie de características que son: 1) formato del XML, 2) visualización del árbol de XML (es decir, cómo está estructurado el documento), evaluación de XPath –lenguaje pensado para navegar y parsear los documentos XML–; 3) enhebrado de XQuery –lenguaje pensado para consultar documentos XML–; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
 
 Veamos un ejemplo de otra de sus funciones, simplificar el XML:
 
