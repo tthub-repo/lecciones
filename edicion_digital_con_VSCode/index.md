@@ -12,6 +12,6 @@ Este tutorial, [Edición filológica digital con Visual Studio Code](https://git
 
 Visual Studio Code es un programa libre y gratuito que se puede emplear para realizar la codificación de textos en XML-TEI. Para mejorar dicha experiencia de trabajo cuenta con extensiones que le permiten ser un programa mucho más completo y útil para el usuario.
 
-Este tutorial se compone de 4 secciones: 1) una introducción a los textos digitales y los editores de código, 2) una explicación del programa Visual Studio Code, 3) la introducción a dos de las extensiones más importantes para trabajar en XML-TEI en Visual Studio Code (Scholarly XML y TEI Publisher) y 4) la recopilación de otras extensiones útiles.
+Este tutorial se compone de 4 secciones: 1) una introducción a los textos digitales y los editores de código, 2) una explicación del programa Visual Studio Code, 3) la introducción a dos de las extensiones más importantes para trabajar en XML-TEI en Visual Studio Code (Scholarly XML y TEI Publisher) y 4) la recopilación de otras extensiones útiles (Git History, XML, XML Tools y xslt-transform).
 
 Cualquier consulta, comentario o sugerencia que desees hacernos, puedes escribirnos a través de nuestro [formulario de contacto](https://tthub.io/contacto).
