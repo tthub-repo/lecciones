@@ -95,21 +95,21 @@ A continuación, se presentarán brevemente otras 4 extensiones que pueden ser d
 
 El editor VS Code posee soporte nativo para Git, lo único que debemos hacer es instalar este control de versiones para nuestro sistema operativo descargándolo desde el siguiente enlace: https://git-scm.com/downloads. 
 
-Primeramente nos acercaremos al control de código fuente de VS Code.
+Primeramente nos acercaremos al control de código fuente de VS Code al que se puede acceder con el atajo de teclado `Ctrl + Mayús + G`. 
 
-![Ubicación del Control de código fuente en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen6.png)
-
-
-En segundo lugar, abrimos una carpeta que ya contenga un repositorio Git. Si todavía no tenemos una, tendremos que clonarla desde GitHub. Aquí es importante señalar que es preciso estar registrado en GitHub para poder emplear Git. El registro es gratuito, y la plataforma GitHub nos permitirá, entre otras cosas, almacenar y compartir nuestro código.
-
-![Abrimos la carpeta que contiene el repositorio git.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen7.png)
-
-Una vez abierta la carpeta, podemos seleccionar uno de los archivos y pedirle a Git que nos muestre el historial de este. Lo que se muestra en la Figura 9 es dicho historial.
-
-![Solicitamos el acceso al historial del archivo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen8.png)
+![Control de código fuente en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen6.png)
 
 
-![Visualización el historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen9.png)
+En segundo lugar, abrimos una carpeta que ya contenga un repositorio Git. Si todavía no tenemos una, tendremos que clonarla desde GitHub. Aquí es importante señalar que es preciso estar registrado en GitHub para poder emplear Git. El registro es gratuito, y la plataforma GitHub nos permitirá, entre otras cosas, almacenar y compartir nuestro código. A continuación, abriremos la carpeta que contenga el repositorio Git.
+
+![Carpeta que contiene el repositorio git.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen7.png)
+
+Una vez abierta la carpeta, podemos seleccionar uno de los archivos y pedirle a Git que nos muestre el historial de este. Para ello, solicitaremos acceso al historial del archivo. En las imágenes siguientes se muestra, primero, cómo acceder a la solicitud del historial y, segundo, la visualización del historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub.
+
+![Solicitud del historial del archivo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen8.png)
+
+
+![Visualización del historial del archivo](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen9.png)
 
 Los objetivos de [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) son: 1) ver y buscar registros de Git al tiempo que gráficos y detalles; 2) visualizar una copia previa del trabajo; 3) visualizar y buscar en el historial (por ejemplo, visualizar el historial de toda o de una de las ramas (*branches*); esto es lo que se denomina Git log; o visualizar el historial de un autor). Mediante esta extensión también se pueden comparar ramas, compromisos (*commit*) o comparar archivos entre compromisos.
 
@@ -119,16 +119,17 @@ La extensión [*XML*](https://marketplace.visualstudio.com/items?itemName=redhat
 
 <span style="color:red">Añadir texto entre imágenes.</span>
 
-En primer lugar, seleccionamos un fragmento de código para el cambio de nombre del símbolo. A continuación, seleccionamos cuál es el símbolo por el que queremos reemplazar el símbolo actual. En este caso reemplazaremos `<p>` y `</p>` por `<l>` y `</l>`. En la figura 12 podemos ver el resultado en VS Code.
+En primer lugar, seleccionamos un fragmento de código para el cambio de nombre del símbolo. A continuación, seleccionamos cuál es el símbolo por el que queremos reemplazar el símbolo actual. En este caso reemplazaremos `<p>` y `</p>` por `<l>` y `</l>`. La primera imagen que sigue a esta explicación muestra el fragmento de código seleccionado y el menú desde el que seleccionaremos la opción de renombrar el símbolo.
 
-![Selección de un fragmento de código para el cambio de nombre del símbolo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen10.png)
+![Cambio de nombre del símbolo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen10.png)
 
+En esta segunda imagen vemos cuál es el símbolo por el que decidimos reemplazar el símbolo actual.
 
+![Paso previo al reemplazo](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen11.png)
 
-![Símbolo por el que queremos remplazar el símbolo actual.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen11.png)
+Finalmente, visualizamos el resultado en VS Code. Como habíamos dicho, en este caso hemos reemplazado `<p>` y `</p>` por `<l>` y `</l>`.
 
-
-![Resultado en VsCode.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen12.png)
+![Resultado en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen12.png)
 
 
 Pueden consultarse todas las funciones de esta extensión en el enlace facilitado anteriormente.
@@ -159,22 +160,22 @@ En primer lugar, instalamos la extensión *xslt-transform*.
 
 <span style="color:red">Explicar los textos en un párrafo, no como leyenda de la figura</span> 
 
-Primeramente abrimos nuestro archivo en VS Code. En segundo lugar, buscamos el comando que nos permite hacer la transformación mediante XSLT (XSLT: Run Transformation).
+Primeramente abrimos nuestro archivo en VS Code. 
 
 ![Nuestro archivo en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen16.png)
 
-
+En segundo lugar, buscamos el comando que nos permite hacer la transformación mediante XSLT (XSLT: Run Transformation).
 
 ![Comando XSLT: Run Transformation](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen17.png)
 
 
-Tras este paso, cargaremos el archivo .xsl o .xslt que hayamos preparado para la transformación. En nuestro caso, hemos partido de un archivo .xsl que ha generado Susanna Allés Torrent y lo hemos modificado para los propósitos de este tutorial. Después de esto, guardaremos el archivo resultante de la transformación como .html y disfrutaremos del resultado, que puede verse en la figura 19.
+Tras este paso, cargaremos el archivo .xsl o .xslt que hayamos preparado para la transformación. En nuestro caso, hemos partido de un archivo .xsl que ha generado Susanna Allés Torrent y lo hemos modificado para los propósitos de este tutorial. Después de esto, guardaremos el archivo resultante de la transformación como .html y disfrutaremos del resultado, que puede verse en la última imagen.
 
 ![Guardamos el archivo como .html](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen18.png)
 
 
 
-![Disfrutamos del resultado en un HTML sencillo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen19.png)
+![Resultado en HTML.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen19.png)
 
 
 
