@@ -6,7 +6,7 @@ layout: default
 lang: es
 ---
 
-En este breve tutorial explicamos cómo utilizar el software de código abierto [Visual Studio Code](https://code.visualstudio.com/) para la edición de documentos en XML-TEI. Además, mostramos cómo instalar el plugin [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml) creado por Raffaele Viglianti y concebido para validar este tipo de archivos con esquemas RELAX-NG y facilitar el autocompletado. 
+En este breve tutorial explicamos cómo utilizar el software de código abierto [Visual Studio Code](https://code.visualstudio.com/) para la edición de documentos en XML-TEI. Además, mostramos cómo instalar el plugin [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml) creado por Raffaele Viglianti y concebido para validar este tipo de archivos con esquemas RELAX-NG y facilitar el autocompletado, junto con otras extensiones de interés para el trabajo de edición filológica digital
 
 # 1. Textos digitales y editores de código
 
@@ -14,12 +14,12 @@ Antes de entrar en detalles sobre qué es [Visual Studio Code](https://code.visu
 
 La forma más básica del texto digital es el texto plano (.txt), que sólo contiene caracteres (entre ellos, los espacios), sin añadir ningún tipo de formato a los mismos. Por otra parte, el texto digital también puede ser enriquecido con información adicional sobre la estructura del texto y la forma en que este será presentado en los dispositivos; estos datos se incorporan mediante el uso de un lenguaje de marcado, como el que ofrece la [Text Encoding Initiative](https://tei-c.org/) (TEI). Este lenguaje de marcado permite estructurar formal y semánticamente los textos con los que deseamos trabajar de tal forma que estos puedan ser procesados y “entendidos” por sistemas informáticos, tanto para su presentación en ediciones digitales como para operaciones de lectura distante (si deseas saber más sobre TEI puedes dirigirte a [nuestros tutoriales](https://tthub.io/aprende) sobre edición de textos con TEI).
 
-Cuando queremos crear o editar un documento TEI, los procesadores de texto más usados, como Microsoft Word o WordPad, no nos son de utilidad, ya que fácilmente se pueden agregar accidentalmente formatos y caracteres extra y/o invisibles que pueden generar problemas. Los editores de texto plano son una opción más adecuada, pero la mejor alternativa para trabajar en este tipo de documentos es utilizar un programa específicamente diseñado para editar códigos informáticos, es decir, un editor de código.
+Cuando queremos crear o editar un documento XML-TEI, los procesadores de texto más usados, como Microsoft Word o WordPad, no nos son de utilidad, ya que fácilmente se pueden agregar accidentalmente formatos y caracteres extra y/o invisibles que pueden generar problemas. Los editores de texto plano son una opción más adecuada, pero la mejor alternativa para trabajar en este tipo de documentos es utilizar un programa específicamente diseñado para editar códigos informáticos, es decir, un editor de código.
 
 
 # 2. VS Code, un editor gratuito y de código abierto 
 
-[Visual Studio Code](https://code.visualstudio.com/) (normalmente abreviado VS Code) es un editor de código gratuito que nos ofrece una gran variedad de funciones adicionales a las que posee un editor de texto plano. Desde el punto de vista de la edición filológica digital, VS Code brinda la posibilidad de instalar diversas extensiones entre las cuales encontramos algunas específicamente desarrolladas para trabajar con documentos XML-TEI.
+[Visual Studio Code](https://code.visualstudio.com/) (normalmente abreviado VS Code) es un editor de código abierto que nos ofrece una gran variedad de funciones adicionales a las que posee un editor de texto plano. Desde el punto de vista de la edición filológica digital, VS Code brinda la posibilidad de instalar diversas extensiones entre las cuales encontramos algunas específicamente desarrolladas para trabajar con documentos XML-TEI.
 
 Para utilizar VS Code solo debes ir a la [página de descarga de la aplicación](https://code.visualstudio.com/Download) y seleccionar el instalador correspondiente según tu sistema operativo. Al ejecutar el archivo descargado el instalador te irá guiando por los diferentes pasos. Una vez completada la instalación podemos abrir el programa y empezar a editar nuestro primer archivo. Puedes abrir un archivo nuevo en blanco con los comandos `ctrl + O` o seleccionando la opción `New file` de la pestaña `File` del menú superior. Alternativamente puedes abrir una carpeta completa y explorar su contenido (subcarpetas y archivos) desde la barra izquierda del programa en la pestaña `Explorer` (el primer ícono del menú de la barra izquierda del editor), para esto puedes utilizar los comandos `crtl + K, ctrl+O` o seleccionando la opción `Open folder` de la pestaña `File`.
 
@@ -43,7 +43,7 @@ Como complemento al tutorial, también te ofrecemos esta tabla con alguno de los
 
 Para más información, pueden consultar la [lista completa de atajos de VS Code para Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) o presionar `Crtl+K` seguido de `Ctrl+S` en VS Code para abrir la lista de atajos y editarlos. 
 
-Como ya señalamos, una de las principales ventajas de utilizar VS Code como editor de código es que nos permite acceder a una variedad de extensiones que le añaden nuevas funcionalidades al programa. A continuación explicaremos brevemente algunas de las que pueden llegar a resultar más útiles para editar archivos codificados con TEI.
+Como ya señalamos, una de las principales ventajas de utilizar VS Code como editor de código es que nos permite acceder a una variedad de extensiones que le añaden nuevas funcionalidades al programa. A continuación instalaremos diferentes extensiones que nos permitirán realizar un trabajo completo a la hora de trabajar con documentos en XML-TEI, desde la codificación a una simple trasformación. 
 
 # 3. Scholarly XML
 
