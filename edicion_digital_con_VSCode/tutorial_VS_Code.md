@@ -117,8 +117,6 @@ Los objetivos de [Git History](https://marketplace.visualstudio.com/items?itemNa
 
 La extensión [*XML*](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml) es una distribución desarrollada por RedHat, quienes han contribuido, por ejemplo, al desarrollo de distribuciones de Linux como Fedora o de programas como Libreoffice. Esta extensión se centra en dotar a VS Code de las herramientas necesarias para reconocer adecuadamente el XML. Así, permite el cierre automático de las etiquetas (por ejemplo, al escribir `<p>`, también se escribirá automáticamente `</p>`). También añade soporte para XSL y para renombrar etiquetas. Este segundo funciona de la siguiente manera:
 
-<span style="color:red">Añadir texto entre imágenes.</span>
-
 En primer lugar, seleccionamos un fragmento de código para el cambio de nombre del símbolo. A continuación, seleccionamos cuál es el símbolo por el que queremos reemplazar el símbolo actual. En este caso reemplazaremos `<p>` y `</p>` por `<l>` y `</l>`. La primera imagen que sigue a esta explicación muestra el fragmento de código seleccionado y el menú desde el que seleccionaremos la opción de renombrar el símbolo.
 
 ![Cambio de nombre del símbolo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen10.png)
@@ -157,9 +155,7 @@ La caja de comandos se puede abrir con `Ctrl+shift+P` o haciendo clic derecho en
 El cometido de la última extensión, [xslt-transform](https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform), es transformar el XML en una salida HTML o un PDF mediante el lenguaje XSLT. Mostraremos un ejemplo de cómo transformar un XML en HTML en VS Code:
 
 En primer lugar, instalamos la extensión *xslt-transform* y, seguidamente, abrimos nuestro archivo en VS Code. 
-
-<span style="color:red">Explicar los textos en un párrafo, no como leyenda de la figura</span> 
-
+ 
 ![Nuestro archivo en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen16.png)
 
 En segundo lugar, buscamos el comando que nos permite hacer la transformación mediante XSLT (XSLT: Run Transformation).
