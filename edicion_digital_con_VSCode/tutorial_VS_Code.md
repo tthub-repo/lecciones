@@ -96,7 +96,7 @@ A continuación, se presentarán brevemente otras 4 extensiones que pueden ser d
 
 El editor VS Code posee soporte nativo para Git, lo único que debemos hacer es instalar este control de versiones para nuestro sistema operativo descargándolo desde el siguiente enlace: https://git-scm.com/downloads. 
 
-Primeramente nos acercaremos al control de código fuente de VS Code al que se puede acceder con el atajo de teclado `Ctrl + Mayús + G`. 
+Primeramente nos acercaremos al control de código fuente de VS Code al que se puede acceder con el atajo de teclado `Ctrl+Mayús+G`. 
 
 ![Control de código fuente en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen6.png)
 
