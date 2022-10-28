@@ -6,7 +6,7 @@ layout: default
 lang: es
 ---
 
-En este breve tutorial explicamos cómo utilizar el software de código abierto, [Visual Studio Code](https://code.visualstudio.com/) para el trabajo con documentos en XML-TEI. Además, mostramos cómo instalar el plugin [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml) creado por Raffaele Viglianti y concebido para validar este tipo de archivos con esquemas RELAX NG y facilitar el autocompletado, junto con otras extensiones de interés para el trabajo de edición filológica digital
+En este breve tutorial explicamos cómo utilizar el software de código abierto [Visual Studio Code](https://code.visualstudio.com/) para el trabajo con documentos en XML-TEI. Además, mostramos cómo instalar el plugin [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml) creado por Raffaele Viglianti y concebido para validar este tipo de archivos con esquemas RELAX NG y facilitar el autocompletado, junto con otras extensiones de interés para el trabajo de edición filológica digital
 
 # 1. Textos digitales y editores de código
 
