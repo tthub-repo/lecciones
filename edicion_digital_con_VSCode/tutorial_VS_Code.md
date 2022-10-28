@@ -89,7 +89,7 @@ Puedes probar otras alternativas de hojas de estilo sobre sus archivos TEI y com
 
 # 5. Otras extensiones para XML-TEI en VS Code
 
-A continuación, se presentarán brevemente otras 4 extensiones que pueden ser de utilidad para trabajar con XML-TEI. Son 1) Git History; 2) XML; 3) XML Tools y 4) xslt-transform.
+A continuación, se presentarán brevemente otras 4 extensiones que pueden ser de utilidad para trabajar con XML-TEI. Son 1) *Git History*; 2) *XML*; 3) *XML Tools* y 4) *xslt-transform*.
 
 ## 5.1. Git y Git History
 
