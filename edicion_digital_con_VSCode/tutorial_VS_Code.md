@@ -6,7 +6,7 @@ layout: default
 lang: es
 ---
 
-En este breve tutorial explicamos cómo utilizar el software de código abierto [Visual Studio Code](https://code.visualstudio.com/) para el trabajo con documentos en XML-TEI. Además, mostramos cómo instalar el plugin [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml) creado por Raffaele Viglianti y concebido para validar este tipo de archivos con esquemas RELAX NG y facilitar el autocompletado, junto con otras extensiones de interés para el trabajo de edición filológica digital
+En este breve tutorial explicamos cómo utilizar el software de código abierto, [Visual Studio Code](https://code.visualstudio.com/) para el trabajo con documentos en XML-TEI. Además, mostramos cómo instalar el plugin [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml) creado por Raffaele Viglianti y concebido para validar este tipo de archivos con esquemas RELAX NG y facilitar el autocompletado, junto con otras extensiones de interés para el trabajo de edición filológica digital
 
 # 1. Textos digitales y editores de código
 
@@ -111,7 +111,7 @@ Una vez abierta la carpeta, podemos seleccionar uno de los archivos y pedirle a 
 
 ![Visualización del historial del archivo](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen9.png)
 
-Los objetivos de [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) son: 1) ver y buscar registros de Git al tiempo que gráficos y detalles; 2) visualizar una copia previa del trabajo; 3) visualizar y buscar en el historial (por ejemplo, visualizar el historial de toda o de una de las ramas (*branches*); esto es lo que se denomina Git log; o visualizar el historial de un autor). Mediante esta extensión también se pueden comparar ramas, compromisos (*commit*) o comparar archivos entre compromisos.
+Los objetivos de [*Git History*](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) son: 1) ver y buscar registros de Git al tiempo que gráficos y detalles; 2) visualizar una copia previa del trabajo; 3) visualizar y buscar en el historial (por ejemplo, visualizar el historial de toda o de una de las ramas (*branches*); esto es lo que se denomina Git log; o visualizar el historial de un autor). Mediante esta extensión también se pueden comparar ramas, compromisos (*commit*) o comparar archivos entre compromisos.
 
 ## 5.2. XML
 
@@ -134,7 +134,7 @@ Pueden consultarse todas las funciones de esta extensión en el enlace facilitad
 
 ## 5.3. XML Tools
 
-Por otro lado, [XML Tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) tiene una serie de características que son: 1) formato del XML, 2) visualización del árbol de XML (es decir, cómo está estructurado el documento), evaluación de XPath –lenguaje pensado para navegar y parsear los documentos XML–; 3) enhebrado de XQuery –lenguaje pensado para consultar documentos XML–; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
+Por otro lado, [*XML Tools*](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) tiene una serie de características que son: 1) formato del XML, 2) visualización del árbol de XML (es decir, cómo está estructurado el documento), evaluación de XPath –lenguaje pensado para navegar y parsear los documentos XML–; 3) enhebrado de XQuery –lenguaje pensado para consultar documentos XML–; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
 
 Veamos un ejemplo de otra de sus funciones, simplificar el XML:
 
@@ -152,7 +152,7 @@ La caja de comandos se puede abrir con `Ctrl+shift+P` o haciendo clic derecho en
 
 ## 5.4. xslt-transform
 
-El cometido de la última extensión, [xslt-transform](https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform), es transformar el XML en una salida HTML o un PDF mediante el lenguaje XSLT. Mostraremos un ejemplo de cómo transformar un XML en HTML en VS Code:
+El cometido de la última extensión, [*xslt-transform*](https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform), es transformar el XML en una salida HTML o un PDF mediante el lenguaje XSLT. Mostraremos un ejemplo de cómo transformar un XML en HTML en VS Code:
 
 En primer lugar, instalamos la extensión *xslt-transform* y, seguidamente, abrimos nuestro archivo en VS Code. 
  
