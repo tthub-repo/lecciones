@@ -40,10 +40,9 @@ Como complemento al tutorial, también te ofrecemos esta tabla con algunos de lo
 | Ctrl + F                     | Buscar secuencia de caracteres en el documento       |
 | Ctrl + H                     | Buscar y reemplazar                                  |
 | Ctrl + Shift + P             | Abre la barra de comandos (para funciones avanzadas) |
-|                              |                                                      |
 
 
-Para más información, pueden consultar la [lista completa de atajos de VS Code para Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) o presionar `Crtl+K` seguido de `Ctrl+S` en VS Code para abrir la lista de atajos y editarlos. 
+Para más información, pueden consultar la lista completa de atajos de VS Code y editarlos [para Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) o presionando `Crtl+K` seguido de `Ctrl+S` , o para [Mac](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) o presionando `Cmd+k Cmd+s`. 
 
 Como ya señalamos, una de las principales ventajas de utilizar VS Code como editor de código es que nos permite acceder a una variedad de extensiones que le añaden nuevas funcionalidades al programa. A continuación instalaremos diferentes extensiones que nos permitirán realizar un trabajo completo a la hora de trabajar con documentos en XML-TEI, desde la codificación a una simple trasformación. 
 
@@ -63,7 +62,7 @@ Instalar esta extensión en VS Code nos permitirá incorporar algunas funciones 
 
 ![Elementos sugeridos por Scholarly XML en VS Code en base al esquema.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen1b.jpg)
 
-Gracias a estas funciones adicionales (en particular la posibilidad de validar documentos a partir de un esquema, que resulta fundamental para el trabajo con este tipo de archivos), VS Code es una herramienta sumamente útil y efectiva para la edición de textos digitales con TEI, cuyas prestaciones son coparables a las de los programas con licencias pagas, aunque con la ventaja de que al tratarse de una aplicación gratuita se encuentra al alcance de toda la comunidad.
+Gracias a estas funciones adicionales (en particular la posibilidad de validar documentos a partir de un esquema, que resulta fundamental para el trabajo con este tipo de archivos), VS Code es una herramienta sumamente útil y efectiva para la edición de textos digitales con TEI, cuyas prestaciones son comparables a las de los programas con licencias de pago, aunque con la ventaja de que al tratarse de una aplicación gratuita se encuentra al alcance de toda la comunidad.
 
 # 4. TEI Publisher
 
