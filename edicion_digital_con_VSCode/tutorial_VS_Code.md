@@ -40,6 +40,8 @@ Como complemento al tutorial, también te ofrecemos esta tabla con algunos de lo
 | Ctrl + F                     | Buscar secuencia de caracteres en el documento       |
 | Ctrl + H                     | Buscar y reemplazar                                  |
 | Ctrl + Shift + P             | Abre la barra de comandos (para funciones avanzadas) |
+|                              |                                                      |
+
 
 Para más información, pueden consultar la [lista completa de atajos de VS Code para Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) o presionar `Crtl+K` seguido de `Ctrl+S` en VS Code para abrir la lista de atajos y editarlos. 
 
