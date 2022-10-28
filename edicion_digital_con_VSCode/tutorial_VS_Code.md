@@ -91,7 +91,7 @@ Puedes probar otras alternativas de hojas de estilo sobre sus archivos TEI y com
 
 A continuación, se presentarán brevemente otras 4 extensiones que pueden ser de utilidad para trabajar con XML-TEI. Son 1) *Git History*; 2) *XML*; 3) *XML Tools* y 4) *xslt-transform*.
 
-## 5.1. Git y Git History
+## Git y Git History
 
 El editor VS Code posee soporte nativo para Git, lo único que debemos hacer es instalar este control de versiones para nuestro sistema operativo descargándolo desde el siguiente enlace: https://git-scm.com/downloads. 
 
@@ -113,7 +113,7 @@ Una vez abierta la carpeta, podemos seleccionar uno de los archivos y pedirle a 
 
 Los objetivos de [*Git History*](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) son: 1) ver y buscar registros de Git al tiempo que gráficos y detalles; 2) visualizar una copia previa del trabajo; 3) visualizar y buscar en el historial (por ejemplo, visualizar el historial de toda o de una de las ramas (*branches*); esto es lo que se denomina Git log; o visualizar el historial de un autor). Mediante esta extensión también se pueden comparar ramas, compromisos (*commit*) o comparar archivos entre compromisos.
 
-## 5.2. XML
+## XML
 
 La extensión [*XML*](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml) es una distribución desarrollada por RedHat, quienes han contribuido, por ejemplo, al desarrollo de distribuciones de Linux como Fedora o de programas como Libreoffice. Esta extensión se centra en dotar a VS Code de las herramientas necesarias para reconocer adecuadamente el XML. Así, permite el cierre automático de las etiquetas (por ejemplo, al escribir `<p>`, también se escribirá automáticamente `</p>`). También añade soporte para XSL y para renombrar etiquetas. Este segundo funciona de la siguiente manera:
 
@@ -132,7 +132,7 @@ Finalmente, visualizamos el resultado en VS Code. Como habíamos dicho, en este 
 
 Pueden consultarse todas las funciones de esta extensión en el enlace facilitado anteriormente.
 
-## 5.3. XML Tools
+## XML Tools
 
 Por otro lado, [*XML Tools*](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) tiene una serie de características que son: 1) formato del XML, 2) visualización del árbol de XML (es decir, cómo está estructurado el documento), evaluación de XPath –lenguaje pensado para navegar y parsear los documentos XML–; 3) enhebrado de XQuery –lenguaje pensado para consultar documentos XML–; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
 
@@ -150,7 +150,7 @@ La caja de comandos se puede abrir con `Ctrl+shift+P` o haciendo clic derecho en
 ![Resultado del XML simplificado.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen15.png)
 
 
-## 5.4. xslt-transform
+## xslt-transform
 
 El cometido de la última extensión, [*xslt-transform*](https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform), es transformar el XML en una salida HTML o un PDF mediante el lenguaje XSLT. Mostraremos un ejemplo de cómo transformar un XML en HTML en VS Code:
 
@@ -168,9 +168,7 @@ Tras este paso, cargaremos el archivo .xsl o .xslt que hayamos preparado para la
 ![Guardamos el archivo como .html](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen18.png)
 
 
-
 ![Resultado en HTML.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen19.png)
-
 
 
 # 6. Conclusiones
