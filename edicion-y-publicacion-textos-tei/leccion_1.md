@@ -56,7 +56,7 @@ Otra característica comúnmente adoptada en muchas ediciones digitales es la de
 Otra opción de procesamiento informático, ligado a la visualización de datos, que nos permiten los textos marcados con XML-TEI es el **análisis de redes**; es decir, el estudio computarizado de las relaciones que establecen entre sí diferentes entidades en un texto o corpus textual. En el siguiente ejemplo podemos observar un análisis de redes de las interacciones de los personajes de la obra *La vida es sueño* de Calderón de la Barca, que se ofrece en el corpus de ediciones digitales del sitio [Dracor](https://dracor.org/):
  
  
-![análisis de red de *La vida es sueño*](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_004.png)
+![Análisis de red de *La vida es sueño*](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_004.png)
 <p align="center">Fuente: <a href="https://dracor.org/cal/la-vida-es-sueno">https://dracor.org/cal/la-vida-es-sueno</a></p>
  
 ## Proyectos de edición de autores
