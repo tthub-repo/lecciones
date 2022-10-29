@@ -129,7 +129,7 @@ pareçiage la rancura: del cor enna maxiella
  
 Si nuestro texto posee alguna zona dañada, frecuente en los manuscritos e impresos antiguos, podemos marcar dicho pasaje con el elemento [`<damage>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-damage.html). En su interior pueden utilizarse diversos atributos, como `@agent` para marcar el motivo del daño; o bien, en aquellos casos en que el daño atañe a un fragmento largo del texto podemos utilizar, como en `<delSpan>`, el elemento [`<damageSpan>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-damageSpan.html) con el atributo `@spanTo` que apuntará hacia el anclaje que indica el final del texto dañado. Por ejemplo:
  
-![Ejemplo de un daño. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 3v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_007.jpg) 
+![Ejemplo de un daño. <a href="http://bdh.bne.es/bnesearch/detalle/bdh0000008671">*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 3v.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_007.jpg) 
  
 ```xml
 <damage>non</damage> se me podria celar: quanto ual vn accento
@@ -141,9 +141,9 @@ ejemplo:
  
 * [`<surplus>`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-surplus.html): para indicar un texto en la fuente que el editor considera superficial o redundante.
  
-* [`<space>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) para indicar el espacio vacío en nuestra copia, como sucede en la Figura \ref{L5_space}
+* [`<space>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) para indicar el espacio vacío en nuestro texto.
  
-* [`<fw>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-fw.html) (forme work) para indicar los números originales de las páginas, o incluso la numeración de los cuadernos o los hilitos de los encabezados.
+* [`<fw>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-fw.html) (*forme work*) para indicar los números originales de las páginas, o incluso la numeración de los cuadernos o los hilitos de los encabezados.
  
  
  
@@ -204,7 +204,7 @@ Las imágenes también pueden codificarse y anotarse describiéndolas en general
  
 # 11. Práctica: Edición de fuentes primarias
  
-## 11.1. Enunciado
+## Enunciado
  
 En este ejercicio volveremos sobre el texto del *El Gallardo catalán*, de Lope de Vega, sobre el que ya trabajamos en el ejercicio de drama de la lección anterior. Si ya realizaste ese ejercicio puedes usar el documento TEI que ya creaste en la lección anterior y continuar directamente al paso 3 de las indicaciones. En cambio, si no realizaste ese ejercicio, a continuación tienes la información necesaria:
  
@@ -240,7 +240,7 @@ También puedes añadir la indicación de la versión digital, distinguiendo un 
  
 **[Paso 4]** Lo ideal es que mientras realizas la codificación te asegures de que tu documento está bien formado y es válido, para ello es necesario asociar el documento TEI a un esquema RelaxNG, tal como se explica en la [lección 2](enlace).
  
-## 11.2. Reproducciones
+## Reproducciones
  
 ![Ed. 1610, fol. 69r](https://raw.githubusercontent.com/tthub-repo/ejercicios/master/img/8.Lope_fol.69r.jpg)
 ![Ed. 1610, fol. 69v](https://raw.githubusercontent.com/tthub-repo/ejercicios/master/img/8.Lope_fol.69v.jpg)
