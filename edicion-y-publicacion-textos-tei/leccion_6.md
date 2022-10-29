@@ -116,7 +116,7 @@ Si tuviéramos una serie de poemas, las estrategias a seguir podrían ser varias
   </lg>
 </div>
 ```
-Pueden encontrar otro ejemplo de marcado en nuestro Repositorio de ejemplos en GitHub: [Ejemplo en verso](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_poema.xml).
+Pueden encontrar otro ejemplo de marcado en nuestro Repositorio de ejemplos en GitHub: [Ejemplo de codificación de un poema: A galopar de Rafael Alberti](https://tthub.io/aprende/ejemplos/ejemplo-poema-rafael-alberti).
  
 Existen muchos otros elementos relacionados con las composiciones métricas, para más detalles pueden consultarse el módulo correspondiente [6. Verse](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html) de las *Guías directrices*; y la sección de [Module 4: Poetry](https://teibyexample.org/modules/TBED04v00.htm) de *TEI By Example*.
  
@@ -207,7 +207,7 @@ pueden sernos útiles en alguna ocasión como por ejemplo:
 * [`<caption>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-caption.html) para recoger las palabras que deberán proyectarse en pantalla.
 * [`<tech>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-tech.html) otras informaciones técnicas.
  
-<span style="color:red">Cambiar enlaces</span> En el [Repositorio de ejemplos en GitHub](https://github.com/tthub-repo/ejemplos/) puede encontrarse un [ejemplo sencillo de codificación](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_drama.xml) y otro ejemplo con el inicio de una obra dramática en verso de [Lope de Vega, *Amar sin saber a quien*](https://github.com/tthub-repo/ejemplos/blob/master/L5_ejemplo_drama_Lope_Amar_sin_saber_a_quien.xml). También puedes ver la reproducción digital que aparece en la [Biblioteca Cervantes Virtual](https://www.cervantesvirtual.com/descargaPdf/amar-sin-saber-a-quien--1/) y confrontarla con la codificación que proponemos. [Aquí](https://www.cervantesvirtual.com/obra-visor/amar-sin-saber-a-quien--0/html/) encontraréis también una edición digital en HTML.
+En nuestra sección de [Ejemplos](https://tthub.io/aprende/ejemplos/inicio) puede encontrarse un [Ejemplo de codificación: Drama](https://tthub.io/aprende/ejemplos/ejemplo-drama) y otro ejemplo con el inicio de una obra dramática en verso de [Lope de Vega, *Amar sin saber a quien*](https://tthub.io/aprende/ejemplos/ejemplo-drama-lope-amar-sin-saber-a-quien). También puedes ver la reproducción digital que aparece en la [Biblioteca Cervantes Virtual](https://www.cervantesvirtual.com/descargaPdf/amar-sin-saber-a-quien--1/) y confrontarla con la codificación que proponemos. [Aquí](https://www.cervantesvirtual.com/obra-visor/amar-sin-saber-a-quien--0/html/) encontraréis también una edición digital en HTML.
  
 Otros recursos que pueden ser de utilidad son el [Module 5: Drama](http://teibyexample.org/modules/TBED05v00.htm) en *TEI by Example*, con especial atención a los [ejemplos](http://teibyexample.org/examples/TBED05v00.htm), y la consulta de las [*Guías directrices*](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html).
 
@@ -308,4 +308,9 @@ También puedes añadir la indicación de la versión digital, distinguiendo un 
 </sp>
 ```
 
- 7. Lo ideal es que mientras realizas la codificación te asegures de que tu documento está bien formado y es válido, para ello es necesario asociar nuestro documento TEI a un esquema RelaxNG, tal como se explica en la [lección 2](enlace). <span style="color:red">Cambiar enlaces</span> 
+ 7. Lo ideal es que mientras realizas la codificación te asegures de que tu documento está bien formado y es válido, para ello es necesario asociar nuestro documento TEI a un esquema RelaxNG. Para este ejercicio puedes utilizar un esquema genérico: 
+ 
+ ```xml
+ <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+ ```
+ 
