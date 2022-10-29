@@ -22,7 +22,7 @@ Cuando decimos que TEI se expresa a través del lenguaje XML nos referimos a que
  
 # 2. Editores de código
 
-Cuando queremos crear o editar un documento XML, los procesadores de texto más usados, como Microsoft Word o WordPad, no nos serán de utilidad, ya que fácilmente se pueden agregar accidentalmente formatos y caracteres extra y/o invisibles que pueden generar problemas. Los editores de texto plano son una opción más adecuada, es posible crear y editar archivos XML-TEI con cualquiera de estos programas mientras trabajen con texto plano sin añadir ningún tipo de formato. Sin embargo la mejor alternativa para trabajar en este tipo de documentos es utilizar un programa específicamente diseñado para editar códigos informáticos. Existen varias opciones gratuitas, tales como [Atom](https://atom.io/packages/xml-tools), [Komodo](https://www.activestate.com/products/komodo-edit/), [jEdit](http://www.jedit.org/), entre muchos otros. En este tutorial usaremos el editor [Visual Studio Code](https://code.visualstudio.com/) (usualmente abreviado VS Code), ya que nos ofrece la posibilidad de instalar la extensión [Scholarly XML*](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml) que brinda funciones adicionales, específicamente desarrolladas para trabajar con documentos XML-TEI.
+Cuando queremos crear o editar un documento XML, los procesadores de texto más usados, como Microsoft Word o WordPad, no nos serán de utilidad, ya que fácilmente se pueden agregar accidentalmente formatos y caracteres extra y/o invisibles que pueden generar problemas. Los editores de texto plano son una opción más adecuada, es posible crear y editar archivos XML-TEI con cualquiera de estos programas mientras trabajen con texto plano sin añadir ningún tipo de formato. Sin embargo la mejor alternativa para trabajar en este tipo de documentos es utilizar un programa específicamente diseñado para editar códigos informáticos. Existen varias opciones gratuitas, tales como [Atom](https://atom.io/packages/xml-tools), [Komodo](https://www.activestate.com/products/komodo-edit/), [jEdit](http://www.jedit.org/), entre muchos otros. En este tutorial usaremos el editor [Visual Studio Code](https://code.visualstudio.com/) (usualmente abreviado VS Code), ya que nos ofrece la posibilidad de instalar la extensión [Scholarly XML](https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml) que brinda funciones adicionales, específicamente desarrolladas para trabajar con documentos XML-TEI.
 
 ## Visual Studio Code 
 
@@ -30,16 +30,15 @@ Para utilizar VS Code solo debes ir a la [página de descarga de la aplicación]
 
 Una vez que hayas completado la instalación de VS Code, el próximo paso será instalar la extensión Scholarly XML. Para eso, debes seleccionar el ícono de extensiones del menú lateral de VS Code (paso 1) y en el cuadro de búsqueda ingresar la palabra “Schorlarly” (paso 2). Cuando aparezca la opción que deseamos utilizar, solo debes presionar el botón “install” (paso 3):
  
-![Instalación de Scholarly XML en VS Code](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L2_001.png)
-<p align="center">Pasos para instalar la extensión Scholarly XML en VS Code.</p>
+![Pasos para instalar la extensión Scholarly XML en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L2_001.png)
  
 Con esta extensión incorporamos en VS Code algunas funciones que nos serán de gran utilidad para la codificación de textos en XML-TEI:
 
-*  VS Code nos informará si nuestros archivos son válidos y están bien formados (veremos qué significa esto en la [sección IV](link)).
-*  Si estamos trabajando en TEI recibiremos sugerencias de elementos que podemos utilizar de acuerdo al esquema con el que estemos trabajando (veremos cómo funciona esto en la [siguiente lección](link)).
-*  Si estamos trabajando en TEI podemos seleccionar una porción de texto y utilizar el atajo *ctrl+E* para marcarlo con una etiqueta de inicio al comienzo y una de cierre al final (el funcionamiento de estas etiquetas se explica a continuación).
+*  VS Code nos informará si nuestros archivos son válidos y están bien formados.
+*  Si estamos trabajando en TEI recibiremos sugerencias de elementos que podemos utilizar de acuerdo al esquema con el que estemos trabajando.
+*  Podremos seleccionar una porción de texto y utilizar el atajo `ctrl+E` para marcarlo con una etiqueta de inicio al comienzo y una de cierre al final.
 
-VS Code también ofrece otras extensiones destinadas al trabajo con archivos XML, como [XML Complete](https://marketplace.visualstudio.com/items?itemName=rogalmic.vscode-xml-complete), que ofrece varias funcionalidades útiles para editar XML. Sin embargo, en este tutorial utilizaremos Scholarly XML ya que fue diseñada espacialmente para la codificación de textos en XML-TEI.
+VS Code también ofrece otras extensiones destinadas al trabajo con archivos XML, como [XML Complete](https://marketplace.visualstudio.com/items?itemName=rogalmic.vscode-xml-complete), que ofrece varias funcionalidades útiles para editar XML. Sin embargo, en este tutorial utilizaremos solo *Scholarly XML* ya que fue diseñada espacialmente para la codificación de textos en XML-TEI. Si deseas saber más sobre este programa, sigue el tutorial [Edición filológica digital con Visual Studio Code](https://tthub.io/aprende/tutorial/edicion-digital-con-VS-code).
 
 Entre la comunidad TEI, también ha sido muy utilizado otro editor XML llamado [oXygen](https://www.oxygenxml.com/). Aunque el programa ofrece funcionalidades específicas y muy útiles para el marcado TEI, el mayor inconveniente es que es propietario y por tanto se necesita una licencia para poder emplearlo. 
  
