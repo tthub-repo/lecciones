@@ -16,7 +16,7 @@ La fenomenología que podemos encontrarnos en una fuente primaria es realmente m
  
 # 2. Adiciones
  
-Para las adiciones usaremos el elemento [`<add>`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-add.html), que pertenece al módulo `Core`. Habitualmente se suele señalar con el atributo `@place` el lugar donde se ha producido dicha adición; por defecto, tenemos como valores: `above`, `below`, `bottom`, `end`, `inline`, `margin`, `opposite`, `overleaf`, `top`. Tomemos el siguiente ejemplo y veamos cómo lo podríamos codificar:
+Para las adiciones usaremos el elemento [`<add>`](https://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-add.html), que pertenece al módulo `core`. Habitualmente se suele señalar con el atributo `@place` el lugar donde se ha producido dicha adición; por defecto, tenemos como valores: `above`, `below`, `bottom`, `end`, `inline`, `margin`, `opposite`, `overleaf`, `top`. Tomemos el siguiente ejemplo y veamos cómo lo podríamos codificar:
  
 ![Ejemplo de una adición. <a href="http://bdh.bne.es/bnesearch/detalle/bdh0000008671">*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 1v.</a>](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_001.jpg)
  
@@ -31,7 +31,7 @@ auian grant alegria: metien en esto mientes
  
 # 3. Cancelaciones o omisiones
  
-En el caso de las supresiones, ya sea porque se ha tachado una parte del texto, ya sea porque se ha omitido, puede utilizarse [`<del>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) (deletion), que también corresponde al módulo `Core`. Podemos añadir un atributo `@type` para caracterizar el tipo de cancelación o de omisión. 
+En el caso de las supresiones, ya sea porque se ha tachado una parte del texto, ya sea porque se ha omitido, puede utilizarse [`<del>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) (*deletion*), que también corresponde al módulo `core`. Podemos añadir un atributo `@type` para caracterizar el tipo de cancelación o de omisión. 
  
 Además, el módulo de representación de fuentes primarias tiene otro elemento útil para aquellos casos en los que un fragmento largo ha sido omitido o cancelado. En estos casos, podríamos introducir el texto eliminado señalando el inicio del texto con el elemento
 [`<delSpan>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-delSpan.html), acompañado del atributo `@spanTo` que apuntaría al punto de anclaje donde finaliza dicho fragmento. Véanse los ejemplos en las [*Guías directrices*](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-delSpan.html%20).
@@ -40,7 +40,7 @@ Además, el módulo de representación de fuentes primarias tiene otro elemento 
  
 Cuando describimos la fuente primaria y nos encontramos con una corrección o substitución de cualquier tipo la marcaremos utilizando [`<del>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) y [`<add>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html), agrupados en un elemento [`<subst>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-subst.html) si lo consideramos conveniente; también podemos especificar, con el atributo `@hand`, la mano responsable de dicha corrección y, con `@resp`, el editor que ha interpretado dicha corrección en la fuente primaria. Por ejemplo:
  
-![Ejemplo de una corrección. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 51v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_003.jpg) 
+![Ejemplo de una corrección. <a href="http://bdh.bne.es/bnesearch/detalle/bdh0000008671">*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 51v.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_003.jpg) 
  
 ```xml
 Bien auie y x mill carros: de los sauios senneros
@@ -58,7 +58,7 @@ Las abreviaturas pueden codificarse de maneras diferentes, la más
 sencilla de las cuales es simplemente marcar la abreviatura dentro del
 elemento [`<abbr>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-abbr.html). Pero en la mayoría de los casos, vale la pena indicar la forma expandida. En el siguiente ejemplo podemos ver diferentes casos de abreviaturas:
  
-![Ejemplos de abreviaturas. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 51v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_004.jpg) 
+![Ejemplos de abreviaturas. <a href="http://bdh.bne.es/bnesearch/detalle/bdh0000008671">*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 51v.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_004.jpg) 
  
 Para ello, podemos proceder de la siguiente manera:
  
@@ -102,7 +102,7 @@ que eran de fin oro: & de piedras <choice>
 
 # 6. Establecer diferentes manos de un manuscrito
  
-Puede ser que en algunos casos nos encontremos con una fuente en la que aparecen manos diferentes y queramos describir los aspectos físicos o externos del manuscrito ([`physDesc`](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-physDesc.html)); en el caso que queramos señalarlas, las codificaremos con el elemento [`<handNote>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-handNote.html) que se halla en el tei Header (/TEI/teiHeader/fileDesc/sourceDesc/msDesc/physDesc/handDesc). Además, le podemos atribuir un identificador propio a cada una de las manos:
+Puede ser que en algunos casos nos encontremos con una fuente en la que aparecen manos diferentes y queramos describir los aspectos físicos o externos del manuscrito ([`physDesc`](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-physDesc.html)); en el caso que queramos señalarlas, las codificaremos con el elemento [`<handNote>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-handNote.html) que se halla en el tei Header (`/TEI/teiHeader/fileDesc/sourceDesc/msDesc/physDesc/handDesc`). Además, le podemos atribuir un identificador propio a cada una de las manos:
  
 ```xml
 <physDesc>
@@ -116,7 +116,7 @@ Puede ser que en algunos casos nos encontremos con una fuente en la que aparecen
 Así, podemos también señalar cuando se produce un cambio de mano en nuestra fuente, gracias al elemento [`<handShift>`](http://www.tei-c.org/release/doc/tei-p5-doc/es/html/ref-handShift.html). En el siguiente ejemplo, podríamos señalar que la segunda mitad del primer verso fue añadida por un lector posterior:
  
  
-![Ejemplos de cambio de mano. [*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 51v.](http://bdh.bne.es/bnesearch/detalle/bdh0000008671)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_005.jpg) 
+![Ejemplos de cambio de mano. <a href="http://bdh.bne.es/bnesearch/detalle/bdh0000008671">*Libro de Alexandre* / Anónimo, siglo XIII. Madrid, Biblioteca Nacional de España, signatura: Vit. 5-10. Fol. 51v.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L7_005.jpg) 
  
 ```xml
 El ñino mano & mano  <handShift resp="Lector">toliose la capiella</handShift>
