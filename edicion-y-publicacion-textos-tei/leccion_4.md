@@ -14,7 +14,7 @@ En primer lugar, conviene recordar que el sistema de codificación TEI se divide
  
 Los módulos optativos, en cambio, responden a tipologías textuales concretas y los veremos con más detalle en las siguientes lecciones.
  
-Las [*Guías directrices*](https://tei-c.org/guidelines/p5/) de TEI no tienen un módulo específico para la codificación de prosa, pues se trata de un término algo genérico y difícil de definir. La mayoría de los elementos utilizados para codificar textos en prosa pertenecen al módulo [core](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html) y [textstructure](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html), es decir, los elementos que aparecen integrados en la estructura TEI por defecto.
+Las [*Guías directrices*](https://tei-c.org/guidelines/p5/) de TEI no tienen un módulo específico para la codificación de prosa, pues se trata de un término algo genérico y difícil de definir. La mayoría de los elementos utilizados para codificar textos en prosa pertenecen al módulo [`core`](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html) y [`textstructure`](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html), es decir, los elementos que aparecen integrados en la estructura TEI por defecto.
 Dado que los tipos textuales que se valen de la prosa como medio de expresión son sumamente variados dividiremos el trabajo de marcado de textos en prosa en dos lecciones complementarias. Comenzaremos por los elementos generales y comunes en todos los documentos TEI (a excepción de los párrafos `<p>` y las divisiones `<div>` que ya fueron trabajados en la lección anterior), como cuestiones de puntuación o de tipografía, la presentación del texto en la fuente original, la referenciación de  nombres, fechas y medidas, entre otros aspectos. Todos estos elementos se encuentran explicados en la sección ["3. Elements Available in All TEI Documents"](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html) de las *Guías directrices*.
  
 # 2. Títulos y encabezados
@@ -58,7 +58,7 @@ Todos los textos impresos poseen elementos tipográficos diversos como pueden se
 * cadenas narrativas diferentes, como un monólogo interno o un comentario.
 * la atribución a una referencia externa al texto, como un discurso directo o una citación.
  
-Ahora bien, como explicamos anteriormente, el sistema TEI no se concentra tanto en la apariencia del texto como en señalar qué son las cosas. De esta manera, al encontrarnos, por ejemplo con un extranjerismo, quizás no nos interesará tanto señalar que aparece en cursiva, como indicar que se trata de una palabra extranjera. Sea cual sea la opción que se elija, TEI ofrece la posibilidad de marcar estos elementos tipográficos de una manera general, sin implicaciones semánticas. El elemento utilizado a tal propósito es `<hi>` (highlight), que por lo general suele tener un atributo `@rend` (*rendition*) que indica de qué manera aparece en el texto:
+Ahora bien, como explicamos anteriormente, el sistema TEI no se concentra tanto en la apariencia del texto como en señalar qué son las cosas. De esta manera, al encontrarnos, por ejemplo con un extranjerismo, quizás no nos interesará tanto señalar que aparece en cursiva, como indicar que se trata de una palabra extranjera. Sea cual sea la opción que se elija, TEI ofrece la posibilidad de marcar estos elementos tipográficos de una manera general, sin implicaciones semánticas. El elemento utilizado a tal propósito es `<hi>` (*highlight*), que por lo general suele tener un atributo `@rend` (*rendition*) que indica de qué manera aparece en el texto:
  
 ```xml
 <hi rend="italic">Palabra o frase en cursiva</hi>
@@ -230,7 +230,7 @@ Este ejercicio se compone de tres partes: el enunciado, el texto a codificar y l
 ## Enunciado
  
 1. Primero crea un documento XML-TEI con su declaración XML, elemento raíz, `<teiHeader>`, y `<text>`.
-2. Completa los elementos obligatorios del encabezado (puedes repasarlos en la [lección 3](enlace) con la información sobre la fuente que antes indicamos.
+2. Completa los elementos obligatorios del encabezado (puedes repasarlos en la [lección 3](https://tthub.io/aprende/tutorial/edicion-y-publicacion-textos-tei/leccion3/encabezado_teiheader) con la información sobre la fuente que antes indicamos.
 3. En el elemento `<body>` incluye el texto propiamente dicho. En resumen, los elementos que debes marcar a partir de la imagen son los siguientes:
  
 * Título o encabezado general de la obra: "Don Quijote de la Mancha"
@@ -249,7 +249,7 @@ Aquí van unas pistas:
  
 5. A continuación, copia el texto que se os ofrece más abajo en su `<div>` correspondiente. Para ello, utiliza el elemento `<head>` para todos los títulos, incluido el argumento del primer capítulo. Emplea el elemento `<p>` para incluir el texto “En un lugar de la mancha...”, aunque el párrafo no termine allí.
 
-6. Marca el principio y el final de las páginas con `<pb/>` (page break) acompañado de su atributo `@n` con el valor del número de la página que viene a continuación (números 57 y 58). Si deseas realizar un marcado aún más granular, también puedes añadir los `<lb/>` (line begining) al comienzo de cada línea de la fuente impresa.
+6. Marca el principio y el final de las páginas con `<pb/>` (*page break*) acompañado de su atributo `@n` con el valor del número de la página que viene a continuación (números 57 y 58). Si deseas realizar un marcado aún más granular, también puedes añadir los `<lb/>` (*line begining*) al comienzo de cada línea de la fuente impresa.
 
 7. Marca los diferentes nombres que aparecen en el texto, ya sean nombres propios (`<persName>`) o de lugar (`<placeName>`), puedes intentar utilizar el atributo `@ref` para referenciarlos con un diccionario de autoridades como VIAF, pero ten en cuenta que en ocasiones puedes toparte con nombres que no aparecen listados en estos diccionarios.
 
