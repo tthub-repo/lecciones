@@ -135,7 +135,7 @@ Pueden consultarse todas las funciones de esta extensión en el enlace facilitad
 
 ## XML Tools
 
-Por otro lado, [*XML Tools*](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) tiene una serie de características que son: 1) formato del XML, 2) visualización del árbol de XML (es decir, cómo está estructurado el documento), evaluación de XPath –lenguaje pensado para navegar y parsear los documentos XML–; 3) enhebrado de XQuery –lenguaje pensado para consultar documentos XML–; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
+Por otro lado, [*XML Tools*](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) tiene una serie de características que son: 1) formato del XML, 2) visualización del árbol de XML, es decir, cómo está estructurado el documento, evaluación de XPath para navegar y parsear los documentos XML; 3) enhebrado de XQuery para consultar documentos XML; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
 
 Veamos un ejemplo de otra de sus funciones, simplificar el XML:
 
@@ -153,7 +153,7 @@ La caja de comandos se puede abrir con `Ctrl+shift+P` o haciendo clic derecho en
 
 ## xslt-transform
 
-El cometido de la última extensión, [*xslt-transform*](https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform), es transformar el XML en una salida HTML o un PDF mediante el lenguaje XSLT. Mostraremos un ejemplo de cómo transformar un XML en HTML en VS Code:
+El cometido de la última extensión, [*xslt-transform*](https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform), es transformar el XML en una salida HTML o un PDF mediante el lenguaje XSLT. Pasemos ahora a mostrar un ejemplo de cómo transformar un XML en HTML en VS Code.
 
 En primer lugar, instalamos la extensión *xslt-transform* y, seguidamente, abrimos nuestro archivo en VS Code. 
  
