@@ -111,10 +111,10 @@ Un marcado electrónico es un valor añadido al texto pues puede proporcionar m�
  
 Es importante antes de empezar a codificar saber qué elementos queremos aislar y cuáles son útiles para nuestro proyecto:
  
-* **Divisiones estructurales dentro del texto**: título de la página, capítulo, escena, poema, línea, párrafo...
-* **Elementos tipográficos puntuales**: cambios de letra, caracteres especiales...
-* **Informaciones semánticas**: personas, lugares, eventos, fechas...
-* **Otros elementos**: estructuras sintácticas, formas gramaticales, localización de ilustraciones, gráficos, tablas, imágenes...
+* **Divisiones estructurales dentro del texto**: título de la página, capítulo, escena, poema, línea, párrafo, etc.
+* **Elementos tipográficos puntuales**: cambios de letra, caracteres especiales, etc.
+* **Informaciones semánticas**: personas, lugares, eventos, fechas, etc.
+* **Otros elementos**: estructuras sintácticas, formas gramaticales, localización de ilustraciones, gráficos, tablas, imágenes, etc.
  
 La decisión, una vez más, dependerá de las informaciones que queramos recuperar y procesar informáticamente.
  
@@ -144,11 +144,7 @@ Las ventajas que ofrece el uso de TEI son múltiples y entre ellas podemos seña
 * Un marcado a través de un estándar web, independiente de cualquier software o plataforma web, como es el caso de en XML-TEI, permite y facilita la **reutilización del mismo material: en diferentes formatos**, en contextos diferentes, por diferentes usuarios. Esto permite que proyectos posteriores o contemporáneos puedan establecer un vínculo y un uso diferente del material publicado, evitando el tener que empezar de cero y avanzando en el conocimiento.
 * XML-TEI se centra en el significado y el **contenido** del texto y no en su apariencia o en su presentación final (es decir, no es tan relevante el señalar un título en negrita, como definir que efectivamente se trata de un “título”).
   
-## En resumen
- 
-A lo largo de esta lección realizamos una primera aproximación a la codificación informática de textos y presentamos las principales características de la TEI desde un punto de vista teórico. A modo de conclusión, lo que el marcado de un texto con TEI nos permite es codificar información que dependiendo del tipo de proyecto en el que se realice el marcado, puede ser de muy variada naturaleza, de forma que esta sea legible y recuperable informáticamente.
- 
-Si te interesa seguir ahondando en la historia de la Text Encoding Inititative y en la organización del Consorcio TEI, puedes encontrar más información sobre estos temas en el [anexo](link).
+A modo de conclusión, lo que el marcado de un texto con TEI nos permite es codificar información que dependiendo del tipo de proyecto en el que se realice el marcado, puede ser de muy variada naturaleza, de forma que esta sea legible y recuperable informáticamente.
  
 En la siguiente lección comenzaremos a introducirnos en la práctica del marcado TEI y echaremos un vistazo a un archivo XML para empezar a familiarizarnos con este formato de archivos.
  
