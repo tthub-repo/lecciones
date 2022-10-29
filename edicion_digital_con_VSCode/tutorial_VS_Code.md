@@ -105,18 +105,18 @@ En segundo lugar, abrimos una carpeta que ya contenga un repositorio Git. Si tod
 
 ![Carpeta que contiene el repositorio git.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen7.png)
 
-Una vez abierta la carpeta, podemos seleccionar uno de los archivos y pedirle a Git que nos muestre el historial de este. Para ello, solicitaremos acceso al historial del archivo. En las imágenes siguientes se muestra, primero, cómo acceder a la solicitud del historial y, segundo, la visualización del historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub.
+VS Code también posee una extensión llamada [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) que, una vez instalada y abierta la carpeta del repositorio, nos permitirá seleccionar uno de los archivos y pedirle a Git que nos muestre el historial de este. Para ello, solicitaremos acceso al historial del archivo. En las imágenes siguientes se muestra, primero, cómo acceder a la solicitud del historial (haciendo click derecho en el mouse) y, segundo, la visualización del historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub.
 
 ![Solicitud del historial del archivo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen8.png)
 
 
 ![Visualización del historial del archivo](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen9.png)
 
-Los objetivos de [*Git History*](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) son: 1) ver y buscar registros de Git al tiempo que gráficos y detalles; 2) visualizar una copia previa del trabajo; 3) visualizar y buscar en el historial (por ejemplo, visualizar el historial de toda o de una de las ramas (*branches*); esto es lo que se denomina Git log; o visualizar el historial de un autor). Mediante esta extensión también se pueden comparar ramas, compromisos (*commit*) o comparar archivos entre compromisos.
+Los objetivos de *Git History* son: 1) ver y buscar registros de Git al tiempo que gráficos y detalles; 2) visualizar una copia previa del trabajo; 3) visualizar y buscar en el historial (por ejemplo, visualizar el historial de toda o de una de las ramas (*branches*); esto es lo que se denomina Git log; o visualizar el historial de un autor). Mediante esta extensión también se pueden comparar ramas, compromisos (*commit*) o comparar archivos entre compromisos.
 
 ## XML
 
-La extensión [*XML*](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml) es una distribución desarrollada por RedHat, quienes han contribuido, por ejemplo, al desarrollo de distribuciones de Linux como Fedora o de programas como Libreoffice. Esta extensión se centra en dotar a VS Code de las herramientas necesarias para reconocer adecuadamente el XML. Así, permite el cierre automático de las etiquetas (por ejemplo, al escribir `<p>`, también se escribirá automáticamente `</p>`). También añade soporte para XSL y para renombrar etiquetas. Este segundo funciona de la siguiente manera:
+La [extensión *XML*](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml) es una distribución desarrollada por RedHat, quienes han contribuido, por ejemplo, al desarrollo de distribuciones de Linux como Fedora o de programas como Libreoffice. Esta extensión se centra en dotar a VS Code de las herramientas necesarias para reconocer adecuadamente el XML. Así, permite el cierre automático de las etiquetas (por ejemplo, al escribir `<p>`, también se escribirá automáticamente `</p>`). También añade soporte para XSL y para renombrar etiquetas. Este segundo funciona de la siguiente manera:
 
 En primer lugar, seleccionamos un fragmento de código para el cambio de nombre del símbolo. A continuación, seleccionamos cuál es el símbolo por el que queremos reemplazar el símbolo actual. En este caso reemplazaremos `<p>` y `</p>` por `<l>` y `</l>`. La primera imagen que sigue a esta explicación muestra el fragmento de código seleccionado y el menú desde el que seleccionaremos la opción de renombrar el símbolo.
 
