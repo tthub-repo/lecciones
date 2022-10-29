@@ -43,7 +43,7 @@ Las posibilidades que ofrece la edición digital son múltiples, una opción muy
 Algunas ediciones aprovechan las posibilidades del medio digital para ofrecer los textos originales junto con sus **traducciones**, como por ejemplo la edición de las cartas de Van Gogh:
  
 ![Vincent Van Gogh, *The Letters*](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_002b.png)
-<p align="center"> Fuente: <a href="http://vangoghletters.org/vg/letters.html">Vincent Van Gogh, <i>The Letters</i></a></p>
+<p align="center"> Fuente: <a href="http://vangoghletters.org/vg/letters.html">http://vangoghletters.org/vg/letters.html</a></p>
 
 ## Edición como enriquecimiento
 Otra característica comúnmente adoptada en muchas ediciones digitales es la de acompañar al texto con una variedad de **elementos visuales** que permiten añadirle una nueva capa de información. Por ejemplo, en la edición de la *La Argentina Manuscrita* de Rui Díaz de Guzmán, realizada por el [HD CAICYT Lab](http://hdlab.space/) además de proporcionar la reproducción facsimilar de la fuente impresa a partir de la cual se realizó la edición, ciertos términos se encuentran destacados y permiten abrir una nota de información adicional al posar el cursor sobre ellos. Adicionalmente, si el término destacado se trata de un nombre de lugar, se incluye la geolocalización del mismo en el mapa. En la siguiente captura, se puede observar la nota que se despliega al situar el cursor sobre la palabra “Fortunadas”:
