@@ -155,7 +155,7 @@ Te invitamos a visitar los sitios de las siguientes ediciones digitales para com
 * [The World of Dante](http://www.worldofdante.org/)
 * [Poesía Medieval](http://hdlab.space//Poesia-Medieval/)
 * [Mini Lazarillo](https://minilazarillo.github.io/)
-* [De oratione dominica](https://scholarlyediting.org/2016/editions/de-oratione-dominica.dunning.html.type=regularized.html)
+* [De Oratione Dominica](https://scholarlyediting.org/2016/editions/de-oratione-dominica.dunning.html.type=regularized.html)
 * [Van Gogh’s letters](http://vangoghletters.org/vg/)
  
 Las siguientes preguntas pueden servir como guía para comenzar a pensar los diferentes enfoques de la edición digital que cada una de estas propuestas presenta, sin embargo, son solo un punto de partida, y no agotan las posibilidades de análisis que pueden surgir de esta comparación.
