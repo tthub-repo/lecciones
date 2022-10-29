@@ -130,7 +130,7 @@ El elemento `<list>` sirve para listas genéricas que responden más bien a un f
  
 ## Referencias cruzadas
  
-Es también habitual que en un texto en prosa nos encontremos con referencias cruzadas que apunten al interior del documento o a una fuente externa. Los elementos para indicar este tipo de referencias y enlaces son [`<ref>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ref.html) y [`<ptr/>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ptr.html). La diferencia básica entre los dos es que el primero puede tener contenido y corresponde en realidad al típico enlace tal cual estamos acostumbrados a ver, mientras que `<ptr/>` (pointer) es un elemento vacío e indica sólo que en ese punto del texto aparece algo que crea un enlace, como por ejemplo un tipo concreto de imagen.
+Es también habitual que en un texto en prosa nos encontremos con referencias cruzadas que apunten al interior del documento o a una fuente externa. Los elementos para indicar este tipo de referencias y enlaces son [`<ref>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ref.html) y [`<ptr/>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ptr.html). La diferencia básica entre los dos es que el primero puede tener contenido y corresponde en realidad al típico enlace tal cual estamos acostumbrados a ver, mientras que `<ptr/>` (*pointer*) es un elemento vacío e indica sólo que en ese punto del texto aparece algo que crea un enlace, como por ejemplo un tipo concreto de imagen.
  
 Ambos suelen utilizar, entre otros, el atributo `@target` que toma la forma de una referencia URI.
  
@@ -149,7 +149,7 @@ La Guidelines proponen un tipo concreto de lenguaje de marcado que consiste en a
  
 # 3. Ejemplos
  
-El posible resultado final -recordemos que no hay una sola manera correcta de codificar- para un texto en prosa puede ser como el que se encuentra en el [Ejemplo en prosa (L5_Ejemplo_prosa.xml)](https://github.com/tthub-repo/ejemplos/blob/master/L5_Ejemplo_prosa.xml). 
+El posible resultado final -recordemos que no hay una sola manera correcta de codificar- para un texto en prosa puede ser como el que se encuentra en el [Ejemplo de codificación: Prosa](https://tthub.io/aprende/ejemplos/ejemplo-prosa). 
  
 Para ver otros ejemplos de prosa, recomendamos el corpus en abierto de novelas españolas y latinoamericanas en el CLiGS textbox:
  
