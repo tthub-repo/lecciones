@@ -1,5 +1,5 @@
 ---
-title: Estructura básica de los documentos XML-TEI
+title: Estructura de los documentos XML-TEI
 author: Susanna Allés Torrent, Gabriel Calarco, Gimena del Rio Riande
 date: 2022
 layout: default
