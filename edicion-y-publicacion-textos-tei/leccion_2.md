@@ -90,7 +90,7 @@ Y un ejemplo concreto podría ser:
 <titulo>Medea</titulo>
 ```
  
-Para practicar el marcado XML con elementos puedes ir al [ejercicio 1](enlace) de la sección *Práctica*
+Para practicar el marcado XML con elementos puedes ir al [Ejercicio 1](https://tthub.io/aprende/tutorial/edicion-y-publicacion-textos-tei/leccion2/practica_xml_en_uso) de la sección *Práctica*
  
 * Los elementos también pueden poseer **atributos** que añaden una característica adicional, y resultan de gran importancia para complementar la información que estamos marcando en el texto. El nombre del atributo se ubica en el interior de la etiqueta de apertura, después del identificador y separado de este por un espacio, a continuación (sin espacios intermedios) encontraremos el símbolo `=`, y entre comillas se incluye el **valor** de este atributo. En conclusión, la estructura sintáctica de un elemento con un atributo será la siguiente:
  
@@ -106,7 +106,7 @@ Y un ejemplo podría ser:
 
 * Los nombres de los atributos deben formularse igual que los nombres de los elementos. Su orden en el interior del elemento es libre, siempre y cuando no se repita. Conviene aclarar que a lo largo de los materiales de este tutorial utilizaremos la convención tipográfica de identificar los nombres de los atributos con el signo `@` al comienzo del nombre. Por ejemplo, nos referimos al atributo `type` como `@type`. Sin embargo, es importante tener presente que esta es solo una forma convencional de referirnos a los nombres de los atributos, pero no debemos incluir el signo `@` cuando estamos introduciendo atributos en un documento XML.
  
-Para practicar el uso de atributos puedes ir al [ejercicio 2](enlace) de la sección *Práctica*
+Para practicar el uso de atributos puedes ir al [ejercicio 2](https://tthub.io/aprende/tutorial/edicion-y-publicacion-textos-tei/leccion2/practica_xml_en_uso#section-5-2-ejercicio_2) de la sección *Práctica*
  
 * Los documentos XML también pueden contener **comentarios**, cuya función es que las personas puedan dejar sus notas, normalmente relativas al proceso de codificación del mismo documento. Pueden aparecer en cualquier lugar del documento mientras sea contenido; es decir, que no podrán nunca situarse al interior de una etiqueta. No tienen ningún efecto sobre el procesamiento informático, pero el uso de comentarios es considerado una buena práctica, que resulta de gran utilidad para hacer que la codificación sea comprendida más fácilmente por un lector humano, y por lo tanto ayuda a mejorar el potencial de reutilización de nuestros archivos. Los comentarios están delimitados por `<!--` y `-->`. Por ejemplo:
  
@@ -114,9 +114,9 @@ Para practicar el uso de atributos puedes ir al [ejercicio 2](enlace) de la secc
 <!-- ¡esto es un comentario! -->
 ```
  
-Para practicar el uso de comentarios puedes ir al [ejercicio 3](enlace) de la sección *Práctica*
+Para practicar el uso de comentarios puedes ir al [Ejercicio 3](https://tthub.io/aprende/tutorial/edicion-y-publicacion-textos-tei/leccion2/practica_xml_en_uso#section-5-3-ejercicio_3) de la sección *Práctica*
  
-* Los documentos XML poseen una **estructura arbórea**, esto significa que tienen un elemento raíz que contiene a todos los demás (en nuestro ejemplo, sería el elemento  `<lista>`), y a su vez cada elemento puede contener otros subordinados (en el ejemplo, cada elemento `<libro>` contiene a su vez a los elementos `<autor>` y `<titulo>`). Esta anidación de elementos crea una estructura jerárquica, que resulta característica de la forma en la que los datos se organizan en un documento XML.
+* Los documentos XML poseen una **estructura arbórea**, esto significa que tienen un elemento raíz que contiene a todos los demás (en nuestro ejemplo, sería el elemento  `<lista>`), y cada elemento puede contener otros subordinados (en el ejemplo, cada elemento `<libro>` contiene a su vez a los elementos `<autor>` y `<titulo>`). Esta anidación de elementos crea una estructura jerárquica, que resulta característica de la forma en la que los datos se organizan en un documento XML.
  
 # 4. Conceptos de “Válido” y “Bien formado”
  
@@ -151,12 +151,11 @@ Pero no esto:
 * Los comentarios y las instrucciones de procesamiento nunca pueden aparecer en el interior de una etiqueta.
 * Se recomienda no utilizar acentos ni espacios en los nombres de los elementos, ni en los atributos como tampoco en los valores; ya que su uso puede acarrear problemas a la hora de procesar los documentos.
  
-Para practicar las reglas de la sintaxis de XML puedes ir al [ejercicio 4](enlace) de la sección *Práctica*
+Para practicar las reglas de la sintaxis de XML puedes ir al [Ejercicio 4](https://tthub.io/aprende/tutorial/edicion-y-publicacion-textos-tei/leccion2/practica_xml_en_uso#section-5-4-ejercicio_4) de la sección *Práctica*
  
 La extensión Scholarly XML, que instalamos en VS Code nos permite comprobar la correcta formación de archivos XML. Si abrimos el archivo que estamos usando como ejemplo, encontraremos un mensaje en la barra inferior que nos indicará si el documento se encuentra bien formado (*XML is well formed*):
  
 ![Mensaje de bien formado en VS Code](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L2_002.png)
- <p align="center">Mensaje de bien formado (<i>well formed</i>) que aparece en la marquesina inferior de la pantalla de VS Code cuando abrimos un archivo XML si tenemos instalada la extensión Scholarly XML.</p>
 
 ## Documento válido
 
@@ -170,8 +169,8 @@ Mientras que un documento XML debe estar siempre bien formado, el hecho de ser v
  
 Agregar a la lista que usamos como ejemplo en esta lección los siguientes libros:
  
-*Ilíada*, de Homero
-*Teogonía*, de Hesíodo
+* *Ilíada*, de Homero
+* *Teogonía*, de Hesíodo
  
 Debes crear un elemento `<libro>` para cada una de estas obras, y en su interior agregar las marcas de `<autor>` y `<titulo>` con sus respectivos contenidos:
  
