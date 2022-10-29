@@ -16,7 +16,7 @@ Comenzaremos por explicar algunos conceptos esenciales para entender qué son lo
  
 La forma más básica del texto digital es el **texto plano** (.txt), que solo contiene caracteres (entre ellos, los espacios), sin añadir ningún tipo de formato a los mismos. Por el contrario, el texto digital también puede ser enriquecido con información adicional sobre la estructura del texto y la forma en que este será presentado en los dispositivos; estos datos se incorporan mediante el uso de un **[lenguaje de marcado](https://es.wikipedia.org/wiki/Lenguaje_de_marcado)**. La iniciativa de marcado nace pues de la necesidad de procesar los textos desde un punto de vista informático, para que, en definitiva, no sea susceptible solo de una lectura "plana", sino para que sea procesable a través de múltiples herramientas como pueden ser programas de concordancias, análisis estilométricos, gráficos de frecuencias, segmentación gramatical o, sobre todo, su publicación web y la posibilidad de realizar búsquedas inteligentes.
  
-Otro concepto importante para entender la función de la codificación informática de textos es el de los **metadatos**. Si tomamos a un texto digital como un conjunto de datos (es decir, una sucesión de caracteres), toda la información referida a ellos (como su título, lengua en la que está escrito o su tipología textual) son sus metadatos. Los metadatos que pueden acompañar a los textos digitales son variados y existen varias propuestas de codificación con sus características particulares, pero todas apuntan a un mismo objetivo: proporcionar un contexto para el conjunto de datos que son los objetos digitales. Los metadatos cumplen un rol fundamental para el trabajo en humanidades, ya que permiten que los textos digitales sean clasificados, conservados y compartidos.
+Otro concepto importante para entender la función de la codificación informática de textos es el de los **metadatos**. Si entendemos un texto digital como un conjunto de datos (es decir, una sucesión de caracteres), toda la información referida a ellos (como su título, lengua en la que está escrito o su tipología textual) son sus metadatos. Los metadatos que pueden acompañar a los textos digitales son variados y existen varias propuestas de codificación con sus características particulares, pero todas apuntan a un mismo objetivo: proporcionar un contexto para el conjunto de datos que son los objetos digitales. Los metadatos cumplen un rol fundamental para el trabajo en humanidades, ya que permiten que los textos digitales sean clasificados, conservados y compartidos.
  
 ![Logo de la Text Encoding Initiative](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_001.png)
  
@@ -33,7 +33,7 @@ Hay muchas razones para utilizar TEI, ya que permite capturar distinciones impor
  
 ## Edición como versiones de un texto 
  
-Las posibilidades que ofrece la edición digital son múltiples, una opción muy utilizada es el trabajo de **comparación y presentación de textos en diferentes versiones**. En una aplicación de este concepto, la edición de *La Dama Boba* de Lope de Vega, realizada por el grupo [Prolope](http://prolope.uab.cat/) nos permite comparar los textos de diferentes testimonios de la obra en sus varios estadíos, con una disposición en tres columnas:
+Las posibilidades que ofrece la edición digital son múltiples, una opción muy utilizada es el trabajo de **comparación y presentación de textos en diferentes versiones**. En una aplicación de este concepto, la edición de *La Dama Boba* de Lope de Vega, realizada por el grupo [Prolope](http://prolope.uab.cat/) nos permite comparar los textos de diferentes testimonios de la obra en sus varios estadios, con una disposición en tres columnas:
  
 ![*La Dama Boba*](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_002.png)
 
@@ -41,10 +41,9 @@ Las posibilidades que ofrece la edición digital son múltiples, una opción muy
  
 ## Edición como traducción
  
-Algunas ediciones aprovechan las posibilidades del medio digital para ofrecer los textos originales junto con sus **traducciones**, como por ejemplo los proyectos siguientes:
+Algunas ediciones aprovechan las posibilidades del medio digital para ofrecer los textos originales junto con sus **traducciones**, como por ejemplo la edición de las cartas de Van Gogh:
  
-* [Vincent Van Gogh, *The Letters*](http://vangoghletters.org/vg/letters.html)
-* [Holinsheds Chronicles](http://www.cems.ox.ac.uk/holinshed/)
+![[Vincent Van Gogh, *The Letters*](http://vangoghletters.org/vg/letters.html)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_002b.png)
 
 ## Edición como enriquecimiento
 Otra característica comúnmente adoptada en muchas ediciones digitales es la de acompañar al texto con una variedad de **elementos visuales** que permiten añadirle una nueva capa de información. Por ejemplo, en la edición de la *La Argentina Manuscrita* de Rui Díaz de Guzmán, realizada por el [HD CAICYT Lab](http://hdlab.space/) además de proporcionar la reproducción facsimilar de la fuente impresa a partir de la cual se realizó la edición, ciertos términos se encuentran destacados y permiten abrir una nota de información adicional al posar el cursor sobre ellos. Adicionalmente, si el término destacado se trata de un nombre de lugar, se incluye la geolocalización del mismo en el mapa. En la siguiente captura, se puede observar la nota que se despliega al situar el cursor sobre la palabra “Fortunadas”:
