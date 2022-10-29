@@ -36,14 +36,14 @@ Hay muchas razones para utilizar TEI, ya que permite capturar distinciones impor
 Las posibilidades que ofrece la edición digital son múltiples, una opción muy utilizada es el trabajo de **comparación y presentación de textos en diferentes versiones**. En una aplicación de este concepto, la edición de *La Dama Boba* de Lope de Vega, realizada por el grupo [Prolope](http://prolope.uab.cat/) nos permite comparar los textos de diferentes testimonios de la obra en sus varios estadios, con una disposición en tres columnas:
  
 ![*La Dama Boba*](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_002.png)
-
 <p align="center"> Fuente: <a href="http://damaboba.unibo.it/">http://damaboba.unibo.it/</a></p>
  
 ## Edición como traducción
  
 Algunas ediciones aprovechan las posibilidades del medio digital para ofrecer los textos originales junto con sus **traducciones**, como por ejemplo la edición de las cartas de Van Gogh:
  
-![[Vincent Van Gogh, *The Letters*](http://vangoghletters.org/vg/letters.html)](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_002b.png)
+![Vincent Van Gogh, *The Letters*](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L1_002b.png)
+<p align="center"> Fuente: <a href="http://vangoghletters.org/vg/letters.html">Vincent Van Gogh, <i>The Letters</i></a></p>
 
 ## Edición como enriquecimiento
 Otra característica comúnmente adoptada en muchas ediciones digitales es la de acompañar al texto con una variedad de **elementos visuales** que permiten añadirle una nueva capa de información. Por ejemplo, en la edición de la *La Argentina Manuscrita* de Rui Díaz de Guzmán, realizada por el [HD CAICYT Lab](http://hdlab.space/) además de proporcionar la reproducción facsimilar de la fuente impresa a partir de la cual se realizó la edición, ciertos términos se encuentran destacados y permiten abrir una nota de información adicional al posar el cursor sobre ellos. Adicionalmente, si el término destacado se trata de un nombre de lugar, se incluye la geolocalización del mismo en el mapa. En la siguiente captura, se puede observar la nota que se despliega al situar el cursor sobre la palabra “Fortunadas”:
