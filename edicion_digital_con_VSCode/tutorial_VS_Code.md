@@ -105,7 +105,7 @@ En segundo lugar, abrimos una carpeta que ya contenga un repositorio Git. Si tod
 
 ![Carpeta que contiene el repositorio git.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen7.png)
 
-VS Code también posee una extensión llamada [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) que, una vez instalada y abierta la carpeta del repositorio, nos permitirá seleccionar uno de los archivos y pedirle a Git que nos muestre el historial de este. Para ello, solicitaremos acceso al historial del archivo. En las imágenes siguientes se muestra, primero, cómo acceder a la solicitud del historial (haciendo click derecho en el mouse) y, segundo, la visualización del historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub.
+VS Code también posee una extensión llamada [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) que, una vez instalada y abierta la carpeta del repositorio, nos permitirá seleccionar uno de los archivos y pedirle a Git que nos muestre el historial de este. Para ello, solicitaremos acceso al historial del archivo. En las imágenes siguientes se muestra, primero, cómo acceder a la solicitud del historial (haciendo click derecho en el ratón) y, segundo, la visualización del historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub.
 
 ![Solicitud del historial del archivo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen8.png)
 
@@ -131,25 +131,31 @@ Finalmente, visualizamos el resultado en VS Code. Como habíamos dicho, en este 
 ![Resultado en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen12.png)
 
 
-Pueden consultarse todas las funciones de esta extensión en el enlace facilitado anteriormente.
+Pueden consultarse todas las funciones de esta extensión en el siguiente [enlace](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml), en el apartado *Features*.
 
 ## XML Tools
 
-Por otro lado, [*XML Tools*](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) tiene una serie de características que son: 1) formato del XML, 2) visualización del árbol de XML, es decir, cómo está estructurado el documento, evaluación de XPath para navegar y parsear los documentos XML; 3) enhebrado de XQuery para consultar documentos XML; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
+Por otro lado, [*XML Tools*](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) tiene una serie de características que son: 1) formato del XML, 2) visualización del árbol de XML, es decir, cómo está estructurado el documento, evaluación por XPath para navegar y parsear los documentos XML; 3) enhebrado de XQuery para consultar documentos XML; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
 
-Veamos un ejemplo de otra de sus funciones, simplificar el XML:
+XPath es la abreviatura de XML Path Language. Este lenguaje emplea sintaxis del tipo *path* para identificar y navegar entre nodos en un documento XML. Veamos cómo hacer uso de él con la extensión *XML Tools*:
 
-![Nuestro código en XML.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen13.png)
+Abrimos la caja comandos con `Ctrl+shift+P` o haciendo clic derecho en cualquier punto del documento y seleccionando dicho panel (paso 1). Buscamos el comando *XML Tools: Evaluate XPath* (paso 2).
 
+[Caja de comandos](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen20.png).
 
+A continuación, la extensión nos solicitará que introduzcamos un elemento de XPath Query, es decir, una manera de preguntarle a XPath.
 
-![Búsqueda en el panel de comandos del proceso de simplificación de XML.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen14.png)
+[XPath Query](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen21.png).
 
+Podemos introducir un comodín de XPath, como `*`, que nos devolverá en la consola cualquier nodo de elementos en el código XML (paso 3), o podemos optar también por introducir una expresión de *path* como `//title`, que nos devolverá en la consola todas las líneas donde aparezca el elemento título en el documento XML (paso 4).
 
-La caja de comandos se puede abrir con `Ctrl+shift+P` o haciendo clic derecho en cualquier punto del documento y seleccionando dicho panel.
+[Comodín `*`](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen22.png).
 
-![Resultado del XML simplificado.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen15.png)
+[Nodos de elementos](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen23.png).
 
+[Expresión `//title`](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen24.png).
+
+[Líneas con elemento *title*](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen25.png).
 
 ## xslt-transform
 
