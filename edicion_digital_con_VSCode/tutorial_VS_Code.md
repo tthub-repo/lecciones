@@ -21,7 +21,11 @@ Cuando queremos crear o editar un documento XML-TEI, los procesadores de texto m
 
 [Visual Studio Code](https://code.visualstudio.com/) (normalmente abreviado VS Code) es un editor de código abierto que nos ofrece una gran variedad de funciones adicionales a las que posee un editor de texto plano. Desde el punto de vista de la edición filológica digital, VS Code brinda la posibilidad de instalar diversas extensiones entre las cuales encontramos algunas específicamente desarrolladas para trabajar con documentos XML-TEI.
 
-Para utilizar VS Code solo debes ir a la [página de descarga de la aplicación](https://code.visualstudio.com/Download) y seleccionar el instalador correspondiente según tu sistema operativo. Al ejecutar el archivo descargado el instalador te irá guiando por los diferentes pasos. Una vez completada la instalación podemos abrir el programa y empezar a editar nuestro primer archivo. Puedes abrir un archivo nuevo en blanco con los comandos `ctrl + O` o seleccionando la opción `New file` de la pestaña `File` del menú superior. Alternativamente puedes abrir una carpeta completa y explorar su contenido (subcarpetas y archivos) desde la barra izquierda del programa en la pestaña `Explorer` (el primer ícono del menú de la barra izquierda del editor), para esto puedes utilizar los comandos `crtl + K, ctrl+O` o seleccionando la opción `Open folder` de la pestaña `File`.
+Para utilizar VS Code solo debes ir a la [página de descarga de la aplicación](https://code.visualstudio.com/Download) y seleccionar el instalador correspondiente según tu sistema operativo. Al ejecutar el archivo descargado el instalador te irá guiando por los diferentes pasos. Una vez completada la instalación podemos abrir el programa y empezar a editar nuestro primer archivo. Puedes abrir un archivo nuevo en blanco con los comandos `ctrl + O` o seleccionando la opción `New file` de la pestaña `File` del menú superior. Alternativamente puedes abrir una carpeta completa y explorar su contenido (subcarpetas y archivos) desde la barra izquierda del programa en la pestaña `Explorer` (el primer ícono del menú de la barra izquierda del editor), para esto puedes utilizar los comandos `crtl + K, ctrl+O` o seleccionando la opción `Open folder` de la pestaña `File`. Puedes usar VS Code en español y en muchos otras lenguas. Para cambiar de lengua lo más sencillo es abrir la paleta de comandos con `Ctrl + Shift + P` y escribir "Configurar idioma de pantalla". En el desplegable que aparece a continuación podremos elegir entre las distintas lenguas.
+
+[Configurar idioma de pantalla](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen26.png).
+
+[Idiomas](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen27.png).
 
 Como complemento al tutorial, también te ofrecemos esta tabla con algunos de los atajos que pueden ser de más utilidad a la hora de trabajar con TEI en VS Code. Os sugerimos que la tengas a mano cuando trabajes con este programa, ya que te ahorrará tiempo a la hora de codificar tus textos:
 
@@ -149,6 +153,8 @@ A continuación, la extensión nos solicitará que introduzcamos un elemento de 
 
 Podemos introducir un comodín de XPath, como `*`, que nos devolverá en la consola cualquier nodo de elementos en el código XML (paso 3), o podemos optar también por introducir una expresión de *path* como `//title`, que nos devolverá en la consola todas las líneas donde aparezca el elemento título en el documento XML (paso 4).
 
+La caja de comandos se puede abrir con `Ctrl+shift+P`, presionando en el menú superior a la izquierda `Ver > Paleta de comandos` o haciendo clic derecho en cualquier punto del documento y seleccionando dicho panel.
+
 [Comodín `*`](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen22.png).
 
 [Nodos de elementos](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen23.png).
@@ -159,9 +165,9 @@ Podemos introducir un comodín de XPath, como `*`, que nos devolverá en la cons
 
 ## xslt-transform
 
-El cometido de la última extensión, [*xslt-transform*](https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform), es transformar el XML en una salida HTML o un PDF mediante el lenguaje XSLT. Pasemos ahora a mostrar un ejemplo de cómo transformar un XML en HTML en VS Code.
+El cometido de la última extensión, [*xslt-transform*](https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform), es transformar el XML en una salida HTML o un PDF mediante el lenguaje XSLT. Para este caso necesitaremos tener instalado [Java](https://www.java.com/es/download/) en nuestro ordenador. Pasemos ahora a mostrar un ejemplo de cómo transformar un XML en HTML en VS Code.
 
-En primer lugar, instalamos la extensión *xslt-transform* y, seguidamente, abrimos nuestro archivo en VS Code. 
+En primer lugar, instalamos la extensión *xslt-transform* y, seguidamente, abrimos nuestro archivo en VS Code. Recordemos que la caja de comandos se puede abrir con `Ctrl+shift+P`, presionando en el menú superior a la izquierda `Ver > Paleta de comandos` o haciendo clic derecho en cualquier punto del documento y seleccionando dicho panel.
  
 ![Nuestro archivo en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen16.png)
 
