@@ -21,7 +21,11 @@ Cuando queremos crear o editar un documento XML-TEI, los procesadores de texto m
 
 [Visual Studio Code](https://code.visualstudio.com/) (normalmente abreviado VS Code) es un editor de código abierto que nos ofrece una gran variedad de funciones adicionales a las que posee un editor de texto plano. Desde el punto de vista de la edición filológica digital, VS Code brinda la posibilidad de instalar diversas extensiones entre las cuales encontramos algunas específicamente desarrolladas para trabajar con documentos XML-TEI.
 
-Para utilizar VS Code solo debes ir a la [página de descarga de la aplicación](https://code.visualstudio.com/Download) y seleccionar el instalador correspondiente según tu sistema operativo. Al ejecutar el archivo descargado el instalador te irá guiando por los diferentes pasos. Una vez completada la instalación podemos abrir el programa y empezar a editar nuestro primer archivo. Puedes abrir un archivo nuevo en blanco con los comandos `ctrl + O` o seleccionando la opción `New file` de la pestaña `File` del menú superior. Alternativamente puedes abrir una carpeta completa y explorar su contenido (subcarpetas y archivos) desde la barra izquierda del programa en la pestaña `Explorer` (el primer ícono del menú de la barra izquierda del editor), para esto puedes utilizar los comandos `crtl + K, ctrl+O` o seleccionando la opción `Open folder` de la pestaña `File`.
+Para utilizar VS Code solo debes ir a la [página de descarga de la aplicación](https://code.visualstudio.com/Download) y seleccionar el instalador correspondiente según tu sistema operativo. Al ejecutar el archivo descargado el instalador te irá guiando por los diferentes pasos. Una vez completada la instalación podemos abrir el programa y empezar a editar nuestro primer archivo. Puedes abrir un archivo nuevo en blanco con los comandos `ctrl + O` o seleccionando la opción `New file` de la pestaña `File` del menú superior. Alternativamente puedes abrir una carpeta completa y explorar su contenido (subcarpetas y archivos) desde la barra izquierda del programa en la pestaña `Explorer` (el primer ícono del menú de la barra izquierda del editor), para esto puedes utilizar los comandos `crtl + K, ctrl+O` o seleccionando la opción `Open folder` de la pestaña `File`. Puedes usar VS Code en español y en muchos otras lenguas. Para cambiar de lengua lo más sencillo es abrir la paleta de comandos con `Ctrl + Shift + P` y escribir "Configurar idioma de pantalla". En el desplegable que aparece a continuación podremos elegir entre las distintas lenguas.
+
+[Configurar idioma de pantalla](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen26.png).
+
+[Idiomas](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen27.png).
 
 Como complemento al tutorial, también te ofrecemos esta tabla con algunos de los atajos que pueden ser de más utilidad a la hora de trabajar con TEI en VS Code. Os sugerimos que la tengas a mano cuando trabajes con este programa, ya que te ahorrará tiempo a la hora de codificar tus textos:
 
@@ -105,7 +109,7 @@ En segundo lugar, abrimos una carpeta que ya contenga un repositorio Git. Si tod
 
 ![Carpeta que contiene el repositorio git.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen7.png)
 
-VS Code también posee una extensión llamada [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) que, una vez instalada y abierta la carpeta del repositorio, nos permitirá seleccionar uno de los archivos y pedirle a Git que nos muestre el historial de este. Para ello, solicitaremos acceso al historial del archivo. En las imágenes siguientes se muestra, primero, cómo acceder a la solicitud del historial (haciendo click derecho en el mouse) y, segundo, la visualización del historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub.
+VS Code también posee una extensión llamada [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) que, una vez instalada y abierta la carpeta del repositorio, nos permitirá seleccionar uno de los archivos y pedirle a Git que nos muestre el historial de este. Para ello, solicitaremos acceso al historial del archivo. En las imágenes siguientes se muestra, primero, cómo acceder a la solicitud del historial (haciendo click derecho en el ratón) y, segundo, la visualización del historial del archivo, desde el que se pueden realizar acciones como acceder a su localización en GitHub.
 
 ![Solicitud del historial del archivo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen8.png)
 
@@ -131,29 +135,37 @@ Finalmente, visualizamos el resultado en VS Code. Como habíamos dicho, en este 
 ![Resultado en VS Code.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen12.png)
 
 
-Pueden consultarse todas las funciones de esta extensión en el enlace facilitado anteriormente.
+Pueden consultarse todas las funciones de esta extensión en el siguiente [enlace](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml), en el apartado *Features*.
 
 ## XML Tools
 
-Por otro lado, [*XML Tools*](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) tiene una serie de características que son: 1) formato del XML, 2) visualización del árbol de XML, es decir, cómo está estructurado el documento, evaluación de XPath para navegar y parsear los documentos XML; 3) enhebrado de XQuery para consultar documentos XML; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
+Por otro lado, [*XML Tools*](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) tiene una serie de características que son: 1) formato del XML, 2) visualización del árbol de XML, es decir, cómo está estructurado el documento, evaluación por XPath para navegar y parsear los documentos XML; 3) enhebrado de XQuery para consultar documentos XML; 4) ejecución de XQuery y 5) compleción del código de XQuery. 
 
-Veamos un ejemplo de otra de sus funciones, simplificar el XML:
+XPath es la abreviatura de XML Path Language. Este lenguaje emplea sintaxis del tipo *path* para identificar y navegar entre nodos en un documento XML. Veamos cómo hacer uso de él con la extensión *XML Tools*:
 
-![Nuestro código en XML.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen13.png)
+Abrimos la caja comandos con `Ctrl+shift+P` o haciendo clic derecho en cualquier punto del documento y seleccionando dicho panel (paso 1). Buscamos el comando *XML Tools: Evaluate XPath* (paso 2).
 
+[Caja de comandos](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen20.png).
 
+A continuación, la extensión nos solicitará que introduzcamos un elemento de XPath Query, es decir, una manera de preguntarle a XPath.
 
-![Búsqueda en el panel de comandos del proceso de simplificación de XML.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen14.png)
+[XPath Query](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen21.png).
 
+Podemos introducir un comodín de XPath, como `*`, que nos devolverá en la consola cualquier nodo de elementos en el código XML (paso 3), o podemos optar también por introducir una expresión de *path* como `//title`, que nos devolverá en la consola todas las líneas donde aparezca el elemento título en el documento XML (paso 4).
 
-La caja de comandos se puede abrir con `Ctrl+shift+P` o haciendo clic derecho en cualquier punto del documento y seleccionando dicho panel.
+La caja de comandos se puede abrir con `Ctrl+shift+P`, presionando en el menú superior a la izquierda `Ver > Paleta de comandos` o haciendo clic derecho en cualquier punto del documento y seleccionando dicho panel.
 
-![Resultado del XML simplificado.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen15.png)
+[Comodín `*`](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen22.png).
 
+[Nodos de elementos](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen23.png).
+
+[Expresión `//title`](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen24.png).
+
+[Líneas con elemento *title*](https://raw.githubusercontent.com/CarlesMarquez/TutorialVSCode/main/img/Imagen25.png).
 
 ## xslt-transform
 
-El cometido de la última extensión, [*xslt-transform*](https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform), es transformar el XML en una salida HTML o un PDF mediante el lenguaje XSLT. Pasemos ahora a mostrar un ejemplo de cómo transformar un XML en HTML en VS Code.
+El cometido de la última extensión, [*xslt-transform*](https://marketplace.visualstudio.com/items?itemName=SvenAGN.xslt-transform), es transformar el XML en una salida HTML o un PDF mediante el lenguaje XSLT. Para este caso necesitaremos tener instalado [Java](https://www.java.com/es/download/) en nuestro ordenador. Pasemos ahora a mostrar un ejemplo de cómo transformar un XML en HTML en VS Code.
 
 En primer lugar, instalamos la extensión *xslt-transform* y [Saxon](https://saxon.sourceforge.net/#F11HE), un procesador de XSLT y XQuery creado por Michael Kay y que necesitamos para que la extensión funcione. Asimismo, es preciso indicarle a VS Code dónde se encuentra instalado Saxon. Para ello, abrimos el panel de configuración, buscamos "XSLT" y escribimos la ruta a Saxon donde leemos "Define the path to the XSLT processor".
 
