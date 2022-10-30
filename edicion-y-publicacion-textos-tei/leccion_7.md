@@ -206,9 +206,7 @@ Las imágenes también pueden codificarse y anotarse describiéndolas en general
  
 ## Enunciado
  
-En este ejercicio volveremos sobre el texto del *El Gallardo catalán*, de Lope de Vega, sobre el que ya trabajamos en el ejercicio de drama de la lección anterior. Si ya realizaste ese ejercicio puedes usar el documento TEI que ya creaste en la lección anterior y continuar directamente al paso 3 de las indicaciones. En cambio, si no realizaste ese ejercicio, a continuación tienes la información necesaria:
- 
-llevarás a cabo la codificación de las dos primeras páginas de la obra teatral de Lope de Vega, *El Gallardo catalán*, publicada en la *Segunda parte de las Comedias* de Lope de Vega Carpio, Madrid, por Alonso Martín, a costa de Alonso Pérez, 1610 y disponible en la [Biblioteca Miguel de Cervantes](http://www.cervantesvirtual.com/obra-visor/el-gallardo-catalan--1/html/). Encontrarás las imágenes más abajo y siguiendo los links a las páginas [69r](http://www.cervantesvirtual.com/obra-visor/el-gallardo-catalan--1/html/ff88cee8-82b1-11df-acc7-002185ce6064_2.html) y [69v](http://www.cervantesvirtual.com/obra-visor/el-gallardo-catalan--1/html/ff88cee8-82b1-11df-acc7-002185ce6064_3.html).
+En este ejercicio volveremos sobre el texto del *El Gallardo catalán*, de Lope de Vega, sobre el que ya trabajamos en el ejercicio de drama de la lección anterior. Si ya realizaste ese ejercicio puedes usar el documento TEI que ya creaste en la lección anterior y continuar directamente al paso 3 de las indicaciones. En cambio, si no realizaste ese ejercicio, a continuación tienes la información necesaria para llevar a cabo la codificación de las dos primeras páginas de la obra teatral de Lope de Vega, *El Gallardo catalán*, publicada en la *Segunda parte de las Comedias* de Lope de Vega Carpio, Madrid, por Alonso Martín, a costa de Alonso Pérez, 1610 y disponible en la [Biblioteca Miguel de Cervantes](http://www.cervantesvirtual.com/obra-visor/el-gallardo-catalan--1/html/). Encontrarás las imágenes más abajo o siguiendo los enlaces a las páginas [69r](http://www.cervantesvirtual.com/obra-visor/el-gallardo-catalan--1/html/ff88cee8-82b1-11df-acc7-002185ce6064_2.html) y [69v](http://www.cervantesvirtual.com/obra-visor/el-gallardo-catalan--1/html/ff88cee8-82b1-11df-acc7-002185ce6064_3.html).
  
 Aquí van las indicaciones, paso a paso, que te ayudarán a completar el ejercicio:
  
@@ -220,7 +218,7 @@ Aquí van las indicaciones, paso a paso, que te ayudarán a completar el ejercic
  
 - En `<sourceDesc>` debe aparecer la fuente original en la que se basa su edición. Para ello, sugiero que utilices el siguiente esquema:
  
-```
+```xml
 <bibl>
     <author></author>
     <title></title>
@@ -230,16 +228,21 @@ Aquí van las indicaciones, paso a paso, que te ayudarán a completar el ejercic
     <biblScope></biblScope>
 </bibl>
 ```
-También puedes añadir la indicación de la versión digital, distinguiendo un `<bibl type="impreso">` y uno de copia digital `<bibl type="digital">`con la referencia a la Biblioteca Miguel de Cervantes.
+También puedes añadir la indicación de la versión digital, distinguiendo un `<bibl type="impreso">` y uno de copia digital `<bibl type="digital">` con la referencia a la Biblioteca Miguel de Cervantes.
  
 **[Paso 3]** Para describir las características de la fuente primaria utiliza los elementos:
-`<abbr>`, para marcar las abreviaturas (opcionalmente pueden agregarse los elementos `<choice>`y `<expan>` para señalar en paralelo la versiòn abreviada y su expansión);
-`<add>`, para marcar las adiciones (opcionalmente puede agregarse el atributo `@place` para indicar en donde se ubica la adiciòn);
-`<del>`,  para marcar las cancelaciones u omisiones;
-`<fw>`, para marcar otros elementos tipográficos de la fuente primaria que consideren relevantes.
+
+* `<abbr>` para marcar las abreviaturas (opcionalmente pueden agregarse los elementos `<choice>` y `<expan>` para señalar en paralelo la versiòn abreviada y su expansión).
+* `<add>` para marcar las adiciones (opcionalmente puede agregarse el atributo `@place` para indicar en donde se ubica la adición).
+* `<del>`  para marcar las cancelaciones u omisiones.
+* `<fw>` para marcar otros elementos tipográficos de la fuente primaria que consideren relevantes.
  
-**[Paso 4]** Lo ideal es que mientras realizas la codificación te asegures de que tu documento está bien formado y es válido, para ello es necesario asociar el documento TEI a un esquema RelaxNG, tal como se explica en la [lección 2](enlace).
- 
+**[Paso 4]** Lo ideal es que mientras realizas la codificación te asegures de que tu documento está bien formado y es válido, para ello es necesario asociar el documento TEI a un esquema RelaxNG. Para este ejercicio puedes utilizar un esquema genérico:
+
+```xml
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+ ```
+   
 ## Reproducciones
  
 ![Ed. 1610, fol. 69r](https://raw.githubusercontent.com/tthub-repo/ejercicios/master/img/8.Lope_fol.69r.jpg)
