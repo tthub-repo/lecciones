@@ -32,8 +32,7 @@ Si, en cambio, quisiéramos asociar nuestro documento a un esquema que nosotros 
 ```
 En este caso, como puede verse, el esquema estaría en una carpeta llamada "esquema" al mismo nivel que el documento XML-TEI.
  
-Los esquemas, como se explica brevemente en la [lección 3](enlace), son los responsables de la validación de nuestro documento. Recuerda que una cuestión es el estar bien formado, según las normas del lenguaje XML, y la otra ser válido, según las normas de un esquema.
- 
+Los esquemas son los responsables de la validación de nuestro documento. Recuerda que una cuestión es el estar bien formado, según las normas del lenguaje XML, y la otra ser válido, según las normas de un esquema.
  
 Un esquema establece la representación formal de los elementos y atributos cuyo uso se permitirá en el documento a codificar. Así, por ejemplo, establece cuál será el elemento raíz del documento, los nombres de los elementos utilizados, los nombres y los tipos de datos (cadena de caracteres, números, etc.), las reglas sobre cómo los elementos deben anidarse, e incluso, a veces, los valores por defecto de los atributos. Un esquema, pues, especifica la estructura y la nomenclatura de nuestro fichero; la semántica de los elementos, por otro lado, queda como siempre relegada a las *Guías directrices* TEI.
  
@@ -67,10 +66,10 @@ En las pestañas que aparecen en la parte superior de la pantalla veremos las di
 
 Alcaraz Martínez y Vázquez Puig (2016) nos ofrecen una versión en castellano de la descripción de los módulos que proporciona TEI:
 
-* [analysis](https://roma.tei-c.org/startroma.php?mode=changeModule&module=analysis): pensado para asociar análisis simples e interpretaciones a elementos textuales. Por ejemplo, para indicar el predicado de una frase, el prefijo o sufijo de una palabra, o su categoría gramatical.
+* [analysis](https://roma.tei-c.org/startroma.php?mode=changeModule&module=analysis): concebido para asociar análisis simples e interpretaciones a elementos textuales. Por ejemplo, para indicar el predicado de una frase, el prefijo o sufijo de una palabra, o su categoría gramatical.
 * [certainty](https://roma.tei-c.org/startroma.php?mode=changeModule&module=certainty): permite indicar que aspectos concretos del texto son problemáticos o inciertos. Esto se manifiesta en forma de notas o de aclaraciones en el texto.
 * [core](https://roma.tei-c.org/startroma.php?mode=changeModule&module=core): se trata de un conjunto de elementos básicos disponibles para la codificación de cualquier tipo de texto como, por ejemplo, párrafos, listas, texto enfatizado, referencias bibliográficas, etc.
-* [corpus](https://roma.tei-c.org/startroma.php?mode=changeModule&module=corpus): pensado para crear corpus lingüísticos.
+* [corpus](https://roma.tei-c.org/startroma.php?mode=changeModule&module=corpus): usado para crear corpus lingüísticos.
 * [dictionaries](https://roma.tei-c.org/startroma.php?mode=changeModule&module=dictionaries): en él encontramos los elementos necesarios para codificar cualquier tipo de recurso léxico como, por ejemplo, diccionarios o glosarios.
 * [drama](https://roma.tei-c.org/startroma.php?mode=changeModule&module=drama): diseñado para codificar obras teatrales, guiones cinematográficos o radiofónicos, entre otros.
 * [figures](https://roma.tei-c.org/startroma.php?mode=changeModule&module=figures): orientado a describir gráficos, tablas, imágenes, obras de arte, fórmulas matemáticas, etc., que forman parte de los documentos.
@@ -78,22 +77,22 @@ Alcaraz Martínez y Vázquez Puig (2016) nos ofrecen una versión en castellano 
 * [header](https://roma.tei-c.org/startroma.php?mode=changeModule&module=header): proporciona metadatos descriptivos sobre el recurso codificado (información bibliográfica, menciones de responsabilidad, información sobre el proyecto e investigadores y centros participantes, información de aspectos no bibliográficos como, por ejemplo, materias o códigos de clasificación, el historial de revisión de la codificación, etc.).
 * [iso-fs](https://roma.tei-c.org/startroma.php?mode=changeModule&module=iso-fs): permite representar las interrelaciones entre piezas de información, proporcionando su instanciación en el marcado, un metalenguaje para representaciones genéricas de los análisis e interpretaciones realizados.
 * [linking](https://roma.tei-c.org/startroma.php?mode=changeModule&module=linking): ofrece diferentes elementos que permiten representar relaciones entre partes de los documentos a partir de identificadores y enlaces.
-* [msdescription](https://roma.tei-c.org/startroma.php?mode=changeModule&module=msdescription): define elementos pensados para proporcionar información descriptiva detallada sobre cualquier tipo de texto manuscrito. Inicialmente, fue concebido para satisfacer las necesidades de los catalogadores y académicos que trabajaban con manuscritos medievales de tradición europea, aunque actualmente se puede extender su uso a otras tradiciones y materiales.
-* [namesdates](https://roma.tei-c.org/startroma.php?mode=changeModule&module=namesdates): un módulo pensado para codificar fechas, nombres y otros identificadores de personas, lugares y organizaciones.
+* [msdescription](https://roma.tei-c.org/startroma.php?mode=changeModule&module=msdescription): define elementos para proporcionar información descriptiva detallada sobre cualquier tipo de texto manuscrito. Inicialmente, fue concebido para satisfacer las necesidades de los catalogadores y académicos que trabajaban con manuscritos medievales de tradición europea, aunque actualmente se puede extender su uso a otras tradiciones y materiales.
+* [namesdates](https://roma.tei-c.org/startroma.php?mode=changeModule&module=namesdates): un módulo para codificar fechas, nombres y otros identificadores de personas, lugares y organizaciones.
 * [nets](https://roma.tei-c.org/startroma.php?mode=changeModule&module=nets): permite codificar representaciones gráficas utilizadas para visualizar las relaciones que se establecen entre unidades de información. Se prevé el uso de grafos y mapas conceptuales.
 * [spoken](https://roma.tei-c.org/startroma.php?mode=changeModule&module=spoken): orientado a describir transcripciones de cualquier tipo de discurso oral.
 * [tagdocs](https://roma.tei-c.org/startroma.php?mode=changeModule&module=tagdocs): ofrece un conjunto de elementos que pueden ser utilizados para documentar los elementos XML. Muy pensado para los proyectos en los cuales se personaliza o modifica el núcleo o alguno de los módulos del estándar.
 * **tei**: contiene las declaraciones de todos los tipos de datos y las declaraciones iniciales de las clases de atributos, modelos y las macros utilizadas por el resto de módulos del esquema.
 * [textcrit](https://roma.tei-c.org/startroma.php?mode=changeModule&module=textcrit): permite crear aparatos críticos propios de la crítica textual.
 * [textstructure](https://roma.tei-c.org/startroma.php?mode=changeModule&module=textstructure): un módulo obligatorio que contiene la estructura de alto nivel por defecto de cualquier documento TEI.
-* [transcr](https://roma.tei-c.org/startroma.php?mode=changeModule&module=transcr): pensado para representar fuentes primarias, como manuscritos, cartas o diarios.
+* [transcr](https://roma.tei-c.org/startroma.php?mode=changeModule&module=transcr): módulo para representar fuentes primarias, como manuscritos, cartas o diarios.
 * [verse](https://roma.tei-c.org/startroma.php?mode=changeModule&module=verse): diseñado para codificar textos escritos total o parcialmente en verso”.
 
 A continuación veremos esta pantalla con más detalle:
 
 ![Pestaña de Módulos en Roma](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L8_003.png)
 
-Como puede verse en la captura de pantalla, en la columna de la izquierda aparecen todos los módulos de TEI, mientras que en la derecha encontramos los módulos que queremos incluir en nuestro esquema. En un principio tendremos solo los módulos obligatorios: *core*, *tei*, *header*, *textstructure*. A partir de aquí, debemos saber a qué módulos pertenecen los fenómenos textuales que queremos codificar. Por lo general, si trabajamos con textos teatrales, tendremos que incluir el módulo *drama*, si trabajamos con poesía el módulo *verse*, etc. 
+Como puede verse en la captura de pantalla, en la columna de la izquierda aparecen todos los módulos de TEI, mientras que en la derecha encontramos los módulos que queremos incluir en nuestro esquema. En un principio tendremos solo los módulos obligatorios: `core`, `tei`, `header`, `textstructure`. A partir de aquí, debemos saber a qué módulos pertenecen los fenómenos textuales que queremos codificar. Por lo general, si trabajamos con textos teatrales, tendremos que incluir el módulo `drama`, si trabajamos con poesía el módulo `verse`, etc. 
 
 Roma también nos permite acceder al interior de cada uno de los módulos y ver todos los elementos que contiene. Por ejemplo, si accedemos al módulo `textcrit`, observamos la lista completa:
 
@@ -103,9 +102,9 @@ Una vez estamos en la sección de los módulos, podemos “Excluir” aquellos e
 
 ![Modificación de un elemento en Roma](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L8_005.png)
 
-Una vez añadidos los diferentes módulos que nos interesan, los veremos en la columna de la derecha. A continuación veremos las funciones que ofrecen el resto de las pestañas de Roma:
+Una vez añadidos los diferentes módulos que nos interesan, se añadirán en la columna de la derecha. A continuación veremos las funciones que ofrecen el resto de las pestañas de Roma:
 
-* **Añadir elemento**: A continuación, pasamos a la pestaña “Añadir elemento”, en el caso que queramos crear un nuevo elemento que no nos proporciona TEI; para ello, tendríamos que adjudicarle una clase de modelo y una clase de atributos. Esta práctica debe evitarse a no ser que sea estrictamente necesario, ya que al salirnos de los elementos proporcionados por las *Guías directrices*, nuestro archivo TEI pierde compatibilidad para su reutilización en otros proyectos de Humanidades Digitales.
+* **Añadir elemento**: en el caso que queramos crear un nuevo elemento que no nos proporciona TEI, tendríamos que adjudicarle una clase de modelo y una clase de atributos. Esta práctica debe evitarse a no ser que sea estrictamente necesario, ya que al salirnos de los elementos proporcionados por las *Guías directrices*, nuestro archivo TEI pierde compatibilidad para su reutilización en otros proyectos de Humanidades Digitales.
 * **Cambiar clase**: Lo mismo sucede con esta pestaña; podría darse el caso que un determinado elemento no tuviera los atributos que necesitamos, en tal caso, podríamos modificarlos y añadir otros nuevos en esta sección.
 * **Esquema**: Esta sección permite escoger el tipo de esquema que queremos: DTD, W3C, RelaxNG, etc. Este es uno de los momentos claves, pues aquí es donde podremos obtener un esquema en el formato que deseemos. Las opciones que se nos ofrecen son las siguientes:
 
@@ -121,23 +120,18 @@ Escogeremos la opción “Relax NG schema (XML syntax) .rng”, ya que este form
 ![Descarga del esquema RelaxNG en Roma](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion-y-publicacion-textos-tei/img/L8_006.png)
 
 * **Documentación**: Permite escoger que tipo de formato se prefiere para la documentación del esquema. Tenemos la posibilidad de bajarnos en un único documento la descripción de cada uno de los elementos y atributos elegidos en nuestro esquema según las *Guías directrices*. Los formatos de salida que podemos elegir son: “HTML web page”, “Word”, “TEI ODD”, “TEI Lite” o “LaTex”.
-* Guardar configuración personal: La última pestaña de Roma nos da la opción de guardar nuestra personalización TEI como un documento ODD en formato XML. No debemos confundir este archivo con el esquema Relax NG que generamos en la pestaña de esquema, ya que sus funciones son diferentes. El archivo Relax NG se asocia al documento TEI para validar el marcado, pero una vez que lo generamos no podemos seguir modificándolo en la aplicación Roma (lo que sí se puede hacer es abrir el archivo del esquema en un editor de código y modificar sus valores manualmente, pero esto requiere un buen dominio de la sintaxis de Relax NG). En cambio, el archivo XML que descargamos en esta pestaña puede volver a ser cargado en la aplicación Roma en la primera de sus pantallas y a partir de ahí introducir nuevas modificaciones para generar un nuevo esquema y documentación actualizada (de ahí el nombre “One Document Does it all” que se le da a estos archivos en la comunidad de TEI). Esta opción es de gran utilidad para el desarrollo de esquemas en proyectos de larga duración.
+* **Guardar configuración personal**: La última pestaña de Roma nos da la opción de guardar nuestra personalización TEI como un documento ODD en formato XML. No debemos confundir este archivo con el esquema Relax NG que generamos en la pestaña de esquema, ya que sus funciones son diferentes. El archivo Relax NG se asocia al documento TEI para validar el marcado, pero una vez que lo generamos no podemos seguir modificándolo en la aplicación Roma (lo que sí se puede hacer es abrir el archivo del esquema en un editor de código y modificar sus valores manualmente, pero esto requiere un buen dominio de la sintaxis de Relax NG). En cambio, el archivo XML que descargamos en esta pestaña puede volver a ser cargado en la aplicación Roma en la primera de sus pantallas y a partir de ahí introducir nuevas modificaciones para generar un nuevo esquema y documentación actualizada (de ahí el nombre “One Document Does it all” que se le da a estos archivos en la comunidad de TEI). Esta opción es de gran utilidad para el desarrollo de esquemas en proyectos de larga duración.
 
 # 3. Declaración de modelo XML
  
-Como ya explicamos en unidades anteriores la función de la declaración de modelo XML es asociar un esquema a nuestro documento TEI. Hasta ahora estuvimos usando el esquema “ejemplo_esquema.rng” que descargaste de la carpeta “materiales TEI” al comienzo del módulo. Sin embargo, ahora que hemos creado nuestro propio esquema tendremos que hacer una modificación en las declaraciones de modelo XML de nuestros documentos TEI para validarlos con el nuevo Relax NG. Para eso modificaremos el valor del atributo `@href`, que indica el nombre y la ubicación del archivo de esquema asociado al documento TEI:
+Como ya explicamos en unidades anteriores la función de la declaración de modelo XML es asociar un esquema a nuestro documento TEI. Hasta ahora estuvimos usando el esquema [ejemplo_esquema.rng](https://github.com/tthub-repo/ejemplos/blob/master/ejemplo_esquema.rng) o otro genérico como el [tei_all.rng](www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng) al comienzo del módulo. Sin embargo, ahora que hemos creado nuestro propio esquema tendremos que hacer una modificación en las declaraciones de modelo XML de nuestros documentos TEI para validarlos con el nuevo Relax NG. Para eso modificaremos el valor del atributo `@href`, que indica el nombre y la ubicación del archivo de esquema asociado al documento TEI:
 
 ```xml
 <?xml-model href="miesquemaTEI.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"?>
 ```
 
-En este ejemplo, el archivo del esquema es “miesquemaTEI” (recuerden que en Roma pueden definir en la pestaña de personalización el nombre del archivo Relax NG que se generará), y está almacenado en la misma carpeta que el documento XML-TEI. En el caso de que el esquema se encuentre guardado en una carpeta diferente a la del archivo TEI (o incluso en una ubicación en línea), debemos proporcionar una indicación completa de la ubicación del archivo en el valor del atributo `@href` para que el VS Code pueda recuperar el esquema y validar nuestro documento, por ejemplo:
-
-```xml
-<?xml-model href="C:\Users\gaa20\OneDrive\Documentos\Humanidades_digitales\TutorialTEI\miesquemaTEI.rng" 
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-```
+En este ejemplo, el archivo del esquema es “miesquemaTEI” (recuerden que en Roma pueden definir en la pestaña de personalización el nombre del archivo Relax NG que se generará), y está almacenado en la misma carpeta que el documento XML-TEI. En el caso de que el esquema se encuentre guardado en una carpeta diferente a la del archivo TEI (o incluso en una ubicación en línea), debemos proporcionar una indicación completa de la ubicación del archivo en el valor del atributo `@href` para que el VS Code pueda recuperar el esquema y validar nuestro documento.
 
  
 # 4. Práctica: Creación de un esquema en RelaxNG en ROMA
