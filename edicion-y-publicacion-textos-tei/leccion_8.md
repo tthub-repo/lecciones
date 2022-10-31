@@ -132,9 +132,14 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 ```
 
 En este ejemplo, el archivo del esquema es “miesquemaTEI” (recuerden que en Roma pueden definir en la pestaña de personalización el nombre del archivo Relax NG que se generará), y está almacenado en la misma carpeta que el documento XML-TEI. En el caso de que el esquema se encuentre guardado en una carpeta diferente a la del archivo TEI (o incluso en una ubicación en línea), debemos proporcionar una indicación completa de la ubicación del archivo en el valor del atributo `@href` para que el VS Code pueda recuperar el esquema y validar nuestro documento.
-
  
-# 4. Práctica: Creación de un esquema en RelaxNG en ROMA
+# 4. Bibliografía
+
+Alcaraz Martínez, R., y Vázquez Puig, E. (2016). [TEI: Un estándar para codificar textos en el ámbito de las humanidades digitales](http://bid.ub.edu/es/37/alcaraz.htm). BiD: textos universitaris de biblioteconomia i documentació, 37.
+
+Bauman, S. (2020). [A TEI Customization for Writing TEI Customizations](https://journals.openedition.org/jtei/2573). Journal of the Text Encoding Initiative, Issue 12. [https://doi.org/10.4000/jtei.2573](https://doi.org/10.4000/jtei.2573)
+
+# 5. Práctica: Creación de un esquema en RelaxNG en ROMA
 
 El objetivo de este ejercicio es crear un esquema RelaxNG utilizando la herramienta ROMA y asociarlo a un documento TEI a través de la declaración del modelo XML. Con ese fin, te sugerimos seguir estos pasos:
 
