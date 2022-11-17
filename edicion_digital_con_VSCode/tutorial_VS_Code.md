@@ -23,9 +23,9 @@ Cuando queremos crear o editar un documento XML-TEI, los procesadores de texto m
 
 Para utilizar VS Code solo debes ir a la [página de descarga de la aplicación](https://code.visualstudio.com/Download) y seleccionar el instalador correspondiente según tu sistema operativo. Al ejecutar el archivo descargado el instalador te irá guiando por los diferentes pasos. Una vez completada la instalación podemos abrir el programa y empezar a editar nuestro primer archivo. Puedes abrir un archivo nuevo en blanco con los comandos `ctrl + O` o seleccionando la opción `New file` de la pestaña `File` del menú superior. Alternativamente puedes abrir una carpeta completa y explorar su contenido (subcarpetas y archivos) desde la barra izquierda del programa en la pestaña `Explorer` (el primer ícono del menú de la barra izquierda del editor), para esto puedes utilizar los comandos `crtl + K, ctrl+O` o seleccionando la opción `Open folder` de la pestaña `File`. Puedes usar VS Code en español y en muchos otras lenguas. Para cambiar de lengua lo más sencillo es abrir la paleta de comandos con `Ctrl + Shift + P` y escribir "Configurar idioma de pantalla". En el desplegable que aparece a continuación podremos elegir entre las distintas lenguas.
 
-[Configurar idioma de pantalla](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen26.png).
+![Configurar idioma de pantalla](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen26.png).
 
-[Idiomas](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen27.png).
+![Idiomas](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen27.png).
 
 Como complemento al tutorial, también te ofrecemos esta tabla con algunos de los atajos que pueden ser de más utilidad a la hora de trabajar con TEI en VS Code. Os sugerimos que la tengas a mano cuando trabajes con este programa, ya que te ahorrará tiempo a la hora de codificar tus textos:
 
