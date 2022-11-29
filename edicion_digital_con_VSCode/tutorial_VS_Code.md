@@ -23,9 +23,9 @@ Cuando queremos crear o editar un documento XML-TEI, los procesadores de texto m
 
 Para utilizar VS Code solo debes ir a la [página de descarga de la aplicación](https://code.visualstudio.com/Download) y seleccionar el instalador correspondiente según tu sistema operativo. Al ejecutar el archivo descargado el instalador te irá guiando por los diferentes pasos. Una vez completada la instalación podemos abrir el programa y empezar a editar nuestro primer archivo. Puedes abrir un archivo nuevo en blanco con los comandos `ctrl + O` o seleccionando la opción `New file` de la pestaña `File` del menú superior. Alternativamente puedes abrir una carpeta completa y explorar su contenido (subcarpetas y archivos) desde la barra izquierda del programa en la pestaña `Explorer` (el primer ícono del menú de la barra izquierda del editor), para esto puedes utilizar los comandos `crtl + K, ctrl+O` o seleccionando la opción `Open folder` de la pestaña `File`. Puedes usar VS Code en español y en muchos otras lenguas. Para cambiar de lengua lo más sencillo es abrir la paleta de comandos con `Ctrl + Shift + P` y escribir "Configurar idioma de pantalla". En el desplegable que aparece a continuación podremos elegir entre las distintas lenguas.
 
-![Configurar idioma de pantalla](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen26.png).
+![Configurar idioma de pantalla.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen26.png)
 
-![Idiomas](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen27.png).
+![Idiomas.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen27.png)
 
 Como complemento al tutorial, también te ofrecemos esta tabla con algunos de los atajos que pueden ser de más utilidad a la hora de trabajar con TEI en VS Code. Os sugerimos que la tengas a mano cuando trabajes con este programa, ya que te ahorrará tiempo a la hora de codificar tus textos:
 
@@ -114,7 +114,7 @@ VS Code también posee una extensión llamada [Git History](https://marketplace.
 ![Solicitud del historial del archivo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen8.png)
 
 
-![Visualización del historial del archivo](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen9.png)
+![Visualización del historial del archivo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen9.png)
 
 Los objetivos de *Git History* son: 1) ver y buscar registros de Git al tiempo que gráficos y detalles; 2) visualizar una copia previa del trabajo; 3) visualizar y buscar en el historial (por ejemplo, visualizar el historial de toda o de una de las ramas (*branches*); esto es lo que se denomina Git log; o visualizar el historial de un autor). Mediante esta extensión también se pueden comparar ramas, compromisos (*commit*) o comparar archivos entre compromisos.
 
@@ -128,7 +128,7 @@ En primer lugar, seleccionamos un fragmento de código para el cambio de nombre 
 
 En esta segunda imagen vemos cuál es el símbolo por el que decidimos reemplazar el símbolo actual.
 
-![Paso previo al reemplazo](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen11.png)
+![Paso previo al reemplazo.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen11.png)
 
 Finalmente, visualizamos el resultado en VS Code. Como habíamos dicho, en este caso hemos reemplazado `<p>` y `</p>` por `<l>` y `</l>`.
 
@@ -145,23 +145,23 @@ XPath es la abreviatura de XML Path Language. Este lenguaje emplea sintaxis del 
 
 Abrimos la caja comandos con `Ctrl+shift+P` o haciendo clic derecho en cualquier punto del documento y seleccionando dicho panel (paso 1). Buscamos el comando *XML Tools: Evaluate XPath* (paso 2).
 
-![Caja de comandos](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen20.png).
+![Caja de comandos.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen20.png)
 
 A continuación, la extensión nos solicitará que introduzcamos un elemento de XPath Query, es decir, una manera de preguntarle a XPath.
 
-![XPath Query](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen21.png).
+![XPath Query.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen21.png)
 
 Podemos introducir un comodín de XPath, como `*`, que nos devolverá en la consola cualquier nodo de elementos en el código XML (paso 3), o podemos optar también por introducir una expresión de *path* como `//title`, que nos devolverá en la consola todas las líneas donde aparezca el elemento título en el documento XML (paso 4).
 
 La caja de comandos se puede abrir con `Ctrl+shift+P`, presionando en el menú superior a la izquierda `Ver > Paleta de comandos` o haciendo clic derecho en cualquier punto del documento y seleccionando dicho panel.
 
-![Comodín `*`](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen22.png).
+![Comodín `*`](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen22.png)
 
-![Nodos de elementos](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen23.png).
+![Nodos de elementos.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen23.png)
 
-![Expresión `//title`](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen24.png).
+![Expresión `//title`](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen24.png)
 
-![Líneas con elemento *title*](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen25.png).
+![Líneas con elemento *title*](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen25.png)
 
 ## xslt-transform
 
@@ -169,7 +169,7 @@ El cometido de la última extensión, [*xslt-transform*](https://marketplace.vis
 
 En primer lugar, instalamos la extensión *xslt-transform* y [Saxon](https://saxon.sourceforge.net/#F11HE), un procesador de XSLT y XQuery creado por Michael Kay y que necesitamos para que la extensión funcione. Con este fin debes seleccionar la opción "Download for java" y extraer el contenido de la carpeta comprimida que se descaragará en nuestra computadora. Estos archivos pueden ubicarse en cualquier directorio, pero es importante que tomes nota de la ubicación en la que queda guardado, ya que deberemos indicarla en VS Code. Para ello, abrimos el panel de configuración, buscamos "XSLT" y escribimos la ruta del archivo .jar cuyo nombre corresponde a la versión de Saxon que descargamos (por ejemplo: `saxon-he-11.4.jar`) en el espacio en donde leemos "Define the path to the XSLT processor". 
 
-![Ruta a Saxon](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen28.png).
+![Ruta a Saxon.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen28.png)
 
 Seguidamente, abrimos nuestro archivo en VS Code. 
  
@@ -177,7 +177,7 @@ Seguidamente, abrimos nuestro archivo en VS Code.
 
 En segundo lugar, buscamos el comando que nos permite hacer la transformación mediante XSLT (XSLT: Run Transformation).
 
-![Comando XSLT: Run Transformation](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen17.png)
+![Comando XSLT: Run Transformation.](https://raw.githubusercontent.com/tthub-repo/lecciones/master/edicion_digital_con_VSCode/img/Imagen17.png)
 
 
 Tras este paso, cargaremos el archivo .xsl o .xslt que hayamos preparado para la transformación. En nuestro caso, hemos partido de un archivo .xsl que ha generado Susanna Allés Torrent y lo hemos modificado para los propósitos de este tutorial. Después de esto, guardaremos el archivo resultante de la transformación como .html y disfrutaremos del resultado, que puede verse en la última imagen.
